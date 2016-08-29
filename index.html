@@ -1,0 +1,59 @@
+<html>
+
+<head> 
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">-->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.css"/>-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.css">
+
+</head>
+
+<body>
+
+    <div class="panel panel-primary">
+
+        <div class="panel-heading">
+            Baker Beach Device Registry
+        </div>
+
+        <div class="panel-body">
+
+            <div ng-app="app" ng-controller="DeviceController as vm">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <th>Device ID</th>
+                            <th>Device Status</th>
+                            <th>AID(need to be Staged Manifest)</th>
+                            <th>Sha(need to be Archived Manifests)</th>
+                        </thead>
+                        <tbody>
+                            <!--<tr ng-repeat="device in vm.devices.Devices">-->
+                            <tr ng-repeat="device in vm.devices">
+                                <td>{{device.DeviceId}}</td>
+                                <td>{{device.DeviceStatus}}</td>
+                                <td>{{device.Aid}}</td>
+                                <td>{{device.Sha}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+
+<!--<script src="~/Scripts/angular.min.js"></script>-->
+<script src="./app/app.module.js"></script>
+<script src="./app/device.controller.js"></script>
+
+
+
+</html>

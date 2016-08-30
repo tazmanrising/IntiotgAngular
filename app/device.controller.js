@@ -1,16 +1,21 @@
 (function () {
   'use strict';
 
-  angular.module('app').controller('DeviceController', DeviceController);
+//   angular.module('app').controller('DeviceController', DeviceController);
 
-        function DeviceController($http){
+
+     angular.module('app').controller('DeviceController', DeviceController) 
+
+       
+
+        function DeviceController($http, $scope){
             var vm = this;
             var dataService = $http;
             //dataService.get("/api/Product")
             
             vm.devices = [];
 
-        deviceList();
+            deviceList();
 
         function deviceList() {
 
@@ -24,9 +29,13 @@
             // });    
 
             //$http.defaults.headers.post["Content-Type"] = "text/plain";
-            
+
+            $scope.users = []; //declare an empty array
+
+
             $http.get('api/devices/devices.json')
                 .then(function (result) {
+                    $scope.users = result; // ajax request to fetch data into $scope.data
                         vm.devices = result.data.Devices;      
                 },
                 function(error) {
@@ -34,7 +43,11 @@
                     console.log('error');
                 });
 
+            $scope.sort = function(keyname){
+                $scope.sortKey = keyname; // set the sortKey to the param passed
+                $scope.reverse = !$scope.reverse; // if true make it false and vice versa
 
+            }
             //$http.get('api/devices/devices.json').success(function(data) {
             //    $scope.countries = data;
             //});

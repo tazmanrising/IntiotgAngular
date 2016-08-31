@@ -1,27 +1,41 @@
 (function () {
-  'use strict';
+    'use strict';
 
-//   angular.module('app').controller('DeviceController', DeviceController);
+    //   angular.module('app').controller('DeviceController', DeviceController);
 
 
-     angular.module('app').controller('DeviceController', DeviceController) 
+    angular.module('app')
+         .filter('deviceStatus', function () {
+                        return function (status_id) {
+                            var statuses = ['Old Device', 'New Device', 'Activated', 'Unactivated'];
+                            return statuses[status_id];
+                        };
+                    })
+        .controller('DeviceController', DeviceController)
 
-       
 
-        function DeviceController($http, $scope){
-            var vm = this;
-            var dataService = $http;
-            //dataService.get("/api/Product")
-            
-            vm.devices = [];
 
-            deviceList();
+    function DeviceController($http, $scope) {
+        var vm = this;
+        var dataService = $http;
+        //dataService.get("/api/Product")
+
+        vm.devices = [];
+
+        deviceList();
+
+
+
+
 
         function deviceList() {
 
+
+
+
             var mainInfo = null;
-            
-            var obj = {content:null};
+
+            var obj = { content: null };
 
             // $http.get('api/devices/devices.json').success(function(data) {
             //     // you can do some processing here
@@ -36,14 +50,23 @@
             $http.get('api/devices/devices.json')
                 .then(function (result) {
                     $scope.users = result; // ajax request to fetch data into $scope.data
-                        vm.devices = result.data.Devices;      
+                    vm.devices = result.data.Devices;
+
+                   $scope.statuses = [];
+
+
+                    angular.forEach(result.data.Devices, function (value, index) {
+                        $scope.statuses.push(value.DeviceStatus);
+                    });
+
+
                 },
-                function(error) {
+                function (error) {
 
                     console.log('error');
                 });
 
-            $scope.sort = function(keyname){
+            $scope.sort = function (keyname) {
                 $scope.sortKey = keyname; // set the sortKey to the param passed
                 $scope.reverse = !$scope.reverse; // if true make it false and vice versa
 
@@ -56,7 +79,7 @@
 
 
             //return obj;    
-            
+
             // $http.get('api/devices/devices.json').success(function(data) {
             //  mainInfo = data;
             // });
@@ -66,7 +89,7 @@
             // .then(function (result) {
             //     //vm.devices = result.data;
             //     vm.devices = result.data.Devices;
-                
+
             //     //debugger;
             //     console.log(vm.devices);
             // },
@@ -80,8 +103,8 @@
             alert(error.data.ExceptionMessage);
         }
 
-  }
+    }
 
 
 
- })(); 
+})(); 

@@ -41,9 +41,10 @@
                         <tbody>
                             <!--<tr ng-repeat="device in vm.devices.Devices">-->
                             <!--<tr ng-repeat="device in vm.devices">-->
-                            <tr dir-paginate="device in vm.devices|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+                            <tr dir-paginate="device in vm.devices|orderBy:sortKey:reverse|filter:search|itemsPerPage:7">
                                 <td>{{device.DeviceId}}</td>
-                                <td>{{device.DeviceStatus}}</td>
+                                <!--<td>{{device.DeviceStatus}}</td>-->
+                                <td>{{device.DeviceId | deviceStatus}}</td>
                                 <td>{{device.Aid}}</td>
                                 <td>{{device.Sha}}</td>
                             </tr>

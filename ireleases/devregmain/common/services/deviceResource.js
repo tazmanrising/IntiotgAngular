@@ -12,7 +12,8 @@
                                     // reference to it 
 
     function deviceResource($resource) {     // inject $resource in 
-        return $resource("api/products/:productId");  
+        //return $resource("api/products/:productId");
+         return $resource("/api/devices/:deviceId");    
     } 
 
 

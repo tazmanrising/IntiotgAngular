@@ -4,7 +4,8 @@
     
     var app = angular.module("deviceManagement",
         ['angularUtils.directives.dirPagination',
-         'common.services'
+         'common.services',
+         'deviceResourceMock'
         ]);
 
 

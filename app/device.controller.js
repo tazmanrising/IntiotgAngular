@@ -1,8 +1,6 @@
 (function () {
     'use strict';
-
-    //   angular.module('app').controller('DeviceController', DeviceController);
-
+ 
 
     angular.module('app')
          .filter('deviceStatus', function () {
@@ -18,8 +16,7 @@
     function DeviceController($http, $scope) {
         var vm = this;
         var dataService = $http;
-        //dataService.get("/api/Product")
-
+       
         vm.devices = [];
 
         deviceList();
@@ -29,23 +26,7 @@
 
 
         function deviceList() {
-
-
-
-
-            var mainInfo = null;
-
-            var obj = { content: null };
-
-            // $http.get('api/devices/devices.json').success(function(data) {
-            //     // you can do some processing here
-            //     obj.content = data;
-            // });    
-
-            //$http.defaults.headers.post["Content-Type"] = "text/plain";
-
-            $scope.users = []; //declare an empty array
-
+         
 
             $http.get('api/devices/devices.json')
                 .then(function (result) {
@@ -108,3 +89,19 @@
 
 
 })(); 
+
+
+ //add custom filter for display
+  app.filter('deviceStatusTest', function() {
+
+    var deviceStatusLookup = {
+      1: "New Device",
+      2: "Activated",
+      3: "Unactivated"
+    };
+    
+    return function(statusId) {
+      var output = deviceStatusLookup[statusId];
+      return output;
+    }
+  });

@@ -33,12 +33,12 @@
                     controller: "DeviceListCtrl as vm"   // associated controller is contructed
                 })
                 .state("deviceEdit", {
-                    url: "/devices/edit/:deviceId",  // param is required which specific device id
+                    url: "/devices/edit/:DeviceId",  // param is required which specific device id
                     templateUrl: "app/devices/deviceEditView.html",  // ui elements 
                     controller: "DeviceEditCtrl as vm"   // as with alias of vm
                 })
                 .state("deviceDetail", {
-                    url: "/devices/:deviceId",  // param is required which specific device id
+                    url: "/devices/:DeviceId",  // param is required which specific device id
                     templateUrl: "app/devices/deviceDetailView.html",  // ui elements 
                     controller: "DeviceDetailCtrl as vm"   // as with alias of vm
                 })

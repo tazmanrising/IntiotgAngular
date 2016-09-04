@@ -4,17 +4,23 @@
     angular
         .module("deviceManagement")
         .controller("DeviceDetailCtrl",
-                    ["device",
-                     DeviceDetailCtrl]);
+                    [DeviceDetailCtrl]);
+        // .controller("DeviceDetailCtrl",
+        //             ["device",
+        //              DeviceDetailCtrl]);
 
     function DeviceDetailCtrl() {  // (device) {
+        
+        console.log("test");
+
         var vm = this;
 
         //vm.device = device;
+        
 
         vm.device = {
-            "productId": 2,
-            "productName": "blah",
+            "DeviceId": 1,
+            "deviceName": "blah",
             "proctCode": "adf-233",
             "releaseDate": "March 18, 2010",
             "description": "afdlka  adsjflkajf",
@@ -23,8 +29,7 @@
             "category": "garden",
             "tags": ["adf","adfadf","adf"],
             "imageUrl": "http://adfa.com"
-                        
-        }
+        };
 
         vm.title = "Device Detail: " + vm.device.deviceName;
 

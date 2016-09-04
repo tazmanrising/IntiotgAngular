@@ -25,10 +25,24 @@
                         {{vm.showImage ? "Hide" : "Show"}} Image
                     </button>
                         </td>-->
-                    <th>Device ID</th>
-                    <th>Device Status</th>
+                    <!--<th ng-click="sort('first_name')">First Name
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='first_name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>-->
+                    <th ng-click="sort('DeviceId')">Device ID
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='DeviceId'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th ng-click="sort('DeviceStatus')">Device Status
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='DeviceStatus'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th ng-click="sort('StagedManifestIdList')">Staged Manifest
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='StagedManifestIdList'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th ng-click="sort('ManifestIdList')">Archived Manifests
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='ManifestIdList'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <!--<th>Device Status</th>
                     <th>Staged Manifest</th>
-                    <th>Archived Manifests</th>
+                    <th>Archived Manifests</th>-->
                 </tr>
             </thead>
             <tbody>

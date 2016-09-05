@@ -11,19 +11,19 @@
 
     // app.run takes function passed in as parmeter and executes it
     // define the devices  
-    app.run(function ($httpBackend, $resource) {
+    app.run(function ($httpBackend) {
 
         //var devices = '../../api/devices.json';
 
-        var xdevices = [];
+        //var xdevices = [];
         //$http.get('api/devices.json')
         //devices = '/test.json';
-        xdevices = '/api/devices.json';
+        //xdevices = '/api/devices.json';
 
-        var devices = [];
-        devices = 
-           { "Devices": [
-               //[
+        //var devices = [];
+        var devices = 
+           //{ "Devices": [
+               [
                 {
                     "DeviceId": 1,
                     "deviceName": "adf",
@@ -40,16 +40,21 @@
                     "Sha": "Leaf rake with 48-inch wooden handle.",
                     "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
                 }
-           ]
-            //];
-        };
+           //]
+            ];
+        //};
 
         var deviceUrl = "/api/devices";
+
+        
 
         // when there is a get requesst  respond with a list of devices 
 
         //Instead of writing these out many times with slight differences 
-        $httpBackend.whenGET(deviceUrl).respond(devices.Devices);
+        
+        //$httpBackend.whenGET(deviceUrl).respond(devices.Devices);
+        $httpBackend.whenGET(deviceUrl).respond(devices);
+
 
         // $httpBackend.when('GET', deviceUrl).respond(getData());
 

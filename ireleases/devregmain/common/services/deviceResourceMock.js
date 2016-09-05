@@ -5,37 +5,41 @@
     "use strict";
 
     var app = angular
-                .module("deviceResourceMock",
-                        ["ngMockE2E"]);  // a
+        .module("deviceResourceMock",
+        ["ngMockE2E"]);  // a
 
-   
+
     // app.run takes function passed in as parmeter and executes it
     // define the devices  
-    app.run(function ($httpBackend) {
-        
-        //var devices = '../../api/devices.json';
-        
-        var devices = [];
-        //devices = 'test.json';
-        
+    app.run(function ($httpBackend, $resource) {
 
-        devices = {"Devices":  [
-            {
-                "DeviceId": 1,
-                "DeviceStatus": "Leaf Rake",
-                "Aid": "GDN-0011",
-                "Sha": "Leaf rake with 48-inch wooden handle.",
-                "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-            },
-            {
-                "DeviceId": 1,
-                "DeviceStatus": "Leaf Rake",
-                "Aid": "GDN-0011",
-                "Sha": "Leaf rake with 48-inch wooden handle.",
-                "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-            }
-        ]};
-        
+        //var devices = '../../api/devices.json';
+
+        var xdevices = [];
+        //$http.get('api/devices.json')
+        //devices = '/test.json';
+        xdevices = '/api/devices.json';
+
+        var devices = [];
+        devices = {
+            "Devices": [
+                {
+                    "DeviceId": 1,
+                    "DeviceStatus": "Leaf Rake",
+                    "Aid": "GDN-0011",
+                    "Sha": "Leaf rake with 48-inch wooden handle.",
+                    "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+                },
+                {
+                    "DeviceId": 1,
+                    "DeviceStatus": "Leaf Rake",
+                    "Aid": "GDN-0011",
+                    "Sha": "Leaf rake with 48-inch wooden handle.",
+                    "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
+                }
+            ]
+        };
+
         var deviceUrl = "/api/devices";
 
         // when there is a get requesst  respond with a list of devices 
@@ -43,14 +47,40 @@
         //Instead of writing these out many times with slight differences 
         $httpBackend.whenGET(deviceUrl).respond(devices.Devices);
 
+        // $httpBackend.when('GET', deviceUrl).respond(getData());
+
+        // function getData() {
+        //     var request = new XMLHttpRequest();
+        //     request.open('GET', 'common/services/test.json', false);
+        //     request.send(null);
+
+        //     return [request.status, request.response, {}];
+        // }
+
+
+        // $httpBackend.whenGET(deviceUrl).respond(function (method, url, data) {
+        //     var request = new XMLHttpRequest();
+
+        //     request.open('GET', devices, false);
+        //     request.send(null);
+
+        //     return [request.status, request.response, {}];
+
+        // });
+
+
+
+
+
+
         //It does allow for regular expressions  :)  
-        
+
         var editingRegex = new RegExp(deviceUrl + "/[0-9][0-9]*", '');
         // respond method can take a function  , fx locates  
         // split url in an array  , code loops through 
 
         $httpBackend.whenGET(editingRegex).respond(function (method, url, data) {
-            var device = {"deviceId": 0};
+            var device = { "deviceId": 0 };
             var parameters = url.split('/');
             var length = parameters.length;
             var id = parameters[length - 1];
@@ -87,8 +117,8 @@
         });
 
         // // Pass through any requests for application files
-         $httpBackend.whenGET(/app/).passThrough();
+        $httpBackend.whenGET(/app/).passThrough();
 
 
     })
-}());
+} ());

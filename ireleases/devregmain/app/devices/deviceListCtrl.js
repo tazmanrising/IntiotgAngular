@@ -9,7 +9,7 @@
     function DeviceListCtrl($scope, $http, deviceResource) {
         var vm = this;
 
-        vm.devices = [];
+        //vm.devices = [];
 
         //deviceList();
 

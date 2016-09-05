@@ -21,23 +21,27 @@
         xdevices = '/api/devices.json';
 
         var devices = [];
-        devices = {
-            "Devices": [
+        devices = 
+           { "Devices": [
+               //[
                 {
                     "DeviceId": 1,
+                    "deviceName": "adf",
                     "DeviceStatus": "Leaf Rake",
                     "Aid": "GDN-0011",
                     "Sha": "Leaf rake with 48-inch wooden handle.",
                     "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
                 },
                 {
-                    "DeviceId": 1,
-                    "DeviceStatus": "Leaf Rake",
+                    "DeviceId": 2,
+                    "deviceName": "sdfeadf",
+                    "DeviceStatus": "motherboard Rake",
                     "Aid": "GDN-0011",
                     "Sha": "Leaf rake with 48-inch wooden handle.",
                     "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
                 }
-            ]
+           ]
+            //];
         };
 
         var deviceUrl = "/api/devices";
@@ -80,14 +84,14 @@
         // split url in an array  , code loops through 
 
         $httpBackend.whenGET(editingRegex).respond(function (method, url, data) {
-            var device = { "deviceId": 0 };
+            var device = { "DeviceId": 0 };
             var parameters = url.split('/');
             var length = parameters.length;
             var id = parameters[length - 1];
 
             if (id > 0) {
                 for (var i = 0; i < devices.length; i++) {
-                    if (devices[i].deviceId == id) {
+                    if (devices[i].DeviceId == id) {
                         device = devices[i];
                         break;
                     }

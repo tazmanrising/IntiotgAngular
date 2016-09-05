@@ -5,8 +5,9 @@
     var app = angular.module("deviceManagement",
         ['angularUtils.directives.dirPagination',
             'common.services',
-            'deviceResourceMock',
-            'ui.router'
+             'ui.router',
+            'deviceResourceMock'
+           
         ]);
 
     // configure state for device list    
@@ -40,7 +41,15 @@
                 .state("deviceDetail", {
                     url: "/devices/:DeviceId",  // param is required which specific device id
                     templateUrl: "app/devices/deviceDetailView.html",  // ui elements 
-                    controller: "DeviceDetailCtrl as vm"   // as with alias of vm
+                    controller: "DeviceDetailCtrl as vm",  // as with alias of vm
+                    resolve: {
+                        deviceResource: "deviceResource",    // key value pair     Key is  deviceResource   value is string name  of "deviceResource"
+
+                        device: function (deviceResource, $stateParams) {      // $stateParams service is needed  because url: has this :DeviceId 
+                            var DeviceId = $stateParams.DeviceId;
+                            return deviceResource.get({ DeviceId: DeviceId }).$promise;   // function returns the promise 
+                        }
+                    }
                 })
         }]
 

@@ -11,7 +11,7 @@
 
     function DeviceDetailCtrl(device) {   // pass in parameter into the function , now we need
         
-        console.log("test");
+        //console.log("test");
 
         var vm = this;
 
@@ -27,7 +27,7 @@
         //     "cost": 20.00,
         //     "price": 32.99,
         //     "category": "garden",
-        //     "tags": ["adf","adfadf","adf"],
+        //     "tags": ["adf","adfadf","adf"],-
         //     "imageUrl": "http://adfa.com"
         // };
 

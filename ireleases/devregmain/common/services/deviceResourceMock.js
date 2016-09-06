@@ -46,41 +46,11 @@
 
         var deviceUrl = "/api/devices";
 
-        
-
         // when there is a get requesst  respond with a list of devices 
-
         //Instead of writing these out many times with slight differences 
         
         //$httpBackend.whenGET(deviceUrl).respond(devices.Devices);
         $httpBackend.whenGET(deviceUrl).respond(devices);
-
-
-        // $httpBackend.when('GET', deviceUrl).respond(getData());
-
-        // function getData() {
-        //     var request = new XMLHttpRequest();
-        //     request.open('GET', 'common/services/test.json', false);
-        //     request.send(null);
-
-        //     return [request.status, request.response, {}];
-        // }
-
-
-        // $httpBackend.whenGET(deviceUrl).respond(function (method, url, data) {
-        //     var request = new XMLHttpRequest();
-
-        //     request.open('GET', devices, false);
-        //     request.send(null);
-
-        //     return [request.status, request.response, {}];
-
-        // });
-
-
-
-
-
 
         //It does allow for regular expressions  :)  
 
@@ -93,6 +63,8 @@
             var parameters = url.split('/');
             var length = parameters.length;
             var id = parameters[length - 1];
+            
+            console.log('in regex');
 
             if (id > 0) {
                 for (var i = 0; i < devices.length; i++) {

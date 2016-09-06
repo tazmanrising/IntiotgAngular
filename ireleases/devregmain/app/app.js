@@ -42,7 +42,7 @@
                     url: "/devices/:DeviceId",  // param is required which specific device id
                     templateUrl: "app/devices/deviceDetailView.html",  // ui elements 
                     controller: "DeviceDetailCtrl as vm",  // as with alias of vm
-                    resolve: {
+                    resolve: {  // resolve is a property of the stateconfiguration object
                         deviceResource: "deviceResource",    // key value pair     Key is  deviceResource   value is string name  of "deviceResource"
 
                         device: function (deviceResource, $stateParams) {      // $stateParams service is needed  because url: has this :DeviceId 

@@ -1,6 +1,4 @@
-/**
- * Created by Deb on 8/21/2014.
- */
+
 (function () {
     "use strict";
 
@@ -26,19 +24,33 @@
             [
                 {
                     "DeviceId": "00022B9A000000010001",
-                    "deviceName": "adf",
+                    "StagedManifestIdList": [],
+                    "PendingManifestId": null,
+                    "PendingTimeStamp": "0001-01-01T00:00:00",
+                    "ManifestIdList": [
+                        "00000002",
+                        "00000001",
+                        "00000003"
+                    ],
                     "DeviceStatus": 3,
-                    "Aid": "GDN-0011",
-                    "Sha": "Leaf rake with 48-inch wooden handle.",
-                    "imageUrl": "http:/"
+                    "Aid": "oAAABTUAAg==",
+                    "DKiIndex": "DKi00000002",
+                    "Sha": "R2tiZRQgY/iohXZt5O4HaQwtVe/adWU2VOcKaelJ3Us=",
+                    "DefaultPayload": "C:\\ProgramData\\Intel\\DPT4T\\Payloads\\M4PayloadAuto.xml"
                 },
                 {
-                    "DeviceId": "00022B9E000000020001",
-                    "deviceName": "sdfeadf",
+                    "DeviceId": "00022B9E000000060001",
+                    "StagedManifestIdList": [
+                        "00000004"
+                    ],
+                    "PendingManifestId": null,
+                    "PendingTimeStamp": "0001-01-01T00:00:00",
+                    "ManifestIdList": [],
                     "DeviceStatus": 1,
-                    "Aid": "GDN-0011",
-                    "Sha": "Leaf rake with 48-inch wooden handle.",
-                    "imageUrl": "http://o"
+                    "Aid": "oAAABTUAAg==",
+                    "DKiIndex": "DKi00000003",
+                    "Sha": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                    "DefaultPayload": null
                 }
                 //]
             ];
@@ -55,6 +67,8 @@
         //It does allow for regular expressions  :)  
 
         var editingRegex = new RegExp(deviceUrl + "/[0-9][0-9]*", '');
+        //console.log(editingRegex); ///\/api\/devices\/[0-9][0-9]*/
+
         // respond method can take a function  , fx locates  
         // split url in an array  , code loops through 
 
@@ -65,15 +79,27 @@
             var id = parameters[length - 1];
 
             console.log('in regex');
+            console.log(id);
 
-            if (id > 0) {
-                for (var i = 0; i < devices.length; i++) {
-                    if (devices[i].DeviceId == id) {
-                        device = devices[i];
-                        break;
-                    }
-                };
+            for (var i = 0; i < devices.length; i++) {
+                if (devices[i].DeviceId == id) {
+                    device = devices[i];
+                    break;
+                }
             }
+
+
+            // if (id > 0) {
+            //     for (var i = 0; i < devices.length; i++) {
+            //         if (devices[i].DeviceId == id) {
+            //             device = devices[i];
+            //             break;
+            //         }
+            //     };
+            // }
+
+
+
             return [200, device, {}];
         });
 

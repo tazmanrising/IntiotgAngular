@@ -5,59 +5,53 @@
 
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-2">Name:</div>
-                    <div class="col-md-6">{{vm.device.deviceName}}</div>
+                    <div class="col-md-3">Device ID:</div>
+                    <div class="col-md-5">{{vm.device.DeviceId}}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">Code:</div>
-                    <div class="col-md-6">{{vm.device.productCode }}</div>
+                    <div class="col-md-3">Device Status:</div>
+                    <div class="col-md-5">{{vm.device.DeviceStatus }}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">Description:</div>
-                    <div class="col-md-6">{{vm.device.description }}</div>
+                    <div class="col-md-3">DKi Value:</div>
+                    <div class="col-md-5">{{vm.device.DKiIndex }}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">Availability:</div>
-                    <div class="col-md-6">{{vm.device.releaseDate|date }}</div>
+                    <div class="col-md-3">AID:</div>
+                    <div class="col-md-5">{{vm.device.Aid }}</div>
+                    <!--<div class="col-md-5">{{vm.device.releaseDate|date }}</div>-->
                 </div>
                 <div class="row">
-                    <div class="col-md-2">Cost:</div>
-                    <div class="col-md-6">{{vm.device.cost|currency }}</div>
+                    <div class="col-md-3">Extended Measurement:</div>
+                    <div class="col-md-5">{{vm.device.Aid }}</div>
+                    <!--<div class="col-md-5">{{vm.device.cost|currency }}</div>-->
                 </div>
                 <div class="row">
-                    <div class="col-md-2">Price:</div>
-                    <div class="col-md-6">{{ vm.device.price|currency }}</div>
+                    <div class="col-md-3">Staged Manifest:</div>
+                    <div class="col-md-5">{{ vm.device.price|currency }}</div>
                 </div>
                 <!--<div class="row">
                     <div class="col-md-2">Margin:</div>
                     <div class="col-md-6">{{ vm.marginPercent | number:0}}%</div>
                 </div>-->
                 <div class="row">
-                    <div class="col-md-2">Tags:</div>
-                    <div class="col-md-6">{{vm.device.tagList}}</div>
+                    <div class="col-md-3">Tags:</div>
+                    <div class="col-md-5">{{vm.device.tagList}}</div>
                 </div>
             </div>
 
             <div class="col-md-6">
-                <img class="center-block img-responsive"
-                     style="width:200px;margin:2px;"
-                     ng-src="{{vm.device.imageUrl}}"
-                     title="{{vm.device.productName}}">
+                <img class="center-block img-responsive" style="width:200px;margin:2px;" ng-src="{{vm.device.imageUrl}}" title="{{vm.device.productName}}">
             </div>
         </div>
     </div>
     <div class="panel-footer">
-        <a class="btn btn-default"
-           ui-sref="deviceList"
-           style="width:80px">
-            <I class="glyphicon glyphicon-chevron-left"></i>
-            Back
+        <a class="btn btn-default" ui-sref="deviceList" style="width:80px">
+            <I class="glyphicon glyphicon-chevron-left"></i> Back
         </a>
-        <a class="btn btn-primary"
-           ui-sref="deviceEdit.info({DeviceId: vm.device.DeviceId})"
-           style="width:80px;margin-left:10px">
+        <a class="btn btn-primary" ui-sref="deviceEdit.info({DeviceId: vm.device.DeviceId})" style="width:80px;margin-left:10px">
             Edit
         </a>
     </div>

@@ -65,8 +65,8 @@
                     </td>
 
                     <!--<td>{{device.DeviceStatus}}</td>-->
-                    <!--<td>{{device.DeviceId | deviceStatus}}</td>-->
-                    <td>{{device.DeviceStatus }}</td>
+                    <td ng-style="set_color(device)">{{device.DeviceStatus | deviceStatus}}</td>
+                    <!--<td ng-style="{'color':(device.DeviceStatus>1?'red':'blue')}">{{device.DeviceStatus | deviceStatus }}</td>-->
                     <td>{{device.StagedManifestIdList.join(',')}}</td>
                     <td>{{device.ManifestIdList.join(',')}}</td>
                     <td>

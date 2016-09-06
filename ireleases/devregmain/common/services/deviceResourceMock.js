@@ -21,26 +21,26 @@
         //xdevices = '/api/devices.json';
 
         //var devices = [];
-        var devices = 
-           //{ "Devices": [
-               [
+        var devices =
+            //{ "Devices": [
+            [
                 {
-                    "DeviceId": 1,
+                    "DeviceId": "00022B9A000000010001",
                     "deviceName": "adf",
-                    "DeviceStatus": "Leaf Rake",
+                    "DeviceStatus": 3,
                     "Aid": "GDN-0011",
                     "Sha": "Leaf rake with 48-inch wooden handle.",
-                    "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+                    "imageUrl": "http:/"
                 },
                 {
-                    "DeviceId": 2,
+                    "DeviceId": "00022B9E000000020001",
                     "deviceName": "sdfeadf",
-                    "DeviceStatus": "motherboard Rake",
+                    "DeviceStatus": 1,
                     "Aid": "GDN-0011",
                     "Sha": "Leaf rake with 48-inch wooden handle.",
-                    "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
+                    "imageUrl": "http://o"
                 }
-           //]
+                //]
             ];
         //};
 
@@ -48,7 +48,7 @@
 
         // when there is a get requesst  respond with a list of devices 
         //Instead of writing these out many times with slight differences 
-        
+
         //$httpBackend.whenGET(deviceUrl).respond(devices.Devices);
         $httpBackend.whenGET(deviceUrl).respond(devices);
 
@@ -63,7 +63,7 @@
             var parameters = url.split('/');
             var length = parameters.length;
             var id = parameters[length - 1];
-            
+
             console.log('in regex');
 
             if (id > 0) {
@@ -103,3 +103,19 @@
 
     })
 } ());
+
+// angular
+//     .module("deviceManagement")
+//     .filter('deviceStatus', function () {
+//         var deviceStatusLookup = {
+//             0: "None", // Gray
+//             1: "New Device",  // Blue
+//             2: "Activated",  // Green
+//             3: "Unactivated" // Orange
+//         };
+
+//         return function (statusId) {
+//             var output = deviceStatusLookup[statusId];
+//             return output;
+//         }
+//     });

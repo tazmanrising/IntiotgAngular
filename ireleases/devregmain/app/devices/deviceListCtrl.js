@@ -3,8 +3,8 @@
     angular
         .module("deviceManagement")
         .controller("DeviceListCtrl",
-           ["$scope","$http", "deviceResource", DeviceListCtrl]);    // changed to an array    //ProductListCtrl);
-       
+        ["$scope", "$http", "deviceResource", DeviceListCtrl]);    // changed to an array    //ProductListCtrl);
+
 
     function DeviceListCtrl($scope, $http, deviceResource) {
         var vm = this;
@@ -14,8 +14,8 @@
         //deviceList();
 
         //controller will call query method
-        deviceResource.query(function(data) {   // get request sent and get json 
-           vm.devices = data; 
+        deviceResource.query(function (data) {   // get request sent and get json 
+            vm.devices = data;
         });
 
 
@@ -25,20 +25,19 @@
         function deviceList() {
 
             //var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device'
-            
+
             //$http 
             //$httpBackend
 
-           /////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////
 
             //$resource
- 
+
             // Angular factory which creates a resource object    REST 
             //
             // function productResource($resource) {
             //     return $resource("/api/products/:productId")
             //}
-
 
 
             //deviceResource.query
@@ -93,6 +92,37 @@
         vm.toggleImage = function () {
             vm.showImage = !vm.showImage;
         }
+
+
+
+
+        $scope.set_color = function (device) {
+
+            var fontColor = "";
+            switch (device.DeviceStatus) {
+                case 0:
+                    fontColor = "gray";
+                    break;
+                case 1:
+                    fontColor = "blue";
+                    break;
+                case 2:
+                    fontColor = "green";
+                    break;
+                case 3:
+                    fontColor= "orange";
+                    break;
+                
+            }
+
+            return { color: fontColor };
+
+            // if (device.DeviceStatus > 1) {
+            //     return { color: "red" }
+            // }
+        }
+
+
     }
 
 
@@ -100,17 +130,21 @@
 } ());
 
 
-// app.filter  ?
-// deviceManagement.filter('deviceStatus', function () {
 
-//     var deviceStatusLookup = {
-//         1: "New Device",
-//         2: "Activated",
-//         3: "Unactivated"
-//     };
 
-//     return function (statusId) {
-//         var output = deviceStatusLookup[statusId];
-//         return output;
-//     }
-// });
+angular
+    .module("deviceManagement")
+    .filter('deviceStatus', function () {
+        var deviceStatusLookup = {
+            0: "None", // Gray
+            1: "New Device",  // Blue
+            2: "Activated",  // Green
+            3: "Unactivated" // Orange
+        };
+
+        return function (statusId) {
+            var output = deviceStatusLookup[statusId];
+            return output;
+        }
+    });
+

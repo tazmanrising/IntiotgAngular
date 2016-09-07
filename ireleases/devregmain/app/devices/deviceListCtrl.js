@@ -15,11 +15,16 @@
 
         //controller will call query method
         deviceResource.query(function (data) {   // get request sent and get json 
+            $scope.devices = data;
             vm.devices = data;
         });
 
 
+        $scope.sort = function (keyname) {
+            $scope.sortKey = keyname; // set the sortKey to the param passed
+            $scope.reverse = !$scope.reverse; // if true make it false and vice versa
 
+        }
 
 
         function deviceList() {
@@ -45,7 +50,7 @@
 
             $http.get('api/devices.json')
                 .then(function (result) {
-                    $scope.users = result; // ajax request to fetch data into $scope.data
+                    // $scope.devices = result; // ajax request to fetch data into $scope.data
                     vm.devices = result.data.Devices;
 
                     $scope.statuses = [];
@@ -110,9 +115,9 @@
                     fontColor = "green";
                     break;
                 case 3:
-                    fontColor= "orange";
+                    fontColor = "orange";
                     break;
-                
+
             }
 
             return { color: fontColor };

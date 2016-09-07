@@ -18,6 +18,9 @@
         vm.device = device;
         
 
+        // http://localhost:42822/api/device/00022B510000000A0001
+
+        
         // vm.device = {
         //     "DeviceId": 1,
         //     "deviceName": "blah",
@@ -31,7 +34,7 @@
         //     "imageUrl": "http://adfa.com"
         // };
 
-        vm.title = "Device Detail: " + vm.device.deviceName;
+        vm.title = "Device Detail"; //: " + vm.device.deviceName;
 
         if (vm.device.tags) {
             vm.device.tagList = vm.device.tags.toString();

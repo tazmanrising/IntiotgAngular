@@ -12,7 +12,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">Device Status:</div>
-                    <div ng-style="set_color(vm.device)" class="col-md-5">{{vm.device.DeviceStatus }}</div>
+                    <div ng-style="set_color(vm.device)" class="col-md-5">{{vm.device.DeviceStatus | deviceStatus }}</div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">DKi Value:</div>

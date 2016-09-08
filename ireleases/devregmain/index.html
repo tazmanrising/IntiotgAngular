@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.css">
 
+    <!-- Style sheets -->
+    <!--<link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/toastr.css" rel="stylesheet" />-->
+    <link href="css/app.css" rel="stylesheet" />
+
+
     <style type="text/css">
         .navbar {
             background-color: #0071C5;
@@ -20,9 +26,10 @@
         .navbar a {
             color: white !important;
         }
-
-        ul.nav a:hover { color: #000 !important; }
-
+        
+        ul.nav a:hover {
+            color: #000 !important;
+        }
     </style>
 
     <title>Baker Beach Device Registry</title>
@@ -61,7 +68,7 @@
                 <ul class="nav navbar-nav navbar-custom">
                     <li><a ui-sref="deviceList">Device List</a></li>
                     <li>
-                        <a ui-sref="deviceEdit({deviceId:0})">
+                        <a ui-sref="deviceEdit.info({deviceId:0})">
                             <i class="glyphicon glyphicon-plus"></i> Add Device</a>
                     </li>
                     <li>
@@ -104,5 +111,6 @@
 <!--Controllers-->
 <script src="./app/devices/deviceListCtrl.js"></script>
 <script src="./app/devices/deviceDetailCtrl.js"></script>
+<script src="./app/devices/deviceEditCtrl.js"></script>
 
 </html>

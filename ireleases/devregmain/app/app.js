@@ -5,9 +5,9 @@
     var app = angular.module("deviceManagement",
         ['angularUtils.directives.dirPagination',
             'common.services',
-             'ui.router',
+            'ui.router',
             'deviceResourceMock'
-           
+
         ]);
 
     // configure state for device list    
@@ -34,9 +34,30 @@
                     controller: "DeviceListCtrl as vm"   // associated controller is contructed
                 })
                 .state("deviceEdit", {
+                    abstract: true,  // abstract set so that it cannot be explicitly activated , it must have child state 
                     url: "/devices/edit/:DeviceId",  // param is required which specific device id
                     templateUrl: "app/devices/deviceEditView.html",  // ui elements 
-                    controller: "DeviceEditCtrl as vm"   // as with alias of vm
+                    controller: "DeviceEditCtrl as vm",   // as with alias of vm
+                    resolve: {
+                        deviceResource: "deviceResource",
+
+                        device: function (deviceResource, $stateParams) {
+                            var DeviceId = $stateParams.DeviceId;
+                            return deviceResource.get({ DeviceId: DeviceId }).$promise;
+                        }
+                    }
+                })
+                .state("deviceEdit.info", {
+                    url: "/info",
+                    templateUrl: "app/devices/deviceEditInfoView.html"
+                })
+                .state("deviceEdit.price", {
+                    url: "/price",
+                    templateUrl: "app/devices/deviceEditPriceView.html"
+                })
+                .state("deviceEdit.tags", {
+                    url: "/tags",
+                    templateUrl: "app/devices/deviceEditTagsView.html"
                 })
                 .state("deviceDetail", {
                     url: "/devices/:DeviceId",  // param is required which specific device id

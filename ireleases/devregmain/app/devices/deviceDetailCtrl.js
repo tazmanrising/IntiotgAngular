@@ -15,8 +15,8 @@
         ["$scope",
             "$http",
              //"device",
-             "$stateParams", 
-            "$state",
+             "$stateParams",
+            //"$state",
             //"deviceService",
             //"dataFactory",
             DeviceDetailCtrl]);
@@ -40,16 +40,9 @@
 
     }
 
-    function DeviceDetailCtrl($scope, $http, device, $state) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+    function DeviceDetailCtrl($scope, $http, device) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+     
 
-        console.log($scope.DeviceId);
-        console.log($scope);
-        console.log($state);
-
-        console.log('test');
-
-
-        //Testing($http);
 
         console.log(device.DeviceId);
 

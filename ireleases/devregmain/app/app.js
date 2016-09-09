@@ -63,10 +63,10 @@
                 .state("deviceDetail", {
                     url: "/devices/:DeviceId",  // param is required which specific device id
                     templateUrl: "app/devices/deviceDetailView.html",  // ui elements 
-                    controller: "DeviceDetailCtrl as vm", function($scope, $stateParams , DeviceId) {
-                        $scope.DeviceId = $stateParams.DeviceId;
-                        var DeviceId = $stateParams.DeviceId;
-                    }
+                    controller: "DeviceDetailCtrl as vm"//{
+                        //$scope.DeviceId = $stateParams.DeviceId;
+                        //var DeviceId = $stateParams.DeviceId;
+                    //}
                     
                     
                     //controller: "DeviceDetailCtrl as vm" //,  // as with alias of vm

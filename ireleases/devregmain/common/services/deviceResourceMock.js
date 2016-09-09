@@ -92,8 +92,8 @@
             var length = parameters.length;
             var id = parameters[length - 1];
 
-            console.log('in regex');
-            console.log(id);
+            //console.log('in regex');
+            //console.log(id);
 
             // for (var i = 0; i < devices.length; i++) {
             //     if (devices[i].DeviceId == id) {
@@ -119,11 +119,14 @@
             //         }
             //     };
             // }
-            $httpBackend.whenGET(deviceUrl).respond(deviceEvents);
-            console.log(deviceEvents);
+            
+            //$httpBackend.whenGET(deviceUrl).respond(deviceEvents);
+            //console.log(deviceEvents);
 
-            //return [200, device, {}];
-            return [200, device, deviceEvents, {}];
+            return [200, device, {}];
+            
+            //return [200, device, deviceEvents, {}];
+
         });
 
         $httpBackend.whenPOST(deviceUrl).respond(function (method, url, data) {

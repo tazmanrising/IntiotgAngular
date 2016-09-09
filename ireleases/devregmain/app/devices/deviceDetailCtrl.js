@@ -12,7 +12,14 @@
         // })
 
         .controller("DeviceDetailCtrl",
-        ["$scope", "$http", "device", DeviceDetailCtrl]);
+        ["$scope", 
+            "$http", 
+            "device", 
+            "$state",
+            "deviceService",
+            "dataFactory",
+            DeviceDetailCtrl]);
+
     // .controller("DeviceDetailCtrl",
     //             ["device",
     //              DeviceDetailCtrl]);
@@ -32,17 +39,43 @@
 
     }
 
-    function DeviceDetailCtrl($scope, $http, device, deviceEvents) {   // pass in parameter into the function , now we need
+    function DeviceDetailCtrl($scope, $http, device, $state, deviceService, dataFactory) {   // pass in parameter into the function , now we need
 
         //Testing($http);
 
-        console.log(deviceEvents);
+        //console.log(deviceEvents);
 
         var vm = this;
 
         vm.device = device;
 
 
+         vm.calculatePrice = function () {
+
+             var other = 0;
+             console.log(other);
+             var t = 0;
+
+             t = deviceService.calculatePriceFromMarkupAmount(1,4);
+             console.log(t);
+
+             var xx = 0;
+             xx = deviceService.chttpgetOutside(1,4);
+             console.log(xx);
+
+            // var price = 0;
+
+            // if (vm.priceOption == 'amount') {
+            //     price = productService.calculatePriceFromMarkupAmount(
+            //         vm.product.cost, vm.markupAmount);
+            // }
+
+            // if (vm.priceOption == 'percent') {
+            //     price = productService.calculatePriceFromMarkupPercent(
+            //         vm.product.cost, vm.markupPercent);
+            // }
+            // vm.product.price = price;
+        };
 
         // temp spot 
 

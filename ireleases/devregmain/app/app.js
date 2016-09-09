@@ -5,8 +5,9 @@
     var app = angular.module("deviceManagement",
         ['angularUtils.directives.dirPagination',
             'common.services',
-            'ui.router',
-            'deviceResourceMock'
+            'ui.router'//,
+            //'deviceResourceRest'
+            //'deviceResourceMock'
 
         ]);
 
@@ -62,16 +63,26 @@
                 .state("deviceDetail", {
                     url: "/devices/:DeviceId",  // param is required which specific device id
                     templateUrl: "app/devices/deviceDetailView.html",  // ui elements 
-                    controller: "DeviceDetailCtrl as vm",  // as with alias of vm
-                    resolve: {  // resolve is a property of the stateconfiguration object
-                        deviceResource: "deviceResource",    // key value pair     Key is  deviceResource   value is string name  of "deviceResource"
-
-                        device: function (deviceResource, $stateParams) {      // $stateParams service is needed  because url: has this :DeviceId 
-                            var DeviceId = $stateParams.DeviceId;
-                            return deviceResource.get({ DeviceId: DeviceId }).$promise;   // function returns the promise 
-                        }
+                    controller: "DeviceDetailCtrl as vm", function($scope, $stateParams , DeviceId) {
+                        $scope.DeviceId = $stateParams.DeviceId;
+                        var DeviceId = $stateParams.DeviceId;
                     }
+                    
+                    
+                    //controller: "DeviceDetailCtrl as vm" //,  // as with alias of vm
+                    // resolve: {  // resolve is a property of the stateconfiguration object
+                    //     deviceResource: "deviceResource",    // key value pair     Key is  deviceResource   value is string name  of "deviceResource"
+
+                    //     device: function (deviceResource, $stateParams) {      // $stateParams service is needed  because url: has this :DeviceId 
+                    //         var DeviceId = $stateParams.DeviceId;
+                    //         return deviceResource.get({ DeviceId: DeviceId }).$promise;   // function returns the promise 
+                    //     }
+                    // }
+                    
                 })
+
+                //console.log('end .state  ui router');
+
         }]
 
     );

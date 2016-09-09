@@ -3,10 +3,11 @@
     angular
         .module("deviceManagement")
         .controller("DeviceListCtrl",
-        ["$scope", "$http", "deviceResource", DeviceListCtrl]);    // changed to an array    //ProductListCtrl);
+        ["$scope", "$http", DeviceListCtrl]); 
+        //["$scope", "$http", "deviceResource", DeviceListCtrl]);    // changed to an array    //ProductListCtrl);
 
 
-    function DeviceListCtrl($scope, $http, deviceResource) {
+    function DeviceListCtrl($scope, $http){ //deviceResource) {
         var vm = this;
 
         //vm.devices = [];
@@ -14,10 +15,14 @@
         //deviceList();
 
         //controller will call query method
-        deviceResource.query(function (data) {   // get request sent and get json 
-            $scope.devices = data;
-            vm.devices = data;
-        });
+        // deviceResource.query(function (data) {   // get request sent and get json 
+        //     $scope.devices = data;
+        //     vm.devices = data;
+        // });
+
+
+        deviceList();
+
 
 
         $scope.sort = function (keyname) {

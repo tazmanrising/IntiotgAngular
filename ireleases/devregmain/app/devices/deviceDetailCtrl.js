@@ -2,7 +2,7 @@
     "use strict";
 
 
-    
+
     angular
         .module("deviceManagement")
         //.controller("TestController",
@@ -12,12 +12,13 @@
         // })
 
         .controller("DeviceDetailCtrl",
-        ["$scope", 
-            "$http", 
-            "device", 
+        ["$scope",
+            "$http",
+             //"device",
+             "$stateParams", 
             "$state",
-            "deviceService",
-            "dataFactory",
+            //"deviceService",
+            //"dataFactory",
             DeviceDetailCtrl]);
 
     // .controller("DeviceDetailCtrl",
@@ -39,29 +40,36 @@
 
     }
 
-    function DeviceDetailCtrl($scope, $http, device, $state, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+    function DeviceDetailCtrl($scope, $http, device, $state) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+
+        console.log($scope.DeviceId);
+        console.log($scope);
+        console.log($state);
+
+        console.log('test');
+
 
         //Testing($http);
 
-        //console.log(deviceEvents);
+        console.log(device.DeviceId);
 
         var vm = this;
 
         vm.device = device;
 
 
-         vm.calculatePrice = function () {
+        vm.calculatePrice = function () {
 
-             var other = 0;
-             console.log(other);
-             var t = 0;
+            var other = 0;
+            console.log(other);
+            var t = 0;
 
-             t = deviceService.calculatePriceFromMarkupAmount(1,4);
-             console.log(t);
+            t = deviceService.calculatePriceFromMarkupAmount(1, 4);
+            console.log(t);
 
-             var xx = 0;
-             xx = deviceService.chttpgetOutside(1,4);
-             console.log(xx);
+            var xx = 0;
+            xx = deviceService.chttpgetOutside(1, 4);
+            console.log(xx);
 
             // var price = 0;
 

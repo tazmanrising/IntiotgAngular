@@ -1,21 +1,54 @@
 (function () {
     "use strict";
 
+
+    
     angular
         .module("deviceManagement")
+        //.controller("TestController",
+        // ["$scope", "$http", Testing])
+        // .controller("TextController",function($scope){
+        //     $scope.text = { message  : "wel"}
+        // })
+
         .controller("DeviceDetailCtrl",
-        ["$scope","device", DeviceDetailCtrl]);
+        ["$scope", "$http", "device", DeviceDetailCtrl]);
     // .controller("DeviceDetailCtrl",
     //             ["device",
     //              DeviceDetailCtrl]);
 
-    function DeviceDetailCtrl($scope, device) {   // pass in parameter into the function , now we need
+    function Testing($http) {
+        console.log("in Testing");
+        var deviceEvents = [];
 
-        //console.log("test");
+        $http.get('../api/deviceEvents.json')
+            .then(function (result) {
+                deviceEvents = result.data.DeviceEvents;
+                console.log(deviceEvents);
+            },
+            function (error) {
+                console.log(error);
+            });
+
+    }
+
+    function DeviceDetailCtrl($scope, $http, device, deviceEvents) {   // pass in parameter into the function , now we need
+
+        //Testing($http);
+
+        console.log(deviceEvents);
 
         var vm = this;
 
         vm.device = device;
+
+
+
+        // temp spot 
+
+
+        //////////////////
+
 
 
         // http://localhost:42822/api/device/00022B510000000A0001

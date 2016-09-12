@@ -58,4 +58,20 @@
                             Calculate
                         </button>
     </div>
+
+    <div class="panel-body">
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr ng-repeat="events in vm.deviceEvents">
+                        <td>{{events.Name}}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

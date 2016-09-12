@@ -59,12 +59,14 @@
 
         $http.get("api/devices.json").then(function (response) {
             for (var x = 0; x < response.data.Devices.length; x++) {
-                if(response.data.Devices[x].DeviceId === device.DeviceId)
-                {
+                if (response.data.Devices[x].DeviceId === device.DeviceId) {
                     console.log('in');
+                    vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
+                    vm.device.Aid = response.data.Devices[x].Aid;
+                    //vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
                 }
-                console.log(x);
-                console.log(response.data.Devices[x].DeviceId);
+                //console.log(x);
+                //console.log(response.data.Devices[x].DeviceId);
                 //categories.push(response.data[x]);
             }
         });

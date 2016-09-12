@@ -14,8 +14,8 @@
         .controller("DeviceDetailCtrl",
         ["$scope",
             "$http",
-             //"device",
-             "$stateParams",
+            //"device",
+            "$stateParams",
             //"$state",
             //"deviceService",
             //"dataFactory",
@@ -41,14 +41,46 @@
     }
 
     function DeviceDetailCtrl($scope, $http, device) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
-     
 
 
-        console.log(device.DeviceId);
+
+        console.log("device.DeviceId = " + device.DeviceId);
 
         var vm = this;
 
+        console.log(this);
+
         vm.device = device;
+
+        $scope.categories = [];
+
+        //console.log("$scope.categories = " + $scope.categories);
+        //console.log("before - categories = "  + categories);
+
+        $http.get("api/devices.json").then(function (response) {
+            for (var x = 0; x < response.data.Devices.length; x++) {
+                if(response.data.Devices[x].DeviceId === device.DeviceId)
+                {
+                    console.log('in');
+                }
+                console.log(x);
+                console.log(response.data.Devices[x].DeviceId);
+                //categories.push(response.data[x]);
+            }
+        });
+
+        //console.log("$scope.categories = " + $scope.categories);
+        //console.log("after - categories = "  + categories);
+
+        // $http.get('api/devices.json')
+        //     .then(function (result) {
+        //         vm.device = result.data.Devices;
+
+        //     },
+        //     function (error) {
+        //         console.log(error);
+        //     });
+
 
 
         vm.calculatePrice = function () {

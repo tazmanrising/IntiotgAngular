@@ -60,17 +60,25 @@
     </div>
 
     <div class="panel-body">
-
+        <div class="container">
+            Event History
+        </div>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Context</th>
                 </tr>
             </thead>
             <tbody>
-                    <tr ng-repeat="events in vm.deviceEvents">
-                        <td>{{events.Name}}</td>
-                    </tr>
+                <tr ng-repeat="events in vm.deviceEvents">
+                    <td>{{events.Id}}</td>
+                    <td>{{events.Timestamp}}</td>
+                    <td>{{events.Name}}</td>
+                    <td>{{events.Context}}</td>
+                </tr>
             </tbody>
         </table>
     </div>

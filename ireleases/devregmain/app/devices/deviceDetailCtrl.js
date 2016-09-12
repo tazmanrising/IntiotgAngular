@@ -57,6 +57,10 @@
         //console.log("$scope.categories = " + $scope.categories);
         //console.log("before - categories = "  + categories);
 
+        // http://stackoverflow.com/questions/26968959/angular-js-importing-json-data-with-http-get-works-in-controller-does-not
+
+        // switch this to service like in link
+
         $http.get("api/devices.json").then(function (response) {
             for (var x = 0; x < response.data.Devices.length; x++) {
                 if (response.data.Devices[x].DeviceId === device.DeviceId) {
@@ -74,15 +78,24 @@
         //console.log("$scope.categories = " + $scope.categories);
         //console.log("after - categories = "  + categories);
 
-        // $http.get('api/devices.json')
-        //     .then(function (result) {
-        //         vm.device = result.data.Devices;
+        vm.deviceEvents = [];
 
-        //     },
-        //     function (error) {
-        //         console.log(error);
-        //     });
+        var tom = [];
 
+        $http.get('api/deviceEvents.json')
+            .then(function (result) {
+                vm.deviceEvents = result.data.DeviceEvents;
+                console.log(vm.deviceEvents);
+                console.log(vm.deviceEvents[0].Name);
+                //tom.events = result.data.DeviceEvents;
+                //console.log(result);
+
+            },
+            function (error) {
+                console.log(error);
+            });
+
+        //console.log(tom.events);
 
 
         vm.calculatePrice = function () {

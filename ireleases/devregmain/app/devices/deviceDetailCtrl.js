@@ -57,10 +57,12 @@
                     vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
                     //vm.device.Aid = response.data.Devices[x].Aid;
                     var baseFinal = base64toHEX(response.data.Devices[x].Aid);
+                    var extM =  base64toHEX(response.data.Devices[x].Sha);
                     // base64toHEX("oAAABTUAAg==")
                     //console.log(baseFinal);
 
                     vm.device.Aid = baseFinal;
+                    vm.device.Sha = extM;
                     vm.device.DeviceStatus = response.data.Devices[x].DeviceStatus;
 
                     //vm.device.DKiIndex = response.data.Devices[x].DKiIndex;

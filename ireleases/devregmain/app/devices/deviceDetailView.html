@@ -7,39 +7,50 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-3">Device ID:</div>
-                    <div class="col-md-5">{{vm.device.DeviceId}}</div>
+                    <div class="col-md-2">Device ID:</div>
+                    <div class="col-md-6">{{vm.device.DeviceId}}</div>
+                    <div class="col-md-4"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Device Status:</div>
-                    <div ng-style="set_color(vm.device)" class="col-md-5">{{vm.device.DeviceStatus | deviceStatus }}</div>
+                    <div class="col-md-2">Device Status:</div>
+                    <div ng-style="set_color(vm.device)" class="col-md-6">{{vm.device.DeviceStatus | deviceStatus }}</div>
+                <div class="col-md-4"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">DKi Value:</div>
-                    <div class="col-md-5">{{vm.device.DKiIndex }}</div>
+                    <div class="col-md-2">DKi Value:</div>
+                    <div class="col-md-6">{{vm.device.DKiIndex }}</div>
+                     <div class="col-md-4"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">AID:</div>
-                    <div class="col-md-5">{{vm.device.Aid }}</div>
+                    <div class="col-md-2">AID:</div>
+                    <div class="col-md-6">{{vm.device.Aid }}</div>
                     <!--<div class="col-md-5">{{vm.device.releaseDate|date }}</div>-->
+                     <div class="col-md-4"></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Extended Measurement:</div>
-                    <div class="col-md-5">{{vm.device.Aid }}</div>
+                    <div class="col-md-2">Extended Measurement:</div>
+                    <div class="col-md-6">{{vm.device.Sha }}
+                    </div>
+                     <div class="col-md-4">
+                        <button type="button" class="btn btn-default" title="Check the Integrity of.." ng-click="vm.calculatePrice()">
+                            Check Integrity
+                        </button>
+                    </div>
                     <!--<div class="col-md-5">{{vm.device.cost|currency }}</div>-->
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Staged Manifest:</div>
-                    <div class="col-md-5">{{ vm.device.price|currency }}</div>
+                    <div class="col-md-2">Staged Manifest:</div>
+                    <div class="col-md-6">{{ vm.device.price|currency }}</div>
+                     <div class="col-md-4"></div>
                 </div>
                 <!--<div class="row">
                     <div class="col-md-2">Margin:</div>
                     <div class="col-md-6">{{ vm.marginPercent | number:0}}%</div>
                 </div>-->
-                <div class="row">
+                <!--<div class="row">
                     <div class="col-md-3">Tags:</div>
                     <div class="col-md-5">{{vm.device.tagList}}</div>
-                </div>
+                </div>-->
             </div>
 
             <div class="col-md-6">
@@ -51,17 +62,15 @@
         <a class="btn btn-default" ui-sref="deviceList" style="width:80px">
             <I class="glyphicon glyphicon-chevron-left"></i> Back
         </a>
-        <a class="btn btn-primary" ui-sref="deviceEdit.info({DeviceId: vm.device.DeviceId})" style="width:80px;margin-left:10px">
+        <!--<a class="btn btn-primary" ui-sref="deviceEdit.info({DeviceId: vm.device.DeviceId})" style="width:80px;margin-left:10px">
             Edit
-        </a>
-        <button type="button" class="btn btn-default" title="Calculate the price based on the code plus % markup" ng-click="vm.calculatePrice()">
-                            Calculate
-                        </button>
+        </a>-->
+
     </div>
 
     <div class="panel-body">
         <div class="container">
-            Event History
+           <h3>Event History</h3>
         </div>
         <table class="table table-striped table-hover">
             <thead>

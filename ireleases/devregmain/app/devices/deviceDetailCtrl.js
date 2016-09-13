@@ -55,9 +55,14 @@
                 if (response.data.Devices[x].DeviceId === device.DeviceId) {
                     //console.log('in');
                     vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
-                    vm.device.Aid = response.data.Devices[x].Aid;
+                    //vm.device.Aid = response.data.Devices[x].Aid;
+                    var baseFinal = base64toHEX(response.data.Devices[x].Aid);
+                    // base64toHEX("oAAABTUAAg==")
+                    //console.log(baseFinal);
+
+                    vm.device.Aid = baseFinal;
                     vm.device.DeviceStatus = response.data.Devices[x].DeviceStatus;
-                    
+
                     //vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
 
                     angular.forEach(response.data.Devices[x], function (value, index) {
@@ -65,16 +70,25 @@
                         //console.log(response.data.Devices[x].DeviceStatus);
                         //console.log(value[x]);
                     });
-                   
+
 
 
                 }
-               
+
                 //console.log(response.data.Devices[x].DeviceId);
                 //categories.push(response.data[x]);
             }
         });
 
+        function base64toHEX(base64) {
+            var raw = atob(base64);
+            var HEX = '';
+            for (var i = 0; i < raw.length; i++) {
+                var _hex = raw.charCodeAt(i).toString(16)
+                HEX += (_hex.length == 2 ? _hex : '0' + _hex);
+            }
+            return HEX.toUpperCase();
+        }
 
         //console.log("$scope.categories = " + $scope.categories);
         //console.log("after - categories = "  + categories);
@@ -94,7 +108,7 @@
 
                 angular.forEach(result.data.DeviceEvents, function (value, index) {
                     $scope.isoDate.push(value.Timestamp);
-                    
+
                 });
 
             },
@@ -194,6 +208,36 @@
 
     }
 } ());
+
+angular
+    .module("deviceManagement")
+    .filter('decodeBaseToHex', function () {
+        return function (base64) {
+
+            // return window.atob(base64)
+            //     .split('')
+            //     .map(function (char) {
+            //         return ('0' + char.charCodeAt(0).toString(16)).slice(-2);
+            //     })
+            //     .join('')
+            //     .toUpperCase(); // Per your example output
+
+            var raw = atob(base64);
+
+            var HEX = '';
+
+            for (i = 0; i < raw.length; i++) {
+
+                var _hex = raw.charCodeAt(i).toString(16)
+
+                HEX += (_hex.length == 2 ? _hex : '0' + _hex);
+
+            }
+            return HEX.toUpperCase();
+
+        }
+    });
+
 
 angular
     .module("deviceManagement")

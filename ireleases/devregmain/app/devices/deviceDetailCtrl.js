@@ -1,29 +1,16 @@
 (function () {
     "use strict";
 
-
-
     angular
         .module("deviceManagement")
-        //.controller("TestController",
-        // ["$scope", "$http", Testing])
-        // .controller("TextController",function($scope){
-        //     $scope.text = { message  : "wel"}
-        // })
-
         .controller("DeviceDetailCtrl",
         ["$scope",
             "$http",
-            //"device",
             "$stateParams",
-            //"$state",
-            //"deviceService",
+            "deviceService",
             //"dataFactory",
             DeviceDetailCtrl]);
 
-    // .controller("DeviceDetailCtrl",
-    //             ["device",
-    //              DeviceDetailCtrl]);
 
     function Testing($http) {
         console.log("in Testing");
@@ -40,19 +27,15 @@
 
     }
 
-    function DeviceDetailCtrl($scope, $http, device) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+    function DeviceDetailCtrl($scope, $http, device, deviceService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
 
-
-
-        console.log("device.DeviceId = " + device.DeviceId);
-
+        //console.log("device.DeviceId = " + device.DeviceId);
         var vm = this;
-
-        console.log(this);
+        //console.log(this);
 
         vm.device = device;
 
-        $scope.categories = [];
+        //$scope.categories = [];
 
         //console.log("$scope.categories = " + $scope.categories);
         //console.log("before - categories = "  + categories);
@@ -61,34 +44,58 @@
 
         // switch this to service like in link
 
+        var j = 0;
+
         $http.get("api/devices.json").then(function (response) {
+
+            $scope.statuses = [];
+
+
             for (var x = 0; x < response.data.Devices.length; x++) {
                 if (response.data.Devices[x].DeviceId === device.DeviceId) {
-                    console.log('in');
+                    //console.log('in');
                     vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
                     vm.device.Aid = response.data.Devices[x].Aid;
+                    vm.device.DeviceStatus = response.data.Devices[x].DeviceStatus;
+                    
                     //vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
+
+                    angular.forEach(response.data.Devices[x], function (value, index) {
+                        //$scope.statuses.push(value[x].DeviceStatus);
+                        //console.log(response.data.Devices[x].DeviceStatus);
+                        //console.log(value[x]);
+                    });
+                   
+
+
                 }
-                //console.log(x);
+               
                 //console.log(response.data.Devices[x].DeviceId);
                 //categories.push(response.data[x]);
             }
         });
+
 
         //console.log("$scope.categories = " + $scope.categories);
         //console.log("after - categories = "  + categories);
 
         vm.deviceEvents = [];
 
-        var tom = [];
+
 
         $http.get('api/deviceEvents.json')
             .then(function (result) {
                 vm.deviceEvents = result.data.DeviceEvents;
-                console.log(vm.deviceEvents);
-                console.log(vm.deviceEvents[0].Name);
+                //console.log(vm.deviceEvents);
+                //console.log(vm.deviceEvents[0].Name);
                 //tom.events = result.data.DeviceEvents;
                 //console.log(result);
+                $scope.isoDate = [];
+
+                angular.forEach(result.data.DeviceEvents, function (value, index) {
+                    $scope.isoDate.push(value.Timestamp);
+                    
+                });
 
             },
             function (error) {
@@ -98,6 +105,7 @@
         //console.log(tom.events);
 
 
+        // ####  Calculate button click event  #####################
         vm.calculatePrice = function () {
 
             var other = 0;
@@ -107,9 +115,9 @@
             t = deviceService.calculatePriceFromMarkupAmount(1, 4);
             console.log(t);
 
-            var xx = 0;
-            xx = deviceService.chttpgetOutside(1, 4);
-            console.log(xx);
+            //var xx = 0;
+            //xx = deviceService.chttpgetOutside(1, 4);
+            //console.log(xx);
 
             // var price = 0;
 
@@ -186,3 +194,32 @@
 
     }
 } ());
+
+angular
+    .module("deviceManagement")
+    .filter('isoConvert', function () {
+
+        return function (str) {
+            //var str2 = new Date('2016-08-26T16:02:15.747').toLocaleString('en-US');
+            //var s = new Date(str).toLocaleString('en-US');
+            var s = new Date(str).toLocaleString('en-US').replace(/,/, '');
+            return s;
+        }
+
+
+    });
+angular
+    .module("deviceManagement")
+    .filter('deviceStatus', function () {
+        var deviceStatusLookup = {
+            0: "None", // Gray
+            1: "New Device",  // Blue
+            2: "Activated",  // Green
+            3: "Unactivated" // Orange
+        };
+
+        return function (statusId) {
+            var output = deviceStatusLookup[statusId];
+            return output;
+        }
+    });

@@ -4,7 +4,7 @@
     angular
         .module("common.services")
         .factory("deviceService",
-        ["$http",deviceService]);
+        ["$http", deviceService]);
 
     function deviceService($http) {
         function calculateMarginPercent(price, cost) {
@@ -40,17 +40,24 @@
         }
 
 
-        function chttpGetCost(cost, amount) {
-               $http.get('../api/deviceEvents.json')
-                .then(function (result) {
-                    deviceEvents = result.data.DeviceEvents;
-                    console.log(deviceEvents);
-                },
-                function (error) {
-                    console.log(error);
-                });
-            var x = 4;
-            return x;
+        // function chttpGetCost(cost, amount) {
+        //        $http.get('../api/deviceEvents.json')
+        //         .then(function (result) {
+        //             deviceEvents = result.data.DeviceEvents;
+        //             console.log(deviceEvents);
+        //         },
+        //         function (error) {
+        //             console.log(error);
+        //         });
+        //     var x = 4;
+        //     return x;
+        // }
+
+
+        function convertISODate(isoDate) {
+            //var str = new Date('2016-08-26T16:02:15.747').toLocaleString('en-US');
+            var formatDate = new Date(isoDate).toLocaleString('en-US');
+            return formatDate;
         }
 
         return {
@@ -58,7 +65,8 @@
             calculateMarginAmount: calculateMarginAmount,
             calculatePriceFromMarkupPercent: calculatePriceFromPercent,
             calculatePriceFromMarkupAmount: calculatePriceFromAmount,
-            chttpgetOutside: chttpGetCost
+            //chttpgetOutside: chttpGetCost,
+            isoOutside: convertISODate
         }
 
     }

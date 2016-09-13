@@ -75,7 +75,7 @@
             <tbody>
                 <tr ng-repeat="events in vm.deviceEvents">
                     <td>{{events.Id}}</td>
-                    <td>{{events.Timestamp}}</td>
+                    <td>{{events.Timestamp | isoConvert}}</td>
                     <td>{{events.Name}}</td>
                     <td>{{events.Context}}</td>
                 </tr>

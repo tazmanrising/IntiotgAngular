@@ -57,7 +57,7 @@
                     vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
                     //vm.device.Aid = response.data.Devices[x].Aid;
                     var baseFinal = base64toHEX(response.data.Devices[x].Aid);
-                    var extM =  base64toHEX(response.data.Devices[x].Sha);
+                    var extM = base64toHEX(response.data.Devices[x].Sha);
                     // base64toHEX("oAAABTUAAg==")
                     //console.log(baseFinal);
 
@@ -81,6 +81,22 @@
                 //categories.push(response.data[x]);
             }
         });
+
+        vm.archivedManifests = [];
+
+        // http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022B9A000000010001?ManifestStatus=Archived&StartIdx=0&RecordCount=5
+        $http.get('api/archivedManifests.json')
+            .then(function (result) {
+                vm.archivedManifests = result.data.ManifestMeasurements;
+                console.log(result);
+                
+            },
+            function (error) {
+                console.log(error);
+            });
+
+
+
 
         function base64toHEX(base64) {
             var raw = atob(base64);

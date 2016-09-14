@@ -15,6 +15,9 @@
 
         vm.device = device;
 
+        //http://localhost:8000/#/devices/edit//info
+
+        
         console.log(device);
 
         if (vm.device && vm.device.DeviceId) {

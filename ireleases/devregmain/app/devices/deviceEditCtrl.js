@@ -4,12 +4,12 @@
     angular
         .module("deviceManagement")
         .controller("DeviceEditCtrl",
-        ["$scope","device",
+        ["$scope","$stateParams",//"device",
            // "$state",
             DeviceEditCtrl]);
 
 
-    function DeviceEditCtrl($scope, device) {
+    function DeviceEditCtrl($scope, device) {  //, device) {
         
         var vm = this;
 

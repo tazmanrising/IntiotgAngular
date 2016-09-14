@@ -39,14 +39,14 @@
                     url: "/devices/edit/:DeviceId",  // param is required which specific device id
                     templateUrl: "app/devices/deviceEditView.html",  // ui elements 
                     controller: "DeviceEditCtrl as vm",   // as with alias of vm
-                    resolve: {
-                        deviceResource: "deviceResource",
+                    // resolve: {
+                    //     deviceResource: "deviceResource",
 
-                        device: function (deviceResource, $stateParams) {
-                            var DeviceId = $stateParams.DeviceId;
-                            return deviceResource.get({ DeviceId: DeviceId }).$promise;
-                        }
-                    }
+                    //     device: function (deviceResource, $stateParams) {
+                    //         var DeviceId = $stateParams.DeviceId;
+                    //         return deviceResource.get({ DeviceId: DeviceId }).$promise;
+                    //     }
+                    // }
                 })
                 .state("deviceEdit.info", {
                     url: "/info",

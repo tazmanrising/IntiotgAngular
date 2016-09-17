@@ -1,15 +1,70 @@
 (function () {
     "use strict";
 
+
+    var app2 = angular.module('app2', ['angularModalService']);
+
+    //angular
+    //    .module("app2", ['angularModalService'])
+
+
     angular
         .module("deviceManagement")
+        .directive('modal',[dirTest])
         .controller("DeviceDetailCtrl",
+
         ["$scope",
             "$http",
             "$stateParams",
             "deviceService",
             //"dataFactory",
+            //ModalService,
             DeviceDetailCtrl]);
+
+    function dirTest() {
+        console.log('in dirTest');
+
+        return {
+            template: '<div class="modal fade">' +
+            '<div class="modal-dialog">' +
+            '<div class="modal-content">' +
+            '<div class="modal-header">' +
+            '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>' +
+            '<h4 class="modal-title">{{ title }}</h4>' +
+            '</div>' +
+            '<div class="modal-body" ng-transclude></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>',
+            restrict: 'E',
+            transclude: true,
+            replace: true,
+            scope: true,
+            link: function postLink(scope, element, attrs) {
+                scope.title = attrs.title;
+
+                scope.$watch(attrs.visible, function (value) {
+                    if (value == true)
+                        $(element).modal('show');
+                    else
+                        $(element).modal('hide');
+                });
+
+                $(element).on('shown.bs.modal', function () {
+                    scope.$apply(function () {
+                        scope.$parent[attrs.visible] = true;
+                    });
+                });
+
+                $(element).on('hidden.bs.modal', function () {
+                    scope.$apply(function () {
+                        scope.$parent[attrs.visible] = false;
+                    });
+                });
+            }
+        };
+
+    }
 
 
     function Testing($http) {
@@ -27,13 +82,20 @@
 
     }
 
-    function DeviceDetailCtrl($scope, $http, device, deviceService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+    function DeviceDetailCtrl($scope, $http, device, deviceService, ModalService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
 
         //console.log("device.DeviceId = " + device.DeviceId);
         var vm = this;
         //console.log(this);
 
         vm.device = device;
+
+
+
+        $scope.showModal = false;
+        $scope.toggleModal = function () {
+            $scope.showModal = !$scope.showModal;
+        };
 
         //$scope.categories = [];
 
@@ -89,7 +151,7 @@
             .then(function (result) {
                 vm.archivedManifests = result.data.ManifestMeasurements;
                 console.log(result);
-                
+
             },
             function (error) {
                 console.log(error);
@@ -135,6 +197,21 @@
             });
 
         //console.log(tom.events);
+
+        $scope.show = function () {
+            console.log('yes');
+
+            ModalService.showModal({
+                templateUrl: 'modal.html',
+                controller: "ModalController"
+            }).then(function (modal) {
+                modal.element.modal();
+                modal.close.then(function (result) {
+                    $scope.message = "You said " + result;
+                });
+            });
+
+        };
 
 
         // ####  Calculate button click event  #####################
@@ -285,3 +362,47 @@ angular
             return output;
         }
     });
+
+
+// angular.directive('modal', function () {
+//     return {
+//         template: '<div class="modal fade">' +
+//         '<div class="modal-dialog">' +
+//         '<div class="modal-content">' +
+//         '<div class="modal-header">' +
+//         '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>' +
+//         '<h4 class="modal-title">{{ title }}</h4>' +
+//         '</div>' +
+//         '<div class="modal-body" ng-transclude></div>' +
+//         '</div>' +
+//         '</div>' +
+//         '</div>',
+//         controller: 'DeviceDetailCtrl',
+//         restrict: 'E',
+//         transclude: true,
+//         replace: true,
+//         scope: true,
+//         link: function postLink(scope, element, attrs) {
+//             scope.title = attrs.title;
+
+//             scope.$watch(attrs.visible, function (value) {
+//                 if (value == true)
+//                     $(element).modal('show');
+//                 else
+//                     $(element).modal('hide');
+//             });
+
+//             $(element).on('shown.bs.modal', function () {
+//                 scope.$apply(function () {
+//                     scope.$parent[attrs.visible] = true;
+//                 });
+//             });
+
+//             $(element).on('hidden.bs.modal', function () {
+//                 scope.$apply(function () {
+//                     scope.$parent[attrs.visible] = false;
+//                 });
+//             });
+//         }
+//     };
+// });

@@ -11,10 +11,10 @@
                             <td><strong>DKi Value:</strong> {{vm.device.DKiIndex}}</td>
                             <td><strong>AID:</strong> {{vm.device.Aid}}</td>
                         </tr>
-                       
+
                         <tr>
                             <td colspan="3"><strong>Extended Measurement: </strong>{{vm.device.Sha}}</td>
-                           
+
                         </tr>
                         <tr>
                             <td colspan="3">
@@ -23,7 +23,7 @@
                                     <I class="glyphicon glyphicon-chevron-left"></i> Back
                                 </a>
                             </td>
-                         
+
                         </tr>
                     </tbody>
                 </table>
@@ -168,24 +168,24 @@
 </div>
 
 <button ng-click="toggleModal()" class="btn btn-default">Open modal</button>
-    
-  <modal title="Login form" visible="showModal">
-    <form role="form">
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" />
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password" />
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-  </modal>
 
-  
- <!-- The actual modal template, just a bit o bootstrap -->
-     <script type="text/ng-template" id="modal.html">
+<modal title="Login form" visible="showModal">
+    <form role="form">
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" />
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</modal>
+
+
+<!-- The actual modal template, just a bit o bootstrap -->
+<script type="text/ng-template" id="modal.html">
          <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">

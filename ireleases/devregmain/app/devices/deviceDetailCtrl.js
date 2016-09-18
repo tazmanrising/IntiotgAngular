@@ -10,7 +10,7 @@
 
     angular
         .module("deviceManagement")
-        .directive('modal',[dirTest])
+        .directive('modal', [dirTest])
         .controller("DeviceDetailCtrl",
 
         ["$scope",

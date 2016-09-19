@@ -29,7 +29,7 @@
                 })
                 //manifest
                 .state("manifestList", {
-                    url: "/devices/manifest",
+                    url: "/devices/manifest/:DeviceId",
                     templateUrl: "app/devices/manifestList.html",
                     controller: "ManifestCtrl as vm"
                 })

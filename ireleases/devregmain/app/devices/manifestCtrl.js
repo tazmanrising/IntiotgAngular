@@ -3,13 +3,18 @@
 
     angular
         .module("deviceManagement")
-        .controller("manifestManagement",
-        ["$scope", "$http", ManifestCtrl]);
+        .controller("ManifestCtrl",
+        ["$scope", 
+         "$http", 
+         "$stateParams",
+          ManifestCtrl]);
 
 
-    function ManifestCtrl($scope, $http) {
+    function ManifestCtrl($scope, $http, manifest) {
         var vm = this;
-        vm.manifest = [];
+        vm.manifest = manifest;
+
+        //http://localhost:8000/#/devices/manifest/4234234234
 
         $http.get("http://localhost:8000/api/manifest.xml",
             {

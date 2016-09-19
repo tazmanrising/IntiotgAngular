@@ -27,6 +27,12 @@
                     url: "/",
                     templateUrl: "app/welcomeView.html"
                 })
+                //manifest
+                .state("manifestList", {
+                    url: "/devices/manifest",
+                    templateUrl: "app/devices/manifestList.html",
+                    controller: "ManifestCtrl as vm"
+                })
 
                 //devices
                 .state("deviceList", {    // set url fragment 

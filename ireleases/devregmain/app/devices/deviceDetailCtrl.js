@@ -83,14 +83,9 @@
     }
 
     function DeviceDetailCtrl($window, $scope, $http, device, deviceService, ModalService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
-
-        //console.log("device.DeviceId = " + device.DeviceId);
+     
         var vm = this;
-        //console.log(this);
-
         vm.device = device;
-
-
 
         $scope.showModal = false;
         $scope.toggleModal = function () {
@@ -99,13 +94,9 @@
 
 
         $scope.loadXML = function() {
-            //console.log('load xml');
             //$window.location.href = "http://www.google.com";
             //$window.open('https://www.google.com', '_blank');
-
             $window.open('http://localhost:8000/api/manifest.xml', '_blank');
-
-            //http://localhost:8000/api/manifest.xml
 
         };
 

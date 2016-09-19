@@ -13,7 +13,7 @@
         .directive('modal', [dirTest])
         .controller("DeviceDetailCtrl",
 
-        ["$scope",
+        ["$window","$scope",
             "$http",
             "$stateParams",
             "deviceService",
@@ -82,7 +82,7 @@
 
     }
 
-    function DeviceDetailCtrl($scope, $http, device, deviceService, ModalService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+    function DeviceDetailCtrl($window, $scope, $http, device, deviceService, ModalService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
 
         //console.log("device.DeviceId = " + device.DeviceId);
         var vm = this;
@@ -96,6 +96,20 @@
         $scope.toggleModal = function () {
             $scope.showModal = !$scope.showModal;
         };
+
+
+        $scope.loadXML = function() {
+            //console.log('load xml');
+            //$window.location.href = "http://www.google.com";
+            //$window.open('https://www.google.com', '_blank');
+
+            $window.open('http://localhost:8000/api/manifest.xml', '_blank');
+
+            //http://localhost:8000/api/manifest.xml
+
+        };
+
+
 
         //$scope.categories = [];
 

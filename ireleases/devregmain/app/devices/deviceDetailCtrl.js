@@ -1,11 +1,23 @@
 (function () {
     "use strict";
 
+   
 
-    var app2 = angular.module('app2', ['angularModalService']);
+//these are the same 
+//angular.module('app2', ['angularModalService']);
+// same thing 
+//var application2 = angular.module('app2', ['angularModalService']);
 
-    //angular
-    //    .module("app2", ['angularModalService'])
+//angular.module('app2').config(...)
+//application2.config(...)
+
+
+// var application2 = angular.module('app2', ['angularModalService']);
+
+// angular.module('app2').controller('SomeController', ['ModalService', function(ModalService) {
+  
+//   console.log('in app2');
+// }]);
 
 
     angular

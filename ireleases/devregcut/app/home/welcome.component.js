@@ -9,22 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-var device_service_1 = require('./devices/device.service');
-var AppComponent = (function () {
-    function AppComponent() {
+var WelcomeComponent = (function () {
+    function WelcomeComponent() {
+        this.pageTitle = 'Welcome';
     }
-    AppComponent = __decorate([
+    WelcomeComponent = __decorate([
         core_1.Component({
-            selector: 'pm-app',
-            template: "\n    <h1>Device Registry Manager</h1>\n    ",
-            //directives: [ROUTER_DIRECTIVES],
-            providers: [device_service_1.DeviceService,
-                http_1.HTTP_PROVIDERS]
+            templateUrl: 'app/home/welcome.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], WelcomeComponent);
+    return WelcomeComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.WelcomeComponent = WelcomeComponent;
+//# sourceMappingURL=welcome.component.js.map

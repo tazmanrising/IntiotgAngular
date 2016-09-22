@@ -9,6 +9,7 @@
             DeviceEditCtrl]);
 
 
+
     function DeviceEditCtrl($scope, device) {  //, device) {
         
         var vm = this;

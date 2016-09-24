@@ -30,8 +30,11 @@
             $scope.error = "Could not fetch the data";
         };
 
-        //var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device'
-        $http.get('api/devices.json')
+        var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device';
+        // MOCK 
+        //var _url = 'api/devices.json';
+        
+        $http.get(_url)
             .then(onListComplete, onError);
 
 
@@ -41,7 +44,7 @@
             vm.showImage = !vm.showImage;
         }
 
-
+        
 
 
         $scope.set_color = function (device) {

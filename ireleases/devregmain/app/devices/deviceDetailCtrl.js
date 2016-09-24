@@ -163,6 +163,9 @@
 
         vm.archivedManifests = [];
 
+        // this is 
+        var manifestTemp = "testing";
+
         // http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022B9A000000010001?ManifestStatus=Archived&StartIdx=0&RecordCount=5
         $http.get('api/archivedManifests.json')
             .then(function (result) {
@@ -215,20 +218,20 @@
 
         //console.log(tom.events);
 
-        $scope.show = function () {
-            console.log('yes');
+        // $scope.show = function () {
+        //     console.log('yes');
 
-            ModalService.showModal({
-                templateUrl: 'modal.html',
-                controller: "ModalController"
-            }).then(function (modal) {
-                modal.element.modal();
-                modal.close.then(function (result) {
-                    $scope.message = "You said " + result;
-                });
-            });
+        //     ModalService.showModal({
+        //         templateUrl: 'modal.html',
+        //         controller: "ModalController"
+        //     }).then(function (modal) {
+        //         modal.element.modal();
+        //         modal.close.then(function (result) {
+        //             $scope.message = "You said " + result;
+        //         });
+        //     });
 
-        };
+        // };
 
 
         // ####  Calculate button click event  #####################

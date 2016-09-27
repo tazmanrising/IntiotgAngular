@@ -33,3 +33,11 @@ form legend {
     background: #007ACC;
     color: #fff;
 }
+
+input[type='file'] {
+    width:400px;
+    height:25px;
+    opacity:0
+}
+
+

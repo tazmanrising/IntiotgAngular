@@ -2,7 +2,8 @@ body {
     background-color: #F8F8F8;
 }
 form {
-    background-color: #A4C8E8;
+    /*background-color: #A4C8E8;*/
+    
     border-radius: 2px;
     box-shadow: 0 1px 1px #ccc;
     color: #404040;
@@ -32,3 +33,11 @@ form legend {
     background: #007ACC;
     color: #fff;
 }
+
+input[type='file'] {
+    width:400px;
+    height:25px;
+    opacity:0
+}
+
+

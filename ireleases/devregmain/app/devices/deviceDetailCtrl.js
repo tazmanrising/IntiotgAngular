@@ -95,25 +95,106 @@
     }
 
     function DeviceDetailCtrl($window, $scope, $http, device, deviceService, ModalService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
-     
+
         var vm = this;
         vm.device = device;
 
+        //Archived link modal popup (left of red arrow)
         $scope.showModal = false;
         $scope.toggleModal = function () {
             $scope.showModal = !$scope.showModal;
         };
 
 
-        $scope.loadXML = function() {
+        // RED Arrow Download 
+        $scope.loadXML = function () {
             //$window.location.href = "http://www.google.com";
             //$window.open('https://www.google.com', '_blank');
             $window.open('http://localhost:8000/api/manifest.xml', '_blank');
 
         };
 
+        $scope.checkIntegrity = function () {
+
+            //console.log($scope.vm.device.DeviceId);
+            //console.log($scope.vm.device.Sha);
+            //var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device';
+            // var data = {
+            //     DeviceId: '00022B9E000000060001',
+            //     CalculatedMeasurement: '0000000000000000000000000000000000000000000000000000000000000000'
+            //     //DeviceId: $scope.vm.device.DeviceId,
+            //     //CalculatedMeasurement:  $scope.shaOriginal //$scope.vm.device.Sha
+               
+            // };
+
+            //var data = '../api/integrity.json';
+
+     var data =  {
+  DeviceId: "00022B9E000000060001",
+  "CalculatedMeasurement": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+
+};
+
+            var _url = 'http://localhost:42822/api/Manifest/VerifyChain/';
+            //$http.put(_url, JSON.stringify(data)).then(function (response) {
+            $http.put(_url, data).then(function (response) {
+                if (response.data) {
+                    console.log('adf');
+                }
+            }, function (response) {
+                console.log(response.status);
+                $scope.msg = "Service not Exists";
+                $scope.statusval = response.status;
+                $scope.statustext = response.statusText;
+                console.log(response.statusText);
+                console.log(response.headers());
+                $scope.headers = response.headers();
+            });
 
 
+        };
+
+
+        $('#button').click(function () {
+            $("input[type='file']").trigger('click');
+        })
+
+        $("input[type='file']").change(function () {
+            $('#val').text(this.value.replace(/C:\\fakepath\\/i, ''))
+        })
         //$scope.categories = [];
 
         //console.log("$scope.categories = " + $scope.categories);
@@ -136,7 +217,14 @@
                     vm.device.DKiIndex = response.data.Devices[x].DKiIndex;
                     //vm.device.Aid = response.data.Devices[x].Aid;
                     var baseFinal = base64toHEX(response.data.Devices[x].Aid);
+                    $scope.shaOriginal = response.data.Devices[x].Sha;
                     var extM = base64toHEX(response.data.Devices[x].Sha);
+
+
+                    console.log($scope.shaOriginal);
+                    console.log(extM);
+
+
                     // base64toHEX("oAAABTUAAg==")
                     //console.log(baseFinal);
 
@@ -162,6 +250,9 @@
         });
 
         vm.archivedManifests = [];
+
+        // this is 
+        var manifestTemp = "testing";
 
         // http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022B9A000000010001?ManifestStatus=Archived&StartIdx=0&RecordCount=5
         $http.get('api/archivedManifests.json')
@@ -215,20 +306,20 @@
 
         //console.log(tom.events);
 
-        $scope.show = function () {
-            console.log('yes');
+        // $scope.show = function () {
+        //     console.log('yes');
 
-            ModalService.showModal({
-                templateUrl: 'modal.html',
-                controller: "ModalController"
-            }).then(function (modal) {
-                modal.element.modal();
-                modal.close.then(function (result) {
-                    $scope.message = "You said " + result;
-                });
-            });
+        //     ModalService.showModal({
+        //         templateUrl: 'modal.html',
+        //         controller: "ModalController"
+        //     }).then(function (modal) {
+        //         modal.element.modal();
+        //         modal.close.then(function (result) {
+        //             $scope.message = "You said " + result;
+        //         });
+        //     });
 
-        };
+        // };
 
 
         // ####  Calculate button click event  #####################

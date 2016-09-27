@@ -1,23 +1,23 @@
 (function () {
     "use strict";
 
-   
-
-//these are the same 
-//angular.module('app2', ['angularModalService']);
-// same thing 
-//var application2 = angular.module('app2', ['angularModalService']);
-
-//angular.module('app2').config(...)
-//application2.config(...)
 
 
-// var application2 = angular.module('app2', ['angularModalService']);
+    //these are the same 
+    //angular.module('app2', ['angularModalService']);
+    // same thing 
+    //var application2 = angular.module('app2', ['angularModalService']);
 
-// angular.module('app2').controller('SomeController', ['ModalService', function(ModalService) {
-  
-//   console.log('in app2');
-// }]);
+    //angular.module('app2').config(...)
+    //application2.config(...)
+
+
+    // var application2 = angular.module('app2', ['angularModalService']);
+
+    // angular.module('app2').controller('SomeController', ['ModalService', function(ModalService) {
+
+    //   console.log('in app2');
+    // }]);
 
 
     angular
@@ -25,7 +25,7 @@
         .directive('modal', [dirTest])
         .controller("DeviceDetailCtrl",
 
-        ["$window","$scope",
+        ["$window", "$scope",
             "$http",
             "$stateParams",
             "deviceService",
@@ -124,49 +124,17 @@
             //     CalculatedMeasurement: '0000000000000000000000000000000000000000000000000000000000000000'
             //     //DeviceId: $scope.vm.device.DeviceId,
             //     //CalculatedMeasurement:  $scope.shaOriginal //$scope.vm.device.Sha
-               
+
             // };
 
             //var data = '../api/integrity.json';
 
-     var data =  {
-  DeviceId: "00022B9E000000060001",
-  "CalculatedMeasurement": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ]
-
-};
+            var data = {
+                DeviceId: "00022B9E000000060001",
+                "CalculatedMeasurement": [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                ]
+            };
 
             var _url = 'http://localhost:42822/api/Manifest/VerifyChain/';
             //$http.put(_url, JSON.stringify(data)).then(function (response) {

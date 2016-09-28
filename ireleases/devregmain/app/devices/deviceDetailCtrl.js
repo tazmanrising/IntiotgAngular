@@ -24,9 +24,9 @@
         .module("deviceManagement")
         .directive('modal', [dirTest])
         .controller("DeviceDetailCtrl",
-
         ["$window", "$scope",
             "$http",
+
             "$stateParams",
             "deviceService",
             //"dataFactory",
@@ -94,7 +94,7 @@
 
     }
 
-    function DeviceDetailCtrl($window, $scope, $http, device, deviceService, ModalService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+    function DeviceDetailCtrl($window, $scope, $http, device, deviceService) { //, ModalService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
 
         var vm = this;
         vm.device = device;
@@ -114,46 +114,8 @@
 
         };
 
-        $scope.checkIntegrity = function () {
-
-            //console.log($scope.vm.device.DeviceId);
-            //console.log($scope.vm.device.Sha);
-            //var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device';
-            // var data = {
-            //     DeviceId: '00022B9E000000060001',
-            //     CalculatedMeasurement: '0000000000000000000000000000000000000000000000000000000000000000'
-            //     //DeviceId: $scope.vm.device.DeviceId,
-            //     //CalculatedMeasurement:  $scope.shaOriginal //$scope.vm.device.Sha
-
-            // };
-
-            //var data = '../api/integrity.json';
-
-            var data = {
-                DeviceId: "00022B9E000000060001",
-                "CalculatedMeasurement": [
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-                ]
-            };
-
-            var _url = 'http://localhost:42822/api/Manifest/VerifyChain/';
-            //$http.put(_url, JSON.stringify(data)).then(function (response) {
-            $http.put(_url, data).then(function (response) {
-                if (response.data) {
-                    console.log('adf');
-                }
-            }, function (response) {
-                console.log(response.status);
-                $scope.msg = "Service not Exists";
-                $scope.statusval = response.status;
-                $scope.statustext = response.statusText;
-                console.log(response.statusText);
-                console.log(response.headers());
-                $scope.headers = response.headers();
-            });
 
 
-        };
 
 
         $('#button').click(function () {
@@ -217,6 +179,61 @@
             }
         });
 
+
+
+        $scope.integrityMessage = "Unknown";
+
+
+        $scope.checkIntegrity = function () {
+
+            //console.log($scope.vm.device.DeviceId);
+            //console.log($scope.vm.device.Sha);
+            //var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device';
+            // var data = {
+            //     DeviceId: '00022B9E000000060001',
+            //     CalculatedMeasurement: '0000000000000000000000000000000000000000000000000000000000000000'
+            //     //DeviceId: $scope.vm.device.DeviceId,
+            //     //CalculatedMeasurement:  $scope.shaOriginal //$scope.vm.device.Sha
+
+            // };
+
+            //var data = '../api/integrity.json';
+
+            var data = {
+                DeviceId: "00022B9E000000060001",
+                "CalculatedMeasurement": [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                ]
+            };
+
+            var _url = 'http://localhost:42822/api/Manifest/VerifyChain/';
+            //$http.put(_url, JSON.stringify(data)).then(function (response) {
+            $http.put(_url, data).then(function (response) {
+                if (response.data) {
+                    $scope.integrityMessage = "Success";
+                    //var text = "adf";
+                    //toastr.success(text,"Success");
+                    toastr.success("Device ID: " + $scope.vm.device.DeviceId, "Success Alert", { timeOut: 2000 });
+
+                }
+            }, function (response) {
+                console.log(response.status);
+                $scope.msg = "Service not Exists";
+                $scope.statusval = response.status;
+                $scope.statustext = response.statusText;
+                console.log(response.statusText);
+                console.log(response.headers());
+                $scope.headers = response.headers();
+                $scope.integrityMessage = "failure";
+
+                toastr.error("Device ID: " + $scope.vm.device.DeviceId, "Failure", { timeOut: 2000 });
+            });
+
+
+        };
+
+
+
         vm.archivedManifests = [];
 
         // this is 
@@ -234,6 +251,61 @@
             });
 
 
+        //c# 
+        // var hex = "476B6265142063F8A885766DE4EE07690C2D55EFDA75653654E70A69E949DD4B";
+
+        // var x = StringToByteArray(hex);
+
+
+        //  public static string ByteArrayToString(byte[] ba)
+        // {
+        //     StringBuilder hex = new StringBuilder(ba.Length * 2);
+        //     foreach (byte b in ba)
+        //         hex.AppendFormat("{0:x2}", b);
+        //     return hex.ToString();
+        // }
+
+        // public static string ByteArrayToStringOther(byte[] ba)
+        // {
+        //     string hex = BitConverter.ToString(ba);
+        //     return hex.Replace("-", "");
+        // }
+
+        // public static byte[] StringToByteArray(String hex)
+        // {
+        //     int NumberChars = hex.Length;
+        //     byte[] bytes = new byte[NumberChars / 2];
+        //     for (int i = 0; i < NumberChars; i += 2)
+        //         bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
+        //     return bytes;
+        // }
+
+
+
+        //======================================
+
+
+        //Javascript 
+
+        var hex = "476B6265142063F8A885766DE4EE07690C2D55EFDA75653654E70A69E949DD4B";
+
+        // Convert a hex string to a byte array
+        function hexToBytes(hex) {
+            for (var bytes = [], c = 0; c < hex.length; c += 2)
+                bytes.push(parseInt(hex.substr(c, 2), 16));
+            return bytes;
+        }
+
+        // Convert a byte array to a hex string
+        function bytesToHex(bytes) {
+            for (var hex = [], i = 0; i < bytes.length; i++) {
+                hex.push((bytes[i] >>> 4).toString(16));
+                hex.push((bytes[i] & 0xF).toString(16));
+            }
+            return hex.join("");
+        }
+
+        console.log(hexToBytes(hex));
 
 
         function base64toHEX(base64) {
@@ -346,6 +418,14 @@
         // if (vm.device.tags) {
         //     vm.device.tagList = vm.device.tags.toString();
         // }
+
+        $scope.colorSetter = function (colorCode) {
+            //refactor for colors 
+
+            var color = colorCode;
+
+            return { color: color };
+        };
 
         $scope.set_color = function (device) {
 

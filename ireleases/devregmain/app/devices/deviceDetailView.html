@@ -27,10 +27,12 @@
                         <tr>
                             <td colspan="3">
                                 <!--ng-click="vm.calculatePrice()"-->
-                                <button type="button" class="btn btn-default" title="Check the Integrity of.."  ng-click="checkIntegrity()">Check Integrity</button>
-                                <a class="btn btn-default" ui-sref="deviceList" style="width:80px">
+                                 <a class="btn btn-default" ui-sref="deviceList" style="width:80px">
                                     <I class="glyphicon glyphicon-chevron-left"></i> Back
                                 </a>
+                                <button type="button" class="btn btn-default" title="Check the Integrity of.."  ng-click="checkIntegrity()">Check Integrity</button>
+                                <span class="alert alert-info" ng-style="colorSetter('blue')">Status: {{integrityMessage}}</span>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                             </td>
 
                         </tr>

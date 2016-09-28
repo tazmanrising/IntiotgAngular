@@ -40,4 +40,22 @@ input[type='file'] {
     opacity:0
 }
 
+.alert-info {
+    background-color: #CCCCCC !important;
+    border-color: blue !important;
+}
 
+.alert-dismissable, .alert-dismissible {
+    padding-right: 35px;
+}
+
+.alert {
+    padding: 8px;
+    background-color: #CCCCCC !important;
+    
+    
+}
+
+.xinfo {
+     background-color: green !important;
+}

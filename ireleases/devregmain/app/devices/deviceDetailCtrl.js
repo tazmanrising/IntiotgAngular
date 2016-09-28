@@ -34,7 +34,7 @@
             DeviceDetailCtrl]);
 
     function dirTest() {
-        console.log('in dirTest');
+        //console.log('in dirTest');
 
         return {
             template: '<div class="modal fade">' +
@@ -151,8 +151,8 @@
                     var extM = base64toHEX(response.data.Devices[x].Sha);
 
 
-                    console.log($scope.shaOriginal);
-                    console.log(extM);
+                    //console.log($scope.shaOriginal);
+                    //console.log(extM);
 
 
                     // base64toHEX("oAAABTUAAg==")
@@ -199,12 +199,25 @@
 
             //var data = '../api/integrity.json';
 
+            // var data = {
+            //     DeviceId: "00022B9E000000060001",
+            //     "CalculatedMeasurement": [
+            //         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+            //     ]
+            // };
+
+
+            //console.log(data);
+
+            var hex = "476B6265142063F8A885766DE4EE07690C2D55EFDA75653654E70A69E949DD4B";
+            //console.log(hexToBytes(hex));
+
             var data = {
                 DeviceId: "00022B9E000000060001",
-                "CalculatedMeasurement": [
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-                ]
+                "CalculatedMeasurement": hexToBytes(hex) 
             };
+
+            console.log(data);
 
             var _url = 'http://localhost:42822/api/Manifest/VerifyChain/';
             //$http.put(_url, JSON.stringify(data)).then(function (response) {
@@ -287,7 +300,7 @@
 
         //Javascript 
 
-        var hex = "476B6265142063F8A885766DE4EE07690C2D55EFDA75653654E70A69E949DD4B";
+
 
         // Convert a hex string to a byte array
         function hexToBytes(hex) {
@@ -305,7 +318,7 @@
             return hex.join("");
         }
 
-        console.log(hexToBytes(hex));
+
 
 
         function base64toHEX(base64) {

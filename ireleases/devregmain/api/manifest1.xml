@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CollateralVault Version="1">
+  <Collateral>
+    <Name Type="String">logSize</Name>
+    <Value Type="Hex">30-00-14-00</Value>
+  </Collateral>
+  <Collateral>
+    <Name Type="String">logLevel</Name>
+    <Value Type="Hex">20-00-00-00</Value>
+  </Collateral>
+  <Collateral>
+    <Name Type="String">evid</Name>
+    <Value Type="Vault">
+      <CollateralVault Version="1">
+        <Collateral>
+          <Name Type="String">categories</Name>
+          <Value Type="Vault">
+            <CollateralVault Version="1">
+              <Collateral>
+                <Name Type="String">MSR</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="Hex">10-00-00-02</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.RAW:TXT.1/UNKNOWN</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">11-11-11-11</Name>
+                      <Value Type="String">PARSE.CARD:IF/RAW.MATCH.;151*/GOTO.11111113:IF/RAW.MATCH.?0000*/GOTO.11111112:MASK.RAW/0/59/X:DUKPT2.BBM.RAW:TXT.1/LOYALTY.2/TPoint</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">11-11-11-12</Name>
+                      <Value Type="String">PARSE.CARD:MASK.RAW/0/10/X:DUKPT2.BBM.RAW:TXT.1/LOYALTY.2/Ponta</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">11-11-11-13</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.RAW:TXT.1/EMPLOYEEID</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-55-00-80</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.DSN.SVC.EXP.CHN:MASK.P/0/4/X:DUKPT1.BBM.P.1.2</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-55-00-81</Name>
+                      <Value Type="String">PARSE.ID:PLAIN.ADDR.CITY.ST.BD.CHN.EXP.DL</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-55-00-83</Name>
+                      <Value Type="String">PARSE.CARD:GOTO.10000002:IF/RAW.LENEQ.72/GOTO.11111111</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">HOST</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="Hex">00-57-00-00</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.RAW</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-57-00-01</Name>
+                      <Value Type="String">PARSE.CARD:TXT.1/LOYALTY.2/Stop-n-Shop:PLAIN.CHN.EXP:MASK.P/0/4/X:DUKPT2.BBM.P</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-57-00-02</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.CHN.EXP:MASK.P/0/4/X:DUKPT2.BBM.P</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-57-00-03</Name>
+                      <Value Type="String">PARSE.ID:PLAIN.ADDR.CITY.ST.DL.BD.CHN.EXP</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-57-00-04</Name>
+                      <Value Type="String">PARSE.UPC:PLAIN.UPC:PLAIN.RAW</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-57-00-05</Name>
+                      <Value Type="String">PARSE.UPC:PLAIN.RAW:TXT.13/CHECK</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">EP1</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="Hex">00-40-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-41-00-00</Name>
+                      <Value Type="String">PARSE.ID:PLAIN.BD.CHN</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-42-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-43-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-44-00-00</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.DSN.SVC.EXP.CHN:MASK.P/0/4/X:DUKPT1.BBM.P.1.2</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-45-00-00</Name>
+                      <Value Type="String">PARSE.UPC:PLAIN.RAW</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-40-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-41-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-42-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-43-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-45-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-46-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-47-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-69-00-00</Name>
+                      <Value Type="String">COLLATERALREQUEST</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-71-00-00</Name>
+                      <Value Type="String">DECRYPT:FORWARD.EP1</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-72-00-00</Name>
+                      <Value Type="String">DECRYPT:FORWARD.BBM</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-74-00-00</Name>
+                      <Value Type="String">DECRYPT:FORWARD.BBM</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-75-00-00</Name>
+                      <Value Type="String">DECRYPT:FORWARD.BBM</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">BBM</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="Hex">00-44-00-00</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.DSN.SVC.EXP.CHN:MASK.P/0/4/X:DUKPT1.BBM.P.1.2</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-44-01-00</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.DSN.SVC.EXP.CHN:MASK.P/0/4/X:DUKPT1.BBM.P.1.2</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-40-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-41-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-42-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-43-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-45-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-40-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-41-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-42-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-43-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-45-01-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-46-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-47-00-00</Name>
+                      <Value Type="String">DECRYPT</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-69-00-00</Name>
+                      <Value Type="String">COLLATERALREQUEST</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-71-00-00</Name>
+                      <Value Type="String">DECRYPT:FORWARD.BBM</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-72-00-00</Name>
+                      <Value Type="String">DECRYPT:FORWARD.EP1</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-74-00-00</Name>
+                      <Value Type="String">DECRYPT:FORWARD.EP1</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-75-00-00</Name>
+                      <Value Type="String">DECRYPT:FORWARD.EP1</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">Validation-Tunnel-Id</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="Hex">00-71-00-00</Name>
+                      <Value Type="String">PARSE.UPC:PLAIN.RAW:TXT.71/TUNNEL_TEST</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-00-00-00</Name>
+                      <Value Type="String">PARSE.UPC:PLAIN.UPC:PLAIN.RAW</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-00-00-01</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.CHN.EXP:MASK.P/0/4/X</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-00-00-02</Name>
+                      <Value Type="String">PARSE.ID:IF/1.MATCH.%B*/GOTO.00000102:PLAIN.ADDR.CITY.ST.DL.BD.CHN.EXP</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-00-01-02</Name>
+                      <Value Type="String">PARSE.CARD:PLAIN.CHN.EXP:MASK.P/0/4/X</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="Hex">00-00-00-03</Name>
+                      <Value Type="String">PARSE.UPC:PLAIN.RAW:TXT.13/CHECK</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+            </CollateralVault>
+          </Value>
+        </Collateral>
+        <Collateral>
+          <Name Type="String">endpoints</Name>
+          <Value Type="Vault">
+            <CollateralVault Version="1">
+              <Collateral>
+                <Name Type="String">BBM</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="String">tunnelKey</Name>
+                      <Value Type="Hex">00</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">tunnelExponent</Name>
+                      <Value Type="Hex">00</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">tunnel.perms</Name>
+                      <Value Type="String">BBM:EP1:</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">category</Name>
+                      <Value Type="String">BBM</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">EP1</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="String">tunnelKey</Name>
+                      <Value Type="Hex">00</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">tunnelExponent</Name>
+                      <Value Type="Hex">00</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">tunnel.perms</Name>
+                      <Value Type="String">EP1:BBM:</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">category</Name>
+                      <Value Type="String">EP1</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">Validation-Tunnel-Id</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="String">tunnelKey</Name>
+                      <Value Type="Hex">00</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">tunnelExponent</Name>
+                      <Value Type="Hex">00</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">tunnel.perms</Name>
+                      <Value Type="String">Validation-Tunnel-Id:</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">category</Name>
+                      <Value Type="String">Validation-Tunnel-Id</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">QITM</Name>
+                <Value Type="Vault">
+                  <CollateralVault Version="1">
+                    <Collateral>
+                      <Name Type="String">tunnelKey</Name>
+                      <Value Type="Hex">00</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">tunnelExponent</Name>
+                      <Value Type="Hex">00</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">tunnel.perms</Name>
+                      <Value Type="String">QITM:</Value>
+                    </Collateral>
+                    <Collateral>
+                      <Name Type="String">category</Name>
+                      <Value Type="String">Validation-Tunnel-Id</Value>
+                    </Collateral>
+                  </CollateralVault>
+                </Value>
+              </Collateral>
+            </CollateralVault>
+          </Value>
+        </Collateral>
+        <Collateral>
+          <Name Type="String">dukpt.BBM</Name>
+          <Value Type="Vault">
+            <CollateralVault Version="1">
+              <Collateral>
+                <Name Type="String">bdkId</Name>
+                <Value Type="Hex">00-01-02</Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">ksn</Name>
+                <Value Type="Hex">FF-FF-00-01-02-02-00-00-00-00</Value>
+              </Collateral>
+            </CollateralVault>
+          </Value>
+        </Collateral>
+        <Collateral>
+          <Name Type="String">dukpt.MSR</Name>
+          <Value Type="Vault">
+            <CollateralVault Version="1">
+              <Collateral>
+                <Name Type="String">bdkId</Name>
+                <Value Type="Hex">00-01-02</Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">ksn</Name>
+                <Value Type="Hex">62-99-49-00-6C-00-04-60-00-00</Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">category</Name>
+                <Value Type="String">MSR</Value>
+              </Collateral>
+              <Collateral>
+                <Name Type="String">decrypt</Name>
+                <Value Type="Hex">01</Value>
+              </Collateral>
+            </CollateralVault>
+          </Value>
+        </Collateral>
+        <Collateral>
+          <Name Type="String">dukpts</Name>
+          <Value Type="String">dukpt.BBM:dukpt.MSR</Value>
+        </Collateral>
+      </CollateralVault>
+    </Value>
+  </Collateral>
+</CollateralVault>

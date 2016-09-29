@@ -1,6 +1,19 @@
 body {
     background-color: #F8F8F8;
 }
+
+table{
+  table-layout:fixed;
+}
+
+table td{
+  word-wrap: break-word;
+}
+
+.scroll_overflow {
+  overflow: auto;
+}
+
 form {
     /*background-color: #A4C8E8;*/
     
@@ -59,3 +72,17 @@ input[type='file'] {
 .xinfo {
      background-color: green !important;
 }
+
+
+/*ellipsis , if wanted but not on td , need class ..*/
+/*body {
+    margin: 10px;
+}
+
+table {
+  table-layout: fixed;
+}
+td {
+      overflow: hidden;
+    text-overflow: ellipsis;
+}*/

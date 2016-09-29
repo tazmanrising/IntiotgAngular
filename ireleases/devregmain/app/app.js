@@ -11,6 +11,8 @@
 
         ]);
 
+        app.constant("rootUrl", "http://www.example.com");
+
     // configure state for device list    
 
     // add route state

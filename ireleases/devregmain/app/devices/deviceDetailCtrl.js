@@ -1,32 +1,18 @@
 (function () {
     "use strict";
 
-
-
-    //these are the same 
-    //angular.module('app2', ['angularModalService']);
-    // same thing 
-    //var application2 = angular.module('app2', ['angularModalService']);
-
-    //angular.module('app2').config(...)
-    //application2.config(...)
-
-
-    // var application2 = angular.module('app2', ['angularModalService']);
-
-    // angular.module('app2').controller('SomeController', ['ModalService', function(ModalService) {
-
-    //   console.log('in app2');
-    // }]);
-
-
     angular
         .module("deviceManagement")
+        .factory('web', function($http, rootUrl){
+            return { rootUrl: rootUrl}
+        })
+        .constant('adfaf', 'blah')
         .directive('modal', [dirTest])
         .controller("DeviceDetailCtrl",
-        ["$window", "$scope",
+            ["$window", 
+            "$scope",
             "$http",
-
+            "web",
             "$stateParams",
             "deviceService",
             //"dataFactory",
@@ -94,7 +80,7 @@
 
     }
 
-    function DeviceDetailCtrl($window, $scope, $http, device, deviceService) { //, ModalService) {//, deviceService, dataFactory) {   // pass in parameter into the function , now we need
+    function DeviceDetailCtrl($window, $scope, $http, web, device, deviceService) { //, ModalService) {//, deviceService, dataFactory) {
 
         var vm = this;
         vm.device = device;
@@ -136,10 +122,13 @@
 
         var j = 0;
 
-        $http.get("api/devices.json").then(function (response) {
+        var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device';
+        //$http.get("api/devices.json").then(function (response) {
+        $http.get(_url).then(function (response) {
 
             $scope.statuses = [];
-
+            $scope.extendeMeasure = "";
+            $scope.device = "";
 
             for (var x = 0; x < response.data.Devices.length; x++) {
                 if (response.data.Devices[x].DeviceId === device.DeviceId) {
@@ -149,8 +138,8 @@
                     var baseFinal = base64toHEX(response.data.Devices[x].Aid);
                     $scope.shaOriginal = response.data.Devices[x].Sha;
                     var extM = base64toHEX(response.data.Devices[x].Sha);
-
-
+                    $scope.extendeMeasure = extM;
+                    $scope.device = device.DeviceId;
                     //console.log($scope.shaOriginal);
                     //console.log(extM);
 
@@ -209,23 +198,31 @@
 
             //console.log(data);
 
-            var hex = "476B6265142063F8A885766DE4EE07690C2D55EFDA75653654E70A69E949DD4B";
+
+
+
+            //var hex = "476B6265142063F8A885766DE4EE07690C2D55EFDA75653654E70A69E949DD4B";
             //console.log(hexToBytes(hex));
 
+            var hex = $scope.extendeMeasure;
+            console.log('hex', hex);
+
             var data = {
-                DeviceId: "00022B9E000000060001",
-                "CalculatedMeasurement": hexToBytes(hex) 
+                DeviceId: $scope.device, //"00022B9E000000060001",
+                "CalculatedMeasurement": hexToBytes(hex)
             };
 
-            console.log(data);
+            // console.log(data);
 
-            var _url = 'http://localhost:42822/api/Manifest/VerifyChain/';
-            //$http.put(_url, JSON.stringify(data)).then(function (response) {
+            //var _url = 'http://localhost:42822/api/Manifest/VerifyChain/';
+            var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/VerifyChain/';
+
             $http.put(_url, data).then(function (response) {
                 if (response.data) {
                     $scope.integrityMessage = "Success";
                     //var text = "adf";
                     //toastr.success(text,"Success");
+                    //console.log('success??');
                     toastr.success("Device ID: " + $scope.vm.device.DeviceId, "Success Alert", { timeOut: 2000 });
 
                 }
@@ -237,23 +234,37 @@
                 console.log(response.statusText);
                 console.log(response.headers());
                 $scope.headers = response.headers();
-                $scope.integrityMessage = "failure";
+                $scope.integrityMessage = "Failure";
 
+                //console.log('fail???');
                 toastr.error("Device ID: " + $scope.vm.device.DeviceId, "Failure", { timeOut: 2000 });
             });
 
 
         };
 
-
+        $scope.rootUrl = web.rootUrl;
+        console.log($scope.rootUrl);
 
         vm.archivedManifests = [];
 
         // this is 
         var manifestTemp = "testing";
 
-        // http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022B9A000000010001?ManifestStatus=Archived&StartIdx=0&RecordCount=5
-        $http.get('api/archivedManifests.json')
+        //var _urlManifest = "http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022B9A000000010001?ManifestStatus=Archived&StartIdx=0&RecordCount=5"
+        
+        //var _urlManifest = "http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022BBA000000210001?ManifestStatus=Archived&StartIdx=0&RecordCount=5"
+
+        //console.log(device);
+
+        //http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022B9E000000060001?ManifestStatus=Archived&StartIdx=0&RecordCount=5
+
+        var _urlManifest = "http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/" + device.DeviceId + "?ManifestStatus=Archived&StartIdx=0&RecordCount=5"
+        //console.log(_urlManifest);
+
+
+        // $http.get('api/archivedManifests.json')
+        $http.get(_urlManifest)
             .then(function (result) {
                 vm.archivedManifests = result.data.ManifestMeasurements;
                 console.log(result);
@@ -262,43 +273,6 @@
             function (error) {
                 console.log(error);
             });
-
-
-        //c# 
-        // var hex = "476B6265142063F8A885766DE4EE07690C2D55EFDA75653654E70A69E949DD4B";
-
-        // var x = StringToByteArray(hex);
-
-
-        //  public static string ByteArrayToString(byte[] ba)
-        // {
-        //     StringBuilder hex = new StringBuilder(ba.Length * 2);
-        //     foreach (byte b in ba)
-        //         hex.AppendFormat("{0:x2}", b);
-        //     return hex.ToString();
-        // }
-
-        // public static string ByteArrayToStringOther(byte[] ba)
-        // {
-        //     string hex = BitConverter.ToString(ba);
-        //     return hex.Replace("-", "");
-        // }
-
-        // public static byte[] StringToByteArray(String hex)
-        // {
-        //     int NumberChars = hex.Length;
-        //     byte[] bytes = new byte[NumberChars / 2];
-        //     for (int i = 0; i < NumberChars; i += 2)
-        //         bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
-        //     return bytes;
-        // }
-
-
-
-        //======================================
-
-
-        //Javascript 
 
 
 
@@ -336,9 +310,12 @@
 
         vm.deviceEvents = [];
 
+        
+        //http://localhost:42822/api/DeviceEvents/00022BBA000000210001?RecordCount=10&StartingRecordId=0
 
-
-        $http.get('api/deviceEvents.json')
+        var _urlEvents = "http://azs-dptsvr-003.amr.corp.intel.com:42832/api/DeviceEvents/" + device.DeviceId + "?RecordCount=10&StartingRecordId=0";
+        // $http.get('api/deviceEvents.json')
+        $http.get(_urlEvents)
             .then(function (result) {
                 vm.deviceEvents = result.data.DeviceEvents;
                 //console.log(vm.deviceEvents);
@@ -487,21 +464,14 @@ angular
             //     .toUpperCase(); // Per your example output
 
             var raw = atob(base64);
-
             var HEX = '';
-
             for (i = 0; i < raw.length; i++) {
-
                 var _hex = raw.charCodeAt(i).toString(16)
-
                 HEX += (_hex.length == 2 ? _hex : '0' + _hex);
-
             }
             return HEX.toUpperCase();
-
         }
     });
-
 
 angular
     .module("deviceManagement")
@@ -513,7 +483,6 @@ angular
             var s = new Date(str).toLocaleString('en-US').replace(/,/, '');
             return s;
         }
-
 
     });
 angular

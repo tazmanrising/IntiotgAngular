@@ -27,10 +27,10 @@
                         <tr>
                             <td colspan="3">
                                 <!--ng-click="vm.calculatePrice()"-->
-                                 <a class="btn btn-default" ui-sref="deviceList" style="width:80px">
+                                <a class="btn btn-default" ui-sref="deviceList" style="width:80px">
                                     <I class="glyphicon glyphicon-chevron-left"></i> Back
                                 </a>
-                                <button type="button" class="btn btn-default" title="Check the Integrity of.."  ng-click="checkIntegrity()">Check Integrity</button>
+                                <button type="button" class="btn btn-default" title="Check the Integrity of.." ng-click="checkIntegrity()">Check Integrity</button>
                                 <span class="alert alert-info" ng-style="colorSetter('blue')">Status: {{integrityMessage}}</span>
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                             </td>
@@ -54,8 +54,10 @@
                 <table class="table table-striped table-bordered table-hover">
                     <tr>
                         <td>
-                            <button type="button" class="btn btn-default" title="Stage Manifest from XML" ng-click="showme=true">Stage Manifest from XML</button>                         
-                       
+                            <button type="button" class="btn btn-default" title="Stage Manifest from XML" ng-click="showme=true">Stage Manifest from XML</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-default" title="Stage Manifest from Drafts" ng-click="showme2=true">Stage Manifest from Drafts</button>
                         </td>
                     </tr>
                     <tr>
@@ -63,8 +65,19 @@
                             <div class="wrapper">
                                 <!--<p ng-hide="showme">It will appear here!</p>-->
                                 <p ng-show="showme">
-                                    <input type="file" id="file" name="file"/>
+                                    <input type="file" id="file" name="file" />
                                     <button id='button' type="button" class="btn btn-default" title="Browse">Browse</button>
+                                    <button id='addManifest' type="button" class="btn btn-default" title="Browse">Add Manifest</button>
+                                </p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="wrapper">
+                                <!--<p ng-hide="showme2">It will appear here!</p>-->
+                                <p ng-show="showme2">
+                                    <select>
+                                        <option>Select Manifest...</option>
+                                    </select>
                                     <button id='addManifest' type="button" class="btn btn-default" title="Browse">Add Manifest</button>
                                 </p>
                             </div>

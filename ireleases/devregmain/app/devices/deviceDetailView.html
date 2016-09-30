@@ -9,11 +9,16 @@
                         <tr>
                             <td><strong>Device Status:</strong> <span ng-style="set_color(vm.device)">{{vm.device.DeviceStatus | deviceStatus }}</span></td>
                             <td><strong>DKi Value:</strong> {{vm.device.DKiIndex}}</td>
-                            <td><select>
+                            <td>
+                                <!--<select>
                                     <option>Select DKi Id...</option>
                                     <option>DKi00000003</option>
                                    
-                                </select>
+                                </select>-->
+                                <!--<select>
+                                    <option ng-repeat="x in states" value="{{}}"></option>
+                                </select>-->
+                                <select ng-model="model.id" ng-options="dk.Name as dk.Name for dk in dki"></select>
                                 <button type="button" class="btn btn-default" title="Update DKi" ng-click="vm.calculatePrice()">Update DKi</button>
                             </td>
                         </tr>

@@ -100,9 +100,23 @@
 
         };
 
+        // ============ Get DKI  ===============================================================
+        var onDkiComplete = function(response) {
+            //$scope.dki = response.data;
+            $scope.dki = response.data.Tables;
+            console.log(response.data);
+            //$scope.notes=[{"id":"id1", "text":"text1"}, {"id":"id2", "text":"text2"}];
+        }
 
+          var onError = function(reason){
+            $scope.error = "Could not fetch the data";
+        };
 
+        //http://localhost:42822/api/Table/TBLDKI/
+        $http.get("http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Table/TBLDKI/")
+            .then(onDkiComplete, onError);
 
+        // =====================================================================================
 
         $('#button').click(function () {
             $("input[type='file']").trigger('click');

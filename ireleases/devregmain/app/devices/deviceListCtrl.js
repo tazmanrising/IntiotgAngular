@@ -3,10 +3,10 @@
     angular
         .module("deviceManagement")
         .controller("DeviceListCtrl",
-        ["$scope", "$http", DeviceListCtrl]);
+        ["$scope", "$http", "$env", DeviceListCtrl]);
     
 
-    function DeviceListCtrl($scope, $http) { 
+    function DeviceListCtrl($scope, $http, $env) {
         var vm = this;
 
         var onListComplete = function (response) {
@@ -30,7 +30,7 @@
             $scope.error = "Could not fetch the data";
         };
 
-        var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device';
+        var _url = $env.apiUrl + $env.apiBase + 'device';
         // MOCK 
         //var _url = 'api/devices.json';
         

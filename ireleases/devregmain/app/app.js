@@ -2,6 +2,12 @@
     "use strict";
     //angular.module('app', ['angularUtils.directives.dirPagination']);
 
+    var env = {};
+
+    if (window) {
+        Object.assign(env, window.__env);
+    }
+
     var app = angular.module("deviceManagement",
         ['angularUtils.directives.dirPagination',
             'common.services',
@@ -11,7 +17,9 @@
 
         ]);
 
-        app.constant("rootUrl", "http://www.example.com");
+
+    app.constant("rootUrl", "http://www.example.com");
+    app.constant("$env", env);
 
     // configure state for device list    
 

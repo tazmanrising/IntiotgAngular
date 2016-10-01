@@ -15,6 +15,7 @@
             "web",
             "$stateParams",
             "deviceService",
+            "$env",
             //"dataFactory",
             //ModalService,
             DeviceDetailCtrl]);
@@ -80,7 +81,7 @@
 
     }
 
-    function DeviceDetailCtrl($window, $scope, $http, web, device, deviceService) { //, ModalService) {//, deviceService, dataFactory) {
+    function DeviceDetailCtrl($window, $scope, $http, web, device, deviceService, $env) { //, ModalService) {//, deviceService, dataFactory) {
 
         var vm = this;
         vm.device = device;
@@ -113,10 +114,45 @@
         };
 
         //http://localhost:42822/api/Table/TBLDKI/
-        $http.get("http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Table/TBLDKI/")
+        $http.get($env.apiUrl + $env.apiBase + "Table/TBLDKI/")
             .then(onDkiComplete, onError);
 
         // =====================================================================================
+
+
+        // replace below with a http get call to get staged manifest  
+
+        //"api/Manifest/Measurements/00022BBA000000210001?Status=Staged"
+
+        $scope.companies = [
+            {
+                'name': 'Infosys Technologies',
+                'employees': 125000,
+                'headoffice': 'Bangalore'
+            },
+            {
+                'name': 'Cognizant Technologies',
+                'employees': 100000,
+                'headoffice': 'Bangalore'
+            },
+            {
+                'name': 'Wipro',
+                'employees': 115000,
+                'headoffice': 'Bangalore'
+            },
+            {
+                'name': 'Tata Consultancy Services (TCS)',
+                'employees': 150000,
+                'headoffice': 'Bangalore'
+            },
+            {
+                'name': 'HCL Technologies',
+                'employees': 90000,
+                'headoffice': 'Noida'
+            },
+        ];
+
+        //==========================================================
 
         $('#button').click(function () {
             $("input[type='file']").trigger('click');
@@ -136,7 +172,7 @@
 
         var j = 0;
 
-        var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/device';
+        var _url = $env.apiUrl + $env.apiBase + 'device';
         //$http.get("api/devices.json").then(function (response) {
         $http.get(_url).then(function (response) {
 
@@ -228,8 +264,7 @@
 
             // console.log(data);
 
-            //var _url = 'http://localhost:42822/api/Manifest/VerifyChain/';
-            var _url = 'http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/VerifyChain/';
+            var _url = $env.apiUrl + $env.apiBase + 'Manifest/VerifyChain/';
 
             $http.put(_url, data).then(function (response) {
                 if (response.data) {
@@ -273,7 +308,7 @@
 
         //http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022B9E000000060001?ManifestStatus=Archived&StartIdx=0&RecordCount=5
 
-        var _urlManifest = "http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/" + device.DeviceId + "?ManifestStatus=Archived&StartIdx=0&RecordCount=5"
+        var _urlManifest = $env.apiUrl + $env.apiBase + "Manifest/MeasurementsByStartingRecord/" + device.DeviceId + "?ManifestStatus=Archived&StartIdx=0&RecordCount=5"
         //console.log(_urlManifest);
 
 
@@ -306,9 +341,19 @@
             return hex.join("");
         }
 
+        // Convert Hex to Ascii
+        function hex2ascii(hex) {
+            var hexString = hex.toString();  //force conversion
+            var str = '';
+            for (var i = 0; i < hexString.length; i += 2)
+                str += String.fromCharCode(parseInt(hexString.substr(i, 2), 16));
+            return str;
+        }
+        //hex2ascii('32343630'); // returns '2460'
+        //hex2ascii('00010002000A0005666972737400010000120003444B69000B444B693030303030303033')  // returns  firstDKiDKi00000003
 
 
-
+        // Convert Base64 to Hex
         function base64toHEX(base64) {
             var raw = atob(base64);
             var HEX = '';
@@ -324,10 +369,7 @@
 
         vm.deviceEvents = [];
 
-        
-        //http://localhost:42822/api/DeviceEvents/00022BBA000000210001?RecordCount=10&StartingRecordId=0
-
-        var _urlEvents = "http://azs-dptsvr-003.amr.corp.intel.com:42832/api/DeviceEvents/" + device.DeviceId + "?RecordCount=10&StartingRecordId=0";
+        var _urlEvents = $env.apiUrl + $env.apiBase + "DeviceEvents/" + device.DeviceId + "?RecordCount=10&StartingRecordId=0";
         // $http.get('api/deviceEvents.json')
         $http.get(_urlEvents)
             .then(function (result) {
@@ -375,6 +417,24 @@
 
             t = deviceService.calculatePriceFromMarkupAmount(1, 4);
             console.log(t);
+
+            //ng-submit="addRow()"
+            //$scope.addRow = function () {
+                //$scope.companies.push({ 'name': $scope.name, 'employees': $scope.employees, 'headoffice': $scope.headoffice });
+             
+             
+             
+             // replace below with  http://localhost:42822/api/AddDkiManifest/00022BBA000000210001/DKi00000003
+             
+             
+                $scope.companies.push({ 'name': 'blah', 'employees': 'adf', 'headoffice': 'gg' });
+                $scope.name = '';
+                $scope.employees = '';
+                $scope.headoffice = '';
+            //};
+
+
+
 
             //var xx = 0;
             //xx = deviceService.chttpgetOutside(1, 4);

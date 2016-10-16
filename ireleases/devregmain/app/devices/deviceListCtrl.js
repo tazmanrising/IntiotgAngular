@@ -30,9 +30,10 @@
             $scope.error = "Could not fetch the data";
         };
 
-        var _url = $env.apiUrl + $env.apiBase + 'device';
+        
+        //var _url = $env.apiUrl + $env.apiBase + 'device';
         // MOCK 
-        //var _url = 'api/devices.json';
+        var _url = 'api/devices.json';
         
         $http.get(_url)
             .then(onListComplete, onError);

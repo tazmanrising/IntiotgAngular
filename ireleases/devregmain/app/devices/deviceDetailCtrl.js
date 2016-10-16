@@ -114,7 +114,10 @@
         };
 
         //http://localhost:42822/api/Table/TBLDKI/
-        $http.get($env.apiUrl + $env.apiBase + "Table/TBLDKI/")
+
+        //var tbldki_url = $env.apiUrl + $env.apiBase + "Table/TBLDKI/";
+        var tbldki_url = 'api/DKi.json';
+        $http.get(tbldki_url)
             .then(onDkiComplete, onError);
 
         // =====================================================================================
@@ -172,7 +175,8 @@
 
         var j = 0;
 
-        var _url = $env.apiUrl + $env.apiBase + 'device';
+        //var _url = $env.apiUrl + $env.apiBase + 'device';
+        var _url = 'api/devices.json';
         //$http.get("api/devices.json").then(function (response) {
         $http.get(_url).then(function (response) {
 
@@ -308,7 +312,9 @@
 
         //http://azs-dptsvr-003.amr.corp.intel.com:42832/api/Manifest/MeasurementsByStartingRecord/00022B9E000000060001?ManifestStatus=Archived&StartIdx=0&RecordCount=5
 
-        var _urlManifest = $env.apiUrl + $env.apiBase + "Manifest/MeasurementsByStartingRecord/" + device.DeviceId + "?ManifestStatus=Archived&StartIdx=0&RecordCount=5"
+        //var _urlManifest = $env.apiUrl + $env.apiBase + "Manifest/MeasurementsByStartingRecord/" + device.DeviceId + "?ManifestStatus=Archived&StartIdx=0&RecordCount=5"
+        var _urlManifest = 'api/archivedManifests.json';
+        
         //console.log(_urlManifest);
 
 
@@ -369,7 +375,8 @@
 
         vm.deviceEvents = [];
 
-        var _urlEvents = $env.apiUrl + $env.apiBase + "DeviceEvents/" + device.DeviceId + "?RecordCount=10&StartingRecordId=0";
+        //var _urlEvents = $env.apiUrl + $env.apiBase + "DeviceEvents/" + device.DeviceId + "?RecordCount=10&StartingRecordId=0";
+        var _urlEvents = 'api/deviceEvents.json';
         // $http.get('api/deviceEvents.json')
         $http.get(_urlEvents)
             .then(function (result) {

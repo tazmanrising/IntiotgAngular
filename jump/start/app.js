@@ -10,6 +10,16 @@
 
 (function () {
     // not in global scope 
-    var salesApp = angular.module('salesApp', []);
+    //var salesApp = angular.module('salesApp', []);
+    var salesApp = angular.module('salesApp', ['ngRoute']);
+
+    salesApp.config(function($routeProvider){
+        $routeProvider
+            .when('/', {
+                controller: 'SimpleController',
+                templateUrl: '../views/customers.html'
+            });
+    })
+
 
 }());

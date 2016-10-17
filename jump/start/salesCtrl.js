@@ -20,11 +20,17 @@
 // #3    IFFE    self invoked   anonynomous function 
 (function () {
 
+    console.log('controller outside fx');
     var SimpleController = function ($scope) {
+       
+       console.log('controller inside fx');
+       
         $scope.customers = [
             { name: 'Dave', city: 'Phoenix' },
             { name: 'Tom', city: 'Seattle' }
         ];
+
+        
     };
 
     // angular.module('salesApp')

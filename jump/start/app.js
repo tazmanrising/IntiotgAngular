@@ -11,7 +11,7 @@
 (function () {
     // not in global scope 
     //var salesApp = angular.module('salesApp', []);
-    var salesApp = angular.module('salesApp', ['ngRoute']);
+    var app = angular.module('salesApp', ['ngRoute']);
 
         //  salesApp.config(['$routeProvider', function($routeProvider){
         //         $routeProvider
@@ -21,17 +21,28 @@
         //         .otherwise({redirectTo:'/'});
         //     }]);
 
-    salesApp.config(function($routeProvider, $locationProvider) {
+    app.config(function($routeProvider){ //, $locationProvider) {
        
         $routeProvider
             .when('/', {
+                //http://127.0.0.1:8000/#/
                 controller: 'SimpleController',
                 templateUrl: 'views/customers.html'
             })
+            .when('/view1',{
+                //http://127.0.0.1:8000/#/view1
+                templateUrl: 'test.html',
+                controller: 'AddOrderController'
+            })
             .otherwise({ redirectTo: '/'} );
 
-        $locationProvider.html5Mode(true);      
+        //$locationProvider.html5Mode(true);      
     });
 
-
+app.controller('AddOrderController', function($scope) {
+	
+    console.log('in add order');
+	$scope.message = 'This is Add new order screen';
+	
+});
 }());

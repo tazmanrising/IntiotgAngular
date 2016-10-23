@@ -24,7 +24,7 @@
     var SimpleController = function ($scope) {
        
        console.log('controller inside fx');
-       
+
         $scope.customers = [
             { name: 'Dave', city: 'Phoenix' },
             { name: 'Tom', city: 'Seattle' }
@@ -43,8 +43,8 @@
 
     SimpleController.$inject = ['$scope'];
 
-    angular.module('salesApp')
-        .controller('SimpleController', SimpleController);
+        angular.module('salesApp')
+       .controller('SimpleController', SimpleController);
 
 
 } ());

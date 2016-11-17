@@ -1,15 +1,16 @@
 // #3    IFFE    self invoked   anonynomous function 
 (function () {
 
+
+ console.log('controller outside  orderscontroller fx');
     //console.log('controller outside fx');
     var OrdersController = function ($scope, $routeParams) {
+        
         var customerId = $routeParams.customerId;
-
         // create an orders property 
         $scope.orders = null;
 
         // init 
-
         function init() {
             // Search the customers for the customerId
             for(var i=0, len=$scope.customers.length;i<len;i++){
@@ -21,12 +22,13 @@
         }
 
 
-               $scope.customers= [
+
+        $scope.customers = [
             {
-                id: 1, 
-                joined: '2000-12-02', 
-                name:'John', 
-                city:'Chandler', 
+                id: 1,
+                joined: '2000-12-02',
+                name: 'John',
+                city: 'Chandler',
                 orderTotal: 9.9956,
                 orders: [
                     {
@@ -35,12 +37,12 @@
                         total: 9.9956
                     }
                 ]
-            }, 
+            },
             {
-                id: 2, 
+                id: 2,
                 joined: '1965-01-25',
-                name:'Zed', 
-                city:'Las Vegas', 
+                name: 'Zed',
+                city: 'Las Vegas',
                 orderTotal: 19.99,
                 orders: [
                     {
@@ -56,11 +58,11 @@
                 ]
             },
             {
-                id: 3, 
+                id: 3,
                 joined: '1944-06-15',
-                name:'Tina', 
-                city:'New York', 
-                orderTotal:44.99,
+                name: 'Tina',
+                city: 'New York',
+                orderTotal: 44.99,
                 orders: [
                     {
                         id: 4,
@@ -68,13 +70,13 @@
                         total: 44.99
                     }
                 ]
-            }, 
+            },
             {
-                id: 4, 
+                id: 4,
                 joined: '1995-03-28',
-                name:'Dave', 
-                city:'Seattle', 
-                orderTotal:101.50,
+                name: 'Dave',
+                city: 'Seattle',
+                orderTotal: 101.50,
                 orders: [
                     {
                         id: 5,
@@ -84,12 +86,13 @@
                 ]
             }
         ]; // end scope.customers
-        
+
         init();
+
     }; // end controller 
 
 
-    
+
 
     OrdersController.$inject = ['$scope', '$routeParams'];
 

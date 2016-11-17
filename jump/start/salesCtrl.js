@@ -20,7 +20,8 @@
 // #3    IFFE    self invoked   anonynomous function 
 (function () {
 
-    console.log('controller outside fx');
+    console.log('controller outside  simplecontroller fx');
+
     var SimpleController = function ($scope) {
 
         console.log('controller inside fx');

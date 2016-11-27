@@ -35,7 +35,7 @@ myApp.controller('mainController', ['$scope', '$log', function ($scope, $log) {
     }
 
     // ISOLATE the Scope is important instead to do 
-
+    
 
 
 }]);

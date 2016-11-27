@@ -52,9 +52,14 @@ myApp.directive("searchResult", function () {
         templateUrl: 'directives/searchresult.html',
         //template: '<a href="#" class="list-group-item"><h4 class="list-group-item-heading">Doe, John</h4><p class="list-group-item-text">555 Main St., New York, NY 11111</p></a>',
         replace: true,
-        scope: {  // this is the scope model  NOT what is the scope model in the controller  , it is isolated in its own garden
-                 personName: "@" // local name  normalized  @ = text    person.name in main.html that attribute is personName camelcase   
-                   // this is not even a child scope , it is on its own 
+        scope: {  
+                // instead of personName @   normalization  , lets pass entire person object
+                personObject: "="  // equals is TWO WAY BINDING in the scope , 
+                // now we are passing object down 
+                
+                 // this is the scope model  NOT what is the scope model in the controller  , it is isolated in its own garden
+                 //personName: "@", // local name  normalized  @ = text    person.name in main.html that attribute is personName camelcase   
+                 //personAddress: "@"   // this is not even a child scope , it is on its own 
                 // however u can poke holes through the wall
                 // you can't access scope in controller 
                 // poke holes are with using custom attributes 

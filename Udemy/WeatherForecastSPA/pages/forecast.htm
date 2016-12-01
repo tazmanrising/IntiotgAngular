@@ -1,25 +1,23 @@
+<p>
+    <a href="#/">Back to Search</a>
+</p>
 Forecast for {{ city }}
-
-An important note regarding API usage
-
-In the following lectures we use the free openweathermap API to get weather data. Since the recording of the lectures, openweathermap has now required a free sign up to use their data. You then receive a key that you include in the URL when you request data.
-
-The change is not significant, however to get your weather app working you will now need to do the following:
-
-1) Follow the instructions here: http://openweathermap.org/appid to sign up, and retrieve your API key.
-
-2) When using the code in the next lectures we use this URL to get weather data:
-
-http://api.openweathermap.org/data/2.5/forecast/daily
-
-all you need to do is change this URL to:
-
-http://api.openweathermap.org/data/2.5/forecast/daily?APPID=YOURAPIKEY
-
-but put the API Key you get from openweathermap in place of the phrase 'YOURAPIKEY'.
-
- 
-
-
-
-
+<hr/>
+Days: <a href="#/forecast/2" ng-class="{ 'bg-primary': days === '2'}">2</a> | 
+<a href="#/forecast/5" ng-class="{ 'bg-primary': days === '5'}">5</a> | 
+<a href="#/forecast/7" ng-class="{ 'bg-primary': days === '7'}">7</a>
+<hr/>
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ convertToDate(w.dt)  | date: 'MMM d, y' }}
+                </div>
+                <div class="panel-body">
+                    Daytime temperature: {{ convertToFahrenheit(w.temp.day) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

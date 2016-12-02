@@ -1,0 +1,32 @@
+Angular 2 setup 
+
+Angular CLI 
+
+https://github.com/angular/angular-cli
+
+
+npm install -g angular-cli
+
+Then to create a folder to work from 
+
+ng new FOLDERNAME   
+
+then serve it up 
+
+ng serve     which is  localhost:4200   
+
+-----
+
+however the quickstart of google uses the npm install / npm start  
+in which liteserver with browserlink is really nice 
+
+
+architecture
+
+https://angular.io/docs/ts/latest/guide/architecture.html
+
+node version manager
+NVM
+https://github.com/creationix/nvm
+
+

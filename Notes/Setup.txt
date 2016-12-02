@@ -15,6 +15,21 @@ then serve it up
 
 ng serve     which is  localhost:4200   
 
+Errors then 
+
+seems like you haven't yet installed dependencies in package.json or failed installattion . Just remove node_modules folder, clean cache
+
+npm cache clean
+
+and install project packages
+
+npm install
+
+
+npm start 
+
+http://stackoverflow.com/questions/40925304/angular-cli-errors-with-ng-serve-localhost4200
+
 -----
 
 however the quickstart of google uses the npm install / npm start  

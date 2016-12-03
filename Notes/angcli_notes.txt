@@ -1,0 +1,25 @@
+ng generate component other 
+
+that line creates a component folder of other and files under 
+app folder
+
+shortcuts 
+
+g = generate
+c = component
+
+so...
+
+ng generate component another is same as below
+ng g c another
+
+if we want to generate it into another folder, then 
+
+// Inline   
+
+--flat  // to not create in subfolder
+
+--inline-style    or   -is
+--inline-template or -it 
+
+ng g c another --flat -is -it 

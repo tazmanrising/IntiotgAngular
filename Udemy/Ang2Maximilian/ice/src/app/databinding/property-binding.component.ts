@@ -2,7 +2,7 @@
 import { Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'fa-property-binding', 
+  selector: 'fa-property-binding',
   ////  could use ngcontent,  but we can do it another way
   // with {{}} and  result 
   template: `

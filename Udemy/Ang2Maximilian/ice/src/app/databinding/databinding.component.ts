@@ -1,13 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { PropertyBindingComponent} from './property-binding.component';
 
 @Component({
   selector: 'fa-databinding',
   templateUrl: './databinding.component.html',
-  styleUrls: ['./databinding.component.css']
+
+  styleUrls: ['./databinding.component.css']//,
+  //directives: [PropertyBindingComponent]
+  // Do not use the directives: component in here after RC4  
+  // Instead reference is in @NgModule in app.module.ts
+
 })
 export class DatabindingComponent{
   stringInterpolation = 'This is string interpolation';
-  numberInterpolation = 2;
+  numberInterpolation = 4;
+
+  onTest() {
+    return true;
+  }
 }
 
 //export class DatabindingComponent implements OnInit {

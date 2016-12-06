@@ -1,3 +1,23 @@
+
 <p>
   {{stringInterpolation}} | {{numberInterpolation}}
 </p>
+<hr>
+<p>Property Binding</p>
+<input type="text" value="{{stringInterpolation}}">
+<br>
+property binding with custom ...
+<br>
+<input type="text" [value]="stringInterpolation">
+<br>
+<p [ngClass]="{redBorder: true}">is this styled</p>
+
+<br>
+<p [ngClass]="{redBorder: onTest()}">javascript event - styled</p>
+
+<br>
+<p [ngStyle]="{color: 'green'}">style color</p>
+<br>
+<p>Custom property binding</p>
+<br>
+<fa-property-binding [result]="10"></fa-property-binding>

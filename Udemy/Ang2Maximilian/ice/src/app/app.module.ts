@@ -6,7 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { OtherComponent } from './other/other.component';
 import { AnotherComponent } from './another.component';
-import { DatabindingComponent } from './databinding/databinding.component'; 
+import { DatabindingComponent } from './databinding/databinding.component';
+import { PropertyBindingComponent } from './databinding/property-binding.component'; 
 // added OtherComponent automatically from ng generate 
 
 @NgModule({
@@ -14,7 +15,9 @@ import { DatabindingComponent } from './databinding/databinding.component';
     AppComponent,
     OtherComponent,
     AnotherComponent,
-    DatabindingComponent 
+    DatabindingComponent,
+    PropertyBindingComponent
+     
      // added automatically with ng generate command
   ],
   imports: [

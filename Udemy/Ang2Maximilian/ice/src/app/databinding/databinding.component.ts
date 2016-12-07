@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { PropertyBindingComponent} from './property-binding.component';
 import { EventBindingComponent} from './event-binding.component';
-
+import { TwoWayBindingComponent} from './two-way-binding.component';
 
 @Component({
   selector: 'fa-databinding',

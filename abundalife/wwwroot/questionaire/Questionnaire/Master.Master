@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="abundalife1001.Questionnaire.Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Abunda Life - Questionnaire | Asbury Park NJ</title>
+<meta name="keywords" content="Vitamins,supplements,naturopathic,naturopathic medice,alternative medicine,cancer,diabetes" />
+<meta name="description" content="" />
+<meta name="generator" content="seotoaster" />
+<link href="Styles/concat.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="Styles/Styles.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="Styles/Print.css" rel="stylesheet" media="print" type="text/css" />
+<%--<link href="Styles/css" rel="stylesheet" type="text/css" />
+<link href="Styles/css(1)" rel="stylesheet" type="text/css" />--%>
+<!--[if IE]>
+<script src="Scripts/html5.js" type="text/javascript"></script>
+<![endif]-->
+<script type="text/javascript" src="Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="Scripts/Questionnaire.js"></script>
+<asp:ContentPlaceHolder ID="CntHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="Frm" runat="server">
+<header class="container_12 noPrint">
+<h1 class="logo noPrint">
+<a href="http://www.abundalife.com/" title="Home" class="logo current">
+<img src="Images/abunda-life.png" width="295" height="121" alt="Home" />
+</a>
+</h1>
+<nav> <ul id="main_menu" class="noPrint">
+<li class="cat-1 category"><a title="Home" href="http://www.abundalife.com/index.html">Home</a></li>
+<li class="cat-2 category"><a title="Services" href="http://www.abundalife.com/clinic.html">Clinic</a></li>
+<li class="cat-3 category"><a title="Health A-Z" href="http://www.abundalife.com/health.html">Health A-Z</a>
+    <ul id="health">
+        <li class="page"><a title="Abunda Life -Become Your Own Health Doctor" href="http://www.abundalife.com/abunda-life--become-your-own-health-doctor.html" >Abunda Life -Become Your Own Health Doctor</a></li>
+	</ul>
+</li>
+<li class="cat-4 category"><a title="Vitamins A-Z" href="http://www.abundalife.com/vitamins-a-z.html">Vitamins A-Z</a></li>
+<li class="cat-5 category"><a title="Nutritional Testing" href="http://www.abundalife.com/nutritional.html">Nutritional Testing</a>
+    <ul id="nutritional">
+        <li class="page"><a title="Abunda Life Health Questionnaire Download" href="http://www.abundalife.com/abunda-life-health-questionnaire-download.html" >Abunda Life Health Questionnaire Download</a></li>
+	    <li class="page"><a title="Abunda Life Health Questionnaire NDT-1001" href="http://www.abundalife.com/Abunda-Life-Health-Questionnaire-NDT-1001.html" >Abunda Life Health Questionnaire NDT-1001</a></li>
+    </ul>
+</li>
+<li class="cat-6 category"><a title="Who we are" href="http://www.abundalife.com/about.html">About Us</a>
+    <ul id="about">
+        <li class="page"><a title="Abunda Life Church" href="http://www.abundalife.com/abunda-life-church.html" >Abunda Life Church</a></li>
+    </ul>
+</li>
+<li class="cat-7 category"><a title="Featured events" href="http://www.abundalife.com/news.html">News &amp; Events</a></li>
+<li class="cat-8 category"><a title="Hours of Operation" href="http://www.abundalife.com/contact.html">Contact Us</a></li>
+<li>
+<ul class="nocategory">
+<li><a title="Vegetarian Green Formula- 1" href="http://www.abundalife.com/vegetarian-green-formula-1.html" class="page">Vegetarian Green Formula- 1</a></li>
+</ul>
+</li>
+</ul></nav>
+<%--<form id="search-form" name="search" action="http://www.abundalife.com/sys/backend_search/search" method="post">
+<input type="text" id="searchtext" name="searchtext" value="">
+<input type="submit" value="Search">
+<input type="hidden" id="pageUrl" name="pageUrl" value="search-results.html">
+</form>
+--%>
+<div id="sub_menu" class="noPrint">
+<div><a href="http://www.abundanet.com/" target="_blank"><img src="Images/store.png" alt=""></a> <a href="http://visitor.r20.constantcontact.com/d.jsp?llr=roe8ludab&p=oi&m=1103416365521" target="_blank"><img src="Images/sign-up.png" alt=""></a><a title="Abunda Life Reseller Program" href="http://www.abundaweb.com/" target="_blank"><img src="Images/abundalifereseller.png" border="0" alt="abundalifereseller" width="200" height="128"></a></div>
+</div>
+</header>
+<div id="container" class="container_12 cont_over minhght questionnaireFont">
+<div id="DivHeaderControls" runat="server" class="float_left noPrint" style="padding-left:11px;"><a href="Dashboard.aspx" 
+title="Please click here to go to your home page">Back to My Home</a>&nbsp;
+&nbsp;<asp:LinkButton id="LnkLogOut" runat="server" CausesValidation="false" Text="Sign Out" 
+OnClick="LnkLogOut_Click" ToolTip="It will logs you out from the Questionnaire Section."></asp:LinkButton></div>
+<asp:ContentPlaceHolder ID="Cnt" runat="server"></asp:ContentPlaceHolder>
+<div class="clear noPrint"></div><br /><hr />
+</div>
+<div class="container_12 noPrint">
+<div class="grid_5 noPrint" style="padding-top:8px;"><ul class="footer_menu noPrint">
+<li><a href="http://www.abundalife.com/index.html">Home</a></li>
+<li><a href="http://www.abundalife.com/about.html">About us</a></li>
+<li><a href="http://www.abundalife.com/clinic.html">Clinic</a></li>
+<li><a href="http://www.abundalife.com/health.html">Health A-Z</a></li>
+<li><a href="http://www.abundalife.com/news.html">News &amp; Events</a></li>
+<li><a href="http://www.abundalife.com/contact.html">Contact Us</a></li>
+</ul>
+<p>AbundaLife © 2013&nbsp; | &nbsp;<a title="Privacy policy" href="http://www.abundalife.com/privacy-policy.html">Privacy Policy</a></p></div>
+<div class="grid_2 noPrint"><h5>Meet Us online</h5></div>
+<div class="grid_2 noPrint"><h5>E-mail</h5><p><a class="mail" href="mailto:info@abundalife.com">info@abundalife.com</a></p></div>
+<div class="grid_3 noPrint"><h5>Contact information</h5><div class="line">Telephone: (732) 775-7575<br /> Location: Asbury Park, NJ 07712</div></div>
+</div>
+<!-- end of container div -->
+</form>
+</body>
+</html>

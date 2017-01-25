@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<title>## My Abunda Life ##</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link href="css/style.css" rel="stylesheet" media="all" />
+</head>
+<body>
+<form id="Frm" runat="server" class="pd10">
+<table width="960" border="0" cellpadding="2" cellspacing="2" class="border" align="center">
+<tr>
+<td colspan="2" class="style3" align="center" style="border-bottom:1px solid #328b49;">
+<a href="/"><img src="images/9-08ChurchMedNutTestingClin-1964.jpg" alt="Nutritional Testing and Personal Health Evaluation" /></a><br />
+Nutritional Testing and Personal Health Evaluation<br /><br />
+<a href="/">Home</a>&nbsp;&nbsp;<asp:LinkButton ID="LnkLogin" runat="server" CausesValidation="false" Text="Log in" 
+onclick="LnkLogin_Click"></asp:LinkButton>&nbsp;&nbsp;<asp:LinkButton ID="LnkLogout" runat="server" CausesValidation="false" 
+Text="Log out" onclick="LnkLogout_Click"></asp:LinkButton>
+</td>
+</tr>
+<asp:ContentPlaceHolder ID="Cp" runat="server"></asp:ContentPlaceHolder>
+</table>
+</form>
+<asp:ContentPlaceHolder ID="Ch" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

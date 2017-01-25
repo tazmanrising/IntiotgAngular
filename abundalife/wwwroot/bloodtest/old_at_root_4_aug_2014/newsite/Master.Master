@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="abundalife1001.Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" name="form1" runat="server">
+    <div class="outer">
+        <div class="header">
+            <div class="header-logo">
+                <a href="default.aspx" title="Home">
+                    <img alt="header-logo" src="images/logo.png" /></a>
+            </div>
+            <%--<div class="clear">
+            </div>--%>
+            <div class="header-address">
+                <div class="header-add-content">
+                    Abunda Life<br />
+                    208 Third Eve<br />
+                    Asbury Park N.J. 07712<br />
+                    P 732-775-7575
+                    <br />
+                    www.abundalife.com</div>
+                <div class="clear">
+                </div>
+                <div id="divHeader" runat="server">
+                    <div class="header-title">
+                        Naturopathic Abunda Life 1001
+                    </div>
+                    <div class="header-title2">
+                        Nutritional Testing & Personal Health Evaluation
+                    </div>
+                </div>
+                <div class="header-program-title" id="divProgram" runat="server">
+                    Program Administration Services
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%--<div id="divLogoFirst" runat="server">
+            <div class="footer">
+                <div class="footer-img">
+                    <asp:Image AlternateText="" ImageUrl="images/robert.png" runat="server" ID="imgLogoFirst" />
+                </div>
+            </div>
+            <div class="footer-text">
+                Dr. Robert H. Sorge ND., PHD,<br />
+                Founder Abunda Life<br />
+                Since 1964
+            </div>
+        </div>--%>
+        <div id="divLogoSecoond" runat="server">
+            <div class="footer">
+                <div class="footer-img2">
+                    <asp:Image AlternateText="" ImageUrl="images/abounda-logo2.JPG" runat="server" ID="imgLogoSecond"
+                        />
+                </div>
+                <div class="footer-text2">
+                    Robert H. Sorge ND, PHD<br />
+                    Doctor of Naturopathic Medicine Since 1964
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

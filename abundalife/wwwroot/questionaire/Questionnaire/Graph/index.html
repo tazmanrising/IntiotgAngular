@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Charting</title>
+	<link href="css/basic.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/enhance.js"></script>	
+	<script type="text/javascript">
+		// Run capabilities test
+		enhance({
+			loadScripts: [
+				{src: 'js/excanvas.js', iecondition: 'all'},
+				'../Scripts/jquery-1.6.2.min.js',
+				'js/visualize.jQuery.js',
+				'js/example.js'
+			],
+			loadStyles: [
+				'css/visualize.css',
+				'css/visualize-dark.css'
+			]
+            });
+    </script>
+</head>
+<body>
+<table style="overflow:auto; width:2600px; display:none;">
+    <caption>Division A </caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th scope="col">Sec. 1</th>
+			<th scope="col">Sec. 2</th>
+			<th scope="col">Sec. 3</th>
+			<th scope="col">Sec. 4</th>
+			<th scope="col">Sec. 5</th>
+			<th scope="col">Sec. 6</th>
+            <th scope="col">Sec. 7</th>
+			<th scope="col">Sec. 8</th>
+			<th scope="col">Sec. 9</th>
+			<th scope="col">Sec. 10</th>
+			<th scope="col">Sec. 11</th>
+			<th scope="col">Sec. 12</th>
+            <th scope="col">Sec. 13</th>
+			<th scope="col">Sec. 14</th>
+			<th scope="col">Sec. 15</th>
+			<th scope="col">Sec. 16</th>
+			<th scope="col">Sec. 17</th>
+			<th scope="col">Sec. 18</th>
+            <th scope="col">Sec. 19</th>
+			<th scope="col">Sec. 20</th>
+			<th scope="col">Sec. 21</th>
+			<th scope="col">Sec. 22</th>
+			<th scope="col">Sec. 23</th>
+			<th scope="col">Sec. 24</th>
+            <th scope="col">Sec. 25</th>
+			<th scope="col">Sec. 26</th>
+			<th scope="col">Sec. 27</th>
+			<th scope="col">Sec. 28</th>
+			<th scope="col">Sec. 29</th>
+			<th scope="col">Sec. 30</th>
+            <th scope="col">Sec. 31</th>
+			<th scope="col">Sec. 32</th>
+			<th scope="col">Sec. 33</th>
+			<th scope="col">Sec. 34</th>
+			<th scope="col">Sec. 35</th>
+			<th scope="col">Sec. 36</th>
+            <th scope="col">Sec. 37</th>
+			<th scope="col">Sec. 38</th>
+			<th scope="col">Sec. 39</th>
+			<th scope="col">Sec. 40</th>
+			<th scope="col">Sec. 41</th>
+			<th scope="col">Sec. 42</th>
+            <th scope="col">Sec. 43</th>
+			<th scope="col">Sec. 44</th>
+			<th scope="col">Sec. 45</th>
+			<th scope="col">Sec. 46</th>
+			<th scope="col">Sec. 47</th>
+			<th scope="col">Sec. 48</th>
+            <th scope="col">Sec. 49</th>
+			<th scope="col">Sec. 50</th>
+			<th scope="col">Sec. 51</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Section's Score</th>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+		</tr>
+	</tbody>
+</table>	
+<table style="display:none;">
+    <caption>Division B</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th scope="col">Sec. 1</th>
+			<th scope="col">Sec. 2</th>
+			<th scope="col">Sec. 3</th>
+			<th scope="col">Sec. 4</th>
+			<th scope="col">Sec. 5</th>
+			<th scope="col">Sec. 6</th>
+            <th scope="col">Sec. 7</th>
+			<th scope="col">Sec. 8</th>
+			<th scope="col">Sec. 9</th>
+			<th scope="col">Sec. 10</th>
+			<th scope="col">Sec. 11</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Section's Score</th>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+		</tr>
+	</tbody>
+</table>
+<table style="overflow:auto; width:1800px; display:none;">
+    <caption>Division C</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th scope="col">Sec. 1</th>
+			<th scope="col">Sec. 2</th>
+			<th scope="col">Sec. 3</th>
+			<th scope="col">Sec. 4</th>
+			<th scope="col">Sec. 5</th>
+			<th scope="col">Sec. 6</th>
+            <th scope="col">Sec. 7</th>
+			<th scope="col">Sec. 8</th>
+			<th scope="col">Sec. 9</th>
+			<th scope="col">Sec. 10</th>
+			<th scope="col">Sec. 11</th>
+            <th scope="col">Sec. 12</th>
+            <th scope="col">Sec. 13</th>
+			<th scope="col">Sec. 14</th>
+			<th scope="col">Sec. 15</th>
+			<th scope="col">Sec. 16</th>
+			<th scope="col">Sec. 17</th>
+			<th scope="col">Sec. 18</th>
+            <th scope="col">Sec. 19</th>
+			<th scope="col">Sec. 20</th>
+			<th scope="col">Sec. 21</th>
+			<th scope="col">Sec. 22</th>
+			<th scope="col">Sec. 23</th>
+			<th scope="col">Sec. 24</th>
+            <th scope="col">Sec. 25</th>
+			<th scope="col">Sec. 26</th>
+			<th scope="col">Sec. 27</th>
+			<th scope="col">Sec. 28</th>
+			<th scope="col">Sec. 29</th>
+			<th scope="col">Sec. 30</th>
+            <th scope="col">Sec. 31</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Section's Score</th>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</tbody>
+</table>
+<table style="display:none;">
+    <caption>Division D</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th scope="col">Sec. 1</th>
+			<th scope="col">Sec. 2</th>
+			<th scope="col">Sec. 3</th>
+			<th scope="col">Sec. 4</th>
+			<th scope="col">Sec. 5</th>
+			<th scope="col">Sec. 6</th>
+            <th scope="col">Sec. 7</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Section's Score</th>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>1</td>
+		</tr>
+	</tbody>
+</table>
+<table style="display:none;">
+    <caption>Division E</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th scope="col">Sec. 1</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Section's Score</th>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+<table style="display:none;">
+    <caption>Division F</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th scope="col">Sec. 1</th>
+            <th scope="col">Sec. 2</th>
+            <th scope="col">Sec. 3</th>
+            <th scope="col">Sec. 4</th>
+            <th scope="col">Sec. 5</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Section's Score</th>
+			<td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

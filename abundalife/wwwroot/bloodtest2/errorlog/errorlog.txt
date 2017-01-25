@@ -1,0 +1,188 @@
+﻿1/29/2016 4:29:31 AM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> Input string was not in a correct format.<br /><b>PAGE NAME:</b> /bloodtest2/test-report.aspx<br /><b>QUERYSTRING:</b> q=aa208459-e447-4b85-a8b0-fc9ed76b259a<br /><b>METHOD:</b> Single ParseSingle(System.String, System.Globalization.NumberStyles, System.Globalization.NumberFormatInfo)<br /><b>STACKTRACE:</b>    at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToSingle(String value)
+   at STZ.Library.CF.CSingle(String pValue)
+   at Web.Test_Report.GetRank(String pScore, Single pIdeal)
+   at Web.Test_Report.GetDetails()
+   at Web.Test_Report.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+1/29/2016 4:31:21 AM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> Input string was not in a correct format.<br /><b>PAGE NAME:</b> /bloodtest2/Test-Report.aspx<br /><b>QUERYSTRING:</b> q=aa208459-e447-4b85-a8b0-fc9ed76b259a<br /><b>METHOD:</b> Single ParseSingle(System.String, System.Globalization.NumberStyles, System.Globalization.NumberFormatInfo)<br /><b>STACKTRACE:</b>    at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToSingle(String value)
+   at STZ.Library.CF.CSingle(String pValue)
+   at Web.Test_Report.GetRank(String pScore, Single pIdeal)
+   at Web.Test_Report.GetDetails()
+   at Web.Test_Report.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/13/2016 4:38:53 AM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/Login.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/Login.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/13/2016 4:39:10 AM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/Login.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/Login.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/13/2016 4:39:15 AM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/Login.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/Login.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/13/2016 4:40:30 AM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/Default.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/Default.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/13/2016 4:40:39 AM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/default.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/default.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/13/2016 10:33:31 PM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/Login.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/Login.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/15/2016 4:03:45 PM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/ogin.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/ogin.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/15/2016 4:03:56 PM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/Login.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/Login.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/15/2016 4:04:12 PM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/Login.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/Login.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+2/15/2016 8:19:17 PM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> The file '/bloodtest2/Login.aspx' does not exist.<br /><b>PAGE NAME:</b> /bloodtest2/Login.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void CheckVirtualFileExists(System.Web.VirtualPath)<br /><b>STACKTRACE:</b>    at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/16/2016 8:21:52 PM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> Timeout in IO operation<br /><b>PAGE NAME:</b> /bloodtest2/default.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void StopTimer()<br /><b>STACKTRACE:</b>    at MySql.Data.MySqlClient.TimedStream.StopTimer()
+   at MySql.Data.MySqlClient.TimedStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.BufferedStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.ReadFully(Stream stream, Byte[] buffer, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/16/2016 8:22:39 PM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> Timeout in IO operation<br /><b>PAGE NAME:</b> /bloodtest2/default.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void StopTimer()<br /><b>STACKTRACE:</b>    at MySql.Data.MySqlClient.TimedStream.StopTimer()
+   at MySql.Data.MySqlClient.TimedStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.BufferedStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.ReadFully(Stream stream, Byte[] buffer, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/16/2016 8:22:39 PM: My Abunda Life
+ 
+<br /><b>MESSAGE:</b> Timeout in IO operation<br /><b>PAGE NAME:</b> /bloodtest2/default.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void StopTimer()<br /><b>STACKTRACE:</b>    at MySql.Data.MySqlClient.TimedStream.StopTimer()
+   at MySql.Data.MySqlClient.TimedStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.BufferedStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.ReadFully(Stream stream, Byte[] buffer, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)<br /><b>PARAMETERS:</b> is/are as follows:
+================================

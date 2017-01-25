@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /Web.config
+Disallow: /ScriptResource.axd  
+Disallow: /WebResource.axd  

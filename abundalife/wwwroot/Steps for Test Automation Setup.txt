@@ -1,0 +1,39 @@
+Steps for Test Automation
+
+1. Install Ruby Installer 1.9.3
+	-Click the checkboxes for: 
+		- Add Ruby executables to your PATH
+		- Associate .rb and rbw files with this Ruby installation
+		
+2. Move the following 3 folders to the root: 
+	- vetpro_automation
+	- ansi166
+	- WebDriver
+e.g. C:\ansi166, C:\vetpro_automation, C:\WebDriver
+
+3. Add WebDriver to the path
+	- Right click on "My Computer"
+	- Select "Properties"
+	- Click "Advanced System Settings"
+	- Click the "Environment Variables" button
+	- Select "Path" in the user variables section
+		- Click the "Edit" button
+		- Add C:\WebDriver to your path 
+			-It will probably look like this "C:\Ruby193" if so, 
+			-add the WebDriver path so it looks like this "C:\Ruby193\bin;C:\WebDriver"
+	- Install Ansicon
+		- Open command prompt (In Start Menu, or you can type "CMD" in the RUN window Start > Run)
+		- Change directories (CD) to C:\ansi166: e.g: "cd C:\ansi166"
+		- CD into x86(32bit) or x64(64bit) depending if your OS is 32 or 64 bit: "cd x64"
+		- Type: "ansicon.exe -i" > Enter
+		- Type: "exit" > Enter
+	- Re-open new command prompt
+		- CD into c:\vetpro_automation
+		- Type: "gem install bundler" > Enter
+		- Type: "bundle install" > Enter
+		- Type: "bundle update" > Enter
+		
+4. Test first Scenario
+	- Type: "cucumber featuresSearchProvidersDebug.feature" > Enter
+		- This can be edited to change the html output file name.
+		# e.g. cucumber features\SubmitProviderFileDebug3.feature --format html --out public/SuppAttest_report.html

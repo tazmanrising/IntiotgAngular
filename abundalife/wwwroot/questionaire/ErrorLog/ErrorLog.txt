@@ -1,0 +1,1811 @@
+﻿7/16/2014 9:45:24 PM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/16/2014 9:45:24 PM: Abunda Life ERROR : 7/16/2014 - 9:45 PM
+ 
+<br /><b>MESSAGE:</b> WebForms UnobtrusiveValidationMode requires a ScriptResourceMapping for 'jquery'. Please add a ScriptResourceMapping named jquery(case-sensitive).<br /><b>PAGE NAME:</b> /questionaire/Questionnaire/signin.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void EnsureJqueryRegistered()<br /><b>STACKTRACE:</b>    at System.Web.UI.ClientScriptManager.EnsureJqueryRegistered()
+   at System.Web.UI.WebControls.BaseValidator.RegisterUnobtrusiveScript()
+   at System.Web.UI.WebControls.BaseValidator.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/16/2014 10:10:59 PM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/16/2014 10:10:59 PM: Abunda Life ERROR : 7/16/2014 - 10:10 PM
+ 
+<br /><b>MESSAGE:</b> WebForms UnobtrusiveValidationMode requires a ScriptResourceMapping for 'jquery'. Please add a ScriptResourceMapping named jquery(case-sensitive).<br /><b>PAGE NAME:</b> /questionaire/Questionnaire/signin.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void EnsureJqueryRegistered()<br /><b>STACKTRACE:</b>    at System.Web.UI.ClientScriptManager.EnsureJqueryRegistered()
+   at System.Web.UI.WebControls.BaseValidator.RegisterUnobtrusiveScript()
+   at System.Web.UI.WebControls.BaseValidator.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/16/2014 10:22:34 PM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/16/2014 10:22:34 PM: Abunda Life ERROR : 7/16/2014 - 10:22 PM
+ 
+<br /><b>MESSAGE:</b> Access denied for user 'root'@'localhost' (using password: YES)<br /><b>PAGE NAME:</b> /questionaire/Questionnaire/signin.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void OpenPacket()<br /><b>STACKTRACE:</b>    at MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate411()
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at abundalife1001.Questionnaire.SignIn.BtnSubmit_Click(Object sender, EventArgs e) in c:\dev\abundalife\Questionaire\Questionnaire\SignIn.aspx.cs:line 51
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br /><b>PARAMETERS:</b> is/are as follows:<br />Server Error Code = 1045
+================================
+7/16/2014 10:53:15 PM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/16/2014 10:53:15 PM: Abunda Life ERROR : 7/16/2014 - 10:53 PM
+ 
+<br /><b>MESSAGE:</b> Table 'abundalife.tbl_users_questionnaire' doesn't exist<br /><b>PAGE NAME:</b> /questionaire/Questionnaire/signin.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void OpenPacket()<br /><b>STACKTRACE:</b>    at MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   at MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at abundalife1001.Questionnaire.SignIn.BtnSubmit_Click(Object sender, EventArgs e) in c:\dev\abundalife\Questionaire\Questionnaire\SignIn.aspx.cs:line 54
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br /><b>PARAMETERS:</b> is/are as follows:<br />Server Error Code = 1146
+================================
+7/16/2014 10:53:27 PM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/16/2014 10:53:27 PM: Abunda Life ERROR : 7/16/2014 - 10:53 PM
+ 
+<br /><b>MESSAGE:</b> Table 'abundalife.tbl_users_questionnaire' doesn't exist<br /><b>PAGE NAME:</b> /questionaire/Questionnaire/signin.aspx<br /><b>QUERYSTRING:</b> <br /><b>METHOD:</b> Void OpenPacket()<br /><b>STACKTRACE:</b>    at MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   at MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at abundalife1001.Questionnaire.SignIn.BtnSubmit_Click(Object sender, EventArgs e) in c:\dev\abundalife\Questionaire\Questionnaire\SignIn.aspx.cs:line 54
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)<br /><b>PARAMETERS:</b> is/are as follows:<br />Server Error Code = 1146
+================================
+7/21/2014 9:25:04 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/21/2014 9:25:04 AM: Abunda Life - Forgot Password
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Your Password for Sign In is : <b>polish42</b><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+7/21/2014 9:40:33 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/21/2014 9:40:33 AM: Abunda Life - Questionnaire Report Number 303
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=303&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />View / Approve it from the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/History.aspx' target='_blank'><b>Dashboard Section</b></a> by logging in as <u>info@abundalife.com</u><br /><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+7/21/2014 9:40:33 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/21/2014 9:40:33 AM: Abunda Life - Cover Report of Questionnaire Report Number 303
+ 
+<html><head><title>Abunda Life</title><style type='text/css'>.redtextbold{color:Red; font-weight:bold;}.greentextbold{color:Green; font-weight:bold;}.bluetextbold{color:Blue; font-weight:bold;}</style></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=303&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />Cover Report of it is as follows: <br /><br /></td></tr><tr><td><div id="Cnt_DivCoverReport" >
+<h5>
+Personal Cover Report of Finding Prepared Exclusively For:</h5>
+<br />
+<u><b>PATIENT INFORMATION</b></u>
+<br />
+<br />
+<b>NAME:</b>&nbsp;Richard Jarosz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>DATE
+& TIME:</b>&nbsp;Monday, July 21, 2014 - 9:40 AM
+<br />
+<br />
+<h4>Section Wise Total Scores</h4>
+
+<div class="cvr">
+<div class="fl clm">1.) Calcium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Chromium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Copper :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Iodine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) Iron :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">6.) Magnesium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Manganese :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">8.) Phosphorus :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">9.) Potassium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Silicon :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">11.) Bio Organic Sodium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">12.) Sulfur :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Zinc :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">14.) Digestive Enzymes/Hypochlorhydria :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">15.) Protein/Amino Acids :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Vitamin B Complex :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">17.) Thiamin (vitamin B1) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">18.) Riboflavin (vitamin B2) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Niacin (vitamin B3) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">20.) Vitamin A :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">21.) Pyridoxine (vitamin B6) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Cobalamin (Vitamin B12) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">23.) Pangamic Acid (Vitamin B15) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">24.) Biotin :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Choline :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">26.) Inositol :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">27.) Folic Acid :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) Pantothenic Acid (Vitamin B5) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">29.) Para- Amino Benzoic Acid(vitamin B5) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">30.) Vitamin C :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Vitamin D-3 :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">32.) Essential Fatty Acids (Vitamin F) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">33.) Vitamin E :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">34.) Boron :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">35.) Cobalt :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">36.) Germanium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">37.) Gold :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">38.) Lithium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">39.) Molybdenum :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">40.) Platinum :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">41.) Selenium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">42.) Silver :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">43.) Vanadium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">44.) Vitamin B17 Laetrile :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">45.) Vitamin K :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">46.) Bio-Organic Chlorine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">47.) Bio-organic Fluorine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">48.) Bromine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">49.) Bioflavonoid :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">50.) Electrolytes :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">51.) Co Enzyme Q10 :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Thyroid :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Adrenal :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Pineal :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Pituitary :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) Pregnenolone :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">6.) Aldosterone :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Estrogen (Women) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">8.) Progesterone (Women) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">9.) Testosterone (Women) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Testosterone (Men) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">11.) Progesterone (Men) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Arginine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Histidine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Isoleucine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Leucine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) Lysine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">6.) Methionine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Phenylalaine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">8.) Theonine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">9.) Tryptophan :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Valine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">11.) Proline :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">12.) Taurine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Carnitine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">14.) Tyrosine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">15.) Glutamine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Cystene / cystine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">17.) Glycine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">18.) Alanine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Gama Amino Butyric Acid (GABA) :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">20.) Asparagina / Aspartic Acid :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">21.) Citrulline :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Ornithine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">23.) Glutathione :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">24.) Acetyl-L-Carnitine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Alpha Lipoic Acid :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">26.) Arginine Alpha Ketoglutarate :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">27.) Creatine Monohydrate :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) N-Acetyl-Cystine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">29.) Ornithine Alpha Ketoglutarate :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">30.) S-Adenosyl-L-Methionesame :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Pyruvate :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Pre-mature Aging – Aging/Degenerating faster than chronological years :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl">2.) Blood Sugar Collapse / Bio Energy Thief :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">3.) Candida Albacans :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="fl clm">4.) Intestinal Parasite Syndrome :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) Mal-Absorption Syndrome :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">6.) Liver Sluggishness :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl">7.) Intestinal Dysbiosis, Fermentation - Yeast Fungus Syndrome :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Body/Mind Psycho Induced/Exacerbated Somatic Significance :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Cellular Oxygen Deficiency :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Dopamine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Serotonin :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Gaba :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) L-Acetylcholine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+<h4>
+Any Additional Information</h4>
+<br />
+No at the current time....
+<br />
+<br />
+</div></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+7/21/2014 9:43:36 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/21/2014 9:43:36 AM: Abunda Life - Forgot Password
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Your Password for Sign In is : <b>polish42!</b><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+7/21/2014 9:49:42 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/21/2014 9:49:42 AM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Richard BOBOBBO</td></tr><tr><td><b>Email :</b></td><td>richardmjjarosz@gmail.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+7/21/2014 9:49:42 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/21/2014 9:49:42 AM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>richardmjjarosz@gmail.com</td></tr><tr><td><b>Password :</b></td><td>bobbobbob</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/8/2014 6:56:09 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/8/2014 6:56:09 AM: Abunda Life - Forgot Password
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Your Password for Sign In is : <b>polish42!</b><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/8/2014 9:27:01 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/8/2014 9:27:01 AM: Abunda Life - Forgot Password
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Your Password for Sign In is : <b>polish42!</b><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/8/2014 9:32:01 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/8/2014 9:32:01 AM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>bob jarosz</td></tr><tr><td><b>Email :</b></td><td>bob@gmail.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/8/2014 9:32:01 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/8/2014 9:32:01 AM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>bob@gmail.com</td></tr><tr><td><b>Password :</b></td><td>polish42</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/8/2014 9:32:55 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/8/2014 9:32:55 AM: Abunda Life - Questionnaire Report Number 305
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=305&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />View / Approve it from the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/History.aspx' target='_blank'><b>Dashboard Section</b></a> by logging in as <u>info@abundalife.com</u><br /><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/8/2014 9:32:55 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/8/2014 9:32:55 AM: Abunda Life - Cover Report of Questionnaire Report Number 305
+ 
+<html><head><title>Abunda Life</title><style type='text/css'>.redtextbold{color:Red; font-weight:bold;}.greentextbold{color:Green; font-weight:bold;}.bluetextbold{color:Blue; font-weight:bold;}</style></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=305&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />Cover Report of it is as follows: <br /><br /></td></tr><tr><td><div id="Cnt_DivCoverReport" >
+<h5>
+Personal Cover Report of Finding Prepared Exclusively For:</h5>
+<br />
+<u><b>PATIENT INFORMATION</b></u>
+<br />
+<br />
+<b>NAME:</b>&nbsp;bob jarosz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>DATE
+& TIME:</b>&nbsp;Friday, August 8, 2014 - 9:32 AM
+<br />
+<br />
+<h4>Section Wise Total Scores</h4>
+
+<div class="cvr">
+<div class="fl clm">1.) Calcium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Chromium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Copper :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Iodine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) Iron :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Magnesium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Manganese :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Phosphorus :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Potassium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Silicon :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Bio Organic Sodium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">12.) Sulfur :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Zinc :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">14.) Digestive Enzymes/Hypochlorhydria :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">15.) Protein/Amino Acids :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Vitamin B Complex :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">17.) Thiamin (vitamin B1) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">18.) Riboflavin (vitamin B2) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Niacin (vitamin B3) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">20.) Vitamin A :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">21.) Pyridoxine (vitamin B6) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Cobalamin (Vitamin B12) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Pangamic Acid (Vitamin B15) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">24.) Biotin :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Choline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Inositol :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Folic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) Pantothenic Acid (Vitamin B5) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">29.) Para- Amino Benzoic Acid(vitamin B5) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">30.) Vitamin C :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Vitamin D-3 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">32.) Essential Fatty Acids (Vitamin F) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">33.) Vitamin E :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">34.) Boron :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">35.) Cobalt :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">36.) Germanium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">37.) Gold :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">38.) Lithium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">39.) Molybdenum :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">40.) Platinum :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">41.) Selenium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">42.) Silver :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">43.) Vanadium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">44.) Vitamin B17 Laetrile :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">45.) Vitamin K :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">46.) Bio-Organic Chlorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">47.) Bio-organic Fluorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">48.) Bromine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">49.) Bioflavonoid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">50.) Electrolytes :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">51.) Co Enzyme Q10 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Thyroid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Adrenal :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Pineal :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Pituitary :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Pregnenolone :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Aldosterone :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Estrogen (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Progesterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Testosterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Testosterone (Men) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Progesterone (Men) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Arginine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Histidine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Isoleucine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Leucine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Lysine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Methionine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Phenylalaine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Theonine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Tryptophan :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Valine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Proline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">12.) Taurine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Carnitine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">14.) Tyrosine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">15.) Glutamine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Cystene / cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">17.) Glycine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">18.) Alanine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Gama Amino Butyric Acid (GABA) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">20.) Asparagina / Aspartic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">21.) Citrulline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Ornithine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Glutathione :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">24.) Acetyl-L-Carnitine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Alpha Lipoic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Arginine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Creatine Monohydrate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) N-Acetyl-Cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">29.) Ornithine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">30.) S-Adenosyl-L-Methionesame :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Pyruvate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Pre-mature Aging – Aging/Degenerating faster than chronological years :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl">2.) Blood Sugar Collapse / Bio Energy Thief :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">3.) Candida Albacans :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">4.) Intestinal Parasite Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Mal-Absorption Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">6.) Liver Sluggishness :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl">7.) Intestinal Dysbiosis, Fermentation - Yeast Fungus Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Body/Mind Psycho Induced/Exacerbated Somatic Significance :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Cellular Oxygen Deficiency :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Dopamine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Serotonin :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Gaba :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) L-Acetylcholine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+<h4>
+Any Additional Information</h4>
+<br />
+test
+<br />
+<br />
+</div></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 6:43:28 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 6:43:28 AM: Abunda Life - Forgot Password
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Your Password for Sign In is : <b>bobbobbob</b><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 6:45:03 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 6:45:03 AM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Richard Jarosz</td></tr><tr><td><b>Email :</b></td><td>richardmjarosz@gmail.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 6:45:03 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 6:45:03 AM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>richardmjarosz@gmail.com</td></tr><tr><td><b>Password :</b></td><td>polish42</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 6:46:00 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 6:46:00 AM: Abunda Life - Questionnaire Report Number 306
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=306&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />View / Approve it from the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/History.aspx' target='_blank'><b>Dashboard Section</b></a> by logging in as <u>info@abundalife.com</u><br /><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 6:46:00 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 6:46:00 AM: Abunda Life - Cover Report of Questionnaire Report Number 306
+ 
+<html><head><title>Abunda Life</title><style type='text/css'>.redtextbold{color:Red; font-weight:bold;}.greentextbold{color:Green; font-weight:bold;}.bluetextbold{color:Blue; font-weight:bold;}</style></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=306&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />Cover Report of it is as follows: <br /><br /></td></tr><tr><td><div id="Cnt_DivCoverReport" >
+<h5>
+Personal Cover Report of Finding Prepared Exclusively For:</h5>
+<br />
+<u><b>PATIENT INFORMATION</b></u>
+<br />
+<br />
+<b>NAME:</b>&nbsp;Richard Jarosz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>DATE
+& TIME:</b>&nbsp;Monday, August 18, 2014 - 6:45 AM
+<br />
+<br />
+<h4>Section Wise Total Scores</h4>
+
+<div class="cvr">
+<div class="fl clm">1.) Calcium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Chromium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Copper :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Iodine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Iron :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Magnesium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Manganese :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Phosphorus :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Potassium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Silicon :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Bio Organic Sodium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">12.) Sulfur :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Zinc :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">14.) Digestive Enzymes/Hypochlorhydria :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">15.) Protein/Amino Acids :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Vitamin B Complex :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">17.) Thiamin (vitamin B1) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">18.) Riboflavin (vitamin B2) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Niacin (vitamin B3) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">20.) Vitamin A :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">21.) Pyridoxine (vitamin B6) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Cobalamin (Vitamin B12) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Pangamic Acid (Vitamin B15) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">24.) Biotin :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Choline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Inositol :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Folic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) Pantothenic Acid (Vitamin B5) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">29.) Para- Amino Benzoic Acid(vitamin B5) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">30.) Vitamin C :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Vitamin D-3 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">32.) Essential Fatty Acids (Vitamin F) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">33.) Vitamin E :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">34.) Boron :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">35.) Cobalt :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">36.) Germanium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">37.) Gold :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">38.) Lithium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">39.) Molybdenum :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">40.) Platinum :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">41.) Selenium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">42.) Silver :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">43.) Vanadium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">44.) Vitamin B17 Laetrile :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">45.) Vitamin K :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">46.) Bio-Organic Chlorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">47.) Bio-organic Fluorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">48.) Bromine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">49.) Bioflavonoid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">50.) Electrolytes :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">51.) Co Enzyme Q10 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Thyroid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Adrenal :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Pineal :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Pituitary :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Pregnenolone :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Aldosterone :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Estrogen (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Progesterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Testosterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Testosterone (Men) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Progesterone (Men) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Arginine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Histidine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Isoleucine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Leucine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Lysine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Methionine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Phenylalaine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Theonine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Tryptophan :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Valine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Proline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">12.) Taurine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Carnitine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">14.) Tyrosine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">15.) Glutamine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Cystene / cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">17.) Glycine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">18.) Alanine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Gama Amino Butyric Acid (GABA) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">20.) Asparagina / Aspartic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">21.) Citrulline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Ornithine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Glutathione :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">24.) Acetyl-L-Carnitine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Alpha Lipoic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Arginine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Creatine Monohydrate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) N-Acetyl-Cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">29.) Ornithine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">30.) S-Adenosyl-L-Methionesame :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Pyruvate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Pre-mature Aging – Aging/Degenerating faster than chronological years :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl">2.) Blood Sugar Collapse / Bio Energy Thief :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">3.) Candida Albacans :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">4.) Intestinal Parasite Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Mal-Absorption Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">6.) Liver Sluggishness :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl">7.) Intestinal Dysbiosis, Fermentation - Yeast Fungus Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Body/Mind Psycho Induced/Exacerbated Somatic Significance :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Cellular Oxygen Deficiency :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Dopamine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Serotonin :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Gaba :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) L-Acetylcholine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+<h4>
+Any Additional Information</h4>
+<br />
+Not given
+<br />
+<br />
+</div></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 10:54:18 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 10:54:18 AM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Richard Jarosz</td></tr><tr><td><b>Email :</b></td><td>richard@lonekeep.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 10:54:18 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 10:54:18 AM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>richard@lonekeep.com</td></tr><tr><td><b>Password :</b></td><td>polish42</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 10:55:03 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 10:55:03 AM: Abunda Life - Questionnaire Report Number 307
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=307&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />View / Approve it from the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/History.aspx' target='_blank'><b>Dashboard Section</b></a> by logging in as <u>info@abundalife.com</u><br /><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 10:55:03 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 10:55:03 AM: Abunda Life - Cover Report of Questionnaire Report Number 307
+ 
+<html><head><title>Abunda Life</title><style type='text/css'>.redtextbold{color:Red; font-weight:bold;}.greentextbold{color:Green; font-weight:bold;}.bluetextbold{color:Blue; font-weight:bold;}</style></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=307&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />Cover Report of it is as follows: <br /><br /></td></tr><tr><td><div id="Cnt_DivCoverReport" >
+<h5>
+Personal Cover Report of Finding Prepared Exclusively For:</h5>
+<br />
+<u><b>PATIENT INFORMATION</b></u>
+<br />
+<br />
+<b>NAME:</b>&nbsp;Richard Jarosz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>DATE
+& TIME:</b>&nbsp;Monday, August 18, 2014 - 10:55 AM
+<br />
+<br />
+<h4>Section Wise Total Scores</h4>
+
+<div class="cvr">
+<div class="fl clm">1.) Calcium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Chromium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Copper :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Iodine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Iron :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Magnesium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Manganese :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Phosphorus :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Potassium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Silicon :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Bio Organic Sodium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">12.) Sulfur :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Zinc :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">14.) Digestive Enzymes/Hypochlorhydria :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">15.) Protein/Amino Acids :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Vitamin B Complex :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">17.) Thiamin (vitamin B1) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">18.) Riboflavin (vitamin B2) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Niacin (vitamin B3) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">20.) Vitamin A :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">21.) Pyridoxine (vitamin B6) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Cobalamin (Vitamin B12) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Pangamic Acid (Vitamin B15) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">24.) Biotin :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Choline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Inositol :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Folic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) Pantothenic Acid (Vitamin B5) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">29.) Para- Amino Benzoic Acid(vitamin B5) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">30.) Vitamin C :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Vitamin D-3 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">32.) Essential Fatty Acids (Vitamin F) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">33.) Vitamin E :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">34.) Boron :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">35.) Cobalt :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">36.) Germanium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">37.) Gold :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">38.) Lithium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">39.) Molybdenum :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">40.) Platinum :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">41.) Selenium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">42.) Silver :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">43.) Vanadium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">44.) Vitamin B17 Laetrile :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">45.) Vitamin K :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">46.) Bio-Organic Chlorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">47.) Bio-organic Fluorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">48.) Bromine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">49.) Bioflavonoid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">50.) Electrolytes :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">51.) Co Enzyme Q10 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Thyroid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Adrenal :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Pineal :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Pituitary :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Pregnenolone :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Aldosterone :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Estrogen (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Progesterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Testosterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Testosterone (Men) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Progesterone (Men) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Arginine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Histidine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Isoleucine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Leucine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Lysine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">6.) Methionine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Phenylalaine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Theonine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Tryptophan :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Valine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Proline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">12.) Taurine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Carnitine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">14.) Tyrosine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">15.) Glutamine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Cystene / cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">17.) Glycine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">18.) Alanine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Gama Amino Butyric Acid (GABA) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">20.) Asparagina / Aspartic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">21.) Citrulline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Ornithine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Glutathione :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">24.) Acetyl-L-Carnitine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Alpha Lipoic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Arginine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Creatine Monohydrate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) N-Acetyl-Cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">29.) Ornithine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">30.) S-Adenosyl-L-Methionesame :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Pyruvate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Pre-mature Aging – Aging/Degenerating faster than chronological years :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl">2.) Blood Sugar Collapse / Bio Energy Thief :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">3.) Candida Albacans :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">4.) Intestinal Parasite Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Mal-Absorption Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">6.) Liver Sluggishness :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl">7.) Intestinal Dysbiosis, Fermentation - Yeast Fungus Syndrome :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Body/Mind Psycho Induced/Exacerbated Somatic Significance :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Cellular Oxygen Deficiency :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">2.) Dopamine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Serotonin :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Gaba :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">5.) L-Acetylcholine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+<h4>
+Any Additional Information</h4>
+<br />
+tetst
+<br />
+<br />
+</div></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/18/2014 10:58:49 AM: System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/18/2014 10:58:49 AM: Abunda Life - Forgot Password
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Your Password for Sign In is : <b>abundalifE</b><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+6/16/2016 8:11:31 AM: System.Net.Mail.SmtpException: Transaction failed. The server response was: E-mail sending limit exhausted.
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+6/16/2016 8:11:31 AM: Abunda Life ERROR : 6/16/2016 - 8:11 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=jobklzp19atuxbwohhobys2vg8ajeu2ejyntcloa0mqpjpbx5al25ynyrfbaicd_5kjotq2&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+6/16/2016 9:48:39 AM: System.Net.Mail.SmtpException: Transaction failed. The server response was: E-mail sending limit exhausted.
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+6/16/2016 9:48:39 AM: Abunda Life ERROR : 6/16/2016 - 9:48 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=pyngkmcfuv13he1qd6_tzbopapontjn8fgag47yleic_sytt2dq2i1pp3nbkytzlp8tcig2&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+6/16/2016 9:48:50 AM: System.Net.Mail.SmtpException: Transaction failed. The server response was: E-mail sending limit exhausted.
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+6/16/2016 9:48:50 AM: Abunda Life ERROR : 6/16/2016 - 9:48 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=x2nkrmjgxkmelz33nwnakhzlmgg2czlldr9zt-pchqzuaz9x7ql8olrrpjrfizu_z05idphlzhyg9i77x5uoprsoypw1&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/23/2016 11:02:40 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/23/2016 11:02:40 AM: Abunda Life ERROR : 7/23/2016 - 11:02 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=x2nkrmjgxkmelz33nwnakhzlmgg2czlldr9zt-pchqzuaz9x7ql8olrrpjrfizu_z05idphlzhyg9i77x5uoprsoypw1&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/23/2016 11:04:03 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/23/2016 11:04:03 AM: Abunda Life ERROR : 7/23/2016 - 11:04 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=pyngkmcfuv13he1qd6_tzbopapontjn8fgag47yleic_sytt2dq2i1pp3nbkytzlp8tcig2&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/23/2016 11:06:20 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/23/2016 11:06:20 AM: Abunda Life ERROR : 7/23/2016 - 11:06 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=jobklzp19atuxbwohhobys2vg8ajeu2ejyntcloa0mqpjpbx5al25ynyrfbaicd_5kjotq2&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+7/26/2016 6:05:04 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/26/2016 6:05:04 AM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Anne Lopez</td></tr><tr><td><b>Email :</b></td><td>dakotanned@gmail.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+7/26/2016 6:05:04 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/26/2016 6:05:04 AM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>dakotanned@gmail.com</td></tr><tr><td><b>Password :</b></td><td>dakota21</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+7/26/2016 6:49:07 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/26/2016 6:49:07 AM: Abunda Life - Questionnaire Report Number 479
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=479&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />View / Approve it from the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/History.aspx' target='_blank'><b>Dashboard Section</b></a> by logging in as <u>info@abundalife.com</u><br /><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+7/26/2016 6:49:07 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+7/26/2016 6:49:07 AM: Abunda Life - Cover Report of Questionnaire Report Number 479
+ 
+<html><head><title>Abunda Life</title><style type='text/css'>.redtextbold{color:Red; font-weight:bold;}.greentextbold{color:Green; font-weight:bold;}.bluetextbold{color:Blue; font-weight:bold;}</style></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=479&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />Cover Report of it is as follows: <br /><br /></td></tr><tr><td><div id="Cnt_DivCoverReport" >
+<h5>
+Personal Cover Report of Finding Prepared Exclusively For:</h5>
+<br />
+<u><b>PATIENT INFORMATION</b></u>
+<br />
+<br />
+<b>NAME:</b>&nbsp;Anne Lopez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>DATE
+& TIME:</b>&nbsp;Tuesday, July 26, 2016 - 6:49 AM
+<br />
+<br />
+<h4>Section Wise Total Scores</h4>
+
+<div class="cvr">
+<div class="fl clm">1.) Calcium :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="fl clm">2.) Chromium :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">3.) Copper :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Iodine :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="fl clm">5.) Iron :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">6.) Magnesium :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Manganese :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="fl clm">8.) Phosphorus :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="fl clm">9.) Potassium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Silicon :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">11.) Bio Organic Sodium :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">12.) Sulfur :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Zinc :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="fl clm">14.) Digestive Enzymes/Hypochlorhydria :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="fl clm">15.) Protein/Amino Acids :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Vitamin B Complex :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="fl clm">17.) Thiamin (vitamin B1) :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="fl clm">18.) Riboflavin (vitamin B2) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Niacin (vitamin B3) :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="fl clm">20.) Vitamin A :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">21.) Pyridoxine (vitamin B6) :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Cobalamin (Vitamin B12) :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="fl clm">23.) Pangamic Acid (Vitamin B15) :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">24.) Biotin :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Choline :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">26.) Inositol :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Folic Acid :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) Pantothenic Acid (Vitamin B5) :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="fl clm">29.) Para- Amino Benzoic Acid(vitamin B5) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">30.) Vitamin C :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Vitamin D-3 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">32.) Essential Fatty Acids (Vitamin F) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">33.) Vitamin E :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">34.) Boron :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">35.) Cobalt :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">36.) Germanium :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">37.) Gold :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">38.) Lithium :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">39.) Molybdenum :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">40.) Platinum :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">41.) Selenium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">42.) Silver :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">43.) Vanadium :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">44.) Vitamin B17 Laetrile :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">45.) Vitamin K :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">46.) Bio-Organic Chlorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">47.) Bio-organic Fluorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">48.) Bromine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">49.) Bioflavonoid :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">50.) Electrolytes :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">51.) Co Enzyme Q10 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Thyroid :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">2.) Adrenal :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">3.) Pineal :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Pituitary :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">5.) Pregnenolone :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">6.) Aldosterone :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Estrogen (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">8.) Progesterone (Women) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">9.) Testosterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Testosterone (Men) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">11.) Progesterone (Men) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Arginine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Histidine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Isoleucine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Leucine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Lysine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">6.) Methionine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Phenylalaine :&nbsp;<b><span class=redtextbold>5</span></b></div>
+<div class="fl clm">8.) Theonine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">9.) Tryptophan :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Valine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">11.) Proline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">12.) Taurine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Carnitine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">14.) Tyrosine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">15.) Glutamine :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Cystene / cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">17.) Glycine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">18.) Alanine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Gama Amino Butyric Acid (GABA) :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">20.) Asparagina / Aspartic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">21.) Citrulline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Ornithine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Glutathione :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">24.) Acetyl-L-Carnitine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Alpha Lipoic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Arginine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Creatine Monohydrate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) N-Acetyl-Cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">29.) Ornithine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">30.) S-Adenosyl-L-Methionesame :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Pyruvate :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Pre-mature Aging – Aging/Degenerating faster than chronological years :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl">2.) Blood Sugar Collapse / Bio Energy Thief :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">3.) Candida Albacans :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">4.) Intestinal Parasite Syndrome :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">5.) Mal-Absorption Syndrome :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">6.) Liver Sluggishness :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl">7.) Intestinal Dysbiosis, Fermentation - Yeast Fungus Syndrome :&nbsp;<b><span class=greentextbold>1</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Body/Mind Psycho Induced/Exacerbated Somatic Significance :&nbsp;<b><span class=greentextbold>2</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Cellular Oxygen Deficiency :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Dopamine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Serotonin :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Gaba :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) L-Acetylcholine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+<h4>
+Any Additional Information</h4>
+<br />
+Not given
+<br />
+<br />
+</div></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/8/2016 1:24:35 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/8/2016 1:24:35 PM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Melle Mpubco</td></tr><tr><td><b>Email :</b></td><td>mellie0803@gmail.cm</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/8/2016 1:24:35 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/8/2016 1:24:35 PM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>mellie0803@gmail.cm</td></tr><tr><td><b>Password :</b></td><td>health16</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+8/31/2016 11:01:43 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/31/2016 11:01:43 AM: Abunda Life ERROR : 8/31/2016 - 11:01 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=x2nkrmjgxkmelz33nwnakhzlmgg2czlldr9zt-pchqzuaz9x7ql8olrrpjrfizu_z05idphlzhyg9i77x5uoprsoypw1&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+8/31/2016 11:02:23 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/31/2016 11:02:23 AM: Abunda Life ERROR : 8/31/2016 - 11:02 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=pyngkmcfuv13he1qd6_tzbopapontjn8fgag47yleic_sytt2dq2i1pp3nbkytzlp8tcig2&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+8/31/2016 11:05:22 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+8/31/2016 11:05:22 AM: Abunda Life ERROR : 8/31/2016 - 11:05 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=jobklzp19atuxbwohhobys2vg8ajeu2ejyntcloa0mqpjpbx5al25ynyrfbaicd_5kjotq2&amp%3bt=635793714344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+9/13/2016 7:36:40 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+9/13/2016 7:36:40 AM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>calvin bridges</td></tr><tr><td><b>Email :</b></td><td>artwearsusa@gmail.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+9/13/2016 7:36:40 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+9/13/2016 7:36:40 AM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>artwearsusa@gmail.com</td></tr><tr><td><b>Password :</b></td><td>cb102066</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+9/19/2016 1:45:23 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+9/19/2016 1:45:23 PM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Lynne Cefalo</td></tr><tr><td><b>Email :</b></td><td>Lynepoo2@aol.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+9/19/2016 1:45:23 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+9/19/2016 1:45:23 PM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>Lynepoo2@aol.com</td></tr><tr><td><b>Password :</b></td><td>66502Rby</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+9/24/2016 9:24:45 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+9/24/2016 9:24:45 AM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Francois Le Bec</td></tr><tr><td><b>Email :</b></td><td>Francois.lebec@gmail.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+9/24/2016 9:24:45 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+9/24/2016 9:24:45 AM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>Francois.lebec@gmail.com</td></tr><tr><td><b>Password :</b></td><td>ALBabU5hk3-=</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+10/3/2016 12:08:36 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+10/3/2016 12:08:36 PM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Naana Hayford</td></tr><tr><td><b>Email :</b></td><td>nhayford@gmail.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+10/3/2016 12:08:36 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+10/3/2016 12:08:36 PM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>nhayford@gmail.com</td></tr><tr><td><b>Password :</b></td><td>Queen300</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+12/2/2016 5:57:39 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/2/2016 5:57:39 AM: Abunda Life ERROR : 12/2/2016 - 5:57 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=x2nkrmjgxkmelz33nwnakhzlmgg2czlldr9zt-pchqzuaz9x7ql8olrrpjrfizu_z05idphlzhyg9i77x5uoprsoypw1&amp%3bt=635793786344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+12/2/2016 5:57:48 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/2/2016 5:57:48 AM: Abunda Life ERROR : 12/2/2016 - 5:57 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=pyngkmcfuv13he1qd6_tzbopapontjn8fgag47yleic_sytt2dq2i1pp3nbkytzlp8tcig2&amp%3bt=635793786344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+12/2/2016 5:58:08 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/2/2016 5:58:08 AM: Abunda Life ERROR : 12/2/2016 - 5:58 AM
+ 
+<br /><b>MESSAGE:</b> This is an invalid webresource request.<br /><b>PAGE NAME:</b> /questionaire/webresource.axd<br /><b>QUERYSTRING:</b> d=jobklzp19atuxbwohhobys2vg8ajeu2ejyntcloa0mqpjpbx5al25ynyrfbaicd_5kjotq2&amp%3bt=635793786344370678<br /><b>METHOD:</b> Void System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)<br /><b>STACKTRACE:</b>    at System.Web.Handlers.AssemblyResourceLoader.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)<br /><b>PARAMETERS:</b> is/are as follows:
+================================
+12/8/2016 8:01:45 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/8/2016 8:01:45 AM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Alexander Jacobs</td></tr><tr><td><b>Email :</b></td><td>alexanderyjacobs@gmail.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+12/8/2016 8:01:45 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/8/2016 8:01:45 AM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>alexanderyjacobs@gmail.com</td></tr><tr><td><b>Password :</b></td><td>lifeLife123</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+12/27/2016 8:25:30 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/27/2016 8:25:30 PM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Matthew Sagui</td></tr><tr><td><b>Email :</b></td><td>elvis7@graceland.net</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+12/27/2016 8:25:30 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/27/2016 8:25:30 PM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>elvis7@graceland.net</td></tr><tr><td><b>Password :</b></td><td>qinann761</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+12/28/2016 10:10:14 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/28/2016 10:10:14 PM: Abunda Life - Forgot Password
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Your Password for Sign In is : <b>qinann761</b><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+12/31/2016 6:47:54 AM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/31/2016 6:47:54 AM: Abunda Life - Forgot Password
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Your Password for Sign In is : <b>qinann761</b><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+12/31/2016 10:11:02 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/31/2016 10:11:02 PM: Abunda Life - Questionnaire Report Number 492
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=492&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />View / Approve it from the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/History.aspx' target='_blank'><b>Dashboard Section</b></a> by logging in as <u>info@abundalife.com</u><br /><br /></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+12/31/2016 10:11:02 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+12/31/2016 10:11:02 PM: Abunda Life - Cover Report of Questionnaire Report Number 492
+ 
+<html><head><title>Abunda Life</title><style type='text/css'>.redtextbold{color:Red; font-weight:bold;}.greentextbold{color:Green; font-weight:bold;}.bluetextbold{color:Blue; font-weight:bold;}</style></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A Patient has just completed the <a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/Report.aspx?q=492&u=admin' target='_blank'><b>Questionnaire Report</b></a>.<br />Cover Report of it is as follows: <br /><br /></td></tr><tr><td><div id="Cnt_DivCoverReport" >
+<h5>
+Personal Cover Report of Finding Prepared Exclusively For:</h5>
+<br />
+<u><b>PATIENT INFORMATION</b></u>
+<br />
+<br />
+<b>NAME:</b>&nbsp;Matthew Sagui&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>DATE
+& TIME:</b>&nbsp;Saturday, December 31, 2016 - 10:11 PM
+<br />
+<br />
+<h4>Section Wise Total Scores</h4>
+
+<div class="cvr">
+<div class="fl clm">1.) Calcium :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">2.) Chromium :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="fl clm">3.) Copper :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Iodine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">5.) Iron :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">6.) Magnesium :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Manganese :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">8.) Phosphorus :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">9.) Potassium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Silicon :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">11.) Bio Organic Sodium :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">12.) Sulfur :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Zinc :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">14.) Digestive Enzymes/Hypochlorhydria :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="fl clm">15.) Protein/Amino Acids :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Vitamin B Complex :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">17.) Thiamin (vitamin B1) :&nbsp;<b><span class=redtextbold>4</span></b></div>
+<div class="fl clm">18.) Riboflavin (vitamin B2) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Niacin (vitamin B3) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">20.) Vitamin A :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">21.) Pyridoxine (vitamin B6) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Cobalamin (Vitamin B12) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Pangamic Acid (Vitamin B15) :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">24.) Biotin :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Choline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Inositol :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">27.) Folic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) Pantothenic Acid (Vitamin B5) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">29.) Para- Amino Benzoic Acid(vitamin B5) :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">30.) Vitamin C :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Vitamin D-3 :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">32.) Essential Fatty Acids (Vitamin F) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">33.) Vitamin E :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">34.) Boron :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">35.) Cobalt :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">36.) Germanium :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">37.) Gold :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">38.) Lithium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">39.) Molybdenum :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">40.) Platinum :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">41.) Selenium :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">42.) Silver :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">43.) Vanadium :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">44.) Vitamin B17 Laetrile :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">45.) Vitamin K :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">46.) Bio-Organic Chlorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">47.) Bio-organic Fluorine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">48.) Bromine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">49.) Bioflavonoid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">50.) Electrolytes :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">51.) Co Enzyme Q10 :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Thyroid :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">2.) Adrenal :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">3.) Pineal :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Pituitary :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">5.) Pregnenolone :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">6.) Aldosterone :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Estrogen (Women) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">8.) Progesterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">9.) Testosterone (Women) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Testosterone (Men) :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">11.) Progesterone (Men) :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Arginine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">2.) Histidine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">3.) Isoleucine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Leucine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">5.) Lysine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">6.) Methionine :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">7.) Phenylalaine :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="fl clm">8.) Theonine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">9.) Tryptophan :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">10.) Valine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">11.) Proline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">12.) Taurine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">13.) Carnitine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">14.) Tyrosine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">15.) Glutamine :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">16.) Cystene / cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">17.) Glycine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">18.) Alanine :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">19.) Gama Amino Butyric Acid (GABA) :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="fl clm">20.) Asparagina / Aspartic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">21.) Citrulline :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">22.) Ornithine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">23.) Glutathione :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">24.) Acetyl-L-Carnitine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">25.) Alpha Lipoic Acid :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">26.) Arginine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">27.) Creatine Monohydrate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">28.) N-Acetyl-Cystine :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">29.) Ornithine Alpha Ketoglutarate :&nbsp;<b><span class=bluetextbold>0</span></b></div>
+<div class="fl clm">30.) S-Adenosyl-L-Methionesame :&nbsp;<b><span class=greentextbold>3</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">31.) Pyruvate :&nbsp;<b><span class=redtextbold>5</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Pre-mature Aging – Aging/Degenerating faster than chronological years :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl">2.) Blood Sugar Collapse / Bio Energy Thief :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">3.) Candida Albacans :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">4.) Intestinal Parasite Syndrome :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">5.) Mal-Absorption Syndrome :&nbsp;<b><span class=greentextbold>2</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">6.) Liver Sluggishness :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl">7.) Intestinal Dysbiosis, Fermentation - Yeast Fungus Syndrome :&nbsp;<b><span class=greentextbold>1</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl">1.) Body/Mind Psycho Induced/Exacerbated Somatic Significance :&nbsp;<b><span class=greentextbold>2</span></b></div>
+</div>
+<br />
+<br />
+
+<div class="cvr">
+<div class="fl clm">1.) Cellular Oxygen Deficiency :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">2.) Dopamine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">3.) Serotonin :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="clr"></div>
+<div class="fl clm">4.) Gaba :&nbsp;<b><span class=greentextbold>1</span></b></div>
+<div class="fl clm">5.) L-Acetylcholine :&nbsp;<b><span class=greentextbold>1</span></b></div>
+</div>
+<br />
+<br />
+<h4>
+Any Additional Information</h4>
+<br />
+Not given
+<br />
+<br />
+</div></td></tr></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+1/7/2017 12:26:56 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+1/7/2017 12:26:56 PM: Abunda Life - New Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Administrator,<br /> <br />A New User has been registered with Abunda Life. Details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Name :</b></td><td>Jennifer Henning</td></tr><tr><td><b>Email :</b></td><td>jenstrike23@yahoo.com</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================
+1/7/2017 12:26:56 PM: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: SMTP authentication is required.
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at abundalife1001.Questionnaire.CQ.SendMail(String pReceiverEmail, String pSubject, String pBody) in c:\dev\abundalife\Questionaire\Questionnaire\CommonQuestionnaire.cs:line 192
+================================
+1/7/2017 12:26:56 PM: Abunda Life - Registration
+ 
+<html><head><title>Abunda Life</title></head><body style='font-family: tahoma;'><table width=600 style='border:1px solid #000;'><tr><td style='border-bottom:1px solid #000; background-color:#F2F2F2;'><img src='http://www.abundalife.com/questionaire/Questionnaire/Images/abunda-life.png' alt='Abunda Life' title='Abunda Life' /></td></tr><tr><td style='padding-left:20px; border-bottom:1px solid #000;'><table width='100%' style='font-size: 13px;'><tr><td>Dear Esteemed User,<br /> <br />Thanks for registering with Abunda Life. Your Login details are as follows :<br /><br /></td></tr><tr><td><table width=590 style='font-size: 13px;'><tr><td width=75><b>Email :</b></td><td>jenstrike23@yahoo.com</td></tr><tr><td><b>Password :</b></td><td>mets1234</td></tr></table></table></td></tr><tr><td style='padding-left:20px; font-size: 13px; padding-top:5px;'>Team Abunda Life<br /><a style='color:#000;' href='http://www.abundalife.com/questionaire/Questionnaire/SignIn.aspx'>Abunda Life</a></td></tr></table></body></html>
+================================

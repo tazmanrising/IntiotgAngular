@@ -1,0 +1,190 @@
+﻿body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+h1
+{
+    color: #C30101;
+    font-size: 26px;
+    font-weight: normal;
+    text-align: center;
+    margin-top:17px;
+    height:32px;
+    margin-bottom:17px;
+}
+
+td, p
+{
+    color: #333333;
+    font-size: 13px;
+    text-align: center;
+}
+
+h2
+{
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.values
+{
+    border-bottom: 2px solid #000000;
+    border-top: 2px solid #000000;
+    height: auto;
+    margin: 0;
+    padding: 5px 0;
+    width: 990px;
+}
+
+td input
+{
+    border: 1px solid #666666;
+    color: #000000;
+    height: 30px;
+    line-height: 30px;
+    width: 70px;
+}
+.ideal, .low, .high
+{
+    border-bottom: 1px solid #000000;
+    margin: 0;
+    padding-bottom: 15px;
+    width: 990px;
+}
+h3
+{
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px 0 0;
+    padding: 0;
+    text-align: left;
+}
+
+.display-block
+{
+    display: block;
+}
+
+
+.print
+{
+    float: right;
+    margin-top: -28px;
+}
+
+p
+{
+    clear: left;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.print
+{
+    display:none;
+}
+.show-result
+{
+    display:none;
+}
+table
+{
+    width:990px !important;    
+}
+img
+{
+    border:none;
+}
+
+.report-logo2 {
+    margin: auto;
+    width: 235px;
+}
+.clear {
+    clear: both;
+}
+.patient-name
+{ 
+    float:left;   
+    font-weight:bold;
+    text-decoration:underline;
+    margin-top:40px;
+    margin-left:85px;
+    margin-bottom:20px;
+    font-size:16px;    
+    color:#365f91;
+}
+.report-date
+{
+    margin-top:40px;
+    margin-right:85px;
+    margin-bottom:20px;  
+    float:right;
+    font-weight:bold;
+    text-decoration:underline;
+     color:#365f91;
+     font-size:16px;    
+}
+.heading {
+    color: #C30101;
+    font-size: 30px;
+    font-weight: normal;
+    padding: 25px 0;
+    text-align: center;
+}
+
+
+.low p,.high p
+{
+    font-size:11px;
+}
+.low h3,.high h3,.equal h3
+{
+    font-size:12px;
+}
+.blue
+{
+    color:#00B0F0;
+}
+.red
+{
+    color:Red;
+}
+strong label
+{
+    color: Black !important;
+}
+.profile-container-blood
+{
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 5px #D1D1D1 inset;
+    margin: auto;
+    width: 970px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+.profile-container-blood p
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+@media all
+{
+  .page-break  { display:none; }
+}
+
+@media print
+{
+  .page-break  { display:block; page-break-before:always; }
+}

@@ -1,0 +1,310 @@
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Device #: {{vm.device.DeviceId}} </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+
+                    <tbody>
+                        <tr>
+                            <td><strong>Device Status:</strong> <span ng-style="set_color(vm.device)">{{vm.device.DeviceStatus | deviceStatus }}</span></td>
+                            <td><strong>DKi Value:</strong> {{vm.device.DKiIndex}}</td>
+                            <td>
+                                <!--<select>
+                                    <option>Select DKi Id...</option>
+                                    <option>DKi00000003</option>
+                                   
+                                </select>-->
+                                <!--<select>
+                                    <option ng-repeat="x in states" value="{{}}"></option>
+                                </select>-->
+                                <select ng-model="model.id" ng-options="dk.Name as dk.Name for dk in dki"></select>
+                                <button type="button" class="btn btn-default" title="Update DKi" ng-click="vm.calculatePrice()">Update DKi</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><strong>AID:</strong> {{vm.device.Aid}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><strong>Extended Measurement: </strong>{{vm.device.Sha}}</td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <!--ng-click="vm.calculatePrice()"-->
+                                <a class="btn btn-default" ui-sref="deviceList" style="width:80px">
+                                    <I class="glyphicon glyphicon-chevron-left"></i> Back
+                                </a>
+                                <button type="button" class="btn btn-default" title="Check the Integrity of.." ng-click="checkIntegrity()">Check Integrity</button>
+                                <span class="alert alert-info" ng-style="colorSetter('blue')">Status: {{integrityMessage}}</span>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Staged Manifests </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-default" title="Stage Manifest from XML" ng-click="showme=true">Stage Manifest from XML</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-default" title="Stage Manifest from Drafts" ng-click="showme2=true">Stage Manifest from Drafts</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="wrapper">
+                                <!--<p ng-hide="showme">It will appear here!</p>-->
+                                <p ng-show="showme">
+                                    <input type="file" id="file" name="file" />
+                                    <button id='button' type="button" class="btn btn-default" title="Browse">Browse</button>
+                                    <button id='addManifest' type="button" class="btn btn-default" title="Browse">Add Manifest</button>
+                                </p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="wrapper">
+                                <!--<p ng-hide="showme2">It will appear here!</p>-->
+                                <p ng-show="showme2">
+                                    <select>
+                                        <option>Select Manifest...</option>
+                                    </select>
+                                    <button id='addManifest' type="button" class="btn btn-default" title="Browse">Add Manifest</button>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="company in companies">
+                        <td>{{company.name}}
+                        </td>
+                        <td>{{company.employees}}
+                        </td>
+                        <td>{{company.headoffice}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Archived Manifests </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Measurement (Manifest SHA)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="archived in vm.archivedManifests">
+                            <td>
+                                <a href ng-click="toggleModal()">{{archived.ManifestId}}</a>
+                                <input name="ManifestViewerDisplayAddUniqueNumberHere" ng-click="loadXML()" title="Click to Download Archive Manifest" style="width: 10px; height: 10px;"
+                                    type="image" alt="0000008F" src="../images/Download_RedArrow.jpg">
+                                <!--src="http://azs-dptsvr-001.amr.corp.intel.com/DeviceRegistryWebSite/Data/Download_RedArrow.jpg"-->
+                            </td>
+                            <td>{{archived.ManifestTimeStamp | isoConvert}}</td>
+                            <td>{{archived.Measurement}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Event History</div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Event</th>
+                            <th>Context</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="events in vm.deviceEvents">
+                            <td>{{events.Id}}</td>
+                            <td>{{events.Timestamp | isoConvert}}</td>
+                            <td>{{events.Name}}</td>
+                            <td>{{events.Context}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4">
+    <!--<div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-bell fa-fw"></i> Notifications Panel
+        </div>
+        
+        <div class="panel-body">
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-comment fa-fw"></i> New Comment
+                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                    </span>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-tasks fa-fw"></i> New Task
+                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                    <span class="pull-right text-muted small"><em>11:32 AM</em>
+                                    </span>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-bolt fa-fw"></i> Server Crashed!
+                    <span class="pull-right text-muted small"><em>11:13 AM</em>
+                                    </span>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-warning fa-fw"></i> Server Not Responding
+                    <span class="pull-right text-muted small"><em>10:57 AM</em>
+                                    </span>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
+                    <span class="pull-right text-muted small"><em>9:49 AM</em>
+                                    </span>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-money fa-fw"></i> Payment Received
+                    <span class="pull-right text-muted small"><em>Yesterday</em>
+                                    </span>
+                </a>
+            </div>
+         
+            <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+        </div>
+    
+    </div>-->
+
+
+    <!--<button ng-click="loadXML()" class="btn btn-default">load xml</button>-->
+</div>
+
+<!--<button ng-click="toggleModal()" class="btn btn-default">Open modal</button>-->
+
+<modal title="DeviceID - Tunnels & DUKPTS" visible="showModal">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Log ... Tunnels, DUKPTS</div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>DeviceID</th>
+                                <th>000229CB0000001A0001</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Log Size</td>
+                                <td>00001400 bytes</td>
+                            </tr>
+                            <tr>
+                                <td>Log Level</td>
+                                <td>INFO (0)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+          <input type="checkbox"> Remember me
+        </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+        </div>
+    </form>-->
+</modal>
+
+
+<!-- The actual modal template, just a bit o bootstrap -->
+<script type="text/ng-template" id="modal.html">
+         <div class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Yes or No?</h4>
+              </div>
+              <div class="modal-body">
+                <p>It's your call...</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" ng-click="close('No')" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" ng-click="close('Yes')" class="btn btn-primary" data-dismiss="modal">Yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+     </script>

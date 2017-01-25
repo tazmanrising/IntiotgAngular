@@ -1,0 +1,29 @@
+﻿body   
+{
+background: #FFFFFF;
+font-family: Candara;
+font-size: 12pt;
+color:Black;
+width: 100%;
+margin: 0;
+float: none;
+text-align: justify;
+}
+.noPrint {display: none;}
+.yesPrint {display: block !important;}
+table tr td {border:1px solid #000000;}
+h4{padding:0pt 0pt 0pt 0pt; font-size: 16pt;}
+h5{padding:0pt 0pt 0pt 0pt; font-size: 16pt;}
+.bluetext{color:Blue;}
+.redtext{color:Red;}
+.greentext{color:Green;}
+.bold{font-weight:bold;}
+.redtextbold{color:Red; font-weight:bold;}
+.greentextbold{color:Green; font-weight:bold;}
+.bluetextbold{color:Blue; font-weight:bold;}
+.pagebreak {page-break-before: always;}
+div .pagebreak {page-break-before: always;}
+.cvr {width:750pt;}
+.clm {width:250pt;}
+.fl {float:left;}
+.clr {clear:both;}

@@ -6,6 +6,7 @@ import { TwoWayBindingComponent} from './two-way-binding.component';
 
 @Component({
   selector: 'fa-databinding',
+  //selector: 'fa-lifecycle',
   templateUrl: './databinding.component.html',
 
   styleUrls: ['./databinding.component.css']//,

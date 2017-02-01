@@ -10,6 +10,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { PropertyBindingComponent } from './databinding/property-binding.component';
 import { EventBindingComponent } from './databinding/event-binding.component';
 import { TwoWayBindingComponent } from './databinding/two-way-binding.component';
+import { LifecycleComponent } from './lifecycle.component';
+import { FirstAppComponent } from './first-app.component';
 // added OtherComponent automatically from ng generate 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { TwoWayBindingComponent } from './databinding/two-way-binding.component'
     DatabindingComponent,
     PropertyBindingComponent,
     EventBindingComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    LifecycleComponent,
+    FirstAppComponent
      // added automatically with ng generate command
   ],
   imports: [

@@ -1,0 +1,15 @@
+﻿<section class="main-nav">
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <ul class="nav nav-pills">
+                <li class="nav-item" ng-repeat="navItem in main.currentSession.display_options.menus">
+                    <a class="nav-link" href="{{navItem.link_href}}">{{navItem.text_link}}</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="{{main.currentSession.display_options.shop_travel_link.link_href}}">Shop Travel</a>
+                </li>-->
+            </ul>
+            <div class="mobile-menu__bars">Menu <i class="fa fa-bars"></i></div>
+        </nav>
+    </div>
+</section>

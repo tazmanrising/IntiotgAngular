@@ -1,0 +1,27 @@
+﻿<!-- rci header start -->
+<header class="header header-club">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 brand-conainer">
+                <h1>
+                    <a href="#" translate title="{{main.currentSession.display_options.program_long_name}} - home">
+                        <img ng-src="{{main.mainLogo}}" alt="{{main.currentSession.display_options.program_long_name}}" class="header-main__logo" />
+                    </a>
+                </h1>
+                <!-- <i class="fa fa-times nav-close"></i> -->
+            </div>
+            <div class="col-sm-6 member-container">
+                <div class="member-type-container">
+                    <ul class="nav-top">
+                        <li><display-options text="main.currentSession.display_options.program_phone_number" show="main.currentSession.display_options.general_phone_number"></display-options></li>
+                        <li><a class="nav-link" href="{{main.currentSession.display_options.labels.my_account_href}}"><display-options text="main.currentSession.display_options.labels.account_settings_label" show="main.currentSession.display_options.labels.account_settings_label"></display-options></a></li>
+                    </ul>
+					<div class="savings-container">
+						<div class="savings-amount"><span>Savings Dollars</span> <h4>$3,700</h4><span ng-if="main.showCurrencyVerbiage">{{main.currencyVerbiage}}</span></div>
+						<div class="savings-label">Current Balance</div>
+					</div>
+                </div><!-- end member-type-container -->
+            </div>
+        </div>
+    </div>
+</header>

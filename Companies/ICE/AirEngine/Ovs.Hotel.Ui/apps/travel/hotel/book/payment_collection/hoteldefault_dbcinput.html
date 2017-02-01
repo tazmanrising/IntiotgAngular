@@ -1,0 +1,53 @@
+﻿<div>
+    <hr>
+    <!--<div ng-if="book.currentSession.member_info.max_dbc_spend_allowed > 0">-->
+    <div ng-repeat="alternativeMargin in book.currentSession.member_info.alternative_margin_currencies">
+        <div ng-init="book.setInitialCurrencies();">
+            <div ng-if="book.showDBC">
+        <div ng-if="!alternativeMargin.must_use_max_on_each_transaction">
+            <!--user can chose how much of thier balance to apply-->
+            <div ng-if="!alternativeMargin.must_use_max_on_each_transaction">
+                <div class="payment-option__payment-slider" ng-init="book.setSliderValues(alternativeMargin.balance, book.sliderValue, alternativeMargin.id)">
+                    <h3>{{alternativeMargin.label}}</h3>
+                    <p>You currently have <strong ng-bind-html="alternativeMargin.balance | customCurrency : book.currencyFormat : 0"></strong> {{alternativeMargin.label}} available to you. <br />
+                        The most {{alternativeMargin.label}} you can use for this transaction is <strong ng-bind-html="book.sliderCeil | customCurrency : book.currencyFormat : 0"></strong>. <br/> Please select the amount you would like to use for this transaction.
+                    </p><br/>
+                    <div >
+                        <!--TODO: set step value (needs to be dynamic) and ticks-->
+                        <rzslider rz-slider-model="book.sliderValue" type="number" id="alternativeMargin.id" rz-slider-options="{
+                    value:book.sliderValue,
+                    min: 0,
+                    precision: 0,
+                    step: .01,
+                    max: book.sliderValue,
+                    ceil: book.sliderCeil,
+                    onStart: book.captureMarginUsed(alternativeMargin.label, alternativeMargin.balance, alternativeMargin.id, book.sliderValue),
+                    onEnd:book.checkAltCurrencyTotals()
+                    }" ng-model="book.sliderValue" slider></rzslider>
+                    </div>
+                </div><!-- end payment-slider -->
+            </div>
+        </div>
+        <!--user must use their max on each transaction-->
+        <div ng-if="alternativeMargin.must_use_max_on_each_transaction">
+            <div class="payment-option__payment-slider">
+                <h3>{{alternativeMargin.label}}</h3>
+                <p>
+                    You have <strong ng-bind-html="alternativeMargin.balance | customCurrency : book.currencyFormat : 0"></strong> in {{alternativeMargin.label}} to use. <br />
+                    Would you like to use your {{alternativeMargin.label}} for this transaction?
+                </p>
+                <div ng-init="book.getAlternativeMarginUsage(alternativeMargin.label, alternativeMargin.id, alternativeMargin.balance, book.alternativeMargin.isSelected)">
+                    <div ng-init="book.alternativeMargin.isSelected = 'true'">
+                        Yes <input type="radio" ng-model="book.alternativeMargin.isSelected" value="true" ng-change="book.getAlternativeMarginUsage(alternativeMargin.label, alternativeMargin.id, alternativeMargin.balance, book.alternativeMargin.isSelected, book.SliderValue)" />
+                        No <input type="radio" ng-model="book.alternativeMargin.isSelected" value="false" ng-change="book.getAlternativeMarginUsage(alternativeMargin.label, alternativeMargin.id, alternativeMargin.balance, book.alternativeMargin.isSelected, book.SliderValue)" />
+                    </div>
+                </div>
+            </div><!-- end payment-slider -->
+        </div>
+        <hr>
+    </div>
+        </div>
+    </div>
+<!--</div>-->
+</div>
+

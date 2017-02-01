@@ -1,0 +1,101 @@
+﻿<div class="payment-method__credit-card">
+
+    <div>
+        <div>
+            <div class="form-group">
+                <span>{{book.ccPromo}}</span>
+                <label for="credit_card_type" class="required">
+                    <strong>Card Type</strong><span style="color: red">*</span>
+                </label>
+                <input kendo-drop-down-list k-data-text-field="'Name'" id="ccType" name="credit_card_type" k-data-value-field="'Id'" k-value-primitive="true" ng-model="book.ccPreferredType" k-data-source="book.ccTypesDataSource" style="width: 100%" ng-change="book.captureCC(book.ccPreferredType)" />
+            </div>
+            <div class="form-group">
+                <label for="credit_card_number" class="required">
+                    <strong>Card Number</strong><span style="color: red">*</span>
+                </label>
+                <input kendo-masked-text-box="book.creditCardNumber" k-scope-field="book.creditCardNumber" id="ccNumber" ng-model="book.purchase.ccNumber" name="credit_card_number" required validationMessage="Invalid Number"
+                       k-mask="'0000000000000000'" ng-change="book.validateNumber()" />
+                <span class="k-invalid-msg" data-for="credit_card_number"></span>
+            </div>
+            <div class="form-group">
+                <label for="cc_exp_month" class="required half-size">
+                    <strong>Exp. Month</strong><span style="color: red">*</span>
+                </label>
+                <input kendo-drop-down-list name="cc_exp_month" id="expirationMonth" ng-model="book.purchase.expMo" k-data-source="book.months" class="form-control half-size" required style="width: 100%" />
+            </div>
+            <div class="form-group">
+                <label for="cc_exp_year" class="required half-size">
+                    <strong>Exp. Year</strong><span style="color: red">*</span>
+                </label>
+                <input kendo-drop-down-list name="cc_exp_year" id="ccYear" ng-model="book.purchase.expYear" k-data-source="book.ccYears" class="form-control half-size" required style="width: 100%" />
+            </div>
+            <div class="form-group">
+                <label for="security_code" class="required half-size">
+                    <strong>Security Code</strong><span style="color: red">*</span>
+                </label><br />
+                <input kendo-masked-text-box="book.security_code" k-scope-field="book.security_code" id="ccSecCode" ng-model="book.purchase.ccSecCode" name="security_code" required validationMessage="Invalid Code"
+                       k-mask="'000'" class="form-control half-size" style="width: 60px" /><br />
+                <span class="k-invalid-msg" data-for="security_code"></span>
+            </div>
+            <h3>Billing Information</h3>
+            <div class="form-group">
+                <label for="cardFirstName" class="required">
+                    <strong>First Name on card</strong><span style="color: red">*</span>
+                </label>
+                <input type="text" id="cardFirstName" ng-model="book.purchase.cardFirstName" name="cardFirstName" class="k-textbox" placeholder="First Name" required validationMessage="First name is Required (alphabet letters only)" pattern="^[a-zA-Z\s]+$" style="width: 100%" />
+                <span class="k-invalid-msg" data-for="cardFirstName"></span>
+            </div>
+            <div class="form-group">
+                <label for="cardLastName" class="required">
+                    <strong>Last Name on card</strong><span style="color: red">*</span>
+                </label>
+                <input type="text" id="cardLastName" ng-model="book.purchase.cardLastName" name="cardLastName" class="k-textbox" placeholder="Last name on card" required validationMessage="Last name is Required (alphabet letters only)" pattern="^[a-zA-Z\s]+$" style="width: 100%" />
+                <span class="k-invalid-msg" data-for="cardLastName"></span>
+            </div>
+            <div class="form-group">
+                <label for="book.purchase.billingCountry" class="required"><strong>Country</strong><span style="color: red">*</span></label>
+                <input kendo-drop-down-list k-data-text-field="'Name'" name="book.purchase.billingCountry" k-data-value-field="'Id'" id="billingCountry" k-ng-model="book.purchase.billingCountry" ng-init="book.setInitialCountry()" k-data-source="book.countryDataSource" required style="width: 100%;" k-on-change="book.getStates();" />
+            </div>
+            <div class="form-group">
+                <label for="book.purchase.billingStreet1" class="required"><strong>Address Line1</strong><span style="color: red">*</span></label>
+                <input ng-model="book.purchase.billingStreet1" name="book.purchase.billingStreet1" required placeholder="Address Line 1" validationMessage="Address Required" id="billingStreet" class="k-textbox" style="width: 100%;" />
+                <span class="k-invalid-msg" data-for="book.purchase.billingStreet1"></span>
+            </div>
+            <div class="form-group">
+                <label for="book.purchase.billingCity" class="required"><strong>City</strong><span style="color: red">*</span></label>
+                <input ng-model="book.purchase.billingCity" name="book.purchase.billingCity" id="billingCity" required placeholder="city" validationMessage="City Required" class="k-textbox" style="width: 100%;" />
+                <span class="k-invalid-msg" data-for="book.purchase.billingCity"></span>
+            </div>
+
+            <div class="form-group" ng-if="book.requireStates">
+                <label for="book.purchase.billingState_province" class="required"><strong>State/Province</strong><span style="color: red">*</span></label>
+                <input kendo-drop-down-list name="book.purchase.billingState_province" k-data-text-field="'Name'" k-data-value-field="'Id'" class="k-textbox" k-value-primitive="true" id="billingState" ng-model="book.purchase.billingState_province" k-data-source="book.usStateDataSource" style="width: 100%;" />
+                <span class="k-invalid-msg" data-for="book.purchase.billingState_province"></span>
+            </div>
+            <div class="form-group" ng-if="!book.requireStates">
+                <div ng-if="book.showStates">
+                    <label for="book.purchase.billingState_province" class="required"><strong>State/Province</strong></label>
+                    <input name="book.purchase.billingState_province" class="k-textbox" id="billingState" ng-model="book.purchase.billingState_province" style="width:100%;" ng-init="book.purchase.billingState_province = ''" />
+                </div>
+            </div>
+            <div class="form-group" ng-if="book.showZip">
+                <label for="book.purchase.billingZip" class="required"><strong>Postal Code</strong><span style="color: red">*</span></label>
+                <input kendo-masked-text-box="book.billingZip" k-scope-field="book.billingZip" id="billingZip" k-mask="00000" name="book.purchase.billingZip" ng-model="book.purchase.billingZip" class="k-textbox" required validationMessage="Postal Code Required" style="width: 100%;" />
+                <span class="k-invalid-msg" data-for="book.purchase.billingZip"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+
+                <label for="book.purchase.billingPhone" class="required"><strong>Phone Number</strong><span style="color: red">*</span></label>
+                <input kendo-masked-text-box="book.billingPhone" k-scope-field="book.billingPhone" k-mask="'1 000 000 0000'" name="book.purchase.billingPhone" id="billingPhone" ng-model="book.purchase.billingPhone" class="k-textbox" required validationMessage="Phone Number Required" />
+                <span class="k-invalid-msg" data-for="book.purchase.billingPhone"></span>
+            </div>
+
+            <!--<div class="form-group">
+                <label for="book.purchase.email" class="required"><strong>E-mail</strong><span style="color: red">*</span></label>
+                <input type="email" id="book.purchase.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ng-model="book.purchase.email" name="E-mail" class="k-textbox" placeholder="E-mail" required validationMessage="E-mail Required" style="width: 100%" />
+                <span class="k-invalid-msg" data-for="book.purchase.email"></span>
+            </div>-->
+        </div>
+    </div>
+</div>

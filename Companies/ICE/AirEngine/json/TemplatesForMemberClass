@@ -1,0 +1,276 @@
+{
+  "id": "acoptions101",
+  "type": "air_car_options",
+  "ice_partner_id": "101",
+  "ice_partner_name": "Sears Vacations",
+  "privacy_policy": "Privacy Policy Placeholder",
+  "show_suport_phone_number": true,
+  "support_phone_number": "866-724-5190",
+  "show_support_email": false,
+  "support_email": "",
+  "google_analytics_tracker": "UA-2825175-65",
+  "google_analytics_domain_name": "searsvacations.com",
+  "google_analytics_ignored_organic": "searsvacations.com",
+  "member_classes": [
+    {
+      "site_terms_and_conditions": "Site terms and conditions",
+      "class_id": "mc295",
+      "class_name": "Sears Vacations Upgrade",
+      "partner_name": "Sears Vacations",
+      "program_name": "",
+      "phone_number": "866-724-5190",
+      "link_to_club_home": "http://www.cnn.com",
+      "primary_logo_url": "http://iceassets.blob.core.windows.net/logos/primarylogo101-295.jpg",
+      "secondary_logo_url": "",
+      "logo_text": "",
+      "stylesheet1": "http://iceassets.blob.core.windows.net/stylesheets/sheet1-101-295.css",
+      "stylesheet2": "",
+      "can_use_curvc": true,
+      "vc_label": "Vacation Cash",
+      "can_use_curdbc": false,
+      "dbc_label": "",
+      "can_use_curhp": false,
+      "hp_label": "",
+      "vc_balance": 0,
+      "dbc_balance": 0,
+      "hp_balance": 0,
+      "car_options": {
+        "can_prepay": false,
+        "terms_and_conditions": "Car Terms and Conditions",
+        "cancellation_policy": "Car Cancellation Policy",
+        "can_cancel": true
+      },
+      "air_options": {
+        "terms_and_conditions": "Air Terms and conditions",
+        "cancellation_policy": "Air Cancellation Policy",
+        "can_cancel": true
+      },
+      "currencies_available": [
+        {
+          "id": "c1:e1:curcv",
+          "name": "Vacation Cash",
+          "type": null,
+          "label": "Vacation Cash",
+          "use_as": "SameAsCash",
+          "conversion_value": 1,
+          "currency_symbol": "$",
+          "customer_balance": 0,
+          "max_customer_spend": 0,
+          "min_customer_spend": 1,
+          "is_refundable": true,
+          "must_use_max_eligible_for_transaction": false
+        }
+      ]
+    },
+    {
+      "site_terms_and_conditions": "Site terms and conditions",
+      "class_id": "mc340",
+      "class_name": "Sears Vacations Upgrade - Savings Credits (dbc)",
+      "partner_name": "Sears Vacations",
+      "program_name": "",
+      "phone_number": "866-724-5190",
+      "link_to_club_home": "http://www.cnn.com",
+      "primary_logo_url": "http://iceassets.blob.core.windows.net/logos/primarylogo101-295.jpg",
+      "secondary_logo_url": "",
+      "logo_text": "",
+      "stylesheet1": "http://iceassets.blob.core.windows.net/stylesheets/sheet1-101-295.css",
+      "stylesheet2": "",
+      "can_use_curvc": true,
+      "vc_label": "Vacation Cash",
+      "can_use_curdbc": true,
+      "dbc_label": "Savings Credits",
+      "can_use_curhp": false,
+      "hp_label": "",
+      "vc_balance": 0,
+      "dbc_balance": 0,
+      "hp_balance": 0,
+      "car_options": {
+        "can_prepay": false,
+        "terms_and_conditions": "Car Terms and Conditions",
+        "cancellation_policy": "Car Cancellation Policy",
+        "can_cancel": true
+      },
+      "air_options": {
+        "terms_and_conditions": "Air Terms and conditions",
+        "cancellation_policy": "Air Cancellation Policy",
+        "can_cancel": true
+      },
+      "currencies_available": [
+        {
+          "id": "c1:e1:curcv",
+          "name": "Vacation Cash",
+          "type": null,
+          "label": "Vacation Cash",
+          "use_as": "SameAsCash",
+          "conversion_value": 1,
+          "currency_symbol": "$",
+          "customer_balance": 0,
+          "max_customer_spend": 0,
+          "min_customer_spend": 1,
+          "is_refundable": true,
+          "must_use_max_eligible_for_transaction": false
+        },
+        {
+          "id": "c1:e1:curdbc",
+          "name": "Vacation Cash",
+          "type": null,
+          "label": "Savings Credits",
+          "use_as": "MarginDiscount",
+          "conversion_value": 1,
+          "currency_symbol": "",
+          "customer_balance": 0,
+          "max_customer_spend": 0,
+          "min_customer_spend": 1,
+          "is_refundable": true,
+          "must_use_max_eligible_for_transaction": false
+        }
+      ]
+    },
+    {
+      "site_terms_and_conditions": "Site terms and conditions",
+      "class_id": "mc340",
+      "class_name": "Sears Vacations Upgrade - Savings Credits (dbc)",
+      "partner_name": "Sears Vacations",
+      "program_name": "",
+      "phone_number": "866-724-5190",
+      "link_to_club_home": "http://www.cnn.com",
+      "primary_logo_url": "http://iceassets.blob.core.windows.net/logos/primarylogo101-295.jpg",
+      "secondary_logo_url": "",
+      "logo_text": "",
+      "stylesheet1": "http://iceassets.blob.core.windows.net/stylesheets/sheet1-101-295.css",
+      "stylesheet2": "",
+      "can_use_curvc": true,
+      "vc_label": "Vacation Cash",
+      "can_use_curdbc": true,
+      "dbc_label": "Savings Credits",
+      "can_use_curhp": false,
+      "hp_label": "",
+      "vc_balance": 0,
+      "dbc_balance": 0,
+      "hp_balance": 0,
+      "car_options": {
+        "can_prepay": false,
+        "terms_and_conditions": "Car Terms and Conditions",
+        "cancellation_policy": "Car Cancellation Policy",
+        "can_cancel": true,
+        "online_booking_fee": 0,
+        "offline_booking_fee": 0
+      },
+      "air_options": {
+        "terms_and_conditions": "Air Terms and conditions",
+        "cancellation_policy": "Air Cancellation Policy",
+        "can_cancel": true,
+        "online_booking_fee": 0,
+        "offline_booking_fee": 0
+      },
+      "currencies_available": [
+        {
+          "id": "c1:e1:curcv",
+          "name": "Vacation Cash",
+          "type": null,
+          "label": "Vacation Cash",
+          "use_as": "SameAsCash",
+          "conversion_value": 1,
+          "currency_symbol": "$",
+          "customer_balance": 0,
+          "max_customer_spend": 0,
+          "min_customer_spend": 1,
+          "is_refundable": true,
+          "must_use_max_eligible_for_transaction": false
+        },
+        {
+          "id": "c1:e1:curdbc",
+          "name": "Vacation Cash",
+          "type": null,
+          "label": "Savings Credits",
+          "use_as": "MarginDiscount",
+          "conversion_value": 1,
+          "currency_symbol": "",
+          "customer_balance": 0,
+          "max_customer_spend": 0,
+          "min_customer_spend": 1,
+          "is_refundable": true,
+          "must_use_max_eligible_for_transaction": false
+        }
+      ]
+    }
+  ],
+  "credit_cards_accepted": [
+    {
+      "id": "c1:e1:ccsears",
+      "sort_order": 1,
+      "ice_gateway": true,
+      "prefix_numbers": "",
+      "card_digits": 16,
+      "security_code_digits": 3,
+      "need_expiration_month_day": true,
+      "name": "Sears Credit Card",
+      "merchant_credentials": {
+        "access_code": "4556",
+        "password": "4cgg5"
+      }
+    },
+    {
+      "id": "c1:e1:ccvisa",
+      "sort_order": 2,
+      "ice_gateway": false,
+      "prefix_numbers": "",
+      "card_digits": 16,
+      "security_code_digits": 3,
+      "need_expiration_month_day": true,
+      "name": "Visa",
+      "merchant_credentials": {
+        "access_code": "4556",
+        "password": "4cgg5"
+      }
+    },
+    {
+      "id": "c1:e1:ccmastercard",
+      "sort_order": 3,
+      "ice_gateway": false,
+      "prefix_numbers": "",
+      "card_digits": 16,
+      "security_code_digits": 3,
+      "need_expiration_month_day": true,
+      "name": "MasterCard",
+      "merchant_credentials": {
+        "access_code": "4556",
+        "password": "4cgg5"
+      }
+    },
+    {
+      "id": "c1:e1:ccdiscover",
+      "sort_order": 3,
+      "ice_gateway": false,
+      "prefix_numbers": "",
+      "card_digits": 16,
+      "security_code_digits": 3,
+      "need_expiration_month_day": true,
+      "name": "Discover",
+      "merchant_credentials": {
+        "access_code": "4556",
+        "password": "4cgg5"
+      }
+    },
+    {
+      "id": "c1:e1:ccamex",
+      "sort_order": 4,
+      "ice_gateway": false,
+      "prefix_numbers": "",
+      "card_digits": 15,
+      "security_code_digits": 4,
+      "need_expiration_month_day": true,
+      "name": "American Express",
+      "merchant_credentials": {
+        "access_code": "4556",
+        "password": "4cgg5"
+      }
+    }
+  ],
+  "name": "Air/Car Options for Partner 101 (Sears Vacations)",
+  "is_active": true,
+  "created_timestamp": "2015-11-18T20:15:12.6321435Z",
+  "updated_timestamp": "2015-11-18T20:15:12.6321435Z",
+  "created_by_id": "c1:e1:u1",
+  "updated_by_id": "c1:e1:u1"
+}

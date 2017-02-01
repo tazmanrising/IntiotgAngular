@@ -1,0 +1,2122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0389D2B-2FBD-4382-B43D-304A2609CA32}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ovs.Hotel.Ui</RootNamespace>
+    <AssemblyName>Ovs.Hotel.Ui</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/89780439-fb9b-4f7b-bf37-115569216afe/resourcegroups/Land-Prod-UI/providers/microsoft.insights/components/Ovs.Hotel.Ui-Beta</ApplicationInsightsResourceId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hyak.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hyak.Common.1.1.0\lib\net45\Hyak.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiteDB, Version=1.0.4.0, Culture=neutral, PublicKeyToken=5c2fff750805920e, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.1.0.4\lib\net40\LiteDB.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Loggly, Version=4.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\loggly-csharp.4.5.1.11\lib\net45\Loggly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Loggly.Config, Version=4.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\loggly-csharp-config.4.5.1.11\lib\net45\Loggly.Config.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Common.2.1.0\lib\net45\Microsoft.Azure.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Common.NetFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Common.2.1.0\lib\net45\Microsoft.Azure.Common.NetFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Documents.Client, Version=1.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.DocumentDB.1.9.4\lib\net45\Microsoft.Azure.Documents.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.1.0.0\lib\net45\Microsoft.Azure.KeyVault.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.7.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.7.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.7.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.13.4.878, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.4\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.13.4.878, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.4\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.7.0.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.0.0\lib\portable-net45+win8+wpa81\Microsoft.OData.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.ServiceBus.3.1.7\lib\net45-full\Microsoft.ServiceBus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.7.0.0\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.1\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.0.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Air.Models, Version=1.0.1.34, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Air.Models.1.0.1.34\lib\net452\Ovs.Air.Models.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.BaseModel, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.BaseModel.1.0.0.3\lib\net452\Ovs.Core.BaseModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.CacheManager, Version=1.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.CacheManager.1.1.0.2\lib\net452\Ovs.Core.CacheManager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.Configuration, Version=1.1.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.Configuration.1.1.0.4\lib\net452\Ovs.Core.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.DocumentRepository, Version=1.1.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.DocumentRepository.1.1.0.7\lib\net452\Ovs.Core.DocumentRepository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.EventLogging, Version=1.1.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.EventLogging.1.1.0.3\lib\net452\Ovs.Core.EventLogging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.LegacyContentRepository, Version=1.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.LegacyContentRepository.1.1.0.2\lib\net452\Ovs.Core.LegacyContentRepository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.LegacyMembershipRepository, Version=1.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.LegacyMembershipRepository.1.1.0.2\lib\net452\Ovs.Core.LegacyMembershipRepository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.Logging, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.Logging.1.1.0.1\lib\net452\Ovs.Core.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.Models, Version=1.1.0.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.Models.1.1.0.22\lib\net452\Ovs.Core.Models.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.UserRepository, Version=1.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.UserRepository.1.1.0.2\lib\net452\Ovs.Core.UserRepository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.Utility, Version=1.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.Utility.1.1.0.2\lib\net452\Ovs.Core.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Core.WebVisitor, Version=1.1.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Core.WebVisitor.1.1.0.6\lib\net452\Ovs.Core.WebVisitor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ovs.Hotel.Models, Version=1.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ovs.Hotel.Models.1.1.0.2\lib\net452\Ovs.Hotel.Models.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.1.5.14\lib\net45\Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.1.5.14\lib\net45\Serilog.FullNetFx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Loggly, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Loggly.2.0.7\lib\net45\Serilog.Sinks.Loggly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=3.3.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.3.3.2\lib\net45\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Extensions.ExecutionContextScoping, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Extensions.ExecutionContextScoping.3.1.2\lib\net45\SimpleInjector.Extensions.ExecutionContextScoping.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.3.1.2\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.2\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.0.316.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.0.488\lib\net45\StackExchange.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StackExchange.Redis.StrongName, Version=1.0.316.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.StrongName.1.0.488\lib\net45\StackExchange.Redis.StrongName.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.OData, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.OData.6.0.0\lib\net45\System.Web.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AirController.cs" />
+    <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Controllers\LinktoController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="DependencyContainer.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apps\assets\brands\137\css\style.css" />
+    <Content Include="apps\assets\brands\137\img\checkout-steps.gif" />
+    <Content Include="apps\assets\brands\137\img\cs-card.jpg" />
+    <Content Include="apps\assets\brands\137\img\dest-hawaii.jpg" />
+    <Content Include="apps\assets\brands\137\img\dest-las-vegas.jpg" />
+    <Content Include="apps\assets\brands\137\img\dest-new-york.jpg" />
+    <Content Include="apps\assets\brands\137\img\dest-orlando.jpg" />
+    <Content Include="apps\assets\brands\137\img\glyphicons.png" />
+    <Content Include="apps\assets\brands\137\img\hotel-room.jpg" />
+    <Content Include="apps\assets\brands\137\img\sears-cc.jpg" />
+    <Content Include="apps\assets\brands\137\img\sears-shop-your-way-partner.png" />
+    <Content Include="apps\assets\brands\137\img\137-logo.png" />
+    <Content Include="apps\assets\brands\137\img\thumb.jpg" />
+    <Content Include="apps\assets\brands\137\img\trans.png" />
+    <Content Include="apps\assets\brands\137\img\us-map.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\css\style.css" />
+    <Content Include="apps\assets\brands\dbcanada\img\checkout-steps.gif" />
+    <Content Include="apps\assets\brands\dbcanada\img\cs-card.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\img\dest-hawaii.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\img\dest-las-vegas.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\img\dest-new-york.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\img\dest-orlando.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\img\glyphicons.png" />
+    <Content Include="apps\assets\brands\dbcanada\img\hotel-room.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\img\logo.png" />
+    <Content Include="apps\assets\brands\dbcanada\img\sears-cc.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\img\sears-shop-your-way-partner.png" />
+    <Content Include="apps\assets\brands\dbcanada\img\sears-vacations-logo.png" />
+    <Content Include="apps\assets\brands\dbcanada\img\thumb.jpg" />
+    <Content Include="apps\assets\brands\dbcanada\img\trans.png" />
+    <Content Include="apps\assets\brands\dbcanada\img\us-map.jpg" />
+    <Content Include="apps\assets\brands\hollandamerica\css\style.css" />
+    <Content Include="apps\assets\brands\hollandamerica\img\checkout-steps.gif" />
+    <Content Include="apps\assets\brands\hollandamerica\img\logo.png" />
+    <Content Include="apps\assets\brands\hollandamerica\img\trans.png" />
+    <Content Include="apps\assets\brands\di\css\style.css" />
+    <Content Include="apps\assets\brands\di\img\glyphicons.png" />
+    <Content Include="apps\assets\brands\di\img\logo.png" />
+    <Content Include="apps\assets\brands\di\img\trans.png" />
+    <Content Include="apps\assets\brands\hotelmegastore\content\hotelmegastoreprivacypolicy.html" />
+    <Content Include="apps\assets\brands\hotelmegastore\content\hotelmegastoretermsandconditions.html" />
+    <Content Include="apps\assets\brands\hotelmegastore\css\style.css" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\checkout-steps.gif" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\dest-hawaii.jpg" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\dest-las-vegas.jpg" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\dest-new-york.jpg" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\dest-orlando.jpg" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\glyphicons.png" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\hotel-room.jpg" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\hotelmegastore-logo.png" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\thumb.jpg" />
+    <Content Include="apps\assets\brands\hotelmegastore\img\trans.png" />
+    <Content Include="apps\assets\brands\sears\content\searsprivacypolicy.html" />
+    <Content Include="apps\assets\brands\sears\content\searstermsandconditions.html" />
+    <Content Include="apps\assets\brands\sears\css\style.css" />
+    <Content Include="apps\assets\brands\sears\img\checkout-steps.gif" />
+    <Content Include="apps\assets\brands\sears\img\cs-card.jpg" />
+    <Content Include="apps\assets\brands\sears\img\dest-hawaii.jpg" />
+    <Content Include="apps\assets\brands\sears\img\dest-las-vegas.jpg" />
+    <Content Include="apps\assets\brands\sears\img\dest-new-york.jpg" />
+    <Content Include="apps\assets\brands\sears\img\dest-orlando.jpg" />
+    <Content Include="apps\assets\brands\sears\img\glyphicons.png" />
+    <Content Include="apps\assets\brands\sears\img\hotel-room.jpg" />
+    <Content Include="apps\assets\brands\sears\img\sears-cc.jpg" />
+    <Content Include="apps\assets\brands\sears\img\sears-shop-your-way-partner.png" />
+    <Content Include="apps\assets\brands\sears\img\sears-vacations-logo.png" />
+    <Content Include="apps\assets\brands\sears\img\thumb.jpg" />
+    <Content Include="apps\assets\brands\sears\img\trans.png" />
+    <Content Include="apps\assets\brands\sears\img\us-map.jpg" />
+    <Content Include="apps\assets\brands\westgate\content\westgateprivacypolicy.html" />
+    <Content Include="apps\assets\brands\westgate\content\westgatetermsandconditions.html" />
+    <Content Include="apps\assets\brands\westgate\css\style.css" />
+    <Content Include="apps\assets\brands\westgate\img\checkout-steps.png" />
+    <Content Include="apps\assets\brands\westgate\img\glyphicons.png" />
+    <Content Include="apps\assets\brands\westgate\img\sears-cc.jpg" />
+    <Content Include="apps\assets\brands\westgate\img\trans.png" />
+    <Content Include="apps\assets\brands\westgate\img\user-icon.svg" />
+    <Content Include="apps\assets\brands\westgate\img\westgate-logo.png" />
+    <Content Include="apps\assets\css\bootstrap.custom.css" />
+    <Content Include="apps\assets\components\flexslider\flexslider.css" />
+    <Content Include="apps\assets\components\flexslider\fonts\flexslider-icon.svg" />
+    <Content Include="apps\assets\components\flexslider\images\bg_play_pause.png" />
+    <Content Include="apps\assets\components\flexslider\jquery.flexslider-min.js" />
+    <Content Include="apps\assets\components\flexslider\jquery.flexslider.js" />
+    <Content Include="apps\assets\components\jquery.bxslider\images\bx_loader.gif" />
+    <Content Include="apps\assets\components\jquery.bxslider\images\controls.png" />
+    <Content Include="apps\assets\components\jquery.bxslider\jquery.bxslider.css" />
+    <Content Include="apps\assets\components\jquery.bxslider\jquery.bxslider.js" />
+    <Content Include="apps\assets\components\jquery.bxslider\jquery.bxslider.min.js" />
+    <Content Include="apps\assets\components\jquery.bxslider\plugins\jquery.easing.1.3.js" />
+    <Content Include="apps\assets\components\jquery.bxslider\plugins\jquery.fitvids.js" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrowleft.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrowright.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrow_large_left.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrow_large_right.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrow_left.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrow_left2.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrow_right.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrow_right2.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\black50.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\boxed_bgtile.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\bullet.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\bullets.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\bullets2.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\bullet_boxed.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\coloredbg.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\grain.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\gridtile.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\gridtile_3x3.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\gridtile_3x3_white.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\gridtile_white.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\large_left.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\large_right.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\loader.gif" />
+    <Content Include="apps\assets\components\revolution_slider\assets\loader2.gif" />
+    <Content Include="apps\assets\components\revolution_slider\assets\navigdots.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\navigdots_bgtile.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\shadow1.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\shadow2.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\shadow3.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\small_left.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\small_left_boxed.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\small_right.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\small_right_boxed.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\timer.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\timerdot.png" />
+    <Content Include="apps\assets\components\revolution_slider\assets\transparent.jpg" />
+    <Content Include="apps\assets\components\revolution_slider\assets\white50.png" />
+    <Content Include="apps\assets\components\revolution_slider\css\settings-ie8.css" />
+    <Content Include="apps\assets\components\revolution_slider\css\settings.css" />
+    <Content Include="apps\assets\components\revolution_slider\css\style.css" />
+    <Content Include="apps\assets\components\revolution_slider\font\revicons.svg" />
+    <Content Include="apps\assets\components\revolution_slider\images\decor_inside.png" />
+    <Content Include="apps\assets\components\revolution_slider\images\decor_inside_white.png" />
+    <Content Include="apps\assets\components\revolution_slider\images\decor_testimonial.png" />
+    <Content Include="apps\assets\components\revolution_slider\images\gradient\g30.png" />
+    <Content Include="apps\assets\components\revolution_slider\images\gradient\g40.png" />
+    <Content Include="apps\assets\components\revolution_slider\js\jquery.themepunch.plugins.min.js" />
+    <Content Include="apps\assets\components\revolution_slider\js\jquery.themepunch.revolution.js" />
+    <Content Include="apps\assets\components\revolution_slider\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="apps\assets\components\revolution_slider\js\jquery.themepunch.tools.min.js" />
+    <Content Include="apps\assets\content\products\hotelagentguide.html" />
+    <Content Include="apps\assets\css\agent.css" />
+    <Content Include="apps\assets\css\angular-google-places-autocomplete\autocomplete.min.css" />
+    <Content Include="apps\assets\css\animate.min.css" />
+    <Content Include="apps\assets\css\bootstrap-grid.css" />
+    <Content Include="apps\assets\css\bootstrap.min.css" />
+    <Content Include="apps\assets\css\bootstrap3.min.css" />
+    <Content Include="apps\assets\css\custom.css" />
+    <Content Include="apps\assets\css\default.css" />
+    <Content Include="apps\assets\css\font-awesome.min.css" />
+    <Content Include="apps\assets\css\kendo\Default\editor.png" />
+    <Content Include="apps\assets\css\kendo\Default\imagebrowser.png" />
+    <Content Include="apps\assets\css\kendo\Default\indeterminate.gif" />
+    <Content Include="apps\assets\css\kendo\Default\loading-image.gif" />
+    <Content Include="apps\assets\css\kendo\Default\loading.gif" />
+    <Content Include="apps\assets\css\kendo\Default\loading_2x.gif" />
+    <Content Include="apps\assets\css\kendo\Default\markers.png" />
+    <Content Include="apps\assets\css\kendo\Default\markers_2x.png" />
+    <Content Include="apps\assets\css\kendo\Default\slider-h.gif" />
+    <Content Include="apps\assets\css\kendo\Default\slider-v.gif" />
+    <Content Include="apps\assets\css\kendo\Default\sprite.png" />
+    <Content Include="apps\assets\css\kendo\Default\sprite_2x.png" />
+    <Content Include="apps\assets\css\kendo\Default\sprite_kpi.png" />
+    <Content Include="apps\assets\css\kendo\Default\sprite_kpi_2x.png" />
+    <Content Include="apps\assets\css\kendo\Fiori\editor.png" />
+    <Content Include="apps\assets\css\kendo\Fiori\imagebrowser.png" />
+    <Content Include="apps\assets\css\kendo\Fiori\indeterminate.gif" />
+    <Content Include="apps\assets\css\kendo\Fiori\loading-image.gif" />
+    <Content Include="apps\assets\css\kendo\Fiori\loading.gif" />
+    <Content Include="apps\assets\css\kendo\Fiori\loading_2x.gif" />
+    <Content Include="apps\assets\css\kendo\Fiori\markers.png" />
+    <Content Include="apps\assets\css\kendo\Fiori\markers_2x.png" />
+    <Content Include="apps\assets\css\kendo\Fiori\slider-h.gif" />
+    <Content Include="apps\assets\css\kendo\Fiori\slider-v.gif" />
+    <Content Include="apps\assets\css\kendo\Fiori\sprite.png" />
+    <Content Include="apps\assets\css\kendo\Fiori\sprite_2x.png" />
+    <Content Include="apps\assets\css\kendo\Fiori\sprite_kpi.png" />
+    <Content Include="apps\assets\css\kendo\Fiori\sprite_kpi_2x.png" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\LICENSE.txt" />
+    <Content Include="apps\assets\css\kendo\fonts\glyphs2\KendoUIGlyphs.svg" />
+    <Content Include="apps\assets\css\kendo\fonts\glyphs\KendoUIGlyphs.svg" />
+    <Content Include="apps\assets\css\kendo\images\back.png" />
+    <Content Include="apps\assets\css\kendo\images\kendoui.svg" />
+    <Content Include="apps\assets\css\kendo\images\wp8_icons.png" />
+    <Content Include="apps\assets\css\kendo\images\wp8_inverseicons.png" />
+    <Content Include="apps\assets\css\kendo\textures\brushed-metal.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots1.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots10.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots11.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots12.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots13.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots2.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots3.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots4.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots5.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots6.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots7.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots8.png" />
+    <Content Include="apps\assets\css\kendo\textures\dots9.png" />
+    <Content Include="apps\assets\css\kendo\textures\glass-lighter.png" />
+    <Content Include="apps\assets\css\kendo\textures\glass.png" />
+    <Content Include="apps\assets\css\kendo\textures\highlight.png" />
+    <Content Include="apps\assets\css\kendo\textures\hsv-gradient.png" />
+    <Content Include="apps\assets\css\kendo\textures\hue.png" />
+    <Content Include="apps\assets\css\kendo\textures\leather1.png" />
+    <Content Include="apps\assets\css\kendo\textures\leather2.png" />
+    <Content Include="apps\assets\css\kendo\textures\noise.png" />
+    <Content Include="apps\assets\css\kendo\textures\stripe1.png" />
+    <Content Include="apps\assets\css\kendo\textures\stripe2.png" />
+    <Content Include="apps\assets\css\kendo\textures\stripe3.png" />
+    <Content Include="apps\assets\css\kendo\textures\stripe4.png" />
+    <Content Include="apps\assets\css\kendo\textures\stripe5.png" />
+    <Content Include="apps\assets\css\kendo\textures\stripe6.png" />
+    <Content Include="apps\assets\css\kendo\textures\transparency.png" />
+    <Content Include="apps\assets\css\kendo\textures\transtexture.png" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\editor.png" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\imagebrowser.png" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\indeterminate.gif" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\loading-image.gif" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\loading.gif" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\loading_2x.gif" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\markers.png" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\markers_2x.png" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\slider-h.gif" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\slider-v.gif" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\sprite.png" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\sprite_2x.png" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\sprite_kpi.png" />
+    <Content Include="apps\assets\css\kendo\current\Bootstrap\sprite_kpi_2x.png" />
+    <Content Include="apps\assets\css\kendo\current\kendo.bootstrap.custom.css" />
+    <Content Include="apps\assets\css\kendo\current\kendo.bootstrap.min.css" />
+    <Content Include="apps\assets\css\kendo\current\kendo.common-bootstrap.min.css" />
+    <Content Include="apps\assets\css\kendo\current\kendo.common.min.css" />
+    <Content Include="apps\assets\css\responsive3.css" />
+    <Content Include="apps\assets\css\rzslider.css" />
+    <Content Include="apps\assets\css\sears.css" />
+    <Content Include="apps\assets\css\updates.css" />
+    <Content Include="apps\assets\css\westgate.css" />
+    <Content Include="apps\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="apps\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="apps\assets\fonts\NexaBlack.svg" />
+    <Content Include="apps\assets\fonts\soap-icons.svg" />
+    <Content Include="apps\assets\imgs\air\carriers\AAsmall.jpg" />
+    <Content Include="apps\assets\imgs\air\carriers\aasmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\accent.png" />
+    <Content Include="apps\assets\imgs\air\carriers\alaskasmall.jpg" />
+    <Content Include="apps\assets\imgs\air\carriers\ASsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\B6small.png" />
+    <Content Include="apps\assets\imgs\air\carriers\bullet.png" />
+    <Content Include="apps\assets\imgs\air\carriers\deltasmall.jpg" />
+    <Content Include="apps\assets\imgs\air\carriers\DLsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\F9small.png" />
+    <Content Include="apps\assets\imgs\air\carriers\HAsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\heroAccent.png" />
+    <Content Include="apps\assets\imgs\air\carriers\jetbluesmall.jpg" />
+    <Content Include="apps\assets\imgs\air\carriers\multiple_airlines_small.jpg" />
+    <Content Include="apps\assets\imgs\air\carriers\NKsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\suncountryairsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\SYsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\UAsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\virginsmall.jpg" />
+    <Content Include="apps\assets\imgs\air\carriers\virginsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\VXsmall.png" />
+    <Content Include="apps\assets\imgs\air\carriers\WNsmall.png" />
+    <Content Include="apps\assets\imgs\air\common\flight1.jpg" />
+    <Content Include="apps\assets\imgs\air\common\plus-sign.png" />
+    <Content Include="apps\assets\imgs\air\common\subtract-sign.png" />
+    <Content Include="apps\assets\imgs\hotel\common\credit-cards.png" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\dest-hawaii.jpg" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\dest-las-vegas.jpg" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\dest-new-york.jpg" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\dest-orlando.jpg" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\glyphicons.png" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\hotel-room.jpg" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\thumb.jpg" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\trans.png" />
+    <Content Include="apps\assets\imgs\hotel\common\destinations\us-map.jpg" />
+    <Content Include="apps\assets\imgs\hotel\common\glyphicons.png" />
+    <Content Include="apps\assets\imgs\hotel\common\sears-cc.jpg" />
+    <Content Include="apps\assets\imgs\hotel\common\trans.png" />
+    <Content Include="apps\assets\imgs\hotel\common\us-map.jpg" />
+    <Content Include="apps\assets\imgs\maps\markers\green.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-31.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-20.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-21.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-22.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-23.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-24.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-25.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-26.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-27.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-28.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-29.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-30.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-33.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-34.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-35.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-36.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-37.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-38.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-39.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-40.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-41.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-42.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-43.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-44.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-45.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-46.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-47.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-48.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-49.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-50.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-51.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-52.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-53.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-54.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-55.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-56.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-57.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-58.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-59.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-60.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-61.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-62.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-63.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-64.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-65.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-66.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-67.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-68.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-69.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-70.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-under25.png" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin26.png" />
+    <Content Include="apps\assets\imgs\maps\markers\pin-25.png" />
+    <Content Include="apps\assets\imgs\maps\markers\pin-26.png" />
+    <Content Include="apps\assets\js\angular-animate.min.js" />
+    <Content Include="apps\assets\js\angular-gettext.min.js" />
+    <Content Include="apps\assets\js\angular-google-places-autocomplete\autocomplete.js" />
+    <Content Include="apps\assets\js\angular-google-places-autocomplete\autocomplete.min.js" />
+    <Content Include="apps\assets\js\angular-loggly-logger.js" />
+    <Content Include="apps\assets\js\angular-mocks.js" />
+    <Content Include="apps\assets\js\angular-spinner.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\angular-strap.compat.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\angular-strap.compat.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\angular-strap.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\angular-strap.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\angular-strap.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\angular-strap.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\affix.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\affix.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\alert.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\alert.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\alert.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\alert.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\aside.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\aside.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\aside.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\aside.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\button.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\button.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\collapse.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\collapse.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\compiler.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\compiler.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\date-formatter.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\date-formatter.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\date-parser.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\date-parser.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\datepicker.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\datepicker.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\datepicker.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\datepicker.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\debounce.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\debounce.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\dimensions.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\dimensions.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\dropdown.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\dropdown.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\dropdown.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\dropdown.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\modal.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\modal.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\modal.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\modal.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\navbar.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\navbar.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\parse-options.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\parse-options.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\popover.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\popover.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\popover.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\popover.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\raf.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\raf.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\scrollspy.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\scrollspy.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\select.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\select.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\select.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\select.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tab.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tab.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tab.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tab.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\timepicker.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\timepicker.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\timepicker.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\timepicker.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tooltip.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tooltip.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tooltip.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tooltip.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\typeahead.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\typeahead.min.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\typeahead.tpl.js" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\typeahead.tpl.min.js" />
+    <Content Include="apps\assets\js\angular-timer.min.js" />
+    <Content Include="apps\assets\js\angular-ui-router.min.js" />
+    <Content Include="apps\assets\js\angular.min.js" />
+    <Content Include="apps\assets\js\angularjs-slider-master\dist\rzslider.css" />
+    <Content Include="apps\assets\js\angularjs-slider-master\dist\rzslider.js" />
+    <Content Include="apps\assets\js\angularjs-slider-master\dist\rzslider.min.css" />
+    <Content Include="apps\assets\js\angularjs-slider-master\dist\rzslider.min.js" />
+    <Content Include="apps\assets\js\bootstrap.js" />
+    <Content Include="apps\assets\js\bootstrap.min.js" />
+    <Content Include="apps\assets\js\calendar.js" />
+    <Content Include="apps\assets\js\gmap3.infobox.js" />
+    <Content Include="apps\assets\js\gmap3.js" />
+    <Content Include="apps\assets\js\gmap3.min.js" />
+    <Content Include="apps\assets\js\humanizeduration.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_aa-dj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_aa-er.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_aa-et.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_aa.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_af-na.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_af-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_af.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_agq-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_agq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ak-gh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ak.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_am-et.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_am.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-001.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-ae.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-bh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-dj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-dz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-eg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-eh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-er.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-il.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-iq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-jo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-km.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-kw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-lb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-ly.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-ma.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-mr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-om.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-ps.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-qa.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-sa.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-sd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-so.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-ss.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-sy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-td.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-tn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar-ye.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ar.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_as-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_as.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_asa-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_asa.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ast-es.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ast.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_az-cyrl-az.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_az-cyrl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_az-latn-az.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_az-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_az.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bas-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bas.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_be-by.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_be.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bem-zm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bem.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bez-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bez.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bg-bg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bm-latn-ml.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bm-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bm-ml.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bn-bd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bn-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bo-cn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bo-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_br-fr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_br.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_brx-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_brx.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bs-cyrl-ba.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bs-cyrl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bs-latn-ba.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bs-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_bs.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_byn-er.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_byn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ca-ad.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ca-es-valencia.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ca-es.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ca-fr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ca-it.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ca.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_cgg-ug.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_cgg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_chr-us.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_chr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ckb-arab-iq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ckb-arab-ir.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ckb-arab.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ckb-iq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ckb-ir.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ckb-latn-iq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ckb-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ckb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_cs-cz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_cs.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_cy-gb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_cy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_da-dk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_da-gl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_da.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dav-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dav.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_de-at.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_de-be.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_de-ch.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_de-de.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_de-li.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_de-lu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_de.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dje-ne.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dje.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dsb-de.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dsb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dua-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dua.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dyo-sn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dyo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dz-bt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_dz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ebu-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ebu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ee-gh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ee-tg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ee.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_el-cy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_el-gr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_el.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-001.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-150.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ag.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ai.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-as.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-au.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-bb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-be.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-bm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-bs.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-bw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-bz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ca.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-cc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ck.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-cx.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-dg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-dm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-er.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-fj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-fk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-fm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-gb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-gd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-gg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-gh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-gi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-gm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-gu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-gy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-hk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ie.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-im.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-io.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-iso.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-je.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-jm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ki.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-kn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ky.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-lc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-lr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ls.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-mg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-mh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-mo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-mp.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ms.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-mt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-mu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-mw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-my.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-na.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-nf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ng.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-nr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-nu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-nz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-pg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ph.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-pk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-pn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-pr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-pw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-rw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-sb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-sc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-sd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-sg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-sh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-sl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ss.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-sx.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-sz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-tc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-tk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-to.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-tt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-tv.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ug.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-um.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-us - Copy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-us.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-vc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-vg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-vi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-vu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-ws.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-zm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en-zw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_en.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_eo-001.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_eo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-419.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-ar.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-bo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-cl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-co.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-cr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-cu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-do.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-ea.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-ec.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-es.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-gq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-gt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-hn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-ic.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-mx.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-ni.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-pa.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-pe.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-ph.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-pr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-py.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-sv.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-us.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-uy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es-ve.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_es.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_et-ee.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_et.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_eu-es.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_eu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ewo-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ewo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fa-af.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fa-ir.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fa.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ff-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ff-gn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ff-mr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ff-sn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ff.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fi-fi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fil-ph.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fil.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fo-fo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-be.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-bf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-bi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-bj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-bl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-ca.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-cd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-cf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-cg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-ch.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-ci.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-dj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-dz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-fr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-ga.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-gf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-gn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-gp.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-gq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-ht.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-km.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-lu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-ma.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-mc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-mf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-mg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-ml.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-mq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-mr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-mu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-nc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-ne.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-pf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-pm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-re.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-rw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-sc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-sn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-sy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-td.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-tg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-tn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-vu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-wf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr-yt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fur-it.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fur.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fy-nl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_fy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ga-ie.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ga.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gd-gb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gl-es.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gsw-fr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gsw-li.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gsw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gu-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_guz-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_guz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gv-im.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_gv.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ha-latn-gh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ha-latn-ne.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ha-latn-ng.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ha-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ha.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_haw-us.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_haw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_he-il.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_he.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hi-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hr-ba.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hr-hr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hsb-de.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hsb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hu-hu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hy-am.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_hy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ia-fr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ia.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_id-id.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_id.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ig-ng.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ig.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ii-cn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ii.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_is-is.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_is.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_it-ch.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_it-it.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_it-sm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_it.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_iw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ja-jp.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ja.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_jgo-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_jgo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_jmc-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_jmc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ka-ge.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ka.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kab-dz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kab.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kam-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kam.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kde-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kde.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kea-cv.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kea.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_khq-ml.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_khq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ki-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ki.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kk-cyrl-kz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kk-cyrl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kkj-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kkj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kl-gl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kln-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kln.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_km-kh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_km.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kn-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ko-kp.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ko-kr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ko.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kok-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kok.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ks-arab-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ks-arab.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ks.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ksb-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ksb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ksf-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ksf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ksh-de.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ksh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kw-gb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_kw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ky-cyrl-kg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ky-cyrl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ky.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lag-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lag.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lb-lu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lg-ug.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lkt-us.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lkt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ln-ao.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ln-cd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ln-cf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ln-cg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ln.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lo-la.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lt-lt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lu-cd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_luo-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_luo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_luy-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_luy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lv-lv.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_lv.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mas-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mas-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mas.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mer-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mer.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mfe-mu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mfe.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mg-mg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mgh-mz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mgh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mgo-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mgo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mk-mk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ml-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ml.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mn-cyrl-mn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mn-cyrl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mr-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ms-latn-bn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ms-latn-my.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ms-latn-sg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ms-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ms.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mt-mt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mua-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_mua.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_my-mm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_my.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_naq-na.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_naq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nb-no.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nb-sj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nb.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nd-zw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ne-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ne-np.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ne.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nl-aw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nl-be.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nl-bq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nl-cw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nl-nl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nl-sr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nl-sx.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nmg-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nmg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nn-no.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nnh-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nnh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_no-no.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_no.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nr-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nso-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nso.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nus-sd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nus.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nyn-ug.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_nyn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_om-et.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_om-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_om.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_or-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_or.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_os-ge.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_os-ru.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_os.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pa-arab-pk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pa-arab.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pa-guru-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pa-guru.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pa.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pl-pl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ps-af.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ps.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-ao.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-br.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-cv.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-gw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-mo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-mz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-pt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-st.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt-tl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_pt.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_qu-bo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_qu-ec.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_qu-pe.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_qu.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rm-ch.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rn-bi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ro-md.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ro-ro.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ro.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rof-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rof.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ru-by.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ru-kg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ru-kz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ru-md.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ru-ru.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ru-ua.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ru.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rw-rw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rwk-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_rwk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sah-ru.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sah.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_saq-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_saq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sbp-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sbp.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_se-fi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_se-no.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_se-se.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_se.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_seh-mz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_seh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ses-ml.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ses.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sg-cf.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_shi-latn-ma.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_shi-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_shi-tfng-ma.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_shi-tfng.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_shi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_si-lk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_si.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sk-sk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sl-si.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_smn-fi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_smn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sn-zw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_so-dj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_so-et.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_so-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_so-so.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_so.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sq-al.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sq-mk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sq-xk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-cyrl-ba.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-cyrl-me.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-cyrl-rs.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-cyrl-xk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-cyrl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-latn-ba.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-latn-me.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-latn-rs.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-latn-xk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ss-sz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ss-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ss.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ssy-er.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ssy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_st-ls.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_st-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_st.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sv-ax.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sv-fi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sv-se.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sv.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sw-cd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sw-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sw-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sw-ug.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_sw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_swc-cd.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_swc.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ta-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ta-lk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ta-my.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ta-sg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ta.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_te-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_te.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_teo-ke.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_teo-ug.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_teo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tg-cyrl-tj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tg-cyrl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_th-th.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_th.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ti-er.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ti-et.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ti.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tig-er.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tig.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tn-bw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tn-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_to-to.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_to.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tr-cy.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tr-tr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ts-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ts.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_twq-ne.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_twq.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tzm-latn-ma.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tzm-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_tzm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ug-arab-cn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ug-arab.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ug.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uk-ua.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ur-in.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ur-pk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ur.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uz-arab-af.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uz-arab.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uz-cyrl-uz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uz-cyrl.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uz-latn-uz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uz-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_uz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vai-latn-lr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vai-latn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vai-vaii-lr.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vai-vaii.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vai.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ve-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_ve.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vi-vn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vo-001.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vun-tz.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_vun.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_wae-ch.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_wae.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_wal-et.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_wal.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_xh-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_xh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_xog-ug.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_xog.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_yav-cm.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_yav.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_yi-001.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_yi.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_yo-bj.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_yo-ng.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_yo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zgh-ma.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zgh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-cn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hans-cn.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hans-hk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hans-mo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hans-sg.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hans.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hant-hk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hant-mo.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hant-tw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hant.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-hk.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh-tw.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zh.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zu-za.js" />
+    <Content Include="apps\assets\js\i18n\angular-locale_zu.js" />
+    <Content Include="apps\assets\js\jquery-1.11.1\jquery.min.js" />
+    <Content Include="apps\assets\js\jquery-2.1.4.min.js" />
+    <Content Include="apps\assets\js\jquery-migrate.min.js" />
+    <Content Include="apps\assets\js\jquery-ui.min.js" />
+    <Content Include="apps\assets\js\jquery.noconflict.js" />
+    <Content Include="apps\assets\js\jquery.placeholder.min.js" />
+    <Content Include="apps\assets\js\jquery.stellar.min.js" />
+    <Content Include="apps\assets\js\kalende\arrows.png" />
+    <Content Include="apps\assets\js\kalende\close.png" />
+    <Content Include="apps\assets\js\kalende\kalendae.css" />
+    <Content Include="apps\assets\js\kalende\kalendae.js" />
+    <Content Include="apps\assets\js\kalende\kalendae.min.js" />
+    <Content Include="apps\assets\js\kalende\kalendae.standalone.js" />
+    <Content Include="apps\assets\js\kalende\kalendae.standalone.min.js" />
+    <Content Include="apps\assets\js\kendo\current\kendo.all.min.js" />
+    <Content Include="apps\assets\js\modernizr.2.7.1.min.js" />
+    <Content Include="apps\assets\js\moment.min.js" />
+    <Content Include="apps\assets\js\momentjs-2.14.1\moment-with-locales.js" />
+    <Content Include="apps\assets\js\momentjs-tz-0.5.5-2016f\moment-timezone-with-data-2010-2020.js" />
+    <Content Include="apps\assets\js\ng-backstretch.js" />
+    <Content Include="apps\assets\js\ng-device-detector.js" />
+    <Content Include="apps\assets\js\ng-device-detector.min.js" />
+    <Content Include="apps\assets\js\ng-infinite-scroll.min.js" />
+    <Content Include="apps\assets\js\ngMock.js" />
+    <Content Include="apps\assets\js\re-tree.js" />
+    <Content Include="apps\assets\js\re-tree.min.js" />
+    <Content Include="apps\assets\js\scripts.js" />
+    <Content Include="apps\assets\js\spin.js" />
+    <Content Include="apps\assets\js\spin.min.js" />
+    <Content Include="apps\assets\js\swAngular-Popover.js" />
+    <Content Include="apps\assets\js\theme-scripts.js" />
+    <Content Include="apps\assets\js\tmhDynamicLocale.js" />
+    <Content Include="apps\assets\js\tmhDynamicLocale.min.js" />
+    <Content Include="apps\assets\js\translations.js" />
+    <Content Include="apps\assets\js\truncate.js" />
+    <Content Include="apps\assets\js\waypoints.min.js" />
+    <Content Include="apps\assets\less\sears.css" />
+    <Content Include="apps\common\atb\agentpane.html" />
+    <Content Include="apps\common\atb\atb-controller.js" />
+    <Content Include="apps\common\atb\currencypane.html" />
+    <Content Include="apps\common\atb\dialogs\renewal-controller.js" />
+    <Content Include="apps\common\atb\dialogs\renewal.html" />
+    <Content Include="apps\common\atb\memberpane.html" />
+    <Content Include="apps\common\atb\tabs\agentnotes\agentnotes.html" />
+    <Content Include="apps\common\atb\tabs\allhistory\allhistory.html" />
+    <Content Include="apps\common\atb\tabs\brandrules\brandrules.html" />
+    <Content Include="apps\common\atb\tabs\contactinfo\contactinfo.html" />
+    <Content Include="apps\common\atb\tabs\memberinfo\memberinfo.html" />
+    <Content Include="apps\common\atb\tabs\shoppinghistory\shoppinghistory-controller.js" />
+    <Content Include="apps\common\atb\tabs\shoppinghistory\shoppinghistory.html" />
+    <Content Include="apps\common\atb\tabs\transactionhistory\transactionhistory-controller.js" />
+    <Content Include="apps\common\atb\tabs\transactionhistory\transactionhistory.html" />
+    <Content Include="apps\common\browsernotsupported.html" />
+    <Content Include="apps\common\directives\button-directives.js" />
+    <Content Include="apps\common\commonFilters.js" />
+    <Content Include="apps\common\directives\displayOptions-directives.js" />
+    <Content Include="apps\common\footers\ha_footer.html" />
+    <Content Include="apps\common\footers\di_footer.html" />
+    <Content Include="apps\common\footers\default_footer.html" />
+    <Content Include="apps\common\footers\footer-controller.js" />
+    <Content Include="apps\common\footers\footer-factory.js" />
+    <Content Include="apps\common\footers\rci_footer.html" />
+    <Content Include="apps\common\footers\syw_footer_cb.html" />
+    <Content Include="apps\common\footers\usaa_footer.html" />
+    <Content Include="apps\common\headers\club_header_dbc.html" />
+    <Content Include="apps\common\headers\club_header_discount.html" />
+    <Content Include="apps\common\headers\club_header_retail.html" />
+    <Content Include="apps\common\headers\ha_header_cb.html" />
+    <Content Include="apps\common\headers\di_header_dbc.html" />
+    <Content Include="apps\common\headers\default_header_dbc.html" />
+    <Content Include="apps\common\headers\default_header_discount.html" />
+    <Content Include="apps\common\headers\default_header_retail.html" />
+    <Content Include="apps\common\headers\rci_header.html" />
+    <Content Include="apps\common\headers\rci_header_dbc.html" />
+    <Content Include="apps\common\headers\rci_header_points.html" />
+    <Content Include="apps\common\headers\rci_header_retail.html" />
+    <Content Include="apps\common\headers\syw_header_cb.html" />
+    <Content Include="apps\common\headers\usaa_header_retail.html" />
+    <Content Include="apps\common\menus\ha_menu.html" />
+    <Content Include="apps\common\menus\di_menu.html" />
+    <Content Include="apps\common\menus\default_menu.html" />
+    <Content Include="apps\common\menus\temp.default_menu.html" />
+    <Content Include="apps\common\services\StringService.js" />
+    <Content Include="apps\common\templateFactory.js" />
+    <Content Include="apps\travel\air\airports\airAirports-factory.js" />
+    <Content Include="apps\travel\air\book\airBook-controller.js" />
+    <Content Include="apps\travel\air\book\airBook-service.js" />
+    <Content Include="apps\travel\air\book\airBookState-factory.js" />
+    <Content Include="apps\travel\air\book\air_default_bookview.html" />
+    <Content Include="apps\travel\air\book\air_default_contactinfo.html" />
+    <Content Include="apps\travel\air\book\air_default_flightsummary.html" />
+    <Content Include="apps\travel\air\book\air_default_payment.html" />
+    <Content Include="apps\travel\air\book\air_default_termandconditions.html" />
+    <Content Include="apps\travel\air\book\air_default_travelerinfo.html" />
+    <Content Include="apps\travel\air\book\airBook-freqFlyer-factory.js" />
+    <Content Include="apps\travel\air\book\bookCountriesAndStates-factory.js" />
+    <Content Include="apps\travel\air\book\sections\contact\default.html" />
+    <Content Include="apps\travel\air\book\sections\payment\default.html" />
+    <Content Include="apps\travel\air\book\sections\payment\summary\default.html" />
+    <Content Include="apps\travel\air\book\sections\summary\default.html" />
+    <Content Include="apps\travel\air\book\sections\terms\default.html" />
+    <Content Include="apps\travel\air\book\sections\traveler\additionalInfo.html" />
+    <Content Include="apps\travel\air\book\sections\traveler\assistance\default.html" />
+    <Content Include="apps\travel\air\book\sections\traveler\frequentFlyer\default.html" />
+    <Content Include="apps\travel\air\book\sections\traveler\general.html" />
+    <Content Include="apps\travel\air\book\sections\traveler\knownTraveler\default.html" />
+    <Content Include="apps\travel\air\book\sections\traveler\passport\default.html" />
+    <Content Include="apps\travel\air\book\sections\traveler\redress\default.html" />
+    <Content Include="apps\travel\air\book\sections\traveler\seat\preference\default.html" />
+    <Content Include="apps\travel\air\common\airSessionService.js" />
+    <Content Include="apps\travel\air\common\dialogService.js" />
+    <Content Include="apps\travel\air\common\directives\airConfirmationDirectives.js" />
+    <Content Include="apps\travel\air\common\directives\airDisclaimerDirective.js" />
+    <Content Include="apps\travel\air\common\directives\airlineDirective.js" />
+    <Content Include="apps\travel\air\common\filters\airlineFilter.js" />
+    <Content Include="apps\travel\air\common\filters\getTravelDateFormatted.js" />
+    <Content Include="apps\travel\air\common\services\airConfirmationServices.js" />
+    <Content Include="apps\travel\air\common\services\airportService.js" />
+    <Content Include="apps\travel\air\common\services\lookupBookingService.js" />
+    <Content Include="apps\travel\air\common\templates\airDisclaimer.html" />
+    <Content Include="apps\travel\air\common\testing\jasmine\boot.js" />
+    <Content Include="apps\travel\air\common\testing\jasmine\console.js" />
+    <Content Include="apps\travel\air\common\testing\jasmine\jasmine-html.js" />
+    <Content Include="apps\travel\air\common\testing\jasmine\jasmine.css" />
+    <Content Include="apps\travel\air\common\testing\jasmine\jasmine.js" />
+    <Content Include="apps\travel\air\common\testing\jasmine\JasmineSpecRunner.html" />
+    <Content Include="apps\travel\air\common\testing\jasmine\jasmine_favicon.png" />
+    <Content Include="apps\travel\air\common\testing\specs\airAirports-factory.spec.js" />
+    <Content Include="apps\travel\air\common\testing\specs\airBook-controller.spec.js" />
+    <Content Include="apps\travel\air\common\testing\specs\airPassenger-factory.spec.js" />
+    <Content Include="apps\travel\air\common\testing\specs\airSearch-controller.spec.js" />
+    <Content Include="apps\travel\air\confirmation\airConfirmation-controller.js" />
+    <Content Include="apps\travel\air\confirmation\airConfirmation-service.js" />
+    <Content Include="apps\travel\air\confirmation\air_default_confirmationsummary.html" />
+    <Content Include="apps\travel\air\confirmation\air_default_confirmation_pricing.html" />
+    <Content Include="apps\travel\air\confirmation\air_default_confirmation.html" />
+    <Content Include="apps\travel\air\confirmation\confirmation-factory.js" />
+    <Content Include="apps\travel\air\home\airdefault_merchandising_dbc.html" />
+    <Content Include="apps\travel\air\airApp.js" />
+    <Content Include="apps\travel\air\air-controller.js" />
+    <Content Include="apps\travel\air\passengers\airPassenger-factory.js" />
+    <Content Include="apps\travel\air\receipt\airReceipt-controller.js" />
+    <Content Include="apps\travel\air\receipt\airReceipt-service.js" />
+    <Content Include="apps\travel\air\receipt\airReceipt_resendReceipt.html" />
+    <Content Include="apps\travel\air\search\airSearch-service.js" />
+    <Content Include="apps\travel\air\search\air_default_search.html" />
+    <Content Include="apps\travel\air\search\list.html" />
+    <Content Include="apps\travel\air\search\searchresults\air_default_searchresults.html" />
+    <Content Include="apps\travel\air\search\searchresults\complete\air_default_complete_trip.html" />
+    <Content Include="apps\travel\air\search\searchresults\depart\air_default_depart.html" />
+    <Content Include="apps\travel\air\search\searchresults\return\air_default_return.html" />
+    <Content Include="apps\travel\air\search\searchState-factory.js" />
+    <Content Include="apps\travel\default_travel_body.html" />
+    <Content Include="apps\travel\default_travel_body2.html" />
+    <Content Include="apps\travel\default_travel_footer.html" />
+    <Content Include="apps\travel\default_travel_nav.html" />
+    <Content Include="apps\travel\hotel\book\bookCountriesAndStates-factory.js" />
+    <Content Include="apps\travel\hotel\book\bookPurchase-factory.js" />
+    <Content Include="apps\travel\hotel\book\book_header.html" />
+    <Content Include="apps\travel\hotel\book\hotelBook-controller.js" />
+    <Content Include="apps\travel\hotel\book\pricebar\hoteldefault_pricebar_cb.html" />
+    <Content Include="apps\travel\hotel\receipt\hotelReceipt-controller.js" />
+    <Content Include="apps\travel\hotel\receipt\hotelReceipt_resendReceipt.html" />
+    <Content Include="apps\travel\hotel\book\hotelBook-service.js" />
+    <Content Include="apps\travel\hotel\book\hoteldefault_bookview.html" />
+    <Content Include="apps\travel\hotel\book\payment_collection\hoteldefault_ccinput.html" />
+    <Content Include="apps\travel\hotel\book\payment_collection\hoteldefault_dbcinput.html" />
+    <Content Include="apps\travel\hotel\book\payment_collection\hoteldefault_pointsinput.html" />
+    <Content Include="apps\travel\hotel\book\payment_collection\hoteldefault_pricesummary.html" />
+    <Content Include="apps\travel\hotel\book\payment_collection\hoteldefault_vcinput.html" />
+    <Content Include="apps\travel\hotel\book\pricebar\hoteldefault_pricebar_dbc.html" />
+    <Content Include="apps\travel\hotel\book\pricebar\hoteldefault_pricebar_discount.html" />
+    <Content Include="apps\travel\hotel\book\pricebar\hoteldefault_pricebar_retail.html" />
+    <Content Include="apps\travel\hotel\book\price_summary\hoteldefault_pricesummary_dbc.html" />
+    <Content Include="apps\travel\hotel\book\price_summary\hoteldefault_pricesummary_discount.html" />
+    <Content Include="apps\travel\hotel\book\price_summary\hoteldefault_pricesummary_retail.html" />
+    <Content Include="apps\travel\hotel\book\selectedRoom-factory.js" />
+    <Content Include="apps\travel\hotel\cancel\hotelCancel-controller.js" />
+    <Content Include="apps\travel\hotel\cancel\hotelCancel-service.js" />
+    <Content Include="apps\travel\hotel\cancel\hotelCancelPolicy-factory.js" />
+    <Content Include="apps\travel\hotel\cancel\hotelGetCancelBooking.js" />
+    <Content Include="apps\travel\hotel\cancel\hotelCancelPolicy-service.js" />
+    <Content Include="apps\travel\hotel\cancel\hoteldefault_cancelview.html" />
+    <Content Include="apps\travel\hotel\common\dialogService.js" />
+    <Content Include="apps\travel\hotel\common\hotels-app.js" />
+    <Content Include="apps\travel\hotel\common\hotelSearch-app.js" />
+    <Content Include="apps\travel\hotel\common\hotelSessionService.js" />
+    <Content Include="apps\travel\hotel\common\testing\hotelDetail-controller-test.js" />
+    <Content Include="apps\travel\hotel\common\testing\hotelDetail-service-test.js" />
+    <Content Include="apps\travel\hotel\common\testing\hotelSearch-service-test.js" />
+    <Content Include="apps\travel\hotel\common\testing\hotelsSearch-controller-test.js" />
+    <Content Include="apps\travel\hotel\common\testing\jasmine\boot.js" />
+    <Content Include="apps\travel\hotel\common\testing\jasmine\console.js" />
+    <Content Include="apps\travel\hotel\common\testing\jasmine\jasmine-html.js" />
+    <Content Include="apps\travel\hotel\common\testing\jasmine\jasmine.css" />
+    <Content Include="apps\travel\hotel\common\testing\jasmine\jasmine.js" />
+    <Content Include="apps\travel\hotel\common\testing\jasmine\JasmineSpecRunner.html" />
+    <Content Include="apps\travel\hotel\common\testing\jasmine\jasmine_favicon.png" />
+    <Content Include="apps\travel\hotel\confirmation\confirmation-controller.js" />
+    <Content Include="apps\travel\hotel\confirmation\confirmation-factory.js" />
+    <Content Include="apps\travel\hotel\confirmation\hoteldefault_confirmationview.html" />
+    <Content Include="apps\travel\hotel\displayOptions-directives.js" />
+    <Content Include="apps\travel\hotel\hotelApp.js" />
+    <Content Include="apps\travel\hotel\hoteldetail\detail-factory.js" />
+    <Content Include="apps\travel\hotel\hoteldetail\hotelAvailabilityService.js" />
+    <Content Include="apps\travel\hotel\hoteldetail\hoteldefault_detailview.html" />
+    <Content Include="apps\travel\hotel\hoteldetail\hoteldefault_detailview.original.html" />
+    <Content Include="apps\travel\hotel\hoteldetail\hotelDetail-controller.js" />
+    <Content Include="apps\travel\hotel\hoteldetail\hotelDetail-service.js" />
+    <Content Include="apps\travel\hotel\hoteldetail\roomdisplay\hoteldefault_roomdetail.html" />
+    <Content Include="apps\travel\hotel\hoteldetail\roomdisplay\hoteldefault_roomdetail_cb.html" />
+    <Content Include="apps\travel\hotel\hoteldetail\roomdisplay\hoteldefault_roomdetail_dbc.html" />
+    <Content Include="apps\travel\hotel\hoteldetail\roomdisplay\hoteldefault_roomdetail_discount.html" />
+    <Content Include="apps\travel\hotel\hoteldetail\roomdisplay\hoteldefault_roomdetail_retail.html" />
+    <Content Include="apps\travel\hotel\receipt\hotelReceipt-service.js" />
+    <Content Include="apps\travel\hotel\review\hoteldefault_reviewview.html" />
+    <Content Include="apps\travel\hotel\review\hotelReview -factory.js" />
+    <Content Include="apps\travel\hotel\review\hotelReview-controller.js" />
+    <Content Include="apps\travel\hotel\search\clubdefault_search.html" />
+    <Content Include="apps\travel\hotel\search\club_searchForm.html" />
+    <Content Include="apps\travel\hotel\search\gridviewdisplay\hoteldefault_griddetail_cb.html" />
+    <Content Include="apps\travel\hotel\search\gridviewdisplay\hoteldefault_griddetail_dbc.html" />
+    <Content Include="apps\travel\hotel\search\gridviewdisplay\hoteldefault_griddetail_discount.html" />
+    <Content Include="apps\travel\hotel\search\gridviewdisplay\hoteldefault_griddetail_retail.html" />
+    <Content Include="apps\travel\hotel\search\gridviewdisplay\hoteldefault_gridview.html" />
+    <Content Include="apps\travel\hotel\search\gridviewdisplay\hoteldefault_gridview.original.html" />
+    <Content Include="apps\travel\hotel\search\hoteldefault_search.html" />
+    <Content Include="apps\travel\hotel\search\hoteldefault_search.original.html" />
+    <Content Include="apps\travel\hotel\search\hotelResults-factory.js" />
+    <Content Include="apps\travel\hotel\search\hotelSearch-directives.js" />
+    <Content Include="apps\travel\hotel\search\hotelSearch-filters.js" />
+    <Content Include="apps\travel\hotel\search\listviewdisplay\hoteldefault_listdetail_cb.html" />
+    <Content Include="apps\travel\hotel\search\listviewdisplay\hoteldefault_listdetail_dbc.html" />
+    <Content Include="apps\travel\hotel\search\listviewdisplay\hoteldefault_listdetail_discount.html" />
+    <Content Include="apps\travel\hotel\search\listviewdisplay\hoteldefault_listdetail_retail.html" />
+    <Content Include="apps\travel\hotel\search\listviewdisplay\hoteldefault_listview.html" />
+    <Content Include="apps\travel\hotel\search\listviewdisplay\hoteldefault_listview.original.html" />
+    <Content Include="apps\travel\hotel\search\mapviewdisplay\hoteldefault_mapdetail_cb.html" />
+    <Content Include="apps\travel\hotel\search\mapviewdisplay\hoteldefault_mapdetail_dbc.html" />
+    <Content Include="apps\travel\hotel\search\mapviewdisplay\hoteldefault_mapdetail_discount.html" />
+    <Content Include="apps\travel\hotel\search\mapviewdisplay\hoteldefault_mapdetail_retail.html" />
+    <Content Include="apps\travel\hotel\search\mapviewdisplay\hoteldefault_mapview.html" />
+    <Content Include="apps\travel\hotel\search\merchandising\di_merchandising_dbc.html" />
+    <Content Include="apps\travel\hotel\search\merchandising\ha_merchandising_cb.html" />
+    <Content Include="apps\travel\hotel\search\merchandising\hoteldefault_merchandising_dbc.html" />
+    <Content Include="apps\travel\hotel\search\merchandising\hoteldefault_merchandising_dbc.original.html" />
+    <Content Include="apps\travel\hotel\search\merchandising\hoteldefault_merchandising_discount.html" />
+    <Content Include="apps\travel\hotel\search\merchandising\hoteldefault_merchandising_discount.original.html" />
+    <Content Include="apps\travel\hotel\search\merchandising\hoteldefault_merchandising_retail.html" />
+    <Content Include="apps\travel\hotel\search\merchandising\hoteldefault_merchandising_retail.original.html" />
+    <Content Include="apps\travel\hotel\search\search-controller.js" />
+    <Content Include="apps\travel\hotel\search\search-factory.js" />
+    <Content Include="apps\travel\hotel\search\search-service.js" />
+    <Content Include="apps\travel\hotel\search\searchDescriptionTooltip.html" />
+    <Content Include="apps\travel\hotel\search\sidebar\hoteldefault_sidebar.html" />
+    <Content Include="apps\travel\hotel\search\_sortingFilters.html" />
+    <Content Include="apps\travel\travelApp.js" />
+    <Content Include="apps\travel\travelController.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="apps\assets\js\angular-sanitize.js" />
+    <Content Include="apps\assets\js\angular-sanitize.min.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\angular-strap.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\affix.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\alert.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\aside.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\button.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\collapse.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\compiler.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\date-formatter.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\date-parser.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\datepicker.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\debounce.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\dimensions.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\dropdown.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\modal.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\navbar.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\parse-options.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\popover.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\raf.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\scrollspy.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\select.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tab.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\timepicker.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\tooltip.min.js.map" />
+    <Content Include="apps\assets\js\angular-strap-2.3.6\modules\typeahead.min.js.map" />
+    <Content Include="apps\assets\brands\hotelmegastore\scss\_variables.scss" />
+    <Content Include="apps\assets\brands\hotelmegastore\scss\style.scss" />
+    <Content Include="apps\travel\air\airhome.cshtml" />
+    <Content Include="Json\flightresults.json" />
+    <Content Include="apps\assets\js\jquery-1.11.1\jquery.min.map" />
+    <Content Include="App_Data\airportlist.json" />
+    <Content Include="Json\book.departFlight.json" />
+    <Content Include="Json\book.returnFlight.json" />
+    <Content Include="Json\book.json" />
+    <Content Include="Json\search.json" />
+    <Content Include="Json\book.flight.base.json" />
+    <Content Include="apps\assets\css\kendo\current\kendo.bootstrap.min.css.map" />
+    <Content Include="apps\assets\css\kendo\current\kendo.common-bootstrap.min.css.map" />
+    <Content Include="apps\assets\css\kendo\current\kendo.common.min.css.map" />
+    <Content Include="apps\temp\Api_Responses\confirmation.booking.json" />
+    <Content Include="Json\displayOptions.json" />
+    <Content Include="Json\sample_booking_request.json" />
+    <Content Include="App_Data\Airlines.json" />
+    <Content Include="apps\temp\Api_Responses\Airlines.json" />
+    <Content Include="Json\AirBookController_Booking_Response.json" />
+    <Content Include="Json\currentSession.json" />
+    <Content Include="Json\getFlights_success_response_01-13-2017.json" />
+    <None Include="Properties\PublishProfiles\Land-DevUI-WebApp-Australia - Web Deploy.pubxml" />
+    <Content Include="readme.md" />
+    <None Include="Properties\PublishProfiles\ovsairpoc - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ovsairqa.pubxml" />
+    <None Include="Properties\PublishProfiles\ovsairtest - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ovsairtest - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ovsairtest.pubxml" />
+    <None Include="Properties\PublishProfiles\ovsairtool.pubxml" />
+    <None Include="scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-2.2.3.js" />
+    <Content Include="scripts\jquery-2.2.3.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Views\Message\UserCredentialsNotValid.cshtml" />
+    <Content Include="Views\Message\UserNotLoggedIn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="apps\assets\brands\di\NewFolder1\" />
+    <Folder Include="apps\assets\content\products\hotelagentguide.fld\" />
+    <Folder Include="apps\assets\themes\default\" />
+    <Folder Include="apps\common\atb\tabs\searchhistory\" />
+    <Folder Include="apps\travel\air\cancel\" />
+    <Folder Include="Views\Hotel\" />
+    <Folder Include="Views\Linkto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="apps\assets\js\tmhDynamicLocale.min.js.map" />
+    <Content Include="apps\assets\less\custom.scss" />
+    <Content Include="apps\assets\less\ie.scss" />
+    <Content Include="apps\assets\less\responsive.scss" />
+    <Content Include="apps\assets\less\sears.css.map" />
+    <Content Include="apps\assets\less\soap-icon.scss" />
+    <Content Include="apps\assets\less\style.scss" />
+    <Content Include="apps\assets\less\_base.scss" />
+    <Content Include="apps\assets\less\_mixin.scss" />
+    <Content Include="apps\assets\less\_variables -westgate.scss" />
+    <Content Include="apps\assets\less\_variables-sears - Copy.scss" />
+    <Content Include="apps\assets\less\_variables-sears.scss" />
+    <Content Include="apps\assets\less\_variables.scss" />
+    <Content Include="apps\assets\po\es_MX.mo" />
+    <Content Include="apps\assets\po\es_MX.po" />
+    <Content Include="apps\assets\po\template.pot" />
+    <Content Include="apps\assets\scss\soap-icon.scss" />
+    <Content Include="apps\travel\temp.travelhome.cshtml" />
+    <Content Include="apps\travel\travelhome.cshtml" />
+    <Content Include="apps\travel\hotel\hotelhome.cshtml" />
+    <Content Include="apps\assets\brands\sears\scss\style.scss" />
+    <Content Include="apps\assets\brands\sears\scss\_variables.scss" />
+    <Content Include="apps\assets\components\revolution_slider\assets\arrows.psd" />
+    <Content Include="apps\assets\components\revolution_slider\assets\bullets.psd" />
+    <Content Include="apps\assets\components\revolution_slider\assets\small_arrows.psd" />
+    <Content Include="apps\assets\components\revolution_slider\font\revicons.eot" />
+    <Content Include="apps\assets\components\revolution_slider\font\revicons.ttf" />
+    <Content Include="apps\assets\components\revolution_slider\font\revicons.woff" />
+    <Content Include="apps\assets\components\flexslider\fonts\flexslider-icon.eot" />
+    <Content Include="apps\assets\components\flexslider\fonts\flexslider-icon.ttf" />
+    <Content Include="apps\assets\components\flexslider\fonts\flexslider-icon.woff" />
+    <Content Include="apps\assets\components\jquery.bxslider\readme.md" />
+    <Content Include="apps\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="apps\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="apps\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="apps\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="apps\assets\fonts\FontAwesome.otf" />
+    <Content Include="apps\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="apps\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="apps\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="apps\assets\fonts\NexaBlack.eot" />
+    <Content Include="apps\assets\fonts\NexaBlack.otf" />
+    <Content Include="apps\assets\fonts\NexaBlack.ttf" />
+    <Content Include="apps\assets\fonts\NexaBlack.woff" />
+    <Content Include="apps\assets\fonts\soap-icons.eot" />
+    <Content Include="apps\assets\fonts\soap-icons.ttf" />
+    <Content Include="apps\assets\fonts\soap-icons.woff" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSans.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\DejaVu\DejaVuSerif.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\glyphs\KendoUIGlyphs.eot" />
+    <Content Include="apps\assets\css\kendo\fonts\glyphs\KendoUIGlyphs.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\glyphs\KendoUIGlyphs.woff" />
+    <Content Include="apps\assets\css\kendo\fonts\glyphs2\KendoUIGlyphs.eot" />
+    <Content Include="apps\assets\css\kendo\fonts\glyphs2\KendoUIGlyphs.ttf" />
+    <Content Include="apps\assets\css\kendo\fonts\glyphs2\KendoUIGlyphs.woff" />
+    <Content Include="apps\assets\css\kendo\images\kendoui.ttf" />
+    <Content Include="apps\assets\css\kendo\images\kendoui.woff" />
+    <Content Include="apps\assets\js\kendo\current\kendo.all.min.js.map" />
+    <Content Include="apps\assets\imgs\maps\markers\hotelpin-33.afdesign" />
+    <Content Include="apps\assets\brands\di\scss\_variables.scss" />
+    <Content Include="apps\assets\brands\di\scss\style.scss" />
+    <Content Include="apps\assets\brands\137\scss\style.scss" />
+    <Content Include="apps\assets\brands\137\scss\_buttons.scss" />
+    <Content Include="apps\assets\brands\137\scss\_checkout.scss" />
+    <Content Include="apps\assets\brands\137\scss\_content.scss" />
+    <Content Include="apps\assets\brands\137\scss\_details.scss" />
+    <Content Include="apps\assets\brands\137\scss\_footer.scss" />
+    <Content Include="apps\assets\brands\137\scss\_forms.scss" />
+    <Content Include="apps\assets\brands\137\scss\_global.scss" />
+    <Content Include="apps\assets\brands\137\scss\_header.scss" />
+    <Content Include="apps\assets\brands\137\scss\_home.scss" />
+    <Content Include="apps\assets\brands\137\scss\_layout.scss" />
+    <Content Include="apps\assets\brands\137\scss\_nav.scss" />
+    <Content Include="apps\assets\brands\137\scss\_search.scss" />
+    <Content Include="apps\assets\brands\137\scss\_variables.scss" />
+    <Content Include="apps\assets\brands\hollandamerica\scss\_variables.scss" />
+    <Content Include="apps\assets\brands\hollandamerica\scss\style.scss" />
+    <Content Include="apps\assets\brands\hollandamerica\haconfigrecord.json" />
+    <Content Include="apps\assets\content\products\hotelagentguide.pdf" />
+    <Content Include="apps\assets\brands\dbcanada\scss\_variables.scss" />
+    <Content Include="apps\assets\brands\dbcanada\scss\style.scss" />
+    <Content Include="apps\assets\brands\westgate\scss\style.scss" />
+    <Content Include="apps\assets\brands\westgate\scss\_branding.scss" />
+    <Content Include="apps\assets\brands\westgate\scss\_mediaqueries.scss" />
+    <Content Include="apps\assets\brands\westgate\scss\_variables.scss" />
+    <Content Include="apps\assets\js\angular-sanitize.min.js.map" />
+    <Content Include="Views\Message\BrowserNotSupported.cshtml" />
+    <Content Include="Views\Message\AgentCredentialsNotValid.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Message\LegacyError.cshtml" />
+    <Content Include="Views\Message\DisplayOptionsNotFound.cshtml" />
+    <Content Include="Views\Shared\_Message.cshtml" />
+    <Content Include="scripts\jquery-2.2.3.min.map" />
+    <Content Include="Settings.aiis" />
+    <Content Include="Views\Air\TestAPI.cshtml" />
+    <Content Include="Views\Air\BookingTest.cshtml" />
+    <None Include="Web.Release-NonProd.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release-Prod.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ovs.Air.UI.Services\Ovs.Air.Ui.Services.csproj">
+      <Project>{c55cd8f1-8c80-4bae-a25d-37dcea16e4c9}</Project>
+      <Name>Ovs.Air.Ui.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-NonProd|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-Prod|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties Name="Ovs.Hotel.Ui" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Azure.DocumentDB.1.9.4\build\Microsoft.Azure.DocumentDB.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Azure.DocumentDB.1.9.4\build\Microsoft.Azure.DocumentDB.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Azure.DocumentDB.1.9.4\build\Microsoft.Azure.DocumentDB.targets" Condition="Exists('..\packages\Microsoft.Azure.DocumentDB.1.9.4\build\Microsoft.Azure.DocumentDB.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

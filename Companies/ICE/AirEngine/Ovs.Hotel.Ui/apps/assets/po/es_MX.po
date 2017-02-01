@@ -1,0 +1,604 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/travel/default_travel_body.html:142
+msgid "\"{{'select cruise length'|translate}}\""
+msgstr ""
+
+#: apps/travel/default_travel_body.html:156
+msgid "\"{{'select cruise line'|translate}}\""
+msgstr ""
+
+#: apps/travel/default_travel_body.html:93
+msgid "{{'1 Guest'|translate}}"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:83
+msgid "{{'1 Room'|translate}}"
+msgstr ""
+
+#: apps/travel/default_travel_footer.html:91
+msgid "&copy; 2015 {{main.displayOptions.program_long_name}}"
+msgstr ""
+
+#: apps/travel/default_travel_footer.html:29
+msgid "<a href=\"#\">Amazing Places</a>"
+msgstr "<a href=\"#\">Lugares sorprendentes</a>"
+
+#: apps/travel/default_travel_footer.html:41
+msgid "<a href=\"#\">Travel Insurance</a>"
+msgstr "<a href=\"#\">Seguro de viaje</a>"
+
+#: apps/travel/default_travel_nav.html:18
+msgid ""
+"<img src=\"{{main.displayOptions.logo_name}}\" alt=\"{{main.displayOptions."
+"program_long_name}}Home\">"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:356
+#: apps/travel/default_travel_body.html:367
+msgid "01"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:357
+#: apps/travel/default_travel_body.html:368
+msgid "02"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:358
+#: apps/travel/default_travel_body.html:369
+msgid "03"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:359
+#: apps/travel/default_travel_body.html:370
+msgid "04"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:231
+#: apps/travel/default_travel_body.html:285
+#: apps/travel/default_travel_body.html:93
+msgid "1 Guest"
+msgstr "1 persona"
+
+#: apps/travel/default_travel_body.html:221
+#: apps/travel/default_travel_body.html:275
+#: apps/travel/default_travel_body.html:83
+msgid "1 Room"
+msgstr "1 Habitación"
+
+#: apps/travel/default_travel_body.html:143
+msgid "1-2 Nights"
+msgstr "1-2 Noches"
+
+#: apps/travel/hotel/hoteldefault_body.html:202
+msgid "170 reviews"
+msgstr "170 Comentarios"
+
+#: apps/travel/default_travel_body.html:232
+#: apps/travel/default_travel_body.html:286
+#: apps/travel/default_travel_body.html:94
+msgid "2 Guests"
+msgstr "2 personas"
+
+#: apps/travel/default_travel_body.html:222
+#: apps/travel/default_travel_body.html:276
+#: apps/travel/default_travel_body.html:84
+msgid "2 Rooms"
+msgstr "2 Habitaciones"
+
+#: apps/travel/hotel/hoteldefault_body.html:182
+#: apps/travel/hotel/hoteldefault_body.html:265
+msgid "270 reviews"
+msgstr "270 comentarios"
+
+#: apps/travel/default_travel_body.html:233
+#: apps/travel/default_travel_body.html:287
+#: apps/travel/default_travel_body.html:95
+msgid "3 Guests"
+msgstr "3 personas"
+
+#: apps/travel/default_travel_body.html:223
+#: apps/travel/default_travel_body.html:277
+#: apps/travel/default_travel_body.html:85
+msgid "3 Rooms"
+msgstr "3 Habitaciones"
+
+#: apps/travel/default_travel_body.html:144
+msgid "3-4 Nights"
+msgstr "3-4 Noches"
+
+#: apps/travel/default_travel_body.html:234
+#: apps/travel/default_travel_body.html:288
+#: apps/travel/default_travel_body.html:96
+msgid "4 Guests"
+msgstr "4 personas"
+
+#: apps/travel/default_travel_body.html:224
+#: apps/travel/default_travel_body.html:278
+#: apps/travel/default_travel_body.html:86
+msgid "4 Rooms"
+msgstr "4 Habitaciones"
+
+#: apps/travel/hotel/hoteldefault_body.html:222
+msgid "485 reviews"
+msgstr "485 Comentarios"
+
+#: apps/travel/hotel/hoteldefault_body.html:242
+msgid "75 reviews"
+msgstr "75 Comentarios"
+
+#: apps/travel/default_travel_footer.html:9
+msgid "About"
+msgstr "Acerca de"
+
+#: apps/travel/default_travel_footer.html:59
+msgid "About {{main.displayOptions.program_long_name}}"
+msgstr "Acerca de {{main.displayOptions.program_long_name}}"
+
+#: apps/travel/default_travel_body.html:355
+#: apps/travel/default_travel_body.html:454
+#: apps/travel/hotel/hoteldefault_search.html:32
+msgid "Adults"
+msgstr "Adultos"
+
+#: apps/travel/default_travel_nav.html:47
+msgid "Air"
+msgstr "Vuelos"
+
+#: apps/travel/default_travel_body.html:327
+#: apps/travel/default_travel_body.html:342
+#: apps/travel/default_travel_body.html:423
+#: apps/travel/default_travel_body.html:440
+msgid "anytime"
+msgstr "cualquier fecha"
+
+#: apps/travel/hotel/hoteldefault_body.html:101
+#: apps/travel/hotel/hoteldefault_body.html:115
+#: apps/travel/hotel/hoteldefault_body.html:15
+#: apps/travel/hotel/hoteldefault_body.html:176
+#: apps/travel/hotel/hoteldefault_body.html:198
+#: apps/travel/hotel/hoteldefault_body.html:218
+#: apps/travel/hotel/hoteldefault_body.html:238
+#: apps/travel/hotel/hoteldefault_body.html:259
+#: apps/travel/hotel/hoteldefault_body.html:29
+#: apps/travel/hotel/hoteldefault_body.html:43
+#: apps/travel/hotel/hoteldefault_body.html:57
+#: apps/travel/hotel/hoteldefault_body.html:71
+msgid "avg/night"
+msgstr "Promedio / noche"
+
+#: apps/travel/default_travel_body.html:157
+msgid "Azamara Club Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_footer.html:12
+msgid "Blog Posts"
+msgstr "Blog Artículos"
+
+#: apps/travel/default_travel_nav.html:51
+msgid "Car"
+msgstr "Auto"
+
+#: apps/travel/default_travel_body.html:158
+msgid "Carnival Cruise Lines"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:41
+#: apps/travel/default_travel_body.html:50
+msgid "CARS"
+msgstr "AUTOS"
+
+#: apps/travel/default_travel_body.html:159
+msgid "Celebrity Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:206
+#: apps/travel/default_travel_body.html:260
+#: apps/travel/default_travel_body.html:265
+#: apps/travel/default_travel_body.html:68
+#: apps/travel/hotel/hoteldefault_search.html:11
+msgid "Check In"
+msgstr "Salida"
+
+#: apps/travel/default_travel_body.html:211
+#: apps/travel/default_travel_body.html:73
+#: apps/travel/hotel/hoteldefault_search.html:17
+msgid "Check Out"
+msgstr "Regreso"
+
+#: apps/travel/default_travel_body.html:483
+msgid "Compact"
+msgstr "Compacto"
+
+#: apps/travel/default_travel_body.html:160
+msgid "Costa Cruise Lines"
+msgstr ""
+
+#: apps/travel/default_travel_nav.html:76
+msgid "Cruise"
+msgstr "Crucero"
+
+#: apps/travel/default_travel_body.html:161
+msgid "Cruise &amp; Maritime Voyages"
+msgstr ""
+
+#: apps/travel/default_travel_nav.html:36
+msgid "Cruises"
+msgstr "Cruceros"
+
+#: apps/travel/default_travel_body.html:37
+#: apps/travel/default_travel_body.html:46
+#: apps/travel/default_travel_body.html:51
+msgid "CRUISES"
+msgstr "CRUCEROS"
+
+#: apps/travel/default_travel_body.html:162
+msgid "Crystal Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:163
+msgid "Cunard Line Ltd."
+msgstr ""
+
+#: apps/travel/default_travel_body.html:136
+msgid "Departure Date"
+msgstr "Fecha de Salida"
+
+#: apps/travel/default_travel_footer.html:6
+msgid "Discover {{main.displayOptions.program_short_name}}"
+msgstr "Descubrir {{main.displayOptions.program_short_name}}"
+
+#: apps/travel/default_travel_body.html:164
+msgid "Disney Cruise Line"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:482
+msgid "Economy"
+msgstr "Económica"
+
+#: apps/travel/default_travel_body.html:128
+msgid "Enter A Destination"
+msgstr "Insertar Ubicación"
+
+#: apps/travel/default_travel_body.html:40
+#: apps/travel/default_travel_body.html:49
+msgid "FLIGHTS"
+msgstr "VUELOS"
+
+#: apps/travel/default_travel_body.html:512
+msgid "From $200"
+msgstr "Desde $200"
+
+#: apps/travel/hotel/hoteldefault_body.html:144
+#: apps/travel/hotel/hoteldefault_body.html:151
+#: apps/travel/hotel/hoteldefault_body.html:158
+msgid "guest"
+msgstr "invitado"
+
+#: apps/travel/default_travel_footer.html:14
+msgid "Help Topics"
+msgstr "Temas de ayuda"
+
+#: apps/travel/default_travel_body.html:165
+msgid "Holland America Line"
+msgstr ""
+
+#: apps/travel/default_travel_nav.html:66
+msgid "Home(Travel 1)"
+msgstr "casa1"
+
+#: apps/travel/default_travel_nav.html:69
+msgid "Home(Travel 2)"
+msgstr "casa 2"
+
+#: apps/travel/default_travel_nav.html:26
+msgid "Home(travel1)"
+msgstr "casa 1"
+
+#: apps/travel/default_travel_nav.html:29
+msgid "Home(travel2)"
+msgstr "casa 2"
+
+#: apps/travel/hotel/hoteldefault_body.html:81
+msgid "Hot Hotel Details"
+msgstr "Nombre del hotel"
+
+#: apps/travel/default_travel_nav.html:32
+#: apps/travel/default_travel_nav.html:72
+msgid "Hotels"
+msgstr "Hoteles"
+
+#: apps/travel/default_travel_body.html:36
+#: apps/travel/default_travel_body.html:45
+msgid "HOTELS"
+msgstr "HOTELES"
+
+#: apps/travel/default_travel_body.html:166
+msgid "Hurtigruten Cruise Line"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:382
+msgid "Infants"
+msgstr "Bebés"
+
+#: apps/travel/default_travel_body.html:366
+#: apps/travel/default_travel_body.html:465
+#: apps/travel/hotel/hoteldefault_search.html:43
+msgid "Kids"
+msgstr "Chicos"
+
+#: apps/travel/default_travel_footer.html:49
+msgid "Mailing List"
+msgstr "Lista de correo"
+
+#: apps/travel/hotel/hoteldefault_body.html:166
+msgid "Members Choice of Hotels"
+msgstr "Elección de los miembros de hoteles"
+
+#: apps/travel/default_travel_nav.html:54
+msgid "Merchandise"
+msgstr "Mercancia"
+
+#: apps/travel/default_travel_footer.html:11
+msgid "Mobile"
+msgstr "Celular"
+
+#: apps/travel/default_travel_nav.html:12
+msgid "Mobile Menu Toggle"
+msgstr "Alternar menú móvil"
+
+#: apps/travel/default_travel_body.html:328
+#: apps/travel/default_travel_body.html:343
+#: apps/travel/default_travel_body.html:424
+#: apps/travel/default_travel_body.html:441
+msgid "morning"
+msgstr "mañana"
+
+#: apps/travel/default_travel_body.html:167
+msgid "MSC Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:168
+msgid "Norwegian Cruise Line"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:169
+msgid "Oceania Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:170
+msgid "Orion Expedition Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:171
+msgid "P&amp;O Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:172
+msgid "Paul Gauguin Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:173
+msgid "Peter Deilmann Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_footer.html:16
+msgid "Policies"
+msgstr "Políticas"
+
+#: apps/travel/hotel/hoteldefault_body.html:84
+msgid "Popular"
+msgstr "Populares"
+
+#: apps/travel/default_travel_body.html:174
+msgid "Princess Cruises"
+msgstr ""
+
+#: apps/travel/hotel/hoteldefault_body.html:3
+msgid "Recommended Hotels"
+msgstr "Hoteles recomendados"
+
+#: apps/travel/default_travel_body.html:175
+msgid "Regent Seven Seas Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_nav.html:40
+#: apps/travel/default_travel_nav.html:79
+msgid "Resorts"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:38
+#: apps/travel/default_travel_body.html:47
+msgid "RESORTS"
+msgstr ""
+
+#: apps/travel/hotel/hoteldefault_search.html:23
+msgid "Rooms"
+msgstr "Habitaciones"
+
+#: apps/travel/default_travel_body.html:176
+msgid "Royal Caribbean International"
+msgstr ""
+
+#: apps/travel/default_travel_footer.html:8
+msgid "Safety"
+msgstr "Seguridad"
+
+#: apps/travel/hotel/hoteldefault_body.html:108
+#: apps/travel/hotel/hoteldefault_body.html:94
+msgid "save 23%"
+msgstr "ahorra 23%"
+
+#: apps/travel/default_travel_body.html:177
+msgid "Seabourn Cruise Line"
+msgstr ""
+
+#: apps/travel/hotel/hoteldefault_search.html:55
+msgid "SEARCH"
+msgstr "BUSCAR"
+
+#: apps/travel/default_travel_body.html:102
+#: apps/travel/default_travel_body.html:188
+#: apps/travel/default_travel_body.html:240
+#: apps/travel/default_travel_body.html:294
+#: apps/travel/default_travel_body.html:391
+#: apps/travel/default_travel_body.html:488
+msgid "SEARCH NOW"
+msgstr "BUSCAR"
+
+#: apps/travel/hotel/hoteldefault_body.html:12
+#: apps/travel/hotel/hoteldefault_body.html:26
+#: apps/travel/hotel/hoteldefault_body.html:40
+#: apps/travel/hotel/hoteldefault_body.html:54
+#: apps/travel/hotel/hoteldefault_body.html:68
+msgid "select"
+msgstr "seleccionar"
+
+#: apps/travel/hotel/hoteldefault_body.html:117
+#: apps/travel/hotel/hoteldefault_body.html:186
+#: apps/travel/hotel/hoteldefault_body.html:206
+#: apps/travel/hotel/hoteldefault_body.html:246
+#: apps/travel/hotel/hoteldefault_body.html:269
+msgid "SELECT"
+msgstr "SELECCIONAR"
+
+#: apps/travel/default_travel_body.html:481
+msgid "select a car type"
+msgstr "seleccione un tipo de coche"
+
+#: apps/travel/default_travel_body.html:142
+msgid "select cruise length"
+msgstr "seleccione la longitud de crucero"
+
+#: apps/travel/default_travel_body.html:156
+msgid "select cruise line"
+msgstr "seleccione la línea de cruceros"
+
+#: apps/travel/default_travel_footer.html:50
+msgid "Sign up for our mailing list to get latest updates and offers."
+msgstr ""
+"Regístrate en nuestra lista de correo para recibir ofertas y novedades."
+
+#: apps/travel/default_travel_body.html:178
+msgid "Silversea Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_footer.html:15
+msgid "Site Map"
+msgstr "Mapa del sitio"
+
+#: apps/travel/default_travel_footer.html:13
+msgid "Social Connect"
+msgstr "Conexión Social"
+
+#: apps/travel/default_travel_footer.html:10
+msgid "Staff Picks"
+msgstr "Sobresalientes"
+
+#: apps/travel/default_travel_body.html:179
+msgid "Star Clippers"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:180
+msgid "Swan Hellenic Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_body.html:508
+msgid "THAILAND"
+msgstr "TAILANDIA"
+
+#: apps/travel/hotel/hoteldefault_body.html:141
+#: apps/travel/hotel/hoteldefault_body.html:148
+#: apps/travel/hotel/hoteldefault_body.html:155
+msgid ""
+"This is the 3rd time I’ve used {{main.displayOptions.program_short_name}} "
+"and I'm telling you the truth their services are always realiable and it "
+"only takes few minutes to plan and finalize your entire trip using their "
+"extremely fast website and up to date listings. I’m super excited about my "
+"next trip to Paris."
+msgstr ""
+"Es la 3ª vez que he usado {{main.displayOptions.program_short_name}} y te "
+"digo la verdad sus servicios siempre son realiable y sólo toma unos minutos "
+"para planificar y finalizar su viaje utilizando su web sumamente rápida y "
+"anuncios hasta la fecha. Estoy super emocionado acerca de mi próximo viaje a "
+"París."
+
+#: apps/travel/default_travel_body.html:181
+msgid "Thomson Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_nav.html:43
+#: apps/travel/default_travel_nav.html:82
+msgid "Tour"
+msgstr "Recorrer"
+
+#: apps/travel/default_travel_body.html:39
+#: apps/travel/default_travel_body.html:48
+msgid "TOURS"
+msgstr "EXCURSIÓNES"
+
+#: apps/travel/default_travel_footer.html:20
+msgid "Travel News"
+msgstr "Noticias Viajes"
+
+#: apps/travel/default_travel_body.html:505
+msgid "Tropical Beach,<br>Hotel and Resorts"
+msgstr ""
+
+#: apps/travel/hotel/hoteldefault_body.html:187
+#: apps/travel/hotel/hoteldefault_body.html:207
+#: apps/travel/hotel/hoteldefault_body.html:227
+#: apps/travel/hotel/hoteldefault_body.html:247
+#: apps/travel/hotel/hoteldefault_body.html:270
+msgid "VIEW ON MAP"
+msgstr "VER EN MAPA"
+
+#: apps/travel/default_travel_body.html:182
+msgid "Viking River Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_footer.html:56
+msgid "We respect your privacy"
+msgstr "Respetamos su privacidad"
+
+#: apps/travel/default_travel_nav.html:6
+msgid "Welcome {{main.currentUser.first_name}} {{main.currentUser.last_name}}"
+msgstr ""
+"Bienvenida {{main.currentUser.first_name}} {{main.currentUser.last_name}}"
+
+#: apps/travel/hotel/hoteldefault_body.html:137
+msgid "What Members Say?"
+msgstr "¿Qué decir de los miembros?"
+
+#: apps/travel/default_travel_body.html:124
+#: apps/travel/default_travel_body.html:197
+#: apps/travel/default_travel_body.html:251
+#: apps/travel/default_travel_body.html:306
+#: apps/travel/default_travel_body.html:401
+#: apps/travel/default_travel_body.html:59
+msgid "Where do you want to go?"
+msgstr "Donde quieres ir?"
+
+#: apps/travel/default_travel_body.html:183
+msgid "Windstar Cruises"
+msgstr ""
+
+#: apps/travel/default_travel_nav.html:57
+msgid "Wine"
+msgstr "Vino"
+
+#: apps/travel/hotel/hoteldefault_search.html:7
+msgid "Your Destination"
+msgstr "Su destino"

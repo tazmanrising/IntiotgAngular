@@ -1,0 +1,23 @@
+﻿<!-- Frequent Flyer Program Information -->
+<h4>Frequent Flyer Program</h4>
+
+<input class="form-control"
+       translate="yes"
+       id="freqFlyerProgram"
+       kendo-drop-down-list 
+       type="text"
+       k-highlightFirst="'true'"
+       k-suggest="'true'"
+       k-option-label="'Select a Program'"
+       k-data-source="book.freqFlyerProgramDataSource"
+       ng-model="traveler.freqFlyerProgram"
+       name="freqFlyerProgram" />
+
+<br />
+<div class="input-group">
+    <span class="input-group-addon" id="freqFlyerAddon">#</span>
+    <input type="text" class="form-control" id="frequentFlyerNumber"
+           ng-model="traveler.freqFlyerNumber"
+           placeholder="Frequent Flyer Number" />
+</div>
+<!-- End Frequent Flyer Program Information -->

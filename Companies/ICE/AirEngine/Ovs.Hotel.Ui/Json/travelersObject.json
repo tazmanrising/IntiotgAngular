@@ -1,0 +1,62 @@
+﻿[
+    {
+        "travelerType": "Adult",
+        "travelerTypeId": 0,
+        "firstName": "Tom",
+        "middleName": "",
+        "lastName": "Smith",
+        "gender": "M",
+        "birthDate": "",
+        "freqFlyerProgram": "",
+        "freqFlyerNumber": "",
+        "knownTravelerNumber": "",
+        "knownTravelerProgram": "",
+        "tsaRedressNumber": "",
+        "seatPreference": "window"
+    },
+    {
+        "travelerType": "Adult",
+        "travelerTypeId": 0,
+        "firstName": "Teresa",
+        "middleName": "",
+        "lastName": "Smith",
+        "gender": "F",
+        "birthDate": "",
+        "freqFlyerProgram": "",
+        "freqFlyerNumber": "",
+        "knownTravelerNumber": "",
+        "knownTravelerProgram": "",
+        "tsaRedressNumber": "",
+        "seatPreference": "aisle"
+    },
+    {
+        "travelerType": "Child",
+        "travelerTypeId": 1,
+        "firstName": "Child",
+        "middleName": "",
+        "lastName": "Smith",
+        "gender": "M",
+        "birthDate": "",
+        "freqFlyerProgram": "",
+        "freqFlyerNumber": "",
+        "knownTravelerNumber": "",
+        "knownTravelerProgram": "",
+        "tsaRedressNumber": "",
+        "seatPreference": "window"
+    },
+    {
+        "travelerType": "Infant",
+        "travelerTypeId": 2,
+        "firstName": "Toddler",
+        "middleName": "",
+        "lastName": "Smith",
+        "gender": "F",
+        "birthDate": "",
+        "freqFlyerProgram": "",
+        "freqFlyerNumber": "",
+        "knownTravelerNumber": "",
+        "knownTravelerProgram": "",
+        "tsaRedressNumber": "",
+        "seatPreference": "aisle"
+    }
+]

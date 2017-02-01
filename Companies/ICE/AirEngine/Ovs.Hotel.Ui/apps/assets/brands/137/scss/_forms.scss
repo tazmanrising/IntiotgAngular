@@ -1,0 +1,137 @@
+/*-------------------------------------------------------------------------*/
+/*  Hotel Search Form
+/*-------------------------------------------------------------------------*/
+
+.form-hotel-search {
+	padding: 23px 0 16px 0;
+	background: #d8dadd;
+
+	input, select {
+		border-radius: .15rem !important;
+	}
+	label {
+		font-size: 0.938em;
+		margin-bottom: 5px;
+	}
+
+	fieldset, .btn-default {
+		float: left;
+	}
+	fieldset {
+		margin-right: 5px;
+	}
+
+	fieldset.destination {
+		width: 100%;
+		max-width: 423px;
+	}
+
+	fieldset.checkin {
+		max-width: 120px;
+	}
+
+	fieldset.checkout {
+		max-width: 120px;
+	}
+	.children-enabled {
+		clear: both;
+		.btn-search {
+			margin-top: 0;
+		}
+	}
+	.children-container {
+		overflow: hidden;
+		clear:both;
+		.children-clone {
+			display: inline-block;
+			margin-right: 4px;
+		}
+	}
+
+	.btn-search {
+		margin-top: 21px;
+		float: left;
+        text-transform: uppercase; 
+        background-color: $primary-btn-color;
+        border-color: $primary-btn-color;
+        color:#fff;
+	}
+    .btn-search:after {
+            content: " \203A";
+    }
+    .btn-search:hover {
+        background-color: $primary-btn-color-hover;
+	    border-color: $primary-btn-color-hover;
+        color:#fff;
+    }
+
+}
+
+
+.datepicker {
+	.btn.btn-default.pull-left, .btn.btn-default.pull-right {
+		padding: 0 !important;
+		i {
+			display: block;
+			height: 32px;
+			width: 32px;
+		}
+	}
+
+	.btn.btn-default.btn-block.text-strong:hover, .btn.btn-default.pull-left:hover, .btn.btn-default.pull-right:hover {
+		background: #f2f2f2;
+	}
+
+	// Item Selected
+	.btn.btn-default.btn-primary {
+		background: #e1e1e1;
+		color: #5c5c5c;
+	}
+
+	padding: 4px;
+	th {
+		padding-bottom: 5px;
+	}
+	.btn-default {
+		border: none;
+	}
+	.btn-default:hover {
+		background: #e1e1e1;
+	}
+	.btn-today {
+		background: #c0d2ee;
+		span {
+			font-weight: 500 !important;
+		}
+	}
+	.btn {
+		padding: .375rem 0 .275rem 0 !important;
+	}
+	.btn.disabled, .btn:disabled, fieldset[disabled] .btn {
+        background:#f2f2f2 !important;
+    }
+    .btn-today[disabled] {
+    	color: #696969;
+    }
+}
+
+rzslider {
+    span.rz-bubble:before {
+        content: "\00A3";
+    }
+}
+
+
+
+
+/*-------------------------------------------------------------------------*/
+/*  Custom Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 500px and below) */
+@media (max-width: 500px) {
+	.form-hotel-search {
+		fieldset.form-group {
+			width: 100% !important; max-width: none;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+﻿<div ng-controller="airBookController as book">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-heading">
+                    <h1>Complete Reservation</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-warning btn-block" ng-click="book.populateFields()">
+                    Populate Form with Dummy Data
+                </button>
+                <br/><br/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-content">
+                <form name="book.completeReservation"
+                      kendo-validator="book.validator"
+                      k-scope-field="book.validator"
+                      k-rules="book.validationRules"
+                      ng-submit="book.validate($event)"
+                      id="complete-reservation"
+                      class="form-air__form-tag form-checkout">
+
+                    <div ng-animate="'view'" ui-view="airBookContact"></div>
+                    <div ng-animate="'view'" ui-view="airBookTravelerInfo"></div>
+                    <div ng-animate="'view'" ui-view="airBookPaymentInfo"></div>
+                    <div ng-animate="'view'" ui-view="airBookTermsandconditions"></div>
+                </form>
+            </div>
+
+            <!-- Right column -->
+            <!-- TODO: add bootstrap Affix to pin the sidebar as always visible when scrolling -->
+            <!-- Need to verify mobile behavior -->
+            <!-- data-spy="affix" data-offset-top="XXX" -->
+            <div class="col-sidebar">
+                <div ng-animate="'view'" ui-view="airBookFlightSummary"></div>
+                <div ng-include="'/apps/travel/air/book/sections/payment/summary/default.html'"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" click-and-disable="book.submit()">
+                    Complete Reservation
+                </button>
+                <button class="btn btn-link" ng-click="book.skipToConfirmationPage()">
+                    Skip to confirmation page
+                </button>
+            </div>
+        </div>
+
+        <!-- DEBUG SECTION -->
+        <!--<div class="row" ng-if="book.debug">
+            <div class="col-md-12">
+                <p>Search Form: {{ book.search }}</p>
+                <br /><hr /><br />
+                <p>Flight Object: {{ book.bookingInfoObject }}</p>
+            </div>
+        </div>-->
+    </div>
+</div>

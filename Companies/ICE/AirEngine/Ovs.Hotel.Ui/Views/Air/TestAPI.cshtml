@@ -1,0 +1,159 @@
+﻿
+@{
+    ViewBag.Title = "TestAPI";
+}
+
+<h2>TestAPI</h2>
+<script src="~/scripts/jquery-2.2.3.js"></script>
+<script src="~/scripts/jquery-2.2.3.min.js"></script>
+
+<div id="start"></div>
+<div id="end"></div>
+<div id="exeTime"></div>
+<input type="button" id="btntest" value="Click me!"/>
+
+<input type="button" id="btnPayment" value="Pay with me!"/>
+
+<input type="button" id="btnCityPair" value="Execute CityPair! All countries"/>
+
+<input type="button" id="btnCityPairUSA" value="Execute CityPair! USA"/>
+
+<input type="button" id="btnCityPairCA" value="Execute CityPair! CA" />
+
+<div id="flightsOrigin">Origin:</div>
+<br />
+<div id="flightsReturn">Return:</div>
+<br/>
+<div>Error</div>
+<div id="error"></div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#btntest').click(function () {
+
+            var start = new Date().getTime();
+            $("#start").append("</br><strong>start time: " + start);
+
+            $.ajax({
+                url: '/api/v1/air/flightsearch?originname=SFO&destinationname=LAX&departuredate=20161010&numAdult=1&cabinId=F&run=true',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    ConvertResponse(data);
+
+                    var end = new Date().getTime();
+                    var time = end - start;
+                    $("#end").append("</br><strong>end time: " + end);
+                    $("#exeTime").append("</br><strong>Execution time: " + time);
+                },
+                error: function (x, y, z) {
+                    $("#error").append("<strong>" + x + " " + y + " " + z + " " + "</strong>");
+                }
+            });
+        });
+
+        $('#btnPayment').click(function () {
+            $.ajax({
+                url: '/api/v1/air/booking',
+                type: 'POST',
+                dataType: 'json',
+                data: "",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    
+                },
+                error: function (x, y, z) {
+                    $("#error").append("<strong>" + x + " " + y + " " + z + " " + "</strong>");
+                }
+            });
+        });
+
+        $('#btnCityPair').click(function () {
+            $.ajax({
+                url: '/api/v1/air/generateCityPair',
+                type: 'POST',
+                dataType: 'json',
+                data: "",
+                success: function (data) {
+
+                },
+                error: function (x, y, z) {
+                    $("#error").append("<strong>" + x + " " + y + " " + z + " " + "</strong>");
+                }
+            });
+        });
+
+        $('#btnCityPairUSA').click(function () {
+
+            var dataJSON = "USA";
+
+            $.ajax({
+                url: '/api/v1/air/generateCityPair',
+                type: 'POST',
+                dataType: 'json',
+                data: JSON.stringify(dataJSON),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                },
+                error: function (x, y, z) {
+                    $("#error").append("<strong>" + x + " " + y + " " + z + " " + "</strong>");
+                }
+            });
+        });
+
+        $('#btnCityPairCA').click(function () {
+
+            var dataJSON = "CA";
+
+            $.ajax({
+                url: '/api/v1/air/generateCityPair',
+                type: 'POST',
+                dataType: 'json',
+                data: JSON.stringify(dataJSON),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                },
+                error: function (x, y, z) {
+                    $("#error").append("<strong>" + x + " " + y + " " + z + " " + "</strong>");
+                }
+            });
+        });
+
+    });
+
+    function ConvertResponse(data) {
+        $.map(data, function (flight) {
+                $.map(flight.Legs, function (leg) {
+                    if (leg.OriginFlight) {
+                        $("#flightsOrigin").append("</br><strong>Departure: " + leg.Details.DepartureAirport + " Arrival: " + leg.Details.ArrivalAirport + "</strong>");
+                        $("#flightsOrigin").append("</br><strong>Departure Date: " + leg.Details.DepartureDate + " Arrival Date: " + leg.Details.ArrivalDate + "</strong>");
+                        $("#flightsOrigin").append("</br><strong>Departure Time: " + leg.Details.DepartureTime + " Arrival Time: " + leg.Details.ArrivalTime + "</strong>");
+                        $("#flightsOrigin").append("</br><strong>Flight Number: " + leg.Details.FlightNumber + "</strong>");
+
+                        $("#flightsOrigin").append("</br><strong>Price: " + flight.Price + "</strong>");
+
+                        if (leg.Details.ArrivalAirport === flight.DestinationAirport)
+                            $("#flightsOrigin").append("</br>");
+                    }
+
+
+                    if (leg.ReturnFlight) {
+                        $("#flightsReturn").append("</br><strong>Departure: " + leg.Details.DepartureAirport + " Arrival: " + leg.Details.ArrivalAirport + "</strong>");
+                        $("#flightsReturn").append("</br><strong>Departure Date: " + leg.Details.DepartureDate + " Arrival Date: " + leg.Details.ArrivalDate + "</strong>");
+                        $("#flightsReturn").append("</br><strong>Departure Time: " + leg.Details.DepartureTime + " Arrival Time: " + leg.Details.ArrivalTime + "</strong>");
+                        $("#flightsReturn").append("</br><strong>Flight Number: " + leg.Details.FlightNumber + "</strong>");
+
+                        $("#flightsReturn").append("</br><strong>Price: " + flight.Price + "</strong>");
+
+                        if (leg.Details.ArrivalAirport === flight.DestinationAirport)
+                            $("#flightsReturn").append("</br>");
+                    }
+                });
+            });
+    }
+
+</script>
+

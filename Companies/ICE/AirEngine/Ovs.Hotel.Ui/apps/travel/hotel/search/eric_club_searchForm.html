@@ -1,0 +1,206 @@
+﻿<!--club site needs a functional html form that they can just display in the club site. This is done by calling a URL with the hosted form and
+    placing that form into the club site.
+    -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../../../assets/js/kalendae/kalendae.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="../../../assets/js/jquery-2.1.4.min.js"></script>
+    <script src="../../../assets/js/kalendae/kalendae.standalone.min.js"></script>
+
+
+    <!--<script type="text/javascript" src="/apps/assets/js/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="/apps/assets/js/modernizr.2.7.1.min.js"></script>
+    <script type="text/javascript" src="/apps/assets/js/jquery-migrate.min.js"></script>
+           <script type="text/javascript" src="/apps/assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/apps/assets/js/jquery.placeholder.min.js"></script>
+    -->
+
+    <section class="club-sect-search">
+        <div class="club-sect-row">
+            <form name="search" id="clubFormSearch" class="club-form-search">
+                <div class="club-col-search">
+                    <div class="club-row-search">
+                        <fieldset class="club-field-dest">
+                            <label for="checkin" class="label-dest">Destination</label>
+                            <input class="input-txt-dest" id="destination" type="text" placeholder="Destination" name="destination">
+
+                        </fieldset>
+                        <fieldset class="club-field-chkin">
+                            <label for="" class="label-chkin">Check-In</label>
+                            <div class="datepicker-wrap">
+                                <input type="text" class="auto-kal" id="datefrom" name="date_from" placeholder="mm/dd/yy">
+                            </div>
+                        </fieldset>
+                        <fieldset class="club-field-chkout">
+                            <label for="inputCheckOut" class="label-chkout">Check-Out</label>
+                            <div class="datepicker-wrap">
+                                <input type="text" class="auto-kal" id="dateto" name="date_to" placeholder="mm/dd/yy">
+                            </div>
+                        </fieldset>
+                        <fieldset class="club-field-rooms">
+                            <label for="selectRooms" class="label-rooms">Rooms</label>
+                            <select class="select-rooms" id="numRooms">
+                                <option value="1">01</option>
+                            </select>
+
+                        </fieldset>
+
+                        <fieldset class="club-field-adults">
+                            <label for="" class="label-adults">Adults</label>
+                            <select id="numberAdults" class="select-adults">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="club-field-child">
+                            <label for="selectRooms" class="label-child">Children</label>
+                            <select id="numberChildren" class="select-child">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </fieldset>
+                        <fieldset id="addedChildren" class="club-field-added"></fieldset>
+
+                        <button type="submit" class="submit-search" onclick="SearchHotels()">Search</button>
+
+                    </div><!-- end row -->
+
+
+
+
+                </div><!-- end col-sm-12 -->
+            </form><!-- end search form -->
+        </div><!-- end row -->
+        <!--</div>--><!-- end container-fluid -->
+    </section>
+    <script type="text/javascript">
+        var lat, lng, placeId, destination;
+        $(document).ready(function () {
+
+            var autocomplete;
+            autocomplete = new google.maps.places.Autocomplete(document.getElementById('destination'));
+
+            function initialize() {
+
+                google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                    var place = autocomplete.getPlace();
+                    $("#editPlaceId").val(place.place_id);
+                    $("#editLatitude").val(place.geometry.location.lat());
+                    $("#editLongitude").val(place.geometry.location.lng());
+                    //console.log('place object : ' + JSON.stringify(place, null, '\t'));
+                    destination = place.formatted_address;
+                    placeId = place.place_id
+                    lat = place.geometry.location.lat();
+                    lng = place.geometry.location.lng();
+
+                });
+
+                $("#numberChildren").change(function () {
+                    numChildren = document.getElementById('numberChildren').value;
+
+                    if (numChildren > 0) {
+                        for (var i = 0; i < numChildren; i++) {
+                            var childId = 'child' + i;
+                            var newTextBoxDiv = $(document.createElement('div')).attr("id", childId);
+                            newTextBoxDiv.attr("class", 'childClass');
+                            newTextBoxDiv.after().html('<label>Age for Child : </label>' +
+                                '<select id="select' + i + '" ><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>"');
+
+                            newTextBoxDiv.appendTo("#addedChildren");
+                        }
+                    }
+                });
+
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+
+        });
+
+        function getChildrensAges() {
+            var numItems = $('.childClass');
+            var childAges = [];
+            //get each age of child and put into an array that can be returned.
+            for (var k = 0; k < numItems.length; k++) {
+                var child = document.getElementById('select' + k).value;
+                childAges.push(child);
+            };
+            return childAges;
+        };
+
+
+        function SearchHotels() {
+            var radius = 5;
+            var userid = 'demo';
+            var locale = 'us-en';
+            var currencycode = 'USD';
+            var checkin = document.getElementById('datefrom').value;
+            var checkout = document.getElementById('dateto').value;
+            var numRooms = document.getElementById('numRooms').value;
+            var numAdults = document.getElementById('numberAdults').value;
+            var children = getChildrensAges();
+            //convert dates to date accepted by search
+            checkin = new Date(new Date(checkin).setHours(0, 0, 0, 0)).toJSON();
+            checkout = new Date(new Date(checkout).setHours(0, 0, 0, 0)).toJSON();
+
+            console.log('destination : ' + destination);
+            console.log('lat : ' + lat);
+            console.log('lng : ' + lng);
+            console.log('place id : ' + placeId);
+            console.log('numberofrooms : ' + numRooms);
+            console.log('numAdults : ' + numAdults);
+            console.log('children :' + children);
+            console.log('number of children :' + children.length);
+            console.log('checkout :' + checkout);
+            console.log('checkin :' + checkin);
+
+
+            var searchData = "/api/v1/hotelsearch?";
+
+            searchData = searchData + "destinationname=" + destination + "&",
+            searchData = searchData + "latitudevalue=" + lat + "&",
+            searchData = searchData + "longitudevalue=" + lng + "&",
+            searchData = searchData + "radiusinmilestosearch=" + radius + "&",
+            searchData = searchData + "checkindatevalue=" + checkin + "&",
+            searchData = searchData + "checkoutdatevalue=" + checkout + "&",
+            searchData = searchData + "numberofrooms=" + numRooms + "&",
+            searchData = searchData + "numberofadults=" + numAdults + "&",
+            searchData = searchData + "numberofchildren=" + children.length + "&",
+            searchData = searchData + "userid=" + userid + "&",
+            searchData = searchData + "locale=" + locale + "&",
+            searchData = searchData + "currencycode=" + currencycode;
+
+            $.get(searchData, function (data, status) {
+                 console.log("Data: " + JSON.stringify(data, null, '\t'));
+            }).done(function () {
+                console.log("second success");
+            }).fail(function (error) {
+                console.log("error :" + JSON.stringify(error, null, '\t'));
+             }).always(function () {
+                console.log("finished");
+            });
+
+
+        }
+    </script>
+
+
+</body>
+</html>

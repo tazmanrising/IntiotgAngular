@@ -1,0 +1,145 @@
+﻿<div class="aut_retail aut_cashback" id="retail">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <hgroup>
+                    <h3>Price Summary</h3>
+                </hgroup>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span style="font-weight: bold;">
+                    {{confirm.booking.flightData[0].OriginAirport}} to {{confirm.booking.flightData[0].DestinationAirport}}
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                1 Ticket, Roundtrip
+            </div>
+        </div>
+        <hr />
+        </div>
+        <div class="container-fluid"  ng-repeat="paymentTravel in confirm.booking.payment.travelers">
+        <div class="row">
+            <div class="col-md-8">
+                <span style="font-weight: bold;">{{paymentTravel.label}}</span>
+            </div>
+            <div class="col-md-4">
+                <span style="font-weight: bold;">{{paymentTravel.totalPerPassenger | currency }}</span>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-8">
+                    Flight: 
+                </div>
+                <div class="col-md-4">
+                    {{paymentTravel.totalFare | currency }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    Taxes & Fees: 
+                </div>
+                <div class="col-md-4">
+                    {{paymentTravel.totalTax | currency }}
+                </div>
+            </div>
+            <br />
+        </div>
+       <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8">
+                Booking Fee
+            </div>
+            <div class="col-md-4">
+                {{confirm.booking.payment.bookingFee | currency}}
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-3">
+                &nbsp;
+            </div>
+            <div class="col-md-9">
+                Trip Total: {{confirm.booking.payment.total | currency}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                NOTE: The Total displayed reflects the total cost of the original booking only and does not include any changes associated with subsequent changes.
+            </div>
+        </div>
+    </div>
+
+    <br /><br />
+    <!--<ul class="checkout__hotel-summary">
+        Pricing stuff
+        <li id="retailBundledMarketRate">
+            <span></span>
+            <label></label>
+        </li>
+
+        <li id="retailMarketRate">
+            <span></span>
+            <label></label>
+        </li>
+
+        <li>
+            <span>taxes</span>
+            <label>Included</label>
+        </li>
+
+        <li id="retailTaxes">
+            <span></span>
+            <label></label>
+        </li>
+    </ul>
+    <div id="retailFees">
+        <ul class="checkout__hotel-summary">
+            <li>
+                <span></span>
+                <label></label>
+            </li>
+        </ul>
+    </div>
+    <ul>
+        <li id="retailDbcApplied">
+            <span></span>
+            <label></label>
+        </li>
+
+        <li id="retailVcApplied">
+            <span></span>
+            -<label></label>
+        </li>
+        <li>
+            <span>Less Promo Discount</span>
+            <label></label>
+        </li>
+        <li id="retailCustomerPaid">
+            <span></span>
+            <label></label>
+        </li>
+
+        <li id="retailCashBack">
+            <span></span>
+            <label></label>
+        </li>
+
+    </ul>-->
+</div>

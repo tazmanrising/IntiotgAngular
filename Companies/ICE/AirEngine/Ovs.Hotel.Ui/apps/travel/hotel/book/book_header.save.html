@@ -1,0 +1,43 @@
+﻿<!-- dbc header start -->
+<header class="header-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="logo navbar-brand">
+                        <img src="/apps/assets/brands/sears/img/trans.png" ng-src="{{book.currentSession.display_options.logos.logo_image_url}}" alt="{{book.currentSession.display_options.logos.logo_image_alt}} Home" class="header-main__logo" />
+                </h1>
+            </div>
+            <div class="col-sm-6">
+              <div class="member-type-container">
+                  <ul class="nav-top">
+                      <li><display-options text="main.currentSession.display_options.program_phone_number" show="main.currentSession.display_options.general_phone_number"></display-options></li>
+
+                      <li><display-options text="main.currentSession.display_options.labels.account_settings_label" show="main.currentSession.display_options.labels.account_settings_label"></display-options></li>
+                  </ul>
+                  <div class="credits-balance">
+                      <div ng-repeat="currency in main.currentSession.member_info.alternative_margin_currencies">
+                          <small><display-options text="currency.label"></display-options></small>
+                          <display-options text="currency.balance | currency : undefined:0"></display-options>
+                      </div>
+                  </div>
+              </div><!-- end member-type-container -->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- dbc header end -->
+
+<section class="checkout__steps-container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="checkout__steps">
+                    <li><a href="#"><i class="icon-bell"></i>Hotel</a></li>
+                    <li><a href="#"><i class="icon-completed"></i>Pick a Room</a></li>
+                    <li><a href="#"><i class="icon-current"></i>Payment & Billing</a></li>
+                    <li><a href="#"><i class="icon-pending"></i>Review</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

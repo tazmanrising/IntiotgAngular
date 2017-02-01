@@ -1,0 +1,57 @@
+﻿<div ng-show="main.displayDepartFlight">
+    <div ng-repeat="flight in main.outboundFlights">
+        <table style="width: 95%; margin-top: 8px; margin-bottom: 8px">
+            <tr style="margin-bottom:15px">
+                <td style="width: 15%; text-align: center">
+                    
+                    <span style="font-size: 1.0em; font-weight: bold; color: black">
+                        {{ flight.TotalFareAmount | customCurrency : main.currencySymbol : 0 }}
+                    </span>
+                    <br/>
+
+                    <img src="/apps/assets/imgs/air/carriers/{{flight.CarrierCodeLogoToDisplay}}small.png" width="40" />
+                    <br/>
+                    <a style="font-size: 0.8em" ng-click="main.displayFlightDetail(flight)">Detail</a>
+                    
+                </td>
+            <td style="width: 75%">
+                <table>
+                    <tr style="width: 100%">
+                        <td style="width: 70%">
+                            <span>
+                                <strong>{{flight.Segments[0].DepartureTime}}</strong>  {{flight.OriginAirport}} ->
+                                <strong>{{flight.Segments[(flight.Segments.length - 1)].ArrivalTime}}</strong> {{flight.ArrizalAirport}}  {{main.formatDuration(flight.FlightElapseTime)}} -
+                                <span ng-if="flight.Segments.length -1 == 0">nonstop</span>
+                                <span ng-if="flight.Segments.length -1 > 0">{{flight.Segments.length -1}}-stop(s)</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr style="width: 100%">
+                        <td style="width: 70%">
+                            <br/>Tmp Return Disp<br/>
+                            <span>
+                                {{flight.ReturnOptions[0].Description}}
+                            </span>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+            <td><table>
+            <tr>
+                <td style="width: 20%; text-align: center"><button type="button" id="skipToBook" style="width: 60px" ng-click="main.skipToBook(flight)">Skip</button></td>
+            </tr>
+            <tr>    <td style="width: 20%; text-align: center"><button type="button" id="saveDepartFlight" style="width: 60px" ng-click="main.saveDepartFlight(flight)">Book</button></td>
+                </tr> <tr>    <td style="width: 20%; text-align: center"><button type="button" id="returnOptions" ng-click="main.displayReturnOptions(flight)">{{flight.ReturnOptionCount}} Return Options</button></td>
+                </tr>
+                </table>
+            </td>
+        </table>
+
+        <hr />
+    </div>
+</div>
+
+
+
+

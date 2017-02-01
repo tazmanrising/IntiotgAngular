@@ -1,0 +1,30 @@
+﻿<section class="form-air-traveler-info">
+    <h2>Traveler Details</h2>
+
+    <div class="container-box" ng-repeat="traveler in book.travelers track by $index">
+        <div class="container-spacer">
+            <h3>{{ traveler.travelerType }} #{{ $index + 1 }}</h3>
+
+            <span ng-bind-html="book.tsaAdvisory" />
+            <!--Extract into traveler info partial-->
+            <div class="row">
+                <div class="container-spacer">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div ng-include="'/apps/travel/air/book/sections/traveler/general.html'"></div>
+                        </div>
+                    </div>
+
+                    <br/>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div ng-include="'/apps/travel/air/book/sections/traveler/additionalInfo.html'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Traveler Info Future Partial-->
+</section>

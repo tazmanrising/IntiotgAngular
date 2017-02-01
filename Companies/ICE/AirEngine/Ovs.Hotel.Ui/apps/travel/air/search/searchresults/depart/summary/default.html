@@ -1,0 +1,50 @@
+﻿<div class="terms-agree air_search-depart_flight_summary-block">
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3>Departing Flight</h3>
+        </div>
+    </div>
+
+    <!-- We are not showing individual segment blocks-->
+    <!-- We are showing a rolled up summary of the depart flight -->
+    <div class="row">
+        <div class="col-md-3">
+            <span>Your selected departure</span><br />
+            {{ main.departFlightSummary.departureDate }}
+            <button class="btn btn-link" ng-click="main.return()" ng-hide="true">| Change</button>
+        </div>
+
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-2">
+                    <img ng-src="{{ main.departFlightSummary.carrier.logo }}" alt="carrier logo" height="50" width="50" />
+                </div>
+                <div class="col-md-4">
+                    {{ main.departFlightSummary.departureTime }} - {{ main.departFlightSummary.arrivalTime }}<br />
+                    {{ main.departFlightSummary.carrier.name }}
+                </div>
+                <div class="col-md-3">
+                    {{ main.departFlightSummary.travelTime }}<br />
+                    {{ main.departFlightSummary.departingAirport }} - {{ main.departFlightSummary.arrivalAirport }}
+                </div>
+                <div class="col-md-3">
+                    {{ main.departFlightSummary.numberOfStops }}<br />
+                    <p>
+                        <span ng-repeat="stop in main.departFlightSummary.stops">
+                            {{ stop.duration }} in {{ stop.airport }}
+                        </span>
+                        <br/>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            from <span><strong>{{ main.departFlightSummary.totalPrice | currency }}</strong></span><br />
+            {{ main.departFlightSummary.type }}
+        </div>
+
+        <div class="col-md-12 clearfix"><br /></div>
+    </div>
+</div>

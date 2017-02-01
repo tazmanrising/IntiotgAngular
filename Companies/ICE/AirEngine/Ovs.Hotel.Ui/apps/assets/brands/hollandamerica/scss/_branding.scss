@@ -1,0 +1,367 @@
+/*#########################################################################*/
+/*
+/* HEADER SECTION
+/*
+/*#########################################################################*/
+
+.header-main {
+    background: $header_background_color;
+}
+
+.header-club {
+	background: $header_background_color;
+}
+
+.header-club {
+	.nav-top {
+		li {
+			display-options, a {
+				color: #000; 
+			}
+		} 
+	}
+}
+ 
+
+/*#########################################################################*/
+/*
+/* HOME PAGE SECTION
+/*
+/*#########################################################################*/
+
+.home-backstretch-form {
+	.form-wrap {
+		h1 {
+			font-weight: 300; 
+			font-size: 1.5em;
+			color: #fff; 
+		}
+		background: rgba(0, 0, 0, 0.7);
+	}
+	.form-hotel-search {
+ 		background: none; 
+		label {
+			color: #fff; 
+		}
+	}
+}
+
+/*#########################################################################*/
+/*
+/* SEARCH PAGE SECTION
+/*
+/*#########################################################################*/
+
+.search-results-listings, .search-results-grid {
+	.savings-amount {
+		color: #fff;
+	    background: $brand_highlight_color;
+	}
+	h4 {
+		font-weight: $lead-font-weight;
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  1.  Search Results Listings
+/*-------------------------------------------------------------------------*/
+
+.search-results-listings {
+	.featured {
+		.search-results-listings__featured-headline {
+			background: #f2a113;
+			color: #fff;
+		}
+		.savings-amount {
+			background: $flag_savings_color;
+		}
+	}
+	// cash back component s
+	.cash-back	{
+		&__label {
+			background: $cb_background_color_label; 
+		}
+		&__arrow {
+			background: $cb_background_color;
+			i:first-child {
+				border-top: 23px solid transparent;
+				border-bottom: 23px solid transparent;
+				border-left: 15px solid $cb_background_color_label;
+			}
+			i:last-child {
+				border-left: 20px solid $cb_border_color; //
+				background: #c4c4c4;  
+			}
+		}
+		&__amount {
+			background: $cb_background_color;
+		}
+	} 
+}
+
+.savings-breakdown {
+	strong {
+		color: $brand_primary_color !important;  
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  3.  Search Results Grid View
+/*-------------------------------------------------------------------------*/
+   
+.search-results-grid {
+	.savings-amount-grid {
+		background: $brand_secondary_highlight_color;
+		color: #fff;
+	}
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*  Five Start Ratings
+/*-------------------------------------------------------------------------*/
+
+.filter__rating {
+	.starrating:hover {
+			background-color:#efefef;
+	}
+	.activeStarrating {
+		.fa {
+			color: $brand_highlight_color;
+		}
+	}
+}
+
+.review-stars {
+	li {
+		color: #bebebe;
+	}
+	li.stars-1:nth-child(-n+1){
+		color: $brand_highlight_color;
+	}
+	li.stars-2:nth-child(-n+2){
+		color: $brand_highlight_color;
+	}
+	li.stars-3:nth-child(-n+3){
+		color: $brand_highlight_color;
+	}
+	li.stars-4:nth-child(-n+4){
+		color: $brand_highlight_color;
+	}
+	li.stars-5:nth-child(-n+5){
+		color: $brand_highlight_color;
+	}
+}
+
+
+/*#########################################################################*/
+/*
+/* CHECKOUT PAGE SECTION
+/*
+/*#########################################################################*/
+
+.form-checkout {
+	.checkout__discounts {
+		background: #E4FFE5;
+		border-top: 1px dotted #96E699;
+		border-bottom: 1px dotted #96E699;
+	}
+	.checkout__total-price {
+		background: #F9F9F9;
+		border-top: 1px dotted #E0E0E0;
+	}
+}
+
+.payment-option {
+	&__payment-slider {
+		rzslider {
+			span.rz-bar,span.rz-bar.rz-selection {
+			    background: #D2D2D2;
+			}
+		}		 
+	}
+}
+
+
+/*#########################################################################*/
+/*
+/* GENERAL STYLING
+/*
+/*#########################################################################*/
+
+/*-------------------------------------------------------------------------*/
+/*  Main Navigation
+/*-------------------------------------------------------------------------*/
+ 
+.main-nav {
+	background: #002859;
+	.phone-number {
+		color: #fff; 
+	}
+	.mobile-menu__bars {
+		color: #fff; 
+	} 
+}
+.main-club-nav {
+	margin-top: -34px; 
+	background: $nav_background_color; 
+	.nav-item {   
+		a { 
+			padding: 0.6em 1em;
+			font-weight: 400; 
+			color: #555;
+			border-radius: 0;
+			position: relative; 
+			border-bottom: 4px solid #fff;
+		}
+		a.active, a:hover {
+			content: ''; 
+			border-bottom: 4px solid #BDBDBD;
+		}
+		&:hover {
+			a {
+				background: #fff; 
+				color: #002859 !important;
+				border-radius: 0; 
+			}
+		}
+	}
+}
+.main-nav .nav-pills .nav-link {
+	color: #fff;
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Anchor Navigation
+/*-------------------------------------------------------------------------*/
+.anchor-nav { 
+	li.selected:after {
+		background: #9c9c9c;
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Top Nav
+/*-------------------------------------------------------------------------*/
+.nav-top {
+	li {
+		color: #000; 
+	}
+} 
+
+/*-------------------------------------------------------------------------*/
+/* Buttons
+/*-------------------------------------------------------------------------*/
+
+/* Default Buttons */
+.btn-default {
+	background-color: #fff;
+	border: 1px solid #b9b9b9;
+}
+
+/* Primary Buttons */
+.btn-primary {
+	text-transform: uppercase; 
+	background-color: $primary_btn_color;
+	border-color: $primary_btn_color;
+}
+
+.btn-primary:visited {
+	background-color: $primary_btn_color-visited;
+	border-color: $primary_btn_color-visited;
+}
+
+.btn-primary:hover {
+	background-color: $primary_btn_color-hover;
+	border-color: $primary_btn_color-hover;
+}
+
+.btn-primary:focus {
+	background-color: $primary_btn-color_hover;
+	border-color: $primary_btn_color_hover;
+}
+
+/* Checkout Buttons */
+.btn-checkout  {
+	background: #fff;
+	border: 1px solid #ccd2dc;
+}
+.btn-checkout--red { 
+	color: #fff;
+	background: $primary_btn_color;
+	border: 1px solid $primary_btn_color;
+}
+
+/* Btn Light */
+.btn-light {
+	background: #eff1f4;
+	border: 1px solid #b9b9b9;
+}
+ 
+
+
+/*-------------------------------------------------------------------------*/
+/*  Rzslider
+/*-------------------------------------------------------------------------*/
+rzslider span.rz-pointer, rzslider span.rz-bar.rz-selection {
+	background-color: $brand_secondary_highlight_color !important;
+}
+
+rzslider span.rz-pointer.rz-active:after {
+	background-color: $brand_highlight_color !important;
+}
+rzslider span.rz-pointer {
+	background-color: $brand_secondary_highlight_color !important;
+}
+
+/*-------------------------------------------------------------------------*/
+/*  1. Top Hotel Summary
+/*-------------------------------------------------------------------------*/
+.details__hotel-summary {
+	background: #fff; 
+	h3 {
+		margin-bottom: 5px;
+		font-size: 1.3em;
+	}
+	h4 {
+		font-weight: 300;
+		font-size: 1em;
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Checkout Steps
+/*-------------------------------------------------------------------------*/
+
+.checkout__steps-container {
+	background: #d8dadd;
+	i {
+		background: transparent url("../img/checkout-steps.png") 0px -1000px no-repeat;
+	}
+	.icon-bell {
+		background-position: 0 0 !important;
+	}
+	.icon-bell:before {
+		background: transparent url("../img/checkout-steps.png") 0px -85px no-repeat;
+	}
+	.icon-completed {
+		background-position: 0 -21px !important;
+	}
+	.icon-current {
+		background-position: 0 -42px !important;
+	}
+	.icon-pending {
+		//background-position: 0 -84px !important;
+		background-position: 0 -63px !important;
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/* Terms and Conditions Box
+/*-------------------------------------------------------------------------*/
+.terms-agree {
+	font-size: .9em;
+	background: #F7F7F7;
+	line-height: 1.2em;
+}
+

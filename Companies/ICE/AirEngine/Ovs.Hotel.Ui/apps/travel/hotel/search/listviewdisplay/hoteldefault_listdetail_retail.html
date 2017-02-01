@@ -1,0 +1,57 @@
+<!-- <div class="search-results-listings__featured-headline">
+    00:30:21 Featured Deal
+</div> -->
+<div class="search-results-listings__hotel-details">
+    <div class="heading">
+        <h3 ng-bind-html="hotel.hotel_snapshot.name | html"></h3>
+        <ul class="review-stars">
+            <li ng-repeat="star in main.stars | limitTo : hotel.hotel_snapshot.star_rating" class="fa fa-star stars-5"></li>
+            <li hotel-stars stars="hotel.hotel_snapshot.star_rating" class="fa fa-star-half stars-5"></li>
+        </ul>
+        <h4><small ng-bind-html="hotel.hotel_snapshot.location | html"></small></h4>
+    </div>
+</div><!-- end hotel details -->
+
+<div class="search-results-listings__hotel-image">
+    <img alt="" ng-src="{{ hotel.hotel_snapshot.img_URL }}" class="img-responsive" />
+</div>
+
+<div class="search-results-listings__hotel-pricing">
+
+    <p sw-angular-popover="{{hotel.hotel_snapshot.desc}}" sw-options="main.popoverOptions"><span ng-bind-html="hotel.hotel_snapshot.short_desc | characters : 100"> </span></p>
+
+    <div class="group-container">
+        <!--If using daily rate-->
+        <div ng-if="main.daily == 'true'">
+            <ul class="savings-breakdown savings-breakdown--retail" ng-if="main.currentSession.display_options.options.show_bundled_price == 'true'">
+                <li ng-if="!main.demoMode">Market Rate: <span>{{hotel.daily_market_total | customCurrency : main.currencyFormat}} </span></li>
+                <li ng-if="main.demoMode">Market Rate: <span><a href="{{hotel.expedia_link}}" target="_blank" ng-bind-html="hotel.daily_market_total | customCurrency : main.currencyFormat"></a></span></li>
+                <li class="pricing-notice"><small>Nightly price including taxes</small></li>
+            </ul>
+            <ul class="savings-breakdown savings-breakdown--retail" ng-if="main.currentSession.display_options.options.show_bundled_price == 'false'">
+                <li ng-if="!main.demoMode">Market Rate: <span ng-bind-html="hotel.daily_market_rate | customCurrency : main.currencyFormat"></span></li>
+                <li ng-if="main.demoMode">Market Rate: <span><a href="{{hotel.expedia_link}}" target="_blank" ng-bind-html="hotel.daily_market_rate | customCurrency : main.currencyFormat"></a></span></li>
+                <li class="pricing-notice"><small>Nightly price not including taxes</small></li>
+
+            </ul>
+        </div>
+        <!--If using total stay rate-->
+        <div ng-if="main.daily == 'false'">
+            <ul class="savings-breakdown savings-breakdown--retail" ng-if="main.currentSession.display_options.options.show_bundled_price == 'true'">
+                <li ng-if="!main.demoMode">Market Rate: <span ng-bind-html="hotel.market_total_stay | customCurrency : main.currencyFormat"></span></li>
+                <li ng-if="main.demoMode">Market Rate: <span><a href="{{hotel.expedia_link}}" target="_blank" ng-bind-html="hotel.market_total_stay | customCurrency : main.currencyFormat"></a></span></li>
+                <li class="pricing-notice"><small>Total price including taxes</small></li>
+            </ul>
+            <ul class="savings-breakdown savings-breakdown--retail" ng-if="main.currentSession.display_options.options.show_bundled_price == 'false'">
+                <li ng-if="!main.demoMode">Market Rate: <span ng-bind-html="hotel.Total_market_price | customCurrency : main.currencyFormat"></span></li>
+                <li ng-if="main.demoMode">Market Rate: <span><a href="{{hotel.expedia_link}}" target="_blank" ng-bind-html="hotel.Total_market_price | customCurrency : main.currencyFormat"></a></span></li>
+                <li class="pricing-notice"><small>Total price not including taxes</small></li>
+            </ul>
+        </div>
+        <div class="btn-container">
+            <a class="btn btn-primary" ng-click="details.callDetails(hotel.hotel_snapshot, top)">Select</a>
+            <span style="color: white; text-align: center;">SC: {{hotel.supplier_code}}</span>
+        </div>
+    </div><!-- end group-container -->
+
+</div><!-- end hotel pricing -->

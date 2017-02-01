@@ -1,0 +1,45 @@
+﻿<div class="search-results-listings__hotel-details">
+    <div class="heading">
+        <h3 ng-bind-html="hotel.hotel_snapshot.name | html"></h3>
+        <ul class="review-stars">
+            <li ng-repeat="star in main.stars | limitTo : hotel.hotel_snapshot.star_rating" class="fa fa-star stars-5"></li>
+            <li hotel-stars stars="hotel.hotel_snapshot.star_rating" class="fa fa-star-half stars-5"></li>
+        </ul>
+        <h4><small ng-bind-html="hotel.hotel_snapshot.location | html"></small></h4>
+    </div>
+</div><!-- end hotel details -->
+
+<div class="search-results-listings__hotel-image">
+    <img alt="" ng-src="{{ hotel.hotel_snapshot.img_URL }}" class="img-responsive" />
+</div>
+
+<div class="search-results-listings__hotel-pricing">
+    <p sw-angular-popover="{{hotel.hotel_snapshot.desc}}" sw-options="main.popoverOptions"><span ng-bind-html="hotel.hotel_snapshot.short_desc | characters : 100"> </span></p>
+
+    <div class="group-container">
+        <div class="savings-amount">
+            <small>Save</small> {{hotel.savings_percentage | number:0 }}%
+        </div>
+        <!--if showing daily price-->
+        <ul class="savings-breakdown" ng-if="main.daily == 'true'">
+            <li ng-if="!main.demoMode">Market Rate: <span ng-bind-html="hotel.daily_market_rate | customCurrency : main.currencyFormat"></span></li>
+            <li ng-if="main.demoMode">Market Rate: <span><a href="{{hotel.expedia_link}}" target="_blank" ng-bind-html="hotel.daily_market_rate | customCurrency : main.currencyFormat"></a></span></li>
+            <li>{{main.currentSession.display_options.labels.dbc}} <span ng-bind-html="hotel.daily_savings | customCurrency : main.currencyFormat : 0"></span></li>
+            <li><strong>Your Price:</strong> <span><strong ng-bind-html="hotel.daily_member_rate | customCurrency : main.currencyFormat">}}</strong></span></li>
+        </ul>
+        <!--if showing total price-->
+        <ul class="savings-breakdown" ng-if="main.daily == 'false'">
+            <li ng-if="!main.demoMode">Market Rate: <span ng-bind-html="hotel.Total_market_price | customCurrency : main.currencyFormat">}}</span></li>
+            <li ng-if="main.demoMode">Market Rate: <span><a href="{{hotel.expedia_link}}" target="_blank" ng-bind-html="hotel.Total_market_price | customCurrency : main.currencyFormat"></a></span></li>
+            <li>{{main.currentSession.display_options.labels.dbc}} <span ng-bind-html="hotel.total_savings | customCurrency : main.currencyFormat : 0"></span></li>
+            <li><strong>Your Price:</strong> <span><strong ng-bind-html="hotel.total_member_price | customCurrency : main.currencyFormat"></strong></span></li>
+        </ul>
+        <div class="btn-container">
+            <a class="btn btn-primary" ng-click="details.callDetails(hotel.hotel_snapshot, top)">Select</a>
+            <div class="nightly-price">
+                <span ng-bind-html="hotel.daily_member_rate | customCurrency : main.currencyFormat"></span><small>avg/night</small>
+            </div>
+            <span style="color: white">SC: {{hotel.supplier_code}} - {{hotel.daily_member_rate_pre_yield}}</span>
+        </div>
+    </div><!-- end group-container-->
+</div><!-- end hotel pricing -->

@@ -1,0 +1,348 @@
+﻿{
+    "selectedFlights": [
+        {
+            "MultiCarrier": false,
+            "Id": "O1",
+            "IsRefundable": false,
+            "PaxFareDetails": null,
+            "TotalFareAmount": 402.7,
+            "TotalTaxAmount": 65.96,
+            "TotalMaxFareAmount": 0,
+            "FlightType": 0,
+            "OriginFilter": true,
+            "ReturnFilter": false,
+            "Show": true,
+            "MarketingCarriers": [ "United Airlines", "United Airlines" ],
+            "MarkeOperatingCarriers": [ "United Airlines", "United Airlines" ],
+            "Class": null,
+            "OriginAirport": "PHX",
+            "DestinationAirport": "MCO",
+            "Segments": [
+                {
+                    "OriginFilter": true,
+                    "ReturnFilter": false,
+                    "Show": true,
+                    "SegmentType": null,
+                    "CarrierCode": "UA",
+                    "OpCarrierCode": "UA",
+                    "FlightNumber": "1600",
+                    "Equipment": "738",
+                    "Class": null,
+                    "ArrivalDate": "01/23/2017",
+                    "DepartureDate": "01/23/2017",
+                    "DepartureAirport": "PHX",
+                    "DepartureTime": "06:06",
+                    "ArrivalAirport": "EWR",
+                    "ArrivalTime": "12:38",
+                    "TravelTime": "0432",
+                    "NumberOfStops": null,
+                    "StopsLabel": null,
+                    "Cabin": null,
+                    "AvailabilityContext": null,
+                    "$$hashKey": "object:548"
+                },
+                {
+                    "OriginFilter": true,
+                    "ReturnFilter": false,
+                    "Show": true,
+                    "SegmentType": null,
+                    "CarrierCode": "UA",
+                    "OpCarrierCode": "UA",
+                    "FlightNumber": "991",
+                    "Equipment": "739",
+                    "Class": null,
+                    "ArrivalDate": "01/23/2017",
+                    "DepartureDate": "01/23/2017",
+                    "DepartureAirport": "EWR",
+                    "DepartureTime": "13:59",
+                    "ArrivalAirport": "MCO",
+                    "ArrivalTime": "16:54",
+                    "TravelTime": "0255",
+                    "NumberOfStops": null,
+                    "StopsLabel": null,
+                    "Cabin": null,
+                    "AvailabilityContext": null,
+                    "$$hashKey": "object:549"
+                }
+            ],
+            "FlightElapseTime": "0848",
+            "OutboundElapseTime": null,
+            "InboundElapseTime": null,
+            "ReturnOptionCount": 32,
+            "ReturnOptions": [
+                {
+                    "Id": "4",
+                    "SortOrder": 0,
+                    "Description": "Flt# 725(UA) MCO->PHX ",
+                    "PlusPrice": 0,
+                    "TotalPrice": 402.7,
+                    "$$hashKey": "object:552"
+                },
+                {
+                    "Id": "1",
+                    "SortOrder": 0,
+                    "Description": "Flt# 564(UA) MCO->LAX Flt# 5906(UA) LAX->PHX ",
+                    "PlusPrice": -9.5,
+                    "TotalPrice": 393.2,
+                    "$$hashKey": "object:553"
+                },
+                {
+                    "Id": "2",
+                    "SortOrder": 0,
+                    "Description": "Flt# 564(UA) MCO->LAX Flt# 5411(UA) LAX->PHX ",
+                    "PlusPrice": -9.5,
+                    "TotalPrice": 393.2,
+                    "$$hashKey": "object:554"
+                },
+                {
+                    "Id": "3",
+                    "SortOrder": 0,
+                    "Description": "Flt# 564(UA) MCO->LAX Flt# 5512(UA) LAX->PHX ",
+                    "PlusPrice": -9.5,
+                    "TotalPrice": 393.2,
+                    "$$hashKey": "object:555"
+                },
+                {
+                    "Id": "5",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1788(UA) MCO->IAH Flt# 1797(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:556"
+                },
+                {
+                    "Id": "6",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1527(UA) MCO->IAH Flt# 40(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:557"
+                },
+                {
+                    "Id": "7",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1191(UA) MCO->IAH Flt# 1859(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:558"
+                },
+                {
+                    "Id": "8",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1230(UA) MCO->IAH Flt# 40(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:559"
+                },
+                {
+                    "Id": "9",
+                    "SortOrder": 0,
+                    "Description": "Flt# 272(UA) MCO->ORD Flt# 611(UA) ORD->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:560"
+                },
+                {
+                    "Id": "10",
+                    "SortOrder": 0,
+                    "Description": "Flt# 326(UA) MCO->IAD Flt# 100(UA) IAD->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:561"
+                },
+                {
+                    "Id": "11",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1793(UA) MCO->IAH Flt# 40(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:562"
+                },
+                {
+                    "Id": "12",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1191(UA) MCO->IAH Flt# 1797(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:563"
+                },
+                {
+                    "Id": "13",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1527(UA) MCO->IAH Flt# 867(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:564"
+                },
+                {
+                    "Id": "14",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1768(UA) MCO->IAH Flt# 1859(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:565"
+                },
+                {
+                    "Id": "15",
+                    "SortOrder": 0,
+                    "Description": "Flt# 633(UA) MCO->ORD Flt# 1603(UA) ORD->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:566"
+                },
+                {
+                    "Id": "16",
+                    "SortOrder": 0,
+                    "Description": "Flt# 991(UA) MCO->IAH Flt# 867(UA) IAH->PHX ",
+                    "PlusPrice": 4.5,
+                    "TotalPrice": 407.2,
+                    "$$hashKey": "object:567"
+                },
+                {
+                    "Id": "17",
+                    "SortOrder": 0,
+                    "Description": "Flt# 131(UA) MCO->ORD Flt# 1644(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:568"
+                },
+                {
+                    "Id": "18",
+                    "SortOrder": 0,
+                    "Description": "Flt# 633(UA) MCO->ORD Flt# 853(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:569"
+                },
+                {
+                    "Id": "19",
+                    "SortOrder": 0,
+                    "Description": "Flt# 131(UA) MCO->ORD Flt# 1908(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:570"
+                },
+                {
+                    "Id": "20",
+                    "SortOrder": 0,
+                    "Description": "Flt# 633(UA) MCO->ORD Flt# 547(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:571"
+                },
+                {
+                    "Id": "21",
+                    "SortOrder": 0,
+                    "Description": "Flt# 272(UA) MCO->ORD Flt# 711(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:572"
+                },
+                {
+                    "Id": "22",
+                    "SortOrder": 0,
+                    "Description": "Flt# 272(UA) MCO->ORD Flt# 853(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:573"
+                },
+                {
+                    "Id": "23",
+                    "SortOrder": 0,
+                    "Description": "Flt# 633(UA) MCO->ORD Flt# 1644(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:574"
+                },
+                {
+                    "Id": "24",
+                    "SortOrder": 0,
+                    "Description": "Flt# 272(UA) MCO->ORD Flt# 547(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:575"
+                },
+                {
+                    "Id": "25",
+                    "SortOrder": 0,
+                    "Description": "Flt# 633(UA) MCO->ORD Flt# 1908(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:576"
+                },
+                {
+                    "Id": "26",
+                    "SortOrder": 0,
+                    "Description": "Flt# 725(UA) MCO->ORD Flt# 853(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:577"
+                },
+                {
+                    "Id": "27",
+                    "SortOrder": 0,
+                    "Description": "Flt# 234(UA) MCO->ORD Flt# 1110(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:578"
+                },
+                {
+                    "Id": "28",
+                    "SortOrder": 0,
+                    "Description": "Flt# 272(UA) MCO->ORD Flt# 1644(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:579"
+                },
+                {
+                    "Id": "29",
+                    "SortOrder": 0,
+                    "Description": "Flt# 725(UA) MCO->ORD Flt# 711(AA) ORD->PHX ",
+                    "PlusPrice": 32.5,
+                    "TotalPrice": 435.2,
+                    "$$hashKey": "object:580"
+                },
+                {
+                    "Id": "30",
+                    "SortOrder": 0,
+                    "Description": "Flt# 174(UA) MCO->EWR Flt# 1032(AA) EWR->PHX ",
+                    "PlusPrice": 37.5,
+                    "TotalPrice": 440.2,
+                    "$$hashKey": "object:581"
+                },
+                {
+                    "Id": "31",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1727(UA) MCO->EWR Flt# 1032(AA) EWR->PHX ",
+                    "PlusPrice": 37.5,
+                    "TotalPrice": 440.2,
+                    "$$hashKey": "object:582"
+                },
+                {
+                    "Id": "32",
+                    "SortOrder": 0,
+                    "Description": "Flt# 998(AA) MCO->LAX Flt# 5512(UA) LAX->PHX ",
+                    "PlusPrice": 38.5,
+                    "TotalPrice": 441.2,
+                    "$$hashKey": "object:583"
+                }
+            ],
+            "$$hashKey": "object:73"
+        },
+        {
+            "Id": "4",
+            "SortOrder": 0,
+            "Description": "Flt# 725(UA) MCO->PHX ",
+            "PlusPrice": 0,
+            "TotalPrice": 402.7,
+            "$$hashKey": "object:552"
+        }
+    ],
+    "travelerTypes": [],
+    "paxTypes": {
+        "Adult": "1",
+        "Child": "0",
+        "Infant": "0"
+    },
+    "searchType": "RoundTrip"
+}

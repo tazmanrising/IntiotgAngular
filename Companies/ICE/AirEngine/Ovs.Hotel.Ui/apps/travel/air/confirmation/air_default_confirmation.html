@@ -1,0 +1,282 @@
+﻿<div ng-controller="airConfirmationController as confirm">
+    <section class="top-25px">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    
+                        <h1>&nbsp;&nbsp;&nbsp;Flight Confirmation</h1>
+                        <br />
+                        <form>
+                            <div ng-animate="'view'" ui-view="airConfirmationSummary"></div>
+                        </form>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <form class="form-inline form-checkout">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-content-hundred">
+                        <div class="content-format btm-25px">
+                            <div class="container-box">
+                                <div class="container-spacer">
+                                    <div class="container-box">
+                                        <div class="container-spacer" style="background-color:#F8F8F8;">
+                                            <div style="color:#0393DA;font-weight:500;">
+                                                &nbsp; Flight Summary
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--{{confirm.confirmationFactory}}-->
+
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <span style="font-weight: bold;">Reference Number</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                              
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span style="font-weight: bold;float:right;">{{confirm.booking.confirmationNumber}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p></p>
+                                                <!--<div ng-animate="'view'" ui-view="airConfirmationSummary"></div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!--Passengers-->
+                                    <div class="container-fluid" ng-repeat="paymentTravel in confirm.booking.payment.travelers">
+                                        <div class="row" style="line-height:150%;">
+                                            <div class="col-md-7">
+                                                <span style="font-weight: bold;">Passenger {{ $index + 1 }}</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                
+                                            </div>
+                                            <div class="col-md-3"><span style="font-weight: bold;float:right;">{{paymentTravel.label}}</span></div>
+                                        </div>
+                                        <div class="row" style="line-height:150%;">
+                                            <div class="col-md-7">
+                                                <span style="font-weight: bold;">Tickets</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                
+                                            </div>
+                                            <div class="col-md-3"><span style="font-weight: bold;float:right;">{{paymentTravel.totalFare | currency }}</span></div>
+                                        </div>
+                                        <div class="row" style="line-height:150%;">
+                                            <div class="col-md-7">
+                                                <span style="font-weight: bold;">Taxes</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                
+                                            </div>
+                                            <div class="col-md-3"><span style="font-weight: bold;float:right;">{{paymentTravel.totalTax | currency }}</span></div>
+                                        </div>
+                                        <div class="row" style="line-height:150%;">
+                                            <div class="col-md-7">
+                                                <span style="font-weight: bold;">Total</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                
+                                            </div>
+                                            <div class="col-md-3"><span style="font-weight: bold;float:right;">{{paymentTravel.totalPerPassenger | currency }}</span></div>
+                                        </div>
+                                        
+                                        <br />
+                                    </div>
+
+                                        <!--end Passengers-->
+                                    <div class="container-fluid">
+                                        <div class="row" style="line-height:150%;">
+                                            <div class="col-md-7">
+                                                <span style="font-weight: bold;">Route</span>
+                                                <!--<div ng-repeat="traveler in confirm.booking.travelers">
+                                                    {{traveler.firstName}} {{traveler.lastName}} ({{traveler.travelerType}})
+                                                </div>-->
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-3">
+                                                <span style="font-weight: bold;float:right;">{{confirm.booking.flightData[0].OriginAirport}} - {{confirm.booking.flightData[0].DestinationAirport}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="line-height:150%;">
+                                            <div class="col-md-7">
+                                                <span style="font-weight: bold;">Flights</span>                                                
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-3">
+                                                <span style="font-weight: bold;float:right;">{{confirm.booking.payment.travelers.length}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p></p>
+                                    <div class="container-box">
+                                        <div class="container-spacer" style="background-color:#F8F8F8;">
+                                            <div style="padding:5px;font-weight: bold;">
+                                                Your flight is confirmed but not yet ticketed. Prices are not guaranteed until time of ticketing. You will receive a second email within 24 hours that contains your airline confirmation number and final purchase price.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="container-box">
+                                        <div class="container-spacer" style="background-color:#F8F8F8;">
+                                            <div style="color:#0393DA;font-weight:500;">
+                                                &nbsp;Flight Itinerary                                               
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <span style="font-weight: bold;">Flight</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span style="font-weight: bold;">Departs</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span style="font-weight: bold;">Arrives</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="container-fluid" ng-repeat="x in confirm.booking.flightData">
+
+                                        <div ng-repeat="y in x.Segments">
+                                    
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">{{y.FlightNumber}}</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">{{y.DepartureCity}}, {{y.DepartureState}} ({{y.DepartureAirport}})</span>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">{{y.ArrivalCity}}, {{y.ArrivalState}} ({{y.ArrivalAirport}})</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">{{confirm.booking.flightData[0].MarketingCarriers[0]}}</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">{{y.DepartureDate | getTravelDateFormatted }}</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">{{y.ArrivalDate | getTravelDateFormatted }}</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                   &nbsp;
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">{{y.DepartureTime | getTravelTimeFormatted}}</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">{{y.ArrivalTime | getTravelTimeFormatted}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <span style="font-weight: bold;">Baggage Fees May Apply</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    &nbsp;
+                                                </div>
+                                                <div class="col-md-4">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <a href=""  style="color:#0393DA;font-weight:500;" ng-model="collapsed" ng-click="collapsed=!collapsed">(Baggage Policy)</a>
+                                            <div ng-show="collapsed">
+                                                to be continued
+                                            </div>
+                                            <hr />
+                                           
+                                        </div>
+
+                                    </div>
+
+                                    <div style="font-weight: bold;text-transform:uppercase;">
+                                        SEAT REQUESTS ARE NOT GUARANTEED. THE REQUESTS ARE SENT TO THE AIRLINES BUT THE FINAL SEATING IS ALWAYS DETERMINED BY THE AIRLINE.
+                                        PLEASE ENSURE YOUR TRAVEL DATES ARE CORRECT AND THAT TRAVELERS' NAMES EXACTLY MATCH THEIR PASSPORT/GOVERNMENT ISSUED PHOTO ID. NAME CORRECTIONS ARE REGULATED BY THE AIRLINE’S PENALTY RULES AND IN LINE WITH INTERNATIONAL SECURITY MEASURES, AIRLINES DO NOT GENERALLY ALLOW MODIFICATIONS TO THE NAME. WHERE A NAME CHANGE IS REQUIRED, TICKETS MAY NEED TO BE CANCELLED AND RE-PURCHASED.
+                                        <br /><br />
+                                        PLEASE DOUBLE CHECK VISA REQUIREMENTS FOR YOUR DESTINATION AND ANY TRANSIT COUNTRIES. IT'S YOUR RESPONSIBILITY TO MAKE SURE YOU BRING ALL REQUIRED TRAVEL DOCUMENTS (SUCH AS PASSPORTS AND VISAS, INCLUDING TRANSIT VISAS) AND TO MAKE SURE ALL OTHER ENTRY REQUIREMENTS ARE MET. FOR SOME DESTINATIONS, YOUR TRAVEL DOCUMENTS MAY NEED TO BE VALID FOR A MINIMUM OF 3 TO 6 MONTHS BEYOND YOUR FINAL DATE OF TRAVEL.
+                                        <br /><br />
+                                        MOST AIRLINES ALLOW YOU TO:
+                                        <ul>
+                                            <li style="font-weight: bold;">ADD BAGGAGE/EXTRA BAGGAGE/SPORTS EQUIPMENT (PLEASE CHECK APPLICABLE BAGGAGE POLICY DIRECTLY WITH YOUR AIRLINE FOR GUIDANCE ON BAGGAGE WEIGHT, SIZE AND SECURITY PRIOR TO DEPARTURE)</li>
+                                            <li style="font-weight: bold;">RESERVE A SEAT/CONFIRM PRE-REQUESTED SELECTION</li>
+                                            <li style="font-weight: bold;">ENTER FREQUENT FLIER PROGRAM INFORMATION</li>
+                                            <li style="font-weight: bold;">CHECK IN ONLINE/PRINT BOARDING PASS</li>
+                                            <li style="font-weight: bold;">ENTER TSA PRE-CHECK / GLOBAL ENTRY INFORMATION (WHERE APPLICABLE)</li>
+                                        </ul>
+                                        <br />
+                                        ALWAYS CHECK IN ONLINE AND PRINT YOUR BOARDING PASS WHERE POSSIBLE. YOUR AIRLINE MAY CHARGE FOR THESE SERVICES AND THE COST MAY BE HIGHER AT THE AIRPORT.
+                                        ADVANCED PASSENGER INFORMATION MUST BE ADDED BEFORE YOUR FLIGHT WHERE APPLICABLE.
+                                        <br /><br />
+                                        YOUR RESERVATION WILL BE TICKETED WITHIN TWENTY-FOUR HOURS AND, WITHIN ONE BUSINESS DAY, YOU WILL RECEIVE ANOTHER EMAIL CONFIRMATION WITH YOUR TICKET NUMBER BE SURE TO SAVE YOUR CONFIRMATION NUMBER AND TICKET NUMBER TO OBTAIN A BOARDING PASS OR COMPLETE CHECK-IN VIA THE INTERNET. BECAUSE OF THE WAY THAT AIRLINE TICKETING SYSTEMS WORK, YOUR TRAVEL IS NEVER CHARGED TO YOUR CREDIT CARD OR FULLY CONFIRMED UNTIL YOUR TICKET IS ISSUED. IF YOUR TRAVEL PLANS REQUIRE YOU TO TRAVEL WITHIN 48 HOURS, PLEASE CALL YOUR AGENT TO CONFIRM YOUR FLIGHT VERBALLY.
+
+
+
+                                    </div>
+                                    <br />
+                                    <br />
+
+
+                                    <br /><br />
+                                    
+
+                                </div>
+                            </div>
+
+                          
+                        </div><!-- content-format -->
+                    </div><!-- end col-content -->
+                   
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- DEBUG SECTION -->
+    <div class="row" ng-if="confirm.debug">
+        <div class="col-md-12">
+            <p>{{ confirm.booking }}</p>
+            <br/><hr /><br/>
+        </div>
+    </div>
+</div>

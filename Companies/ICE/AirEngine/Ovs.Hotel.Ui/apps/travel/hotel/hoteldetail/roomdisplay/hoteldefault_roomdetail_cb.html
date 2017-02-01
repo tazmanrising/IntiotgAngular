@@ -1,0 +1,37 @@
+﻿<!-- room -->
+<div ng-repeat="room in details.detailsReturned.RoomsAvailable">
+    <table class="table details__rooms-table details__cash-back">
+        <tr>
+            <td class="table-block__room-photo">
+                <img ng-src="{{room.available_room_type_image}}" alt="">
+            </td><!-- end table-block__room -->
+            <td class="table-block__room-details">
+                <h3>{{room.available_room_type_name}}</h3>
+                <p ng-bind-html="room.available_room_type_description | html"></p>
+            </td>
+            <td class="table-block__room-pricing">
+                <div class="module-cb__container" ng-controller="hotelBookController as book">
+                    <ul class="module-cb__btn-container" ng-click="book.chooseRoom(room);" ng-if="details.daily == 'true'">
+                        <li class="module-cb__label">EARN</li>
+                        <li class="module-cb__arrow"><i></i><i></i></li>
+                        <li class="module-cb__amount"><label ng-bind-html="room.available_daily_savings | customCurrency : details.currencyFormat"></label> <small>{{details.currentSession.user.currentSession.display_options.labels.earned}}</small></li>
+                    </ul>
+                    <ul class="module-cb__btn-container" ng-click="book.chooseRoom(room);" ng-if="details.daily == 'false'">
+                        <li class="module-cb__label">EARN</li>
+                        <li class="module-cb__arrow"><i></i><i></i></li>
+                        <li class="module-cb__amount"><label ng-bind-html="room.available_total_savings | customCurrency : details.currencyFormat"></label><small>{{details.currentSession.user.currentSession.display_options.labels.earned}}</small></li>
+                    </ul>
+                </div>
+            </td><!-- table-block__room-pricing -->
+            <td class="table-block__room-checkout" ng-controller="hotelBookController as book">
+                <button class="btn btn-checkout--red" ng-click="book.chooseRoom(room);">Checkout</button>
+                <div style="color:white">{{room.original_member_price}}</div>
+                <div class="nightly-price"><span ng-bind-html="room.available_daily_market_rate  | customCurrency : details.currencyFormat"></span> <small>Best Nightly Rate</small>
+                </div>
+                <div style="color:white" ng-bind-html="room.original_member_price"></div>
+                <div ng-if="room.available_is_non_refundable"><small>This room is non-refundable</small></div>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- room end -->

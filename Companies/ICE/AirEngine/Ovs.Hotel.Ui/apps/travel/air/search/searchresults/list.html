@@ -1,0 +1,14 @@
+﻿<table>
+    <tr style="width: 100%">
+        <td style="width: 70%">
+            <span>
+                <strong>{{flight.OriginAirport}}</strong> ({{flight.Segments[0].DepartureDate}} {{flight.Segments[0].DepartureTime}}) ->
+                <strong>{{flight.DestinationAirport}}</strong> ({{flight.Segments[(flight.Segments.length - 1)].ArrivalDate}} {{flight.Segments[(flight.Segments.length - 1)].ArrivalTime}})({{main.formatDuration(flight.FlightElapseTime)}}) -
+                <span ng-if="flight.Segments.length -1 == 0">NONSTOP</span>
+                <span ng-if="flight.Segments.length -1 > 0">{{flight.Segments.length -1}}-stop(s)</span>
+            </span>
+            <div ng-repeat="segment in flight.Segments"><small>{{segment.CarrierCode}} / {{segment.OpCarrierCode}} {{segment.FlightNumber}} - <strong>{{segment.DepartureAirport}}</strong> ({{segment.DepartureDate}} {{segment.DepartureTime}}) -> <strong>{{segment.ArrivalAirport}}</strong> ({{segment.ArrivalDate}} {{segment.ArrivalTime}})</small></div>
+        </td>
+    </tr>
+</table>
+

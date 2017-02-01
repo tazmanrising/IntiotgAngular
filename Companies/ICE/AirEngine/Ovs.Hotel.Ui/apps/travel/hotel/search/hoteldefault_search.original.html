@@ -1,0 +1,62 @@
+﻿
+<div class="page-title-container style3">
+    <div class="container">
+        <form name="search" id="search" novalidate>
+            <div id="main2">
+            <div class="row">
+                <div class="form-group col-sm-6 col-md-3">
+                    <label for="destination" translate>Your Destination</label>
+
+                    <input class="input-text full-width" translate ng-class="{'error' : search.lat.$invalid && search.destination.$dirty || search.lng.$invalid && search.destination.$dirty}" id="destination" type="text" placeholder="Destination or Landmark" ng-model="main.searchData.destination" googleplace required name="destination" ng-change="main.validateLatLong(lat, lng)"><br /><!--ng-model="main.place"-->
+                    <input id="lat" ng-model="lat" type="hidden" required name="lat">
+                    <input id="lng" ng-model="lng" type="hidden" required name="lng">
+                </div>
+                <div class="form-group col-sms-6 col-sm-3 col-md-2">
+                    <label for="checkin" translate>Check In</label>
+                   
+                        <input type="text" id="checkin" class="input-text full-width" ng-model="main.searchData.checkin" placeholder="Check In" data-min-date="{{main.today}}" bs-datepicker ng-change="main.changeMonth()" data-max-date="{{main.setMaxDate}}" name="checkin" required>
+                 
+                </div>
+                <div class="form-group col-sms-6 col-sm-3 col-md-2">
+                    <label translate>Check Out</label>
+                    
+                        <input id="checkout" class="input-text full-width" ng-model="main.searchData.checkout" data-max-date="{{main.setMaxDate}}" data-min-date="{{main.tomorrow}}" placeholder="check out" name="checkout" bs-datepicker required>
+                   
+                </div>
+                <div class="form-group col-xs-4 col-sm-2 col-md-1">
+                    <label translate>Rooms</label>
+                    
+                        <select ng-model="main.searchData.numRooms" id="numRooms" ng-options="room for room in main.rooms | limitTo : 1"></select><br />
+                   
+                </div>
+                
+                <div class="form-group col-xs-4 col-sm-2 col-md-1">
+                    <label translate>Guests</label>
+                    
+                        <select ng-options="default.label for default in main.occupancyDefaults track by default.id" ng-model="main.defaultSelected" ng-change="main.setOccupancy(main.defaultSelected)" ng-init="main.setOccupancy(main.defaultSelected)"></select>
+                    
+                </div>
+               
+                </div>
+                <div ng-if="show.additionalGuests" class="occupancySelection">
+                    <div class="col-xs-4 col-sm-2 col-md-1">
+                        <label for="numAdults">Adults</label>
+                        <select ng-model="main.searchData.numAdults" id="numAdults" ng-options="option for option in main.options | limitTo : 6"></select>
+                    </div>
+                    <div ng-repeat="child in main.childAge | limitTo : main.searchData.numChildren" class="col-xs-4 col-sm-2 col-md-1">
+                        <label>Age for Child {{$index + 1}}</label>
+                        <select ng-model="main.child.age" class="form-control" ng-options="option for option in main.options | limitTo : 17" ng-change="main.childAge.push(main.child.age)"></select><br />
+                    </div>
+                </div>
+                <div class="form-group col-sm-6 col-md-2">
+                    <label>&nbsp;</label>
+                    <button translate ng-click="main.getHotels()" class="full-width icon-check">SEARCH</button>
+                </div>
+            </div>
+                </div>
+</form>
+    </div>
+
+</div>
+<script type="text/javascript" src="/apps/assets/js/theme-scripts.js"></script>
+<script type="text/javascript" src="/apps/assets/js/scripts.js"></script>

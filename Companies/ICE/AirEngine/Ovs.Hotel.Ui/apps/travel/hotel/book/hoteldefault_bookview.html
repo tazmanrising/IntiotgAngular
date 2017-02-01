@@ -1,0 +1,237 @@
+﻿    <style>
+        #fieldlist {
+            margin: 0;
+            padding: 0;
+        }
+
+        #fieldlist li {
+            list-style: none;
+            padding-bottom: .7em;
+            text-align: left;
+        }
+
+        #fieldlist label {
+            color: #444;
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            padding-bottom: .3em;
+            text-transform: uppercase;
+        }
+
+        #fieldlist li.status { text-align: center; }
+
+        #fieldlist li .k-widget:not(.k-tooltip),
+        #fieldlist li .k-textbox { margin: 0 5px 5px 0; }
+
+        .confirm { padding-top: 1em; }
+
+        .valid { color: green; }
+
+        .invalid { color: red; }
+
+        #fieldlist li input[type="checkbox"] { margin: 0 5px 0 0; }
+
+        span.k-widget.k-tooltip-validation {
+            background: none;
+            border: 0;
+            box-shadow: none;
+            color: red;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            width: 160px;
+        }
+
+        .k-tooltip-validation .k-warning { display: none; }
+    </style>
+<div ng-controller="hotelBookController as book">
+    <div ng-animate="'view'" ui-view="hotelBookHeader"></div>
+    <section class="checkout-content top-25px" id="top">
+
+        <div class="container-fluid">
+
+            <div class="top-25px">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-heading">
+                                <h1>Complete Reservation</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <form kendo-validator="book.validator"  k-scope-field="book.validator"  k-rules="book.validationRules" ng-submit="book.validate($event)" class="form-inline form-checkout" name="book.bookForm">
+                    <!-- left column -->
+                    <div class="col-content">
+                        <!-- persoanl info -->
+
+                        <div class="checkout__personal-info">
+                            <h2>Guest Information</h2>
+                            <div class="container-box">
+                                <div class="container-spacer">
+                                    <div class="form-group">
+                                        <label for="guestFirstName" class="required"><strong>First Name</strong><span style="color: red">*</span></label>
+                                        <input type="text" id="inputFirstName" ng-model="book.purchase.firstName" name="guestFirstName" value="{{book.purchase.firstName}}" class="k-textbox" placeholder="First Name" pattern="^[a-zA-Z\s]+$" required validationMessage="First name is required (alphabet letters only)" style="width: 100%"/>
+                                        <span class="k-invalid-msg" data-for="guestFirstName"></span>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="guestLastName" class="required"><strong>Last Name</strong><span style="color: red">*</span></label>
+                                        <input type="text" id="guestLastName" ng-model="book.purchase.lastName" name="guestLastName" value="{{book.purchase.lastName}}" class="k-textbox" placeholder="Last Name" pattern="^[a-zA-Z\s]+$" required validationMessage="Last name is required (alphabet letters only)" style="width: 100%"/>
+                                        <span class="k-invalid-msg" data-for="guestLastName"></span>                 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="book.purchase.email" class="required"><strong>E-mail</strong><span style="color: red">*</span></label>
+                                        <input type="email" id="book.purchase.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ng-model="book.purchase.email" name="E-mail" value="{{book.guest.email}}" class="k-textbox" placeholder="E-mail" required validationMessage="Valid e-mail is required" style="width: 100%"/>
+                                        <span class="k-invalid-msg" data-for="book.purchase.email"></span>     
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="book.purchase.phone" name="book.purchase.phone" class="required"><strong>Phone Number</strong><span style="color: red">*</span></label>
+                                    <input kendo-masked-text-box="book.guestPhone" k-scope-field="book.guestPhone" ng-model="book.purchase.phone" id="book.purchase.phone" class="k-textbox" required validationMessage="Phone number is required" k-mask="'1 000 000 0000'" style="width: 100%"/>
+                                        <span class="k-invalid-msg" data-for="book.purchase.phone"></span> 
+                                    </div>
+                                <div class="form-group">
+                                    <small>Would you like to email this information to other email addresses? </small>
+                                    <label class="sr-only" for="book.confirmEmail">Confirmation E-mail</label>
+                                    <input type="email" class="form-control" id="book.confirmEmail" ng-model="book.confirmEmail" placeholder="Secondary Email">
+                                </div>
+
+
+                                </div>
+                            </div>
+                        </div><!-- end checkout__personal-info -->
+
+                        <!-- persoanl info -->
+
+                        <h2>Payment & Billing Details</h2>
+                        <div class="container-box">
+                            <div class="container-spacer">
+                                <div class="payment-option__credit-card">
+
+                                    <div ng-if="book.currentSession.member_info.can_spend_dbc_credits">
+                                        <div ng-animate="'view'" ui-view="hotelBookDbc"></div>
+                                    </div>
+                                    <div ng-if="book.currentSession.member_info.can_spend_vacation_cash">
+                                        <div ng-animate="'view'" ui-view="hotelBookVc"></div>
+                                    </div>
+                                    <div ng-if="book.currentSession.member_info.can_spend_hard_points">
+                                        <div ng-animate="'view'" ui-view="hotelBookPoints"></div>
+                                    </div>
+                                    <div>
+                                    <h3>Credit Card</h3>
+                                        <div ng-animate="'view'" ui-view="hotelBookCc"></div>
+                                    </div>
+                                </div><!-- end credit card info -->
+                            </div>
+                        </div><!-- end personal info -->
+
+                        <!-- cancellation policy and mendatory fees -->
+                        <!--<h2>Cancellation Policy and the Mandatory Fees </h2>
+                        <div class="container-box">
+                            <div class="container-spacer">
+                                <div class="terms-conditions">
+                                    <div ng-bind-html="book.details.HotelContent.policy_description | html"></div>
+                                    <div ng-bind-html="book.details.HotelContent.property_fees_description | html"></div>
+                                    <div ng-bind-html="book.details.HotelContent.property_fees_description | html"></div>
+                                    <strong>Cancellation Policy</strong>
+                                    <div ng-bind-html="book.cancelPolicy.CancelPolicyText | html"></div>
+                                </div>
+                                <div class="terms-agree">
+                                    <div ng-class="{'errors' : book.show.error.termsAgree}">
+                                        <label for="inputAgree">
+                                            <input id="inputAgree" type="checkbox" required ng-model="book.termsAgree" name="termsAgree">
+                                            Please check this bock to confirm you have read and agreed to the terms and condiitions above.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+
+                        <!-- terms and conditions -->
+
+                        <h2>Terms and Conditions</h2>
+                        <div class="container-box">
+                            <div class="container-spacer">
+                                <div class="terms-conditions">
+                                    <strong>Cancellation Policy</strong>
+                                    <div ng-bind-html="book.cancelPolicy.CancelPolicyText | html"></div>
+                                    <strong>Policy Description</strong>
+                                    <div ng-bind-html="book.details.HotelContent.policy_description | html"></div>
+                                    <strong>Property Fees</strong>
+                                    <div ng-bind-html="book.cancelPolicy.SupplierSupplements  | html"></div>
+                                    <div ng-repeat="hardCurrency in book.currentSession.member_info.alternative_hard_currencies">
+                                        <p ng-bind-html="hardCurrency.terms_and_conditions"></p>
+                                        <br>
+                                    </div>
+                                    <div ng-repeat="currency in book.currentSession.member_info.alternative_margin_currencies">
+                                        <p ng-bind-html="currency.terms_and_conditions"></p>
+                                        <br>
+                                    </div>
+                                    <div ng-repeat="points in book.currentSession.member_info.alternative_points_currencies">
+                                        <p ng-bind-html="points.terms_and_conditions"></p>
+                                    </div>
+                                    <div ng-if="book.showDisclaimer"><strong>Use of Data</strong><br/>The Customer agrees that Affiliate may transfer personal data belonging to the Customer and other persons on behalf of whom the Customer is making a booking of EAN Travel Products to EAN and/or its Corporate Affiliates for the purposes of facilitating the booking and providing after sales support (if any) of those EAN Travel Products.</div>
+                                </div>
+
+
+                                         <span class="k-invalid-msg" data-for="termsAgree"></span>   
+                                <div class="terms-agree">
+                                    <label for="inputAgree" class="required">
+                                        <input id="inputAgree" type="checkbox" required ng-model="book.termsAgree" validationMessage="Agreement is required" name="termsAgree">
+                                        Please check this box to confirm you have read and agreed to the terms and condiitions above.
+                                    </label>
+                                </div>
+                                <br/>
+                                <p ng-if="book.showDisclaimer"><a ng-click="book.displayInventoryDisclaimer()">This inventory is provided by Travelscape LLC</a></p>
+                                <br/>
+                                <!--<div style="height:40px; display:inline-block; background-color:cyan">
+                                <label for="tcpaOpyin"></label>
+                                <input id="tcpaOpyin" ng-model="tcpaOptIn" type="checkbox">
+                                <!--Show TCPA optin-->
+                                <!--<display-options text="book.currentSession.display_options.options.tcpa_optin_text" show="book.currentSession.display_options.options.offer_tcpa_optin"></display-options><br/>
+                                <input type="text" class="form-control half-size" ng-model="book.tcpaOpyinNumber" id="tcpaOpyinNumber" placeholder="Phone">
+                                </div>
+                                <div style="height:40px; display:inline-block; background-color:cyan">
+                                <label for="inputAgree"></label>
+                                <input id="emailOptin" ng-model="book.emailOptIn" type="checkbox">-->
+                                <!--Offer Email Option-->
+                                <!--<display-options text="book.currentSession.display_options.options.email_optin_text" show="book.currentSession.display_options.options.offer_email_optin"></display-options><br/>
+                                <input type="text" class="form-control half-size" ng-model="book.emailOptinAddress" id="emailOptinAddress" placeholder="Email">
+
+                                </div>-->
+
+                            </div>
+                        </div>
+
+
+                        <div class="btn-container">
+                            <ul>
+                                <!--<li ng-controller="HotelsReviewController as review">
+                                    <button class="btn btn-default" ng-click="review.review(book.purchase);" ng-disabled="book.bookForm.$invalid">Review Order</button>
+                                </li>-->
+                                <li ng-controller="HotelsConfirmationController as confirm">
+                                    <button class="btn btn-primary" ng-disabled="book.isDisabled">Complete Reservation</button>
+                                </li>
+                            </ul>
+                        </div><!-- end btn-container -->
+
+
+                        <!-- end terms and conditions -->
+
+
+                    </div>
+                    <!-- end left column -->
+                    <!-- right column -->
+                    <div class="col-sidebar">
+                        <div ng-animate="'view'" ui-view="hotelBookPriceBar"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+ 
+    </section>
+</div>

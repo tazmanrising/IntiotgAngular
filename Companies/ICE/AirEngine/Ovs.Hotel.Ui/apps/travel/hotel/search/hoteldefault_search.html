@@ -1,0 +1,70 @@
+﻿<!-- for testing data-bs-show="true" -->
+<section class="form-hotel-search">
+    <div class="container-fluid">
+        <form name="main.search" id="search" class="form-hotel-search__form-tag" novalidate>
+            <div class="row">
+                <div class="col-sm-12">
+                    <fieldset class="form-group destination">
+                        <label for="checkin" translate>Destination</label>
+                        <input class="form-control" translate id="destination" type="text" placeholder="Destination or Landmark" ng-model="main.searchData.destination" value="{{::main.searchData.destination.place}}" name="destination"  googleplace required>
+                    </fieldset>
+                    <fieldset class="form-group checkin">
+                        <label for="checkin" translate>Check-In</label>
+                        <input type="text" id="checkin" class="form-control" ng-model="main.searchData.checkin" placeholder="Check In" data-min-date="{{main.today}}"  ng-change="main.changeMonth()" data-max-date="{{main.setMaxDate}}" name="checkin" bs-datepicker required>
+                    </fieldset>
+                    <fieldset class="form-group checkout">
+                        <label for="checkout" translate>Check-Out</label>
+                        <input id="checkout" class="form-control" ng-model="main.searchData.checkout" data-max-date="{{main.setMaxDate}}" data-min-date="main.tomorrow" placeholder="Check Out" name="checkout" ng-change="main.validateMaxStay();" bs-datepicker required>
+                    </fieldset>
+                    <fieldset class="form-group rooms">
+                        <label for="selectRooms" translate>Rooms</label>
+                        <select class="form-control" ng-model="main.searchData.numRooms" id="numRooms" ng-options="room for room in main.rooms | limitTo : 1"></select>
+                    </fieldset>
+                    <fieldset class="form-group rooms">
+                        <label for="selectRooms" translate>Guests</label>
+                        <select class="form-control" ng-options="default.label for default in main.occupancyDefaults track by default.id" ng-model="main.defaultSelected" ng-change="main.setOccupancy(main.defaultSelected)" ng-init="main.setOccupancy(main.defaultSelected)"></select>
+                    </fieldset>
+                
+                    <div ng-if="main.show.additionalGuests" class="children-enabled">
+                        <fieldset class="form-group rooms">
+                            <label for="selectRooms">Adults</label>
+                            <select class="form-control" ng-model="main.searchData.numAdults" id="numAdults" ng-options="room for room in main.rooms | limitTo : 6"></select>
+                        </fieldset>
+                        <fieldset class="form-group rooms">
+                            <label for="numChildren">Children</label>
+                            <select class="form-control" ng-model="main.searchData.numChildren" id="numChildren" ng-options="option for option in main.options | limitTo : 7" ng-change="main.checkChildren();"></select>
+
+                        </fieldset>
+                        <div class="children-container">
+                            <fieldset class="form-group children">
+                                <div ng-repeat="child in main.ageList" class="form-group children-clone" ng-init="main.childAge(child.age, $index)">
+                                    <label>Age for Child {{$index + 1}}</label>
+                                    <select ng-model="child.age" id="child{{+ $index}}" class="form-control child" ng-options="option for option in main.options | limitTo : 18" ng-change="main.childAge(child.age, $index)"></select>
+
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <button type="submit" translate ng-click="main.getHotels()" class="btn btn-default btn-search" ng-disabled="main.search.$invalid">Select</button>
+
+                </div><!-- end row -->
+
+                <div style="color:#fff;" ng-if="main.show.error.checkout">{{main.show.error.message}}</div>
+
+
+
+
+            </div><!-- end col-sm-12 -->
+        </form><!-- end search form -->
+    </div><!-- end row -->
+    <!--</div>--><!-- end container-fluid -->
+    <!--used to perform search is state parameters are present. -->
+    <div ng-init="main.clubSearch();"></div>
+</section>
+
+
+
+
+
+

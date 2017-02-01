@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "BookingTest";
+}
+
+<h2>Booking Test</h2>
+<script src="~/scripts/jquery-2.2.3.js"></script>
+<script src="~/scripts/jquery-2.2.3.min.js"></script>
+
+<input type="button" id="btnRun" value="Run Test"/>
+<br/>
+<div id="isWorking"></div>
+<br/>
+@*<input type="text" id="txtRequest" style="width: 600px; height: 600px;"/>*@
+
+<textarea id="txtRequest" style="width: 600px; height: 600px;"></textarea>
+
+<div id="response">
+     Is Valid Response:
+    <div id="isValidResponse"></div>
+    <br/><br/>
+    Error Message:
+    <div id="errorMessage"></div>
+    <br/><br/>
+    Is Valid Request:
+    <div id="isValidRequest"></div>
+</div>
+
+<script>
+    $(document).ready(function() {
+
+        $('#btnRun').click(function () {
+
+            $("#isWorking").text("Working...");
+
+            $.ajax({
+                url: '/api/v1/air/booking',
+                type: 'POST',
+                dataType: 'json',
+                data: $('#txtRequest').val(),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    $("#isWorking").text("");
+                    $("#isValidResponse").text(data.Status);
+                    $("#errorMessage").text(data.MemberErrorMessage);
+                    $("#isValidRequest").text(data.IsValidRequest);
+                },
+                error: function (x, y, z) {
+                    $("#isWorking").text("");
+                    $("#isValidResponse").text("<strong>" + x + " " + y + " " + z + " " + "</strong>");
+                }
+            });
+        });
+
+    });
+</script>

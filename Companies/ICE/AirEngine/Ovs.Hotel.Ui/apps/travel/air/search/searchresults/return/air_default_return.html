@@ -1,0 +1,47 @@
+﻿
+<!-- Display Return Flights Options -->
+<div ng-show="main.displayReturnFlight">
+
+    <!-- Display Depart Flight Summary Block -->
+    <div ng-include="'/apps/travel/air/search/searchresults/depart/summary/default.html'"></div>
+
+
+    <div ng-repeat="flight in main.returnFlights | limitTo: main.numShown">
+        <!-- Not sure why we are targeting a specific IndexId, nor what it represents -->
+        <!-- <table ng-if="flight.IndexId == 2" style="width: 95%; margin-top: 8px; margin-bottom: 8px"> -->
+        <table style="width: 95%; margin-top: 8px; margin-bottom: 8px">
+            <tr style="margin-bottom:15px">
+                <td style="width: 15%; text-align: center">
+                    <span style="font-size: 1.0em; font-weight: bold; color: black">
+                        price difference - <!--{{ flight.TotalFareDifference }}-->
+                    </span>
+                    <br />
+                    <a style="font-size: 0.8em">Show Detail</a>
+                </td>
+                <td style="width: 75%">
+                    <table>
+                        <tr style="width: 100%">
+
+                            <!-- Current feed is not returning all fields, so this is meant to be a temp placeholder -->
+                            <td style="width:70%">
+                                {{ flight.Description }} - {{ flight.TotalPrice }}
+                            </td>
+
+                            <!-- Include in prod -->
+                            <!--<td style="width: 70%">
+                                <span>
+                                    <strong>{{flight.FlightOption.OriginAirport}}</strong> ({{flight.Legs[0].Details.DepartureDate}} {{flights.FlightOption.Legs[0].Details.DepartureTime}}) ->
+                                    <strong>{{flight.FlightOption.DestinationAirport}}</strong> ({{flight.FlightOption.Legs[(flight.FlightOption.Legs.length - 1)].Details.ArrivalDate}} {{flight.FlightOption.Legs[(flight.Legs.length - 1)].Details.ArrivalTime}})({{main.formatDuration(flight.FlightOption.FlightElapseTime)}}) -
+                                    <span ng-if="flight.FlightOption.Legs.length -1 == 0">NONSTOP</span>
+                                    <span ng-if="flight.FlightOption.Legs.length -1 > 0">{{flight.FlightOption.Legs.length -1}}-stop(s)</span>
+                                </span>
+                                <div ng-repeat="leg in flight.FlightOption.Legs"><small>{{leg.Carrier}} / {{leg.OpCarrier}} {{leg.Details.FlightNumber}} - <strong>{{leg.Details.DepartureAirport}}</strong> ({{leg.Details.DepartureDate}} {{leg.Details.DepartureTime}}) -> <strong>{{leg.Details.ArrivalAirport}}</strong> ({{leg.Details.ArrivalDate}} {{leg.Details.ArrivalTime}})</small></div>
+                            </td>-->
+                        </tr>
+                    </table>
+                <td style="width: 20%; text-align: center"><button type="button" id="saveReturnFlight" style="width: 60px" ng-click="main.saveReturnFlight(flight)">Select</button><br /> Tickets Left</td>
+            </tr>
+        </table>
+        <hr ng-if="flights.IndexId == 2" />
+    </div>
+</div>

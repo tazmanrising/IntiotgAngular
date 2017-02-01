@@ -1,0 +1,534 @@
+﻿<section id="content" class="slideshow-bg">
+    <div id="slideshow">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <div class="slidebg" style="background-image: url('/apps/assets/images/hotelslider/borabora2080x1214.jpg');"></div>
+                </li>
+                <li>
+                    <div class="slidebg" style="background-image: url('/apps/assets/images/hotelslider/timessquare2080x1214.jpg');"></div>
+                </li>
+                <li>
+                    <div class="slidebg" style="background-image: url('/apps/assets/images/hotelslider/alaskacruise2080x1214.jpg');"></div>
+                </li>
+                <li>
+                    <div class="slidebg" style="background-image: url('/apps/assets/images/hotelslider/kayak2080x1214.jpg');"></div>
+                </li>
+                <li>
+                    <div class="slidebg" style="background-image: url('/apps/assets/images/hotelslider/spa2080x1214.jpg');"></div>
+                </li>
+                <li>
+                    <div class="slidebg" style="background-image: url('/apps/assets/images/hotelslider/sanfran2080x1214.jpg');"></div>
+                </li>
+                <li>
+                    <div class="slidebg" style="background-image: url('/apps/assets/images/hotelslider/falls2080x1214.jpg');"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+
+        <div id="main">
+
+            <div class="search-box-wrapper style2">
+                <div class="search-box">
+                    <ul class="search-tabs clearfix">
+                        <li class="active"><a href="#hotels-tab" data-toggle="tab"><i class="soap-icon-hotel"></i><span translate>HOTELS</span></a></li>
+                        <li><a href="#cruises-tab" data-toggle="tab"><i class="soap-icon-cruise"></i><span translate>CRUISES</span></a></li>
+                        <li><a href="#resorts-tab" data-toggle="tab"><i class="soap-icon-beach"></i><span translate>RESORTS</span></a></li>
+                        <li><a href="#tours-tab" data-toggle="tab"><i class="soap-icon-globe"></i><span translate>TOURS</span></a></li>
+                        <li><a href="#flights-tab" data-toggle="tab"><i class="soap-icon-plane-right takeoff-effect"></i><span translate>FLIGHTS</span></a></li>
+                        <li><a href="#cars-tab" data-toggle="tab"><i class="soap-icon-car"></i><span translate>CARS</span></a></li>
+                    </ul>
+                    <div class="visible-mobile">
+                        <ul id="mobile-search-tabs" class="search-tabs clearfix">
+                            <li class="active"><a translate href="#hotels-tab">HOTELS</a></li>
+                            <li><a translate href="#cruises-tab">CRUISES</a></li>
+                            <li><a translate href="#resorts-tab">RESORTS</a></li>
+                            <li><a translate href="#tours-tab">TOURS</a></li>
+                            <li><a translate href="#flights-tab">FLIGHTS</a></li>
+                            <li><a translate href="#cars-tab">CARS</a></li>
+                            <li><a translate href="#cruises-tab">CRUISES</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="search-tab-content">
+                        <div class="tab-pane fade active in" id="hotels-tab">
+                            <form>
+                                <h4 translate class="title">Where do you want to go?</h4>
+                                <div class="row">
+                                    <div class="form-group col-sm-6 col-md-3">
+                                        <input type="text" translate class="input-text full-width" force-selection="true" ng_model="place" g-places-autocomplete placeholder="Rome, Paris, New York..." />
+                                    </div>
+                                    <div class="form-group col-sm-6 col-md-4">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" id="datefrom" class="input-text full-width" translate placeholder="{{'Check In'|translate}}" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" id="dateto" class="input-text full-width" placeholder="{{'Check Out'|translate}}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <div class="selector">
+                                                    <select id="numberofrooms" class="full-width">
+                                                        <option translate value="1">{{'1 Room'|translate}}</option>
+                                                        <option translate value="2">2 Rooms</option>
+                                                        <option translate value="3">3 Rooms</option>
+                                                        <option translate value="4">4 Rooms</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="selector">
+                                                    <select id="numberofguests" class="full-width">
+                                                        <option translate value="1">{{'1 Guest'|translate}}</option>
+                                                        <option translate value="2">2 Guests</option>
+                                                        <option translate value="3">3 Guests</option>
+                                                        <option translate value="4">4 Guests</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+
+                                                <button onclick="localRunSearch()" translate class="full-width">SEARCH NOW</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <script type="text/javascript">
+        function localRunSearch() {
+            var checkin = document.getElementById('datefrom').value;
+            var checkout = document.getElementById('dateto').value;
+            var numberofrooms = document.getElementById('numberofrooms').value;
+            var numberofguests = document.getElementById('numberofguests').value;
+            var microappscope = angular.element(document.getElementById('main')).scope();
+
+            microappscope.runSearch(microappscope.place.name, microappscope.place.geometry.location.H, microappscope.place.geometry.location.L, checkin, checkout, numberofrooms, numberofguests);
+        }
+                        </script>
+                        <div class="tab-pane fade" id="cruises-tab">
+                            <form>
+                                <h4 translate class="title">Where do you want to go?</h4>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" translate class="input-text full-width" placeholder="{{'Enter A Destination'|translate}}" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" translate class="input-text full-width" placeholder="{{'Departure Date'|translate}}" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="">"{{'select cruise length'|translate}}"</option>
+                                                        <option translate value="1">1-2 Nights</option>
+                                                        <option translate value="2">3-4 Nights</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <div class="col-xs-6">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="">"{{'select cruise line'|translate}}"</option>
+                                                        <option translate>Azamara Club Cruises</option>
+                                                        <option translate>Carnival Cruise Lines</option>
+                                                        <option translate>Celebrity Cruises</option>
+                                                        <option translate>Costa Cruise Lines</option>
+                                                        <option translate>Cruise &amp; Maritime Voyages</option>
+                                                        <option translate>Crystal Cruises</option>
+                                                        <option translate>Cunard Line Ltd.</option>
+                                                        <option translate>Disney Cruise Line</optiontranslate>
+                                                        <option translate>Holland America Line</option>
+                                                        <option translate>Hurtigruten Cruise Line</option>
+                                                        <option translate>MSC Cruises</option>
+                                                        <option translate>Norwegian Cruise Line</option>
+                                                        <option translate>Oceania Cruises</option>
+                                                        <option translate>Orion Expedition Cruises</option>
+                                                        <option translate>P&amp;O Cruises</optiontranslate>
+                                                        <option translate>Paul Gauguin Cruises</option>
+                                                        <option translate>Peter Deilmann Cruises</option>
+                                                        <option translate>Princess Cruises</option>
+                                                        <option translate>Regent Seven Seas Cruises</option>
+                                                        <option translate>Royal Caribbean International</option>
+                                                        <option translate>Seabourn Cruise Line</option>
+                                                        <option translate>Silversea Cruises</option>
+                                                        <option translate>Star Clippers</option>
+                                                        <option translate>Swan Hellenic Cruises</option>
+                                                        <option translate>Thomson Cruises</option>
+                                                        <option translate>Viking River Cruises</option>
+                                                        <option translate>Windstar Cruises</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <button class="full-width" translate>SEARCH NOW</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade in" id="resorts-tab">
+                            <form>
+                                <h4 translate class="title">Where do you want to go?</h4>
+                                <div class="row">
+                                    <div class="form-group col-sm-6 col-md-3">
+                                        <input type="text" translate class="input-text full-width" placeholder="Rome, Paris, New York..." />
+                                    </div>
+                                    <div class="form-group col-sm-6 col-md-4">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" translate id="datefrom" class="input-text full-width" placeholder="{{'Check In'|translate}}" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" id="dateto" translate class="input-text full-width" placeholder="{{'Check Out'|translate}}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <div class="selector">
+                                                    <select id="numberofrooms" class="full-width">
+                                                        <option translate value="1">1 Room</option>
+                                                        <option translate value="2">2 Rooms</option>
+                                                        <option translate value="3">3 Rooms</option>
+                                                        <option translate value="4">4 Rooms</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="selector">
+                                                    <select id="numberofguests" class="full-width">
+                                                        <option translate value="1">1 Guest</option>
+                                                        <option translate value="2">2 Guests</option>
+                                                        <option translate value="3">3 Guests</option>
+                                                        <option translate value="4">4 Guests</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+
+                                                <button translate class="full-width">SEARCH NOW</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade in" id="tours-tab">
+                            <form>
+                                <h4 translate class="title">Where do you want to go?</h4>
+                                <div class="row">
+                                    <div class="form-group col-sm-6 col-md-3">
+                                        <input type="text" translate class="input-text full-width" placeholder="Rome, Paris, New York..." />
+                                    </div>
+                                    <div class="form-group col-sm-6 col-md-4">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" translate id="datefrom" class="input-text full-width" placeholder="{{'Check In'|translate}}" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" translate id="dateto" class="input-text full-width" placeholder="{{'Check In'|translate}}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <div class="selector">
+                                                    <select id="numberofrooms" class="full-width">
+                                                        <option translate value="1">1 Room</option>
+                                                        <option translate value="2">2 Rooms</option>
+                                                        <option translate value="3">3 Rooms</option>
+                                                        <option translate value="4">4 Rooms</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="selector">
+                                                    <select id="numberofguests" class="full-width">
+                                                        <option translate value="1">1 Guest</option>
+                                                        <option translate value="2">2 Guests</option>
+                                                        <option translate value="3">3 Guests</option>
+                                                        <option translate value="4">4 Guests</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+
+                                                <button translate class="full-width">SEARCH NOW</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="flights-tab">
+                            <form action="flight-list-view.html" method="post">
+                                <h4 translate class="title">Where do you want to go?</h4>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" translate class="input-text full-width" placeholder="Leaving From (city, distirct or specific airpot)" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" translate class="input-text full-width" placeholder="Going To (city, distirct or specific airpot)" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" translate name="date_from" class="input-text full-width" placeholder="Departing On" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="1">anytime</optiontranslate>
+                                                        <option translate value="2">morning</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-6">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" translate name="date_to" class="input-text full-width" placeholder="Arriving On" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="1">anytime</option>
+                                                        <option translate value="2">morning</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <div class="col-xs-3">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="">Adults</option>
+                                                        <option translate value="1">01</option>
+                                                        <option translate value="2">02</option>
+                                                        <option translate value="3">03</option>
+                                                        <option translate value="4">04</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="">Kids</option>
+                                                        <option translate value="1">01</option>
+                                                        <option translate value="2">02</option>
+                                                        <option translate value="3">03</option>
+                                                        <option translate value="4">04</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" translate class="input-text full-width" placeholder="Promo Code" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-3">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="">Infants</option>
+                                                        <option value="1">01</option>
+                                                        <option value="2">02</option>
+                                                        <option value="3">03</option>
+                                                        <option value="4">04</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 pull-right">
+                                                <button translate class="full-width">SEARCH NOW</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" id="cars-tab">
+                            <form action="car-list-view.html" method="post">
+                                <h4 translate class="title">Where do you want to go?</h4>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" class="input-text full-width" translate placeholder="Pick Up (city, distirct or specific airpot)" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="input-text full-width" translate placeholder="Drop Off (city, distirct or specific airpot)" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <div class="datepicker-wrap">
+                                                        <input type="text" name="date_from" translate class="input-text full-width" placeholder="Pick-Up Date / Time" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="selector">
+                                                        <select class="full-width">
+                                                            <option translate value="1">anytime</option>
+                                                            <option translate value="2">morning</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <div class="datepicker-wrap">
+                                                        <input type="text" translate name="date_to" class="input-text full-width" placeholder="Drop-Off Date / Time" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="selector">
+                                                        <select class="full-width">
+                                                            <option translate value="1">anytime</option>
+                                                            <option translate value="2">morning</optiontranslate>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <div class="col-xs-3">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="">Adults</option>
+                                                        <option value="1">01</option>
+                                                        <option value="2">02</option>
+                                                        <option value="3">03</option>
+                                                        <option value="4">04</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="">Kids</option>
+                                                        <option value="1">01</option>
+                                                        <option value="2">02</option>
+                                                        <option value="3">03</option>
+                                                        <option value="4">04</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" translate class="input-text full-width" placeholder="Promo Code" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-6">
+                                                <div class="selector">
+                                                    <select class="full-width">
+                                                        <option translate value="">select a car type</option>
+                                                        <option translate value="economy">Economy</option>
+                                                        <option translate value="compact">Compact</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <button translate class="full-width">SEARCH NOW</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="featured image-box">
+        <div class="details pull-left">
+            <h3 translate>
+                Tropical Beach,<br />Hotel and Resorts
+            </h3>
+            <h5 translate>THAILAND</h5>
+        </div>
+        <figure class="pull-left">
+            <a class="badge-container" href="#">
+                <span translate class="badge-content right-side">From $200</span>
+                <img width="64" height="64" alt="" src="http://placehold.it/64x64" class="">
+            </a>
+        </figure>
+    </div>
+</section>
+
+
+
+
+<script type="text/javascript">
+    tjq(".flexslider").flexslider({
+        animation: "fade",
+        controlNav: false,
+        animationLoop: true,
+        directionNav: false,
+        slideshow: true,
+        slideshowSpeed: 5000
+    });
+</script>
+
+<script type="text/javascript" src="/apps/assets/js/theme-scripts.js"></script>
+<script type="text/javascript" src="/apps/assets/js/scripts.js"></script>

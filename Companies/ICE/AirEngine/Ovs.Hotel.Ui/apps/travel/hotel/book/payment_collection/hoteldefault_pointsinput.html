@@ -1,0 +1,24 @@
+﻿<div>
+    <div ng-repeat="alternativePoints in book.currentSession.member_info.alternative_points_currencies">
+        
+        <div ng-if="!alternativePoints.redeem_for_hotel"></div>
+        <div ng-if="alternativePoints.redeem_for_hotel">
+            <!--can chose how much to use on each transaction-->
+            <div ng-if="!alternativePoints.must_use_max_on_each_transaction">
+                <div class="form-group">
+                    <label class="sr-only" for="vc">{{alternativePoints.label}}</label>
+                    <input type="text" class="form-control half-size" id="vc" ng-model="book.alternativePointsSelected" placeholder="" value="{{alternativePoints.balance}}" ng-init="book.captureMarginUsed(book.alternativePoints.label, book.alternativePointsSelected);" ng-change="book.captureMarginUsed(book.alternativePoints.label, book.alternativePointsSelected);">
+                </div>
+            </div>
+
+            <!--must use max on each transaction-->
+            <div ng-if="alternativePoints.must_use_max_on_each_transaction">
+                <div class="form-group">
+                    <label class="sr-only" for="vc">{{alternativePoints.label}}</label>
+                    <input type="text" class="form-control half-size" ng-model="book.alternativePointsSelected" id="vc" value="{{alternativePoints.balance}}" readonly ng-init="book.captureMarginUsed(alternativePoints.label, book.alternativePointsSelected);">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

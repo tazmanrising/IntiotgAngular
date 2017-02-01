@@ -1,0 +1,54 @@
+﻿<!-- rci header dbc start -->
+<header class="header header-club">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 brand-container">
+                <h1>
+                    <a href="#" translate title="{{main.currentSession.display_options.program_long_name}} - home">
+                        <img ng-src="{{main.mainLogo}}" alt="{{main.currentSession.display_options.program_long_name}}" class="header-main__logo" />
+                    </a>
+                </h1>
+                <!-- <i class="fa fa-times nav-close"></i> -->
+            </div>
+            <div class="col-sm-6 member-container">
+                <div class="member-type-container">
+                    <ul class="nav-top">
+                        <li>
+							<a class="nav-link" href="tel:+8005714020">
+								<display-options text="main.currentSession.display_options.program_phone_number" show="main.currentSession.display_options.general_phone_number" class="nav-link-text"></display-options>
+							</a>
+						</li>
+                        <li class="dropdown">
+							<!-- <a data-toggle="dropdown" class="nav-link" href="{{main.currentSession.display_options.labels.my_account_href}}">
+								<display-options text="main.currentSession.display_options.labels.account_settings_label" show="main.currentSession.display_options.labels.account_settings_label"></display-options>
+								<object id="rci-icons" class="user-icon" data="http://iceassets.blob.core.windows.net/ng-img/icons.svg#user-icon" type="image/svg+xml" style="pointer-events:none;"></object>
+							</a> -->
+
+							<a bs-dropdown class="nav-link" href="#">
+								<display-options text="main.currentSession.display_options.labels.account_settings_label" show="main.currentSession.display_options.labels.account_settings_label" class="nav-link-text"></display-options>
+							</a>
+							<a>
+								<object id="rci-icons" class="user-icon" data="http://iceassets.blob.core.windows.net/ng-img/icons.svg#user-icon" type="image/svg+xml" style="pointer-events:none;"></object>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#"><i>My Travel Savings Credits</i> <span>$1,500</span></a></li>
+								<li><a href="#"><i>My Certificates</i> <span>$1,500</span></a></li>
+								<li><a href="#"><i>My Cash</i> <span>$1,500</span></a></li>
+								<li class="nav-divider"></li>
+								<li><a href="#">Account Summary</a></li>
+								<li><a href="#">Users</a></li>
+								<li><a href="#">Booking Activity</a></li>
+								<li class="sign-out"><a href="#">Sign Out</a></li>
+							</ul>
+						</li>
+                    </ul>
+					<!-- <div class="savings-container">
+						<div class="savings-amount"><small>Savings Dollars</small> <h4>$3,700</h4></div>
+						<div class="savings-label">Current Balance</div>
+					</div> -->
+
+                </div><!-- end member-type-container -->
+            </div>
+        </div>
+    </div>
+</header>

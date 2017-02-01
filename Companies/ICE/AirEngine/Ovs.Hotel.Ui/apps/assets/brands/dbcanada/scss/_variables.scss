@@ -1,0 +1,38 @@
+// DirectBuy (Canada) Travel 
+
+// Define Brand Colors
+$color_red: #e1272f; 
+$color_red_light: #e8696e; 
+$color_black: #3e3934; 
+$color_gray: #a7a29e;
+$color_white: #fff;
+   
+// Brand Highlight Color
+$brand_primary_color: 				$color_black;
+$brand_primary_color_darker: 		$color_black;
+$brand_highlight_color: 			$color_red_light;
+$brand_secondary_highlight_color: 	$color_gray;
+ 
+// Main Header 
+$header_background-color: 			$color_white;
+$nav_background_color: 				$color_white;
+
+// Buttons 
+$primary_btn_color: 				$color_red;
+$primary_btn-color_visited: 		$color_red;
+$primary_btn-color_hover: 			$color_black; 
+
+// Fonts 
+$lead_font_weight: 					300 !default;
+
+// Star Rating Color
+$rating_star_color: 				#e1272f; 
+
+// Flag Savings Color
+$flag_savings_color: 				$brand-highlight-color; 
+
+// Screen Size Breakpoints
+$screen_xs_min: 					767px;
+$screen_sm_min: 					768px;
+$screen_md_min: 					992px;
+$screen_lg_min: 					1200px; 

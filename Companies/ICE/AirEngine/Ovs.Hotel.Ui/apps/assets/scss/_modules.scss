@@ -1,0 +1,241 @@
+// module cash back
+.module-cb	{
+	&__container {
+		width: 100%;
+		float: left;
+	}
+	&__btn-container {
+		float: left;
+		overflow: hidden;
+		// li:first-child {
+		// 	line-height: 22px;
+		// 	height: auto;
+		// }
+		li {
+			box-sizing: border-box;
+			float: left;
+			height: 47px;
+			vertical-align: top;
+			display: block;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__nightly-price {
+		float: none !important;
+		font-size: 24px;
+		margin-bottom: 12px;
+		font-weight: 400;
+		small {
+			font-size: 16px;
+		}
+	}
+	// EARN
+	&__label {
+		line-height: 47px;
+		background: #909090;
+		padding: 0 15px;
+		color:#fff;
+		font-weight: 400;
+		font-size: 1.1em;
+	}
+	&__arrow {
+		position: relative;
+		width: 22px;
+		background: #c4c4c4;
+		overflow: hidden;
+		i:first-child {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 1;
+			width: 0;
+			height: 0;
+			border-top: 23px solid transparent;
+			border-bottom: 23px solid transparent;
+			border-left: 15px solid #909090;
+		}
+		i:last-child {
+			// z-index: 5;
+			position: absolute;
+			left: 0px;
+			top: -8px;
+			width: 0;
+			height: 0;
+			border-top: 31px solid transparent;
+			border-bottom: 30px solid transparent;
+			border-left: 20px solid #dadada; //
+			background: #c4c4c4;
+		}
+	}
+	&__amount {
+		background: #c4c4c4;
+		font-size: 20px;
+		height: 47px;
+		padding: 5px 15px 0 10px;
+		font-weight: 400;
+		line-height: 20px;
+		small {
+			display: block;
+			font-size: 13px;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.module-cb__btn-container {
+		float: none;
+	}
+}
+@media (max-width: 1000px) {
+
+	// .module-cb	{
+	// 	&__btn-container {
+	// 		li {
+	// 			height: 39px; ////////////////////
+	// 			line-height: 39px; ////////////////////
+	// 		}
+	// 	}
+	// 	&__nightly-price {
+	// 		float: none !important;
+	// 		font-size: 21px; ////////////////////
+	// 		small {
+	// 			font-size: 16px;
+	// 		}
+	// 	}
+	// 	&__label {
+	// 		background: #909090;
+	// 		padding: 0 10px; //////
+	// 	}
+	// 	&__arrow {
+	// 		position: relative;
+	// 		width: 22px;
+	// 		background: #c4c4c4;
+	// 		overflow: hidden;
+	// 		i:first-child {
+	// 			position: absolute;
+	// 			left: 0px;
+	// 			top: -3px;
+	// 			z-index: 1;
+	// 			width: 0;
+	// 			height: 0;
+	// 			border-top: 23px solid transparent;
+	// 			border-bottom: 23px solid transparent;
+	// 			border-left: 15px solid #909090;
+	// 		}
+	// 		i:last-child {
+	// 			position: absolute;
+	// 			left: 0px;
+	// 			top: -11px;
+	// 			width: 0;
+	// 			height: 0;
+	// 			border-top: 31px solid transparent;
+	// 			border-bottom: 30px solid transparent;
+	// 			border-left: 20px solid #dadada; //
+	// 			background: #c4c4c4;
+	// 		}
+	// 	}
+	// 	&__amount {
+	// 		background: #c4c4c4;
+	// 		font-size: 20px;
+	// 		height: 47px;
+	// 		padding: 5px 15px 0 10px;
+	// 		font-weight: 400;
+	// 		line-height: 20px;
+	// 		small {
+	// 			display: block;
+	// 			font-size: 13px;
+	// 		}
+	// 	}
+	// } // end module
+}
+
+
+// original cash back
+// .cash-back	{
+// 	&__container {
+// 		width: 100%;
+//
+// 	}
+// 	&__btn-container {
+// 		float: left;
+// 		overflow: hidden;
+// 		li:first-child {
+// 			line-height: 22px;
+// 			height: auto;
+// 		}
+// 		li {
+// 			float: left;
+// 			height: 47px;
+// 			vertical-align: top;
+// 			display: block;
+// 		}
+// 		&:hover {
+// 			cursor: pointer;
+// 		}
+// 	}
+// 	&__nightly-price {
+// 		float: none !important;
+// 		font-size: 24px;
+// 		margin-bottom: 12px;
+// 		font-weight: 400;
+// 		small {
+// 			font-size: 16px;
+// 		}
+// 	}
+//
+// 	// EARN
+// 	&__label {
+// 		line-height: 47px;
+// 		background: #909090;
+// 		padding: 0 15px;
+// 		color:#fff;
+// 		font-weight: 400;
+// 		font-size: 1.1em;
+// 	}
+// 	&__arrow {
+// 		position: relative;
+// 		width: 22px;
+// 		background: #c4c4c4;
+// 		overflow: hidden;
+// 		i:first-child {
+// 			position: absolute;
+// 			left: 0px;
+// 			top: 0px;
+// 			z-index: 1;
+// 			width: 0;
+// 			height: 0;
+// 			border-top: 23px solid transparent;
+// 			border-bottom: 23px solid transparent;
+// 			border-left: 15px solid #909090;
+// 		}
+// 		i:last-child {
+// 			// z-index: 5;
+// 			position: absolute;
+// 			left: 0px;
+// 			top: -8px;
+// 			width: 0;
+// 			height: 0;
+// 			border-top: 31px solid transparent;
+// 			border-bottom: 30px solid transparent;
+// 			border-left: 20px solid #dadada; //
+// 			background: #c4c4c4;
+// 		}
+// 	}
+// 	&__amount {
+// 		background: #c4c4c4;
+// 		font-size: 20px;
+// 		height: 47px;
+// 		padding: 5px 15px 0 10px;
+// 		font-weight: 400;
+// 		line-height: 20px;
+// 		small {
+// 			display: block;
+// 			font-size: 13px;
+// 		}
+// 	} // end original cash back
+//
+//
+//
+// } // end cash back

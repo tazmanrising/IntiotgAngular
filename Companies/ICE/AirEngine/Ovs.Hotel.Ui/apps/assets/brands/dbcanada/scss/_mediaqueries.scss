@@ -1,0 +1,55 @@
+/*#########################################################################*/
+/*
+/* MEDIA QUERIES
+/*
+/*#########################################################################*/
+
+@media (max-width: 800px) {
+	.mobile-menu__open {
+		.brand-conainer {
+			background: #003980; 
+		}
+		.nav {
+			li:hover {
+				background: #043A7D; 
+			}
+		} 
+		.nav-close {
+			font-size: 1.4em; 
+			color: #fff;
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Layout
+/*-------------------------------------------------------------------------*/
+@media (max-width: 775px) {
+	.col-content .btn-container {
+	    display: block !important;
+	    margin-bottom: 20px;  
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  General Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+@media (min-width: $screen_xs_min) {
+ 
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen_sm_min) {
+ 
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen_md_min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen_lg_min) {
+
+}

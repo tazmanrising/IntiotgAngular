@@ -1,0 +1,93 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = null;
+    var currentUser = ViewData["currentUser"];
+    var displayOptions = ViewData["displayOptions"];
+    var styleSheet = ViewData["styleSheet"];
+}
+
+<!DOCTYPE html>
+<html ng-app="travelApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="~/apps/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/apps/assets/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/apps/assets/css/animate.min.css">
+
+    <!-- Current Page Styles -->
+    <link rel="stylesheet" type="text/css" href="~/apps/assets/components/revolution_slider/css/settings.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="~/apps/assets/components/revolution_slider/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="~/apps/assets/components/jquery.bxslider/jquery.bxslider.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="~/apps/assets/components/flexslider/flexslider.css" media="screen"/>
+
+    <!-- Main Style -->
+    <link id="main-style" rel="stylesheet" href="@styleSheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="~/apps/assets/css/custom.css">
+
+    <!---Angular google Places AutoComplete-->
+    <link rel="stylesheet" href="/apps/assets/css/angular-google-places-autocomplete/autocomplete.min.css">
+
+</head>
+
+<body ng-controller="travelController as main">
+
+<div id="page-wrapper">
+    <div ui-view="travelNav"></div>
+    <div ui-view="travelBody"></div>
+    <div ui-view="travelFooter"></div>
+</div>
+<script type="text/javascript" src="/apps/assets/js/jquery-1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/jquery.noconflict.js"></script>
+<script type="text/javascript" src="/apps/assets/js/modernizr.2.7.1.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/jquery-ui.min.js"></script>
+
+<script src="/apps/assets/js/angular.min.js"></script>
+<script src="/apps/assets/js/angular-ui-router.min.js"></script>
+<script src="/apps/assets/js/angular-animate.min.js"></script>
+<script src="/apps/assets/js/angular-gettext.min.js"></script>
+<script src="/apps/assets/js/translations.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+<script src="/apps/assets/js/angular-google-places-autocomplete/autocomplete.min.js"></script>
+<script src="/apps/assets/js/spin.min.js"></script>
+<script src="/apps/assets/js/angular-spinner.min.js"></script>
+
+<script src="/apps/travel/travelApp.js"></script>
+<script>
+    TravelApp.constant("currentUser", JSON.parse("@currentUser".replace(/&quot;/g, "\"")));
+    TravelApp.constant("displayOptions", JSON.parse("@displayOptions".replace(/&quot;/g, "\"")));
+</script>
+
+<script src="/apps/travel/travelController.js"></script>
+
+<script type="text/javascript" src="/apps/assets/js/bootstrap.js"></script>
+
+<!-- load revolution slider scripts -->
+<script type="text/javascript" src="/apps/assets/components/revolution_slider/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="/apps/assets/components/revolution_slider/js/jquery.themepunch.revolution.min.js"></script>
+
+<!-- Flex Slider -->
+<script type="text/javascript" src="/apps/assets/components/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- load BXSlider scripts -->
+<script type="text/javascript" src="/apps/assets/components/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+<!-- parallax -->
+<script type="text/javascript" src="/apps/assets/js/jquery.stellar.min.js"></script>
+
+<!-- waypoint -->
+<script type="text/javascript" src="/apps/assets/js/waypoints.min.js"></script>
+
+<!-- load page Javascript -->
+<script type="text/javascript" src="/apps/assets/js/theme-scripts.js"></script>
+<script type="text/javascript" src="/apps/assets/js/scripts.js"></script>
+
+
+</body>
+</html>

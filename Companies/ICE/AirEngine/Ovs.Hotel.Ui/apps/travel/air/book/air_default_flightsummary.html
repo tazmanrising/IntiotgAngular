@@ -1,0 +1,133 @@
+﻿<section class="air-flight-summary">
+    <h2>Flight Summary</h2>
+
+    <div class="container-box">
+        <div class="container-spacer">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Depart Flight |<button class="btn btn-link" ng-click="book.returnUrl()">Change</button></h4>
+
+                    <ul>
+                        <li>
+                            Date: {{ book.departingFlight.departureDate }}
+                        </li>
+                        <li>
+                            Airport: {{ book.departingFlight.departingAirport }}
+                        </li>
+                        <li>
+                            Depart Time: {{ book.departingFlight.departureTime }}
+                        </li>
+                        <li>
+                            Arrival Time: {{ book.departingFlight.arrivalTime }}
+                        </li>
+                        <li ng-show="book.departingFlight.multipleDays">
+                            <span>
+                                <strong style="color:red">Multi-day Flight</strong>
+                            </span>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img ng-src="{{ book.departingFlight.carrier.logo }}" alt="carrier logo" height="50" width="50" />
+                                </div>
+                                <div class="col-md-8">
+                                    {{ book.departingFlight.carrier.name }} <br />
+                                    Flight Number {{ book.departingFlight.flightNumber }} <br />
+                                    <!-- TODO: Operating Carrier if different than ticketing carrier -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            Travel Time: {{ book.departingFlight.travelTime }}
+                        </li>
+                        <li>
+                            {{ book.departingFlight.numberOfStops }}<br />
+                            <div>
+                                <span ng-repeat="stop in book.departingFlight.stops">
+                                    {{ stop.duration }} in {{ stop.airport }}
+                                </span>
+                                <br />
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="" ng-model="book.departingFlight.collapsed" ng-click="book.departingFlight.collapsed=!book.departingFlight.collapsed">DETAILS LINK <i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+                            <div ng-show="book.departingFlight.collapsed">
+                                <p>DETAILS LINK - that will expand and show the details of the flight (same info that is on details link of the search results pages)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Make sure its not a one-way flight -->
+            <div ng-if="book.bookingInfoObject.selectedFlights.length > 1">
+                <br /><hr />
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Return Flight |<button class="btn btn-link" ng-click="book.returnUrl()">Change</button></h4>
+
+                        <ul>
+                            <li>
+                                Date: {{ book.returningFlight.departureDate }}
+                            </li>
+                            <li>
+                                Airport: {{ book.returningFlight.departingAirport }}
+                            </li>
+                            <li>
+                                Depart Time: {{ book.returningFlight.departureTime }}
+                            </li>
+                            <li>
+                                Arrival Time: {{ book.returningFlight.arrivalTime }}
+                            </li>
+                            <li ng-show="book.returningFlight.multipleDays">
+                                <span>
+                                    <strong style="color:red">Multi-day Flight</strong>
+                                </span>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img ng-src="{{ book.returningFlight.carrier.logo }}" alt="carrier logo" height="50" width="50" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        {{ book.returningFlight.carrier.name }} <br />
+                                        Flight Number {{ book.returningFlight.flightNumber }} <br />
+                                        <!-- TODO: Operating Carrier if different than ticketing carrier -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                Travel Time: {{ book.returningFlight.travelTime }}
+                            </li>
+                            <li>
+                                {{ book.returningFlight.numberOfStops }}<br />
+                                <div>
+                                    <span ng-repeat="stop in book.returningFlight.stops">
+                                        {{ stop.duration }} in {{ stop.airport }}
+                                    </span>
+                                    <br />
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="" ng-model="book.returningFlight.collapsed" ng-click="book.returningFlight.collapsed=!book.returningFlight.collapsed">DETAILS LINK <i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+                                <div ng-show="book.returningFlight.collapsed">
+                                    <p>DETAILS LINK - that will expand and show the details of the flight (same info that is on details link of the search results pages)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

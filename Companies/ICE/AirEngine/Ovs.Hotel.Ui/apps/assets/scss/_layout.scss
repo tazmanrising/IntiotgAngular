@@ -1,0 +1,67 @@
+/*-------------------------------------------------------------------------*/
+/*  Layout
+/*-------------------------------------------------------------------------*/
+
+.col-content, .col-sidebar {
+    position: relative;
+    min-height: 1px;
+    // padding-left: 0.5875rem;
+    // padding-right: 0.5875rem;
+}
+.col-content {
+	width: 73%;
+    float: left;
+    padding-left: 0px;
+    padding: 0 12px;
+}
+.col-sidebar {
+	width: 27%;
+    padding: 0 12px;
+    float: left;
+}
+
+.mod__ul-two-cols {
+    ul {
+        margin-left: 0;
+        overflow: hidden;
+        li {
+            width: 50%;
+            float: left;
+            display: block;
+        }
+    }
+}
+
+
+@media (max-width: 1070px) {
+    .col-content {
+    	width: 70%;
+    }
+    .col-sidebar {
+    	width: 30%;
+    }
+}
+
+@media (max-width: 930px) {
+    .col-content {
+    	width: 65%;
+    }
+    .col-sidebar {
+    	width: 35%;
+    }
+}
+
+@media (min-width: 775px) {
+
+}
+@media (max-width: 775px) {
+    .col-content {
+    	width: 100% !important;
+    	display: block;
+        padding-right: 0;
+    }
+    .col-sidebar {
+    	width: 100% !important;
+    	display: block;
+    }
+}

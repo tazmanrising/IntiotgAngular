@@ -1,0 +1,91 @@
+﻿<section class="form-air-contact-info">
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer">
+                <h2>Contact Information</h2>
+                <form name="book.contactInfo" id="contactInfo" class="form-air-contact-info__form-tag" novalidate>
+
+                    <!--Extract into contact info partial-->
+                    <div class="row">
+                        <!-- COUNTRY FIELD -->
+                        <div class="form-group col-md-6">
+                            <label for="book.contactInfo.country">Country</label>
+                            <input type="text"
+                                   kendo-drop-down-list
+                                   k-data-text-field="'Name'"
+                                   k-data-value-field="'Id'"
+                                   k-ng-model="book.contactInfo.country"
+                                   k-data-source="book.countryDataSource"
+                                   k-on-change="book.setCountry();"
+                                   class="form-control"
+                                   id="country"
+                                   name="book.contactInfo.country"
+                                   ng-init="book.setInitialCountry()"
+                                   required />
+                        </div>
+
+                        <!-- PHONE NUMBER FIELD -->
+                        <div class="form-group col-md-6">
+                            <label for="book.contactInfo.phoneNumber">Phone Number</label>
+                            <input type="text"
+                                   class="form-control k-textbox"
+                                   data-for="book.contactInfo.phoneNumber"
+                                   kendo-masked-text-box="book.phoneNumber"
+                                   k-scope-field="book.phoneNumber"
+                                   k-mask="'1 000 000 0000'"
+                                   id="phoneNumber"
+                                   name="book.contactInfo.phoneNumber"
+                                   ng-model="book.contactInfo.phoneNumber"
+                                   required
+                                   validationMessage="Phone Number Required" />
+                            <span class="k-invalid-msg"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- PRIMARY EMAIL FIELD -->
+                        <!-- DESC: sends acknowledgement of booking and receipt with financial info and all change info about reservations -->
+                        <div class="form-group col-md-6">
+                            <label for="book.contactInfo.emailPrimary">Email <i class="fa fa-info-circle"></i></label>
+                            <input type="email"
+                                   class="form-control k-textbox"
+                                   k-scope-field="book.contactInfo.emailPrimary"
+                                   id="emailPrimary"
+                                   ng-model="book.contactInfo.emailPrimary"
+                                   name="book.contactInfo.emailPrimary"
+                                   required
+                                   validationMessage="Primiary Email Address Required" />
+                        </div>
+
+                        <!-- ITINERARY EMAIL FIELD -->
+                        <!-- DESC: email for itinerary info; don't need to confirm the email -->
+                        <div class="form-group col-md-6">
+                            <label for="book.contactInfo.emailItinerary">Email (Itinerary) <i class="fa fa-info-circle"></i></label>
+                            <input type="email"
+                                   class="form-control k-textbox"
+                                   k-scope-field="book.contactInfo.emailItinerary"
+                                   id="emailItinerary"
+                                   ng-model="book.contactInfo.emailItinerary"
+                                   name="book.contactInfo.emailItinerary"
+                                   required
+                                   validationMessage="Itinerary Email Address Required" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- TCPA FIELD -->
+                        <div class="form-group">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" ng-model="book.contactInfo.tcpaOptIn">
+                                    {{ book.tcpaOptInText }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Contact Info Future Partial-->
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

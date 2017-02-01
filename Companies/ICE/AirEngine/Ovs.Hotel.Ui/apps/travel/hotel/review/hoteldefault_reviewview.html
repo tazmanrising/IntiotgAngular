@@ -1,0 +1,165 @@
+﻿ <section class="page-heading top-25px">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Please Confirm your Reservation</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    #########################
+    CHECKOUT FORM
+    #########################
+    -->
+    <section>
+        <form class="form-inline form-checkout">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-content">
+
+                        <div class="mod__ul-span-cols confirmation__personal-info btm-25px">
+                            <hgroup>
+                                <h2>Personal Information</h2>
+                            </hgroup>
+                            <div class="container-box">
+                                <div class="container-spacer">
+                                    review purchase : {{review.purchase}}
+                                    <ul>
+                                        <li><span>Reservaiton Name: </span> John Smith</li>
+                                        <li><span>Confirmation Email: </span> johnsmith@gmail.com</li>
+                                    </ul>
+
+                                    <hr>
+
+                                    <small>Additional Confirmation Emails</small>
+                                    <ul>
+                                        <li> <span>Email Address 1:</span> susansmith@gmail.com</li>
+                                    </ul>
+                                    <div class="checkout__buttons">
+                                        <button type="button" class="btn btn-default btn-sm">Edit Personal Info</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><!-- end checkout__personal-info -->
+
+                        <div class="mod__ul-span-cols confirmation__payment-billing btm-25px">
+                            <hgroup>
+                                <h2>Payment & Billing Details</h2>
+                            </hgroup>
+                            <div class="container-box">
+                                <div class="container-spacer">
+
+                                    <ul>
+                                        <li><span>Card Type</span>		Master Card</li>
+                                        <li><span>Card no.</span>		**********5678</li>
+                                        <li><span>Name (as appears on card)</span>		John Smith</li>
+                                    </ul>
+
+                                    <hr>
+
+                                    <small>In order to process your booking, the credit card provided will be preauthorized for the amount stated. In the event this reservation does not confirm, the credit card will not be charged, and the funds being held will be released within 72 hours.</small>
+                                    <div class="checkout__buttons">
+                                        <button type="button" class="btn btn-default btn-sm">Edit Payment & Billing Info</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><!-- end checkout__payment-billing -->
+                        <!-- terms and conditions -->
+                        <div class="mod__ul-span-cols checkout__terms-conditions btm-25px">
+                            <hgroup>
+                                <h2>Your Billing Details</h2>
+                            </hgroup>
+                            <div class="container-box">
+                                <div class="container-spacer">
+
+                                    <ul>
+                                        <li><span>Address Line 1:</span> 2548 E Jefferosn St</li>
+                                        <li><span>Address Line 2:</span> </li>
+                                        <li><span>Town/ City:</span> Phoenix</li>
+                                        <li><span>Country:</span> United Statess</li>
+                                        <li><span>State:</span> Arizona</li>
+                                        <li><span>Zip:</span>85022</li>
+                                    </ul>
+
+                         
+                                    <div class="checkout__buttons">
+                                        <button type="button" class="btn btn-default btn-sm">Edit Payment & Billing Info</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout__buttons hidden-xs">
+                            <button class="btn btn-default">Review Order</button> <button class="btn btn-primary">Place Order Now</button>
+                        </div>
+
+                        <!-- end terms and conditions -->
+                    </div>
+                    <!-- end col-sm-8 -->
+                    <div class="col-sidebar">
+
+                        <!-- booking summary -->
+                        <div class="mod__ul-span-cols checkout__booking-summary">
+                            <hgroup>
+                                <h2>Accommodation Information</h2>
+                            </hgroup>
+                            <div class="container-box">
+                                <div class="container-spacer">
+
+                                    <div class="checkout__hotel-details">
+                                        <h4>{{book.details.HotelContent.name}}</h4>
+                                        <p>
+                                            {{book.details.HotelContent.address1}}, <br />
+                                            {{book.details.HotelContent.city}}, {{book.details.HotelContent.state_province}}, {{book.details.HotelContent.postal_code}} 
+                                        </p>
+                                    </div>
+
+                                    <ul class="checkout__hotel-summary">
+                                        <li><span>Room </span>1</li>
+                                    </ul>
+
+                                    <ul class="checkout__nightly-price">
+                                        <li><span>5 Night(s)</span></li>
+                                        <li><span><u>Saturday,</u> Sept 5, 2015</span> 		$147.30</li>
+                                        <li><span><u>Sunday,</u> Sept 6, 2015</span>					$147.30</li>
+                                        <li><span><u>Monday,</u> Sept 7, 2015</span>					$147.30</li>
+                                        <li><span><u>Tuesday,</u> Sept 8, 2015</span>				$147.30</li>
+                                        <li><span><u>Wednesday,</u> Sept 9, 2015</span>			$147.30</li>
+                                        <li><span>Taxes & Fees	</span>						$29.54</li>
+                                    </ul>
+
+                                </div><!-- end container-spacer -->
+
+                                <div class="checkout__discounts">
+                                    <div class="container-spacer">
+                                        <ul>
+                                            <li><span>Savings Credits</span>						-$700 </li>
+                                            <li><span>Points</span>									-10 </li>
+                                            <li><span>Vacation Cash</span>						-10 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="container-spacer">
+                                    <ul class="checkout__your-price">
+                                        <li><span>Your Price</span>$242.14</li>
+                                    </ul>
+
+                                </div><!-- end container-spacer -->
+                            </div><!-- end container-box -->
+
+                            <button class="btn btn-default">Edit Order</button> <button class="btn btn-primary">Place Order Now</button>
+
+                        </div><!-- end checkout__booking-summary -->
+
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>

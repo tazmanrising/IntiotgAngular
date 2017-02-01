@@ -1,0 +1,39 @@
+﻿<figure>
+    <img width="270" height="160" alt="" ng-src="{{ hotel.hotel_snapshot.img_URL }}" class="img-responsive" ng-click="details.callDetails(hotel.hotel_snapshot, top)">
+</figure>
+    <div class="savings-amount-grid">
+        <span>SAVE</span> {{hotel.savings_percentage | number : 0 }}%
+    </div>
+
+<div class="details">
+    <span class="price">
+        <!-- <small>Save</small>
+        <span style="color:red">{{hotel.savings_percentage | number}}%!</span> -->
+    </span>
+    <h4 class="box-title" ng-bind-html="hotel.hotel_snapshot.name | html"><br /><small ng-bind-html="hotel.hotel_snapshot.location | html"></small></h4>
+
+    <p class="search-results-grid__description" sw-angular-popover="{{hotel.hotel_snapshot.desc}}" sw-options="main.popoverOptions"><span ng-bind-html="hotel.hotel_snapshot.short_desc | characters : 100"> </span></p>
+
+    <div class="module-cb__container">
+        <ul class="module-cb__btn-container" ng-click="details.callDetails(hotel.hotel_snapshot, top)" ng-if="main.daily == 'true'">
+            <li class="module-cb__nightly-price"><label ng-bind-html="hotel.daily_market_rate | customCurrency : main.currencyFormat"></label><small>Best Nightly Rate</small></li>
+            <li class="module-cb__label">EARN</li>
+            <li class="module-cb__arrow"><i></i><i></i></li>
+            <li class="module-cb__amount"><label ng-bind-html="hotel.daily_savings | customCurrency : main.currencyFormat"></label><small>{{main.currentSession.display_options.labels.earned}}</small></li>
+        </ul>
+        <ul class="module-cb__btn-container" ng-click="details.callDetails(hotel.hotel_snapshot, top)" ng-if="main.daily == 'false'">
+            <li class="module-cb__nightly-price"><label ng-bind-html="hotel.Total_market_price | customCurrency : main.currencyFormat"></label><small>Best Total Rate</small></li>
+            <li class="module-cb__label">EARN</li>
+            <li class="module-cb__arrow"><i></i><i></i></li>
+            <li class="module-cb__amount" ng-bind-html="hotel.total_savings | customCurrency : main.currencyFormat"><small>{{main.currentSession.display_options.labels.earned}}</small></li>
+        </ul>
+    </div>
+
+	<div class="btn-container">
+		<div class="clearfix">
+			<a class="btn btn-primary" ng-click="details.callDetails(hotel.hotel_snapshot, top)">Select</a>
+			<span style="color: white">SC: {{hotel.supplier_code}} - {{hotel.daily_member_rate_pre_yield}}</span>
+		</div>
+	</div>
+
+</div>

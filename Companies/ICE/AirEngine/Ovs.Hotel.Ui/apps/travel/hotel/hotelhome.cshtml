@@ -1,0 +1,239 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = null;
+    var currentSession = ViewData["currentSession"];
+    var styleSheet1 = ViewData["styleSheet1"];
+    var logo1 = ViewData["logo1"];
+    bool agentMode = (bool) ViewData["agentMode"];
+    var appSettings = ViewData["appSettings"];
+    var title = ViewData["title"];
+}
+
+<!DOCTYPE html>
+<html ng-app="hotelApp">
+<head>
+<title>@title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<!-- Theme Styles -->
+<link rel="stylesheet" href="~/apps/assets/css/bootstrap-grid.css">
+<link rel="stylesheet" href="~/apps/assets/css/rzslider.css">
+
+<link rel="stylesheet" href="~/apps/assets/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/apps/assets/css/kendo/kendo.common-bootstrap.min.css">
+<link rel="stylesheet" href="/apps/assets/css/kendo/kendo.bootstrap.min.css">
+
+<!-- Default Style -->
+<link id="main-style" rel="stylesheet" href="~/apps/assets/css/default.css">
+
+<!-- Theme Style -->
+<link id="brand-style" rel="stylesheet" href="@styleSheet1">
+
+<!---Angular google Places AutoComplete-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi8OKicNgkfP3hl2gd7ABQmU3S_u3-Dak&signed_in=true&libraries=places"></script>
+
+</head>
+
+<body ng-controller="hotelController as main">
+<!-- class="mobile-menu__open" to open mobile menu on body tag -->
+
+<span us-spinner="{radius:30, width:8, length: 16}" spinner-key="spinner-1"></span>
+
+@if (agentMode)
+{
+    <link rel="stylesheet" href="/apps/assets/css/agent.css">
+    <div kendo-splitter="main.agentView" orientation="'vertical'" k-scope-field="main.agentView" panes="[{ resizable: true, collapsible: true, collapsed: false, collapsedSize: '100px', size:'600px', min: '100px', max: '600px', scrollable: false}, { collapsible: false, size: '100%' }]" resize="onResize" style="height: 2000px; width: 100%;">
+    <div kendo-splitter="agent.agentTaskBar" orientation="'horizontal'" id="agenttaskbar" ng-controller="agentController as agent" k-scope-field="agent.agentTaskBar" panes="[{resizable: false, collapsible: false, collapsedSize: '10%', min: '10%', size:'10%', scrollable: false},{resizable: true, size:'80%', scrollable: false},{resizeable: true, collapsible: false, collapsedSize: '10%', min: '10%', size:'10%', scrollable: false}]">
+
+            <div>
+                <div ng-include src="'/apps/common/atb/agentpane.html'"></div>
+            </div>
+            <div>
+                <div ng-include src="'/apps/common/atb/memberpane.html'"></div>
+            </div>
+            <div>
+                <div ng-include src="'/apps/common/atb/currencypane.html'"></div>
+            </div>
+
+
+        </div>
+
+
+
+        <div id="page-wrapper" class="ui-view-container">
+            <div>
+                @* hotel search *@
+                <div ui-view="hotelMenu"></div>
+                <div ui-view="hotelSearch"></div>
+                <div ng-animate="'view'" ui-view="hotelBody"></div>
+                <div ui-view="clubSearch"></div>
+                @* list view *@
+                <div ng-animate="'view'" ui-view="hotelSearchResultsList"></div>
+
+                @* grid view *@
+                <div ng-animate="'view'" ui-view="hotelSearchResultsGrid"></div>
+
+                @* map view *@
+                <div ng-animate="'view'" ui-view="hotelSearchResultsMap"></div>
+                <div ng-animate="'view'" ui-view="hotelDetailView"></div>
+                <div ng-animate="'view'" ui-view="hotelPriceBar"></div>
+
+                @* book *@
+                <div ng-animate="'view'" ui-view="hotelBookView"></div>
+                <div ng-animate="'view'" ui-view="hotelConfirmation"></div>
+                <div ng-animate="'view'" ui-view="hotelReview"></div>
+                <div ng-animate="'view'" ui-view="hotelCancel"></div>
+                <div ui-view="hotelFooter"></div>
+                <div ui-view="hotelFooterPage"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+}
+else
+{
+    <div ui-view="hotelHeader"></div>
+    <div id="page-wrapper" class="ui-view-container">
+        <div>
+
+            @* hotel search *@
+
+            <div ui-view="hotelMenu"></div>
+            <div ui-view="hotelSearch"></div>
+            <div ng-animate="'view'" ui-view="hotelBody"></div>
+            <div ui-view="clubSearch"></div>
+            @* list view *@
+            <div ng-animate="'view'" ui-view="hotelSearchResultsList"></div>
+
+            @* grid view *@
+            <div ng-animate="'view'" ui-view="hotelSearchResultsGrid"></div>
+
+            @* map view *@
+            <div ng-animate="'view'" ui-view="hotelSearchResultsMap"></div>
+            <div ng-animate="'view'" ui-view="hotelDetailView"></div>
+            <div ng-animate="'view'" ui-view="hotelPriceBar"></div>
+
+            @* book *@
+            <div ng-animate="'view'" ui-view="hotelBookView"></div>
+            <div ng-animate="'view'" ui-view="hotelConfirmation"></div>
+            <div ng-animate="'view'" ui-view="hotelReview"></div>
+            <div ng-animate="'view'" ui-view="hotelCancel"></div>
+            <div ng-animate="'view'" ui-view="hotelReceipt"></div>
+            <div ui-view="hotelFooter"></div>
+            <div ui-view="hotelFooterPage"></div>
+
+        </div>
+    </div>
+}
+
+
+<script type="text/javascript" src="/apps/assets/js/jquery-1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/jquery.noconflict.js"></script>
+<script type="text/javascript" src="/apps/assets/js/modernizr.2.7.1.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/moment.min.js"></script>
+<script type="text/javascript" src="/apps/assets/js/humanizeduration.js"></script>
+
+
+
+<!-- Angular Libraries -->
+
+<script src="~/apps/assets/js/angular.min.js"></script>
+<script src="/apps/assets/js/angular-ui-router.min.js"></script>
+<script src="/apps/assets/js/angular-animate.min.js"></script>
+<script src="/apps/assets/js/angular-gettext.min.js"></script>
+<script src="/apps/assets/js/translations.js"></script>
+<script src="/apps/assets/js/spin.js"></script>
+<script src="/apps/assets/js/angular-spinner.min.js"></script>
+<script src="~/apps/assets/js/angular-strap-2.3.6/angular-strap.min.js"></script>
+<script src="~/apps/assets/js/angular-strap-2.3.6/angular-strap.tpl.min.js"></script>
+
+<script src="/apps/assets/js/kendo/kendo.all.min.js"></script>
+<script src="~/apps/assets/js/angularjs-slider-master/dist/rzslider.min.js"></script>
+<script src="~/apps/assets/js/ng-backstretch.js"></script>
+<script src="~/apps/assets/js/tmhDynamicLocale.js"></script>
+<script src="~/apps/assets/js/angular-sanitize.min.js"></script>
+<script src="~/apps/assets/js/swAngular-Popover.js"></script>
+<script src="~/apps/assets/js/truncate.js"></script>
+<script src="~/apps/assets/js/angular-loggly-logger.js"></script>
+<script src="~/apps/assets/js/angular-timer.min.js"></script>
+<script src="~/apps/travel/hotel/hotelApp.js"></script>
+
+@*services*@
+<script src="~/apps/travel/hotel/book/hotelBook-service.js"></script>
+<script src="~/apps/travel/hotel/hoteldetail/hotelDetail-service.js"></script>
+<script src="~/apps/travel/hotel/search/search-service.js"></script>
+<script src="~/apps/travel/hotel/common/hotelSessionService.js"></script>
+<script src="~/apps/travel/hotel/cancel/hotelCancelPolicy-service.js"></script>
+<script src="~/apps/travel/hotel/cancel/hotelCancel-service.js"></script>
+<script src="~/apps/travel/hotel/receipt/hotelReceipt-service.js"></script>
+
+@*controllers*@
+<script src="~/apps/travel/hotel/hoteldetail/hotelDetail-controller.js"></script>
+<script src="~/apps/travel/hotel/book/hotelBook-controller.js"></script>
+<script src="~/apps/travel/hotel/cancel/hotelCancel-controller.js"></script>
+<script src="~/apps/travel/hotel/search/search-controller.js"></script>
+<script src="~/apps/common/footers/footer-controller.js"></script>
+<script src="~/apps/travel/hotel/confirmation/confirmation-controller.js"></script>
+<script src="~/apps/travel/hotel/cancel/hotelGetCancelBooking.js"></script>
+<script src="~/apps/travel/hotel/receipt/hotelReceipt-controller.js"></script>
+
+@*factories*@
+<script src="~/apps/travel/hotel/hoteldetail/detail-factory.js"></script>
+<script src="~/apps/travel/hotel/search/search-factory.js"></script>
+<script src="~/apps/travel/hotel/common/dialogService.js"></script>
+<script src="~/apps/common/footers/footer-factory.js"></script>
+<script src="~/apps/travel/hotel/search/hotelResults-factory.js"></script>
+<script src="~/apps/travel/hotel/book/selectedRoom-factory.js"></script>
+<script src="~/apps/travel/hotel/confirmation/confirmation-factory.js"></script>
+<script src="~/apps/travel/hotel/cancel/hotelCancelPolicy-factory.js"></script>
+<script src="~/apps/travel/hotel/book/bookPurchase-factory.js"></script>
+<script src="~/apps/travel/hotel/book/bookCountriesAndStates-factory.js"></script>
+
+@*directives and filters*@
+<script src="~/apps/travel/hotel/search/hotelSearch-directives.js"></script>
+<script src="~/apps/travel/hotel/search/hotelSearch-filters.js"></script>
+<script src="~/apps/travel/hotel/displayOptions-directives.js"></script>
+
+@*agent mode*@
+@if (agentMode)
+{
+    <script src="~/apps/common/atb/atb-controller.js"></script>
+    <script src="~/apps/common/atb/tabs/shoppinghistory/shoppinghistory-controller.js"></script>
+    <script src="~/apps/common/atb/tabs/transactionhistory/transactionhistory-controller.js"></script>
+}
+
+<script>
+    HotelApp.constant("appSettings", JSON.parse("@appSettings".replace(/&quot;/g, "\"")));
+    HotelApp.constant("currentSession", JSON.parse("@currentSession".replace(/&quot;/g, "\"")));
+</script>
+
+@*<script type="text/javascript" src="/apps/assets/js/bootstrap.js"></script>*@
+
+<!-- load page Javascript -->
+<script type="text/javascript" src="/apps/assets/js/gmap3.min.js"></script>
+
+<div kendo-window="main.messageDialog" modal="true" k-modal="true" ng-cloak k-scope-field="main.messageDialog"
+     k-width="350" k-visible="false">{{main.setDialog()}}
+</div>
+
+<div kendo-window="main.contentDialog" modal="true" k-modal="true" ng-cloak k-scope-field="main.contentDialog"
+     k-visible="false">{{main.setContent()}}
+</div>
+
+<div kendo-window="main.contentIframe" modal="true" iframe="true" k-ifram="true" k-modal="true" ng-cloak k-scope-field="main.contentIframe"
+     k-visible="false">{{main.setIframe()}}
+</div>
+
+</body>
+</html>

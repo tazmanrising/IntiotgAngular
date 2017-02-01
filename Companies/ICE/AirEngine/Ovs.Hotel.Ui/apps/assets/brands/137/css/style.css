@@ -1,0 +1,1678 @@
+﻿/* 1. Global */
+/* 2. Skin colors */
+/* 3. Skin logos */
+/* 4. Important colors */
+/*
+
+-------------------------------------------------------------------------
+
+	** How to Read & Understand the CSS **
+
+-------------------------------------------------------------------------
+
+	.block {}
+	.block__element {}
+	.block--modifier {}
+
+	.block : represents the higher level of an abstraction or component.
+	.block__element : represents a descendent of .block that helps form .block as a whole.
+	.block--modifier : represents a different state or version of .block. ex. female or male are both persons.
+
+	Example:
+
+	.search-form {}  :  same as above
+	.search-form__checkin {} : an element of the main componenet
+	.search-form__checkout {} : an element of the main componenet
+	.search-form--inline {} : the inline version state of the form
+	search-form--stacked {} : the stacked version of the form
+
+-------------------------------------------------------------------------
+
+	1.  Browser Reset + Font Face
+	2.  Globally Applied Styles
+	3.  Header + Search Bar Styles
+	4.  Page Sections
+
+-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*  1.  Browser Reset + Font Face
+/*-------------------------------------------------------------------------*/
+/* HEADS UP: Everything that you will normally find here can be found in the library/less/wp.less */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: 700; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/*-------------------------------------------------------------------------*/
+/*  2.  Globally Applied Styles
+/*-------------------------------------------------------------------------*/
+* {
+  font-weight: 300;
+  outline: none !important; }
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  margin-bottom: 0px; }
+
+ul {
+  list-style: none;
+  list-style-type: none; }
+
+small {
+  font-weight: 300;
+  font-size: .8em; }
+
+/*-------------------------------------------------------------------------*/
+/*  3.  Headings
+/*-------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5 {
+  font-weight: 400; }
+
+h1 {
+  font-size: 1.7em; }
+
+h2 {
+  font-size: 1.4em; }
+
+h2.border-dotted {
+  border-bottom: 1px dotted #CCCCCC;
+  padding-bottom: 10px;
+  margin-bottom: 15px; }
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px; }
+
+h4 {
+  font-size: 1.1em;
+  margin-bottom: 5px; }
+
+p {
+  line-height: 20px; }
+
+.page-heading {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccd2dc;
+  margin-bottom: 25px;
+  color: #4c4c4c; }
+
+.box {
+  background: #fff;
+  border: 1px solid #d4d7dc; }
+
+.box-spacing {
+  padding: 20px; }
+
+/*-------------------------------------------------------------------------*/
+/*  Spacing
+/*-------------------------------------------------------------------------*/
+.top-25px {
+  margin-top: 25px; }
+
+.top-20px {
+  margin-top: 20px; }
+
+.top-15px {
+  margin-top: 15px; }
+
+.top-10px {
+  margin-top: 10px; }
+
+.btm-25px {
+  margin-bottom: 25px; }
+
+.btm-20px {
+  margin-bottom: 20px; }
+
+.btm-15px {
+  margin-bottom: 15px; }
+
+.btm-10px {
+  margin-bottom: 10px; }
+
+/*-------------------------------------------------------------------------*/
+/*  4.  Container
+/*-------------------------------------------------------------------------*/
+.container-fluid {
+  max-width: 1170px; }
+
+.container-box {
+  background: #fff;
+  border: 1px solid #dbe0e7;
+  margin-bottom: 15px; }
+  .container-box .form-hotel-search {
+    margin-bottom: 0; }
+
+.container-spacer {
+  padding: 15px;
+  overflow: hidden; }
+
+/*-------------------------------------------------------------------------*/
+/*  Content Styling (bullets, p tags, etc)
+/*-------------------------------------------------------------------------*/
+.content-format p {
+  line-height: 22px;
+  margin-bottom: 15px; }
+
+.content-format strong {
+  font-weight: 500; }
+
+.content-format ul {
+  margin-left: 18px;
+  margin-bottom: 15px;
+  list-style: disc; }
+  .content-format ul li {
+    line-height: 22px; }
+
+.content-format .mod__ul-span-cols ul {
+  margin-left: 0; }
+
+.content-format .mod__ul-span-cols p {
+  margin-bottom: 0; }
+
+.content-format .review-stars {
+  margin-left: 0;
+  margin-bottom: 0; }
+
+/*-------------------------------------------------------------------------*/
+/*  4.  Shared Search Pricing
+/*-------------------------------------------------------------------------*/
+.search-results-listings .savings-breakdown, .details__rooms-table .savings-breakdown, .search-results-grid .savings-breakdown {
+  display: inline-block; }
+  .search-results-listings .savings-breakdown li, .details__rooms-table .savings-breakdown li, .search-results-grid .savings-breakdown li {
+    line-height: 18px;
+    margin-bottom: 7px; }
+  .search-results-listings .savings-breakdown li:last-child, .details__rooms-table .savings-breakdown li:last-child, .search-results-grid .savings-breakdown li:last-child {
+    border-top: 1px dashed #d4d4d4;
+    padding-top: 10px; }
+  .search-results-listings .savings-breakdown span, .details__rooms-table .savings-breakdown span, .search-results-grid .savings-breakdown span {
+    float: right; }
+  .search-results-listings .savings-breakdown strong, .details__rooms-table .savings-breakdown strong, .search-results-grid .savings-breakdown strong {
+    font-weight: 500 !important;
+    color: #e03c3d; }
+
+/*-------------------------------------------------------------------------*/
+/*  Universal Modules
+/*-------------------------------------------------------------------------*/
+.mod__ul-span-cols ul {
+  list-style: none;
+  list-style-type: none; }
+  .mod__ul-span-cols ul li {
+    line-height: 22px;
+    margin-bottom: 4px;
+    text-align: right;
+    clear: both; }
+    .mod__ul-span-cols ul li span {
+      float: left;
+      text-align: left; }
+
+.mod__ul-span-cols .checkout__buttons {
+  padding-top: 20px; }
+
+.mod__table-two-col tr td {
+  padding: 0.25rem;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: none; }
+
+/* Four Column Grid (Top Destinations Home Page)*/
+.mod__four-col .mod__four-col__items img {
+  margin-bottom: 8px; }
+
+.mod__four-col .mod__four-col__items .item {
+  margin-bottom: 10px; }
+
+/* Unordered list with bullets */
+.mod_bullet-list {
+  list-style-type: disc;
+  list-style: disc;
+  margin-left: 0px !important; }
+  .mod_bullet-list li {
+    text-align: left;
+    margin-left: 20px; }
+
+/*-------------------------------------------------------------------------*/
+/*  Simple Carousel
+/*-------------------------------------------------------------------------*/
+.simple-carousel {
+  font-size: 0em;
+  overflow: hidden; }
+  .simple-carousel li {
+    margin-right: 25px;
+    display: inline-block;
+    text-align: -webkit-match-parent; }
+    .simple-carousel li p {
+      font-size: 1em !important; }
+
+/*-------------------------------------------------------------------------*/
+/*  Hotel Nightly Price
+/*-------------------------------------------------------------------------*/
+.nightly-price {
+  text-align: center;
+  line-height: 19px;
+  font-size: 19px; }
+  .nightly-price small {
+    display: block;
+    font-size: 14px; }
+
+/*-------------------------------------------------------------------------*/
+/*  Custom Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none; }
+  .mod__ul-span-cols ul li {
+    text-align: left; }
+    .mod__ul-span-cols ul li span {
+      display: block;
+      float: none; }
+    .mod__ul-span-cols ul li u {
+      display: none; } }
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .hidden-xs-sm, .hidden-sm {
+    display: none; } }
+
+/*-------------------------------------------------------------------------*/
+/*  General Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+@media (min-width: 767px) {
+  .hidden-xs {
+    display: none; } }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .hidden-xs-sm, .hidden-sm {
+    display: none; }
+  .details-rooms-table .savings-breakdown {
+    margin-left: 0; } }
+
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*-------------------------------------------------------------------------*/
+/*  General Media Queries
+/*-------------------------------------------------------------------------*/
+.glyphicon {
+  background-image: url("../img/glyphicons.png");
+  background-position: 0px -1000px;
+  background-repeat: no-repeat; }
+  .glyphicon i {
+    display: inline-block; }
+
+.glyphicon-chevron-left {
+  background-position: 0 0 !important; }
+
+.glyphicon-chevron-right {
+  background-position: 0 -33px !important; }
+
+/*-------------------------------------------------------------------------*/
+/*  Rzslider
+/*-------------------------------------------------------------------------*/
+rzslider span.rz-pointer, rzslider span.rz-bar.rz-selection {
+  background-color: #3199F0 !important; }
+
+/*-------------------------------------------------------------------------*/
+/*  Main Navigation
+/*-------------------------------------------------------------------------*/
+.main-nav {
+  background: #002859; }
+  .main-nav .navbar {
+    float: left;
+    height: 48px; }
+  .main-nav .phone-number {
+    float: right;
+    color: #777;
+    padding: 15px 0 0 0; }
+  .main-nav .mobile-menu__bars {
+    color: #777;
+    padding: 7px 0px; }
+  .main-nav .mobile-menu__bars:hover {
+    cursor: pointer; }
+
+.main-nav .nav-pills .nav-link {
+  color: #777;
+  font-weight: 500; }
+
+.main-nav .navbar {
+  padding-right: 0;
+  padding-left: 0;
+  float: right;
+  height: auto; }
+
+.nav-close {
+  display: none; }
+
+.header-club {
+  background: none;
+  background-color: white;
+  min-height: 104px;
+  border-bottom: 1px solid #196b8e; }
+  .header-club .main-nav {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    background: none; }
+  .header-club .nav-top {
+    margin: 0px; }
+  .header-club .header-main__logo {
+    background: none !important;
+    display: none !important;
+    visibility: hidden !important; }
+  .header-club h1 a {
+    display: block;
+    background-image: url(https://www.ovscruise.co.uk/cruises/promos/uk/new/images/partner_137_logo.png) !important;
+    background-repeat: no-repeat;
+    background-position: center left;
+    width: 383px;
+    height: 73px; }
+
+.main-nav {
+  padding-right: 0px; }
+
+.navbar-static-top,
+.member-type-container {
+  float: right;
+  color: #777 !important;
+  width: 100%; }
+
+.navbar-static-top .nav {
+  float: right; }
+
+/*-------------------------------------------------------------------------*/
+/*  Anchor Navigation
+/*-------------------------------------------------------------------------*/
+.anchor-nav li {
+  display: inline-block;
+  padding: 15px 10px;
+  font-weight: 300;
+  font-size: 18px;
+  position: relative; }
+
+.anchor-nav li.selected:after {
+  background: #9c9c9c;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  content: "";
+  width: 100%;
+  height: 4px; }
+
+/*-------------------------------------------------------------------------*/
+/*  Anchor Navigation
+/*-------------------------------------------------------------------------*/
+.nav-top {
+  margin-bottom: 10px; }
+  .nav-top li {
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #fff; }
+  .nav-top li:first-child {
+    border: none;
+    padding-left: 0;
+    margin-left: 0; }
+
+/*-------------------------------------------------------------------------*/
+/*  Custom Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+@media (max-width: 400px) {
+  .mobile-menu__open .brand-conainer img {
+    background-size: 80%; } }
+
+@media (max-width: 800px) {
+  .nav.nav-pills {
+    display: none; }
+  body.mobile-menu__open {
+    overflow: hidden; }
+  .mobile-menu__open .nav.nav-pills {
+    display: block !important; }
+  .mobile-menu__open .container-fluid {
+    padding: 0; }
+  .mobile-menu__open .navbar {
+    width: 100%; }
+  .mobile-menu__open .brand-conainer {
+    position: absolute !important;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    float: none;
+    width: 100% !important;
+    display: block;
+    background: none; }
+    .mobile-menu__open .brand-conainer x a {
+      width: 100%;
+      max-width: 300px; }
+  .mobile-menu__open .nav li {
+    display: block;
+    width: 100%; }
+  .mobile-menu__open .nav li:hover {
+    background: #043A7D; }
+  .mobile-menu__open .nav-pills .nav-item + .nav-item {
+    margin-left: 0; }
+  .mobile-menu__open .main-nav {
+    padding-top: 100px;
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+  .mobile-menu__open .nav-close {
+    font-size: 1.4em;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #fff;
+    z-index: 4000;
+    padding: 10px;
+    display: block; }
+  .mobile-menu__open .nav-close:hover {
+    cursor: pointer; }
+  .mobile-menu__open .mobile-menu__bars {
+    display: none; } }
+
+/* Extra Small devices (phones, 768px and below) */
+@media (min-width: 800px) {
+  .mobile-menu__open .brand-conainer img {
+    background-size: auto; }
+  .mobile-menu__bars {
+    display: none; } }
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .credits-balance {
+    display: none; } }
+
+/*-------------------------------------------------------------------------*/
+/*  General Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*-------------------------------------------------------------------------*/
+/*  Brand Header
+/*-------------------------------------------------------------------------*/
+hgroup h2 {
+  margin-bottom: 15px; }
+
+.header-main {
+  background: white;
+  min-height: 82px; }
+  .header-main h1 {
+    margin: 0;
+    padding: 0; }
+  .header-main .member-type-container {
+    margin-top: 14px;
+    float: right;
+    margin-left: 15px;
+    padding-top: 5px;
+    min-width: 180px; }
+    .header-main .member-type-container .header-links {
+      float: right;
+      margin-top: 12px; }
+      .header-main .member-type-container .header-links li {
+        display: inline-block;
+        margin-left: 15px; }
+      .header-main .member-type-container .header-links li:first-child {
+        margin-left: 0; }
+      .header-main .member-type-container .header-links li, .header-main .member-type-container .header-links a {
+        color: #fff; }
+    .header-main .member-type-container .credits-balance {
+      float: right;
+      background: #002859;
+      margin-left: 15px;
+      color: #fff;
+      font-weight: 400;
+      padding: 7px;
+      border-bottom: 2px solid #001733;
+      font-size: .9em; }
+      .header-main .member-type-container .credits-balance small {
+        width: 83px;
+        display: inline-block;
+        font-size: 0.8em !important;
+        font-weight: 300; }
+
+/*-------------------------------------------------------------------------*/
+/*  Custom Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+@media (max-width: 520px) {
+  .header-main .member-type-container {
+    float: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 15px; } }
+
+/* Extra Small devices (phones, 768px and below) */
+/* Small devices (tablets, 768px and up) */
+/*-------------------------------------------------------------------------*/
+/*  General Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*-------------------------------------------------------------------------*/
+/*  Layout
+/*-------------------------------------------------------------------------*/
+.map-container,
+.details-hotel-photos img,
+.table-block__room-photo img,
+.img-responsive,
+.item img {
+  border-radius: 3px; }
+
+.col-content, .col-sidebar {
+  position: relative;
+  min-height: 1px; }
+
+.col-content {
+  width: 73%;
+  float: left;
+  padding-left: 0px;
+  padding-right: 15px; }
+
+.col-sidebar {
+  width: 27%;
+  float: left; }
+
+.mod__ul-two-cols ul {
+  margin-left: 0;
+  overflow: hidden; }
+  .mod__ul-two-cols ul li {
+    width: 50%;
+    float: left;
+    display: block; }
+
+@media (max-width: 1070px) {
+  .col-content {
+    width: 70%; }
+  .col-sidebar {
+    width: 30%; } }
+
+@media (max-width: 930px) {
+  .col-content {
+    width: 65%; }
+  .col-sidebar {
+    width: 35%; } }
+
+@media (max-width: 775px) {
+  .col-content {
+    width: 100%;
+    display: block; }
+  .col-sidebar {
+    width: 100%;
+    display: block; } }
+
+/*-------------------------------------------------------------------------*/
+/*  Hotel Search Form
+/*-------------------------------------------------------------------------*/
+.form-hotel-search {
+  padding: 23px 0 16px 0;
+  background: #d8dadd; }
+  .form-hotel-search input, .form-hotel-search select {
+    border-radius: .15rem !important; }
+  .form-hotel-search label {
+    font-size: 0.938em;
+    margin-bottom: 5px; }
+  .form-hotel-search fieldset, .form-hotel-search .btn-default {
+    float: left; }
+  .form-hotel-search fieldset {
+    margin-right: 5px; }
+  .form-hotel-search fieldset.destination {
+    width: 100%;
+    max-width: 423px; }
+  .form-hotel-search fieldset.checkin {
+    max-width: 120px; }
+  .form-hotel-search fieldset.checkout {
+    max-width: 120px; }
+  .form-hotel-search .children-enabled {
+    clear: both; }
+    .form-hotel-search .children-enabled .btn-search {
+      margin-top: 0; }
+  .form-hotel-search .children-container {
+    overflow: hidden;
+    clear: both; }
+    .form-hotel-search .children-container .children-clone {
+      display: inline-block;
+      margin-right: 4px; }
+  .form-hotel-search .btn-search {
+    margin-top: 21px;
+    float: left;
+    text-transform: uppercase;
+    background-color: #196B8E;
+    border-color: #196B8E;
+    color: #fff; }
+  .form-hotel-search .btn-search:after {
+    content: " \203A"; }
+  .form-hotel-search .btn-search:hover {
+    background-color: #3199F0;
+    border-color: #3199F0;
+    color: #fff; }
+
+.datepicker {
+  padding: 4px; }
+  .datepicker .btn.btn-default.pull-left, .datepicker .btn.btn-default.pull-right {
+    padding: 0 !important; }
+    .datepicker .btn.btn-default.pull-left i, .datepicker .btn.btn-default.pull-right i {
+      display: block;
+      height: 32px;
+      width: 32px; }
+  .datepicker .btn.btn-default.btn-block.text-strong:hover, .datepicker .btn.btn-default.pull-left:hover, .datepicker .btn.btn-default.pull-right:hover {
+    background: #f2f2f2; }
+  .datepicker .btn.btn-default.btn-primary {
+    background: #e1e1e1;
+    color: #5c5c5c; }
+  .datepicker th {
+    padding-bottom: 5px; }
+  .datepicker .btn-default {
+    border: none; }
+  .datepicker .btn-default:hover {
+    background: #e1e1e1; }
+  .datepicker .btn-today {
+    background: #c0d2ee; }
+    .datepicker .btn-today span {
+      font-weight: 500 !important; }
+  .datepicker .btn {
+    padding: .375rem 0 .275rem 0 !important; }
+  .datepicker .btn.disabled, .datepicker .btn:disabled, .datepicker fieldset[disabled] .btn {
+    background: #f2f2f2 !important; }
+  .datepicker .btn-today[disabled] {
+    color: #696969; }
+
+rzslider span.rz-bubble:before {
+  content: "\00A3"; }
+
+/*-------------------------------------------------------------------------*/
+/*  Custom Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 500px and below) */
+@media (max-width: 500px) {
+  .form-hotel-search fieldset.form-group {
+    width: 100% !important;
+    max-width: none; } }
+
+.btn {
+  display: inline-block;
+  padding: .375rem 1rem !important;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  border: .0625rem solid transparent;
+  border-radius: .15rem; }
+
+/*-------------------------------------------------------------------------*/
+/*  Primary Button
+/*-------------------------------------------------------------------------*/
+.btn-primary {
+  text-transform: uppercase;
+  background-color: #196B8E;
+  border-color: #196B8E; }
+
+.btn-primary:after {
+  content: " \203A"; }
+
+/* a link the user has visited */
+.btn-primary:visited {
+  background-color: #196B8E;
+  border-color: #196B8E; }
+
+.btn-primary:hover {
+  background-color: #3199F0;
+  border-color: #3199F0; }
+
+.btn-primary:focus {
+  background-color: #3199F0;
+  border-color: #3199F0; }
+
+/*-------------------------------------------------------------------------*/
+/*  Default Button
+/*-------------------------------------------------------------------------*/
+.btn-default {
+  background-color: #fff;
+  border: 1px solid #b9b9b9; }
+
+/*-------------------------------------------------------------------------*/
+/*  Default Button
+/*-------------------------------------------------------------------------*/
+.btn-checkout, .btn-checkout--red {
+  font-weight: 300;
+  text-transform: uppercase;
+  background: #fff;
+  border: 1px solid #ccd2dc;
+  padding-top: 9px !important;
+  display: block; }
+
+.btn-checkout--red {
+  color: #fff;
+  background: #e03c3d;
+  border: 1px solid #e03c3d; }
+
+.btn-checkout--red:after {
+  content: " \203A"; }
+
+.btn-checkout span, .btn-checkout--red span {
+  display: inline-block;
+  margin-left: 20px; }
+
+/*-------------------------------------------------------------------------*/
+/*  Light Button
+/*-------------------------------------------------------------------------*/
+.btn-light {
+  background: #eff1f4;
+  border: 1px solid #b9b9b9; }
+
+.btn-container ul li {
+  display: inline-block; }
+
+/*-------------------------------------------------------------------------*/
+/*  Brand Header
+/*-------------------------------------------------------------------------*/
+.home-backstretch-form {
+  height: 429px;
+  position: relative;
+  margin-bottom: 25px; }
+  .home-backstretch-form img {
+    vertical-align: middle; }
+  .home-backstretch-form .backstretch {
+    width: 100%;
+    height: 100%; }
+  .home-backstretch-form .form-backstretch {
+    position: relative; }
+  .home-backstretch-form .form-wrap {
+    padding: 40px 25px 0 25px;
+    margin-top: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%; }
+    .home-backstretch-form .form-wrap h1 {
+      font-weight: 300;
+      font-size: 1.5em;
+      color: #4f4f4f; }
+  .home-backstretch-form .form-hotel-search {
+    margin: 0 -15px;
+    background: none; }
+    .home-backstretch-form .form-hotel-search label {
+      color: #4f4f4f; }
+
+.home-promo-section {
+  position: relative; }
+  .home-promo-section .box {
+    min-height: 211px;
+    position: relative;
+    overflow: hidden; }
+  .home-promo-section .cs-promo h3 {
+    width: 60%; }
+  .home-promo-section .cs-promo h4 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 10px; }
+  .home-promo-section .cs-promo .cs-promo__img {
+    z-index: 1;
+    position: absolute;
+    bottom: -25px;
+    right: -50px; }
+  .home-promo-section .cc-promo p {
+    max-width: 200px; }
+  .home-promo-section .cc-promo .cc-promo__img {
+    z-index: 1;
+    position: absolute;
+    bottom: -70px;
+    right: -50px; }
+  .home-promo-section .cs-promo h4, .home-promo-section .cs-promo h3, .home-promo-section .cs-promo p, .home-promo-section .cc-promo h4, .home-promo-section .cc-promo h3, .home-promo-section .cc-promo p {
+    position: relative;
+    z-index: 100; }
+  .home-promo-section .cs-promo h3, .home-promo-section .cc-promo h3 {
+    font-size: 1.75em;
+    font-weight: 300;
+    margin-bottom: 15px; }
+
+@media (max-width: 500px) {
+  .home-backstretch-form {
+    height: 700px !important; } }
+
+/* Mobile devices (phones, 768px and below) */
+@media (max-width: 768px) {
+  .home-promo-section .cs-promo {
+    margin-bottom: 15px; }
+    .home-promo-section .cs-promo h3 {
+      width: 100%; }
+  .home-promo-section .cs-promo__img {
+    height: 131px; }
+  .home-promo-section .cc-promo__img {
+    height: 152px;
+    right: -50px; }
+  .home-promo-section .cs-promo__img, .home-promo-section .cc-promo__img {
+    position: static !important; } }
+
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*
+    Template: Search Page
+
+-------------------------------------------------------------------------
+
+    1. Search Reuslts Listings (.search-results-listings) 
+    2. Shared Search Results & Search Results Grid Styles
+    3. Search Results Grid View
+    4. Sidebar 
+
+
+-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/*  1.  Search Results Listings
+/*-------------------------------------------------------------------------*/
+.search-results-listings .group-container {
+  position: relative; }
+
+.search-results-listings article {
+  background: #fff;
+  border: 1px solid #dadfe6;
+  margin-bottom: 10px;
+  padding-bottom: 15px; }
+
+.search-results-listings .featured {
+  border: 1px solid #f2a113; }
+  .search-results-listings .featured .search-results-listings__featured-headline {
+    background: #f2a113;
+    width: 100%;
+    color: #fff;
+    padding: 7px 15px;
+    font-weight: 400; }
+  .search-results-listings .featured .savings-amount {
+    background: #f2a113; }
+
+.search-results-listings p {
+  margin-bottom: 15px;
+  line-height: 20px; }
+
+.search-results-listings article ul, .search-results-listings aside ul li {
+  list-style-type: none;
+  list-style: none; }
+
+.search-results-listings__hotel-image {
+  float: left;
+  padding-right: 20px;
+  width: 33%;
+  overflow: hidden;
+  padding-left: 15px; }
+  .search-results-listings__hotel-image .savings-amount {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 3px; }
+  .search-results-listings__hotel-image img {
+    margin-right: 15px;
+    float: left; }
+
+.search-results-listings h3 {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-bottom: 5px; }
+
+.search-results-listings .search-results-listings__hotel-details {
+  position: relative;
+  padding: 15px 15px 0 15px; }
+  .search-results-listings .search-results-listings__hotel-details .heading h3 {
+    display: inline-block; }
+  .search-results-listings .search-results-listings__hotel-details .heading ul {
+    display: inline-block;
+    clear: right; }
+
+.search-results-listings .savings-breakdown {
+  min-width: 190px;
+  display: inline-block;
+  margin-left: 20px; }
+  .search-results-listings .savings-breakdown li {
+    margin-bottom: 7px; }
+  .search-results-listings .savings-breakdown li:last-child {
+    border-top: 1px dashed #d4d4d4;
+    padding-top: 10px; }
+  .search-results-listings .savings-breakdown span {
+    float: right; }
+  .search-results-listings .savings-breakdown strong {
+    font-weight: 400 !important;
+    color: #e03c3d; }
+
+.search-results-listings .search-results-listings__hotel-pricing {
+  width: 67%;
+  float: right;
+  padding: 0 15px 0 0;
+  min-height: 87px;
+  position: relative; }
+
+.search-results-listings .btn-container {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .search-results-listings .btn-container .btn {
+    margin-bottom: 10px; }
+
+/*-------------------------------------------------------------------------*/
+/*  2.  Shared Search Results & Search Results Grid Styles
+/*-------------------------------------------------------------------------*/
+.search-results-listings .col-content, .search-results-grid .col-content {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 75%;
+  float: right; }
+
+.search-results-listings .col-sidebar, .search-results-grid .col-sidebar {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 25%;
+  float: left; }
+
+.search-results-listings .savings-amount, .search-results-grid .savings-amount {
+  display: inline-block;
+  background: #3199F0;
+  color: #fff;
+  padding: 8px 15px;
+  font-weight: 400;
+  font-size: 1.650em;
+  vertical-align: top;
+  width: 84px;
+  height: 60px;
+  position: relative;
+  text-transform: uppercase; }
+  .search-results-listings .savings-amount small, .search-results-grid .savings-amount small {
+    display: block;
+    font-size: .663em !important;
+    font-weight: 300;
+    text-transform: uppercase; }
+
+.search-results-listings .savings-amount:after, .search-results-grid .savings-amount:after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 13px solid #fff;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; }
+
+.search-results-listings .savings-amount:before, .search-results-grid .savings-amount:before {
+  border-radius: 4px;
+  position: absolute;
+  left: -1px;
+  top: -4px;
+  content: "";
+  background: #ccd2dc;
+  width: 6px;
+  height: 78px; }
+
+.search-results-listings h4, .search-results-grid h4 {
+  font-weight: 300;
+  margin-bottom: 15px; }
+
+/*-------------------------------------------------------------------------*/
+/*  3.  Search Results Grid View
+/*-------------------------------------------------------------------------*/
+.search-results-grid .savings-amount-grid {
+  background: #3199F0;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.3em; }
+  .search-results-grid .savings-amount-grid span {
+    font-weight: 300; }
+
+.search-results-grid .savings-breakdown {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 15px; }
+
+.search-results-grid .btn-primary {
+  width: 100%; }
+
+.search-results-grid .box {
+  margin-bottom: 15px; }
+  .search-results-grid .box .description {
+    margin-bottom: 10px; }
+
+.search-results-grid .image-box .details {
+  padding: 10px; }
+
+.search-results-grid .image-box .box-title {
+  height: 76px; }
+
+/*-------------------------------------------------------------------------*/
+/*  4.  Sidebar 
+/*-------------------------------------------------------------------------*/
+.sidebar-filters .filter {
+  margin-bottom: 20px; }
+
+.sidebar-filters ul li {
+  margin-bottom: 5px; }
+
+.sidebar-filters ul li label:hover {
+  cursor: pointer; }
+
+.sidebar-filters ul li input {
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+  margin-right: 5px; }
+
+.sidebar-filters h4 {
+  font-weight: 400; }
+
+.sort-by-section {
+  padding-bottom: 20px; }
+  .sort-by-section .swap-tiles {
+    float: right; }
+    .sort-by-section .swap-tiles li {
+      display: inline-block;
+      margin-left: 10px; }
+    .sort-by-section .swap-tiles a {
+      font-size: .9em;
+      position: relative;
+      padding-left: 20px;
+      color: #818283; }
+    .sort-by-section .swap-tiles a:hover {
+      cursor: pointer; }
+    .sort-by-section .swap-tiles i {
+      position: absolute;
+      left: 0px;
+      margin-right: 5px; }
+
+.search-results-title i {
+  display: inline-block;
+  margin-right: 10px; }
+
+/*-------------------------------------------------------------------------*/
+/*  Five Start Ratings
+/*-------------------------------------------------------------------------*/
+.filter__rating .starrating {
+  padding: 3px 0; }
+  .filter__rating .starrating:hover {
+    cursor: pointer; }
+  .filter__rating .starrating > span:first-child {
+    margin-right: 10px; }
+
+.filter__rating .starrating:hover {
+  background-color: #efefef; }
+
+.filter__rating .rating .fa-star {
+  margin-right: 2px; }
+
+.filter__rating .activeStarrating .fa {
+  color: #3199F0; }
+
+.review-stars {
+  display: inline-block;
+  padding-left: 15px; }
+  .review-stars li {
+    font-size: 16px;
+    padding: 0;
+    margin-right: 1px;
+    color: #bebebe; }
+  .review-stars .fa-star {
+    margin-right: 2px;
+    position: relative; }
+  .review-stars .fa-star-half {
+    position: relative; }
+  .review-stars .fa-star-half:before {
+    width: 16px;
+    position: absolute;
+    left: -4px;
+    bottom: -2px; }
+  .review-stars li.stars-1:nth-child(-n+1) {
+    color: #196b8e; }
+  .review-stars li.stars-2:nth-child(-n+2) {
+    color: #196b8e; }
+  .review-stars li.stars-3:nth-child(-n+3) {
+    color: #196b8e; }
+  .review-stars li.stars-4:nth-child(-n+4) {
+    color: #196b8e; }
+  .review-stars li.stars-5:nth-child(-n+5) {
+    color: #196b8e; }
+
+/*-------------------------------------------------------------------------*/
+/*  Map View
+/*-------------------------------------------------------------------------*/
+.search-results-map .k-map {
+  border: 1px solid #ccc;
+  height: 800px; }
+
+/*-------------------------------------------------------------------------*/
+/*  Media Queries
+/*-------------------------------------------------------------------------*/
+@media (max-width: 850px) {
+  .search-results-listings__hotel-image {
+    width: 25%; }
+  .search-results-listings__hotel-pricing {
+    width: 75% !important; }
+  .search-results-listings .savings-amount:before {
+    border-radius: 4px;
+    position: absolute;
+    left: -1px;
+    top: -4px;
+    width: 5px;
+    height: 61px; }
+  .search-results-listings .savings-amount {
+    font-size: 1.20em;
+    width: 66px;
+    height: 44px;
+    padding: 7px 12px; }
+    .search-results-listings .savings-amount small {
+      font-size: .6em !important; }
+  .search-results-listings .savings-amount:after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 13px solid #fff;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent; } }
+
+@media (max-width: 750px) {
+  .search-results-listings .col-content {
+    width: 100%;
+    display: block;
+    float: none; }
+  .search-results-listings .col-sidebar {
+    width: 100%;
+    display: block;
+    float: none; }
+  .search-results-listings .search-results-listings__hotel-image {
+    width: 30% !important; }
+    .search-results-listings .search-results-listings__hotel-image img {
+      width: 100%; }
+  .search-results-listings .search-results-listings__hotel-pricing {
+    width: 70% !important; } }
+
+@media (max-width: 600px) {
+  .search-results-listings .search-results-listings__hotel-image {
+    width: 100% !important;
+    display: block;
+    float: none; }
+    .search-results-listings .search-results-listings__hotel-image img {
+      margin-right: 0px; }
+  .search-results-listings .search-results-listings__hotel-pricing {
+    width: 100% !important;
+    float: none;
+    display: block;
+    padding-left: 15px;
+    margin-top: 15px; }
+    .search-results-listings .search-results-listings__hotel-pricing .savings-breakdown {
+      width: 50%; } }
+
+@media (max-width: 495px) {
+  .search-results-listings__hotel-image img {
+    width: 100%; }
+  .search-results-listings img {
+    width: 100%;
+    margin-bottom: 15px; }
+  .search-results-listings p {
+    display: none; }
+  .search-results-listings .search-results-listings__hotel-pricing .savings-breakdown {
+    width: 65%; }
+  .search-results-listings__hotel-pricing {
+    display: block;
+    clear: left; }
+    .search-results-listings__hotel-pricing .btn-primary {
+      width: 100%; }
+  .savings-breakdown {
+    margin-bottom: 15px;
+    margin-left: 0;
+    width: 65%;
+    float: right; }
+  .review-stars {
+    padding-left: 0;
+    display: block; }
+  .btn-container {
+    position: static !important;
+    display: block; } }
+
+@media (max-width: 360px) {
+  .search-results-listings__hotel-image img {
+    margin-bottom: 0; }
+  .search-results-listings__hotel-pricing .savings-amount {
+    display: block !important;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 18px !important;
+    text-align: center;
+    padding: 10px;
+    height: inherit; }
+    .search-results-listings__hotel-pricing .savings-amount small {
+      display: inline-block;
+      font-size: 18px !important; }
+    .search-results-listings__hotel-pricing .savings-amount:before {
+      display: none; }
+    .search-results-listings__hotel-pricing .savings-amount:after {
+      display: none; }
+  .search-results-listings__hotel-pricing .savings-breakdown {
+    width: 100% !important; } }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 496px) and (max-width: 1044px) {
+  .search-results-listings .savings-breakdown {
+    margin-left: 15px !important; } }
+
+/* Mobile devices (phones, 768px and below) */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*-------------------------------------------------------------------------*/
+/*  Top Hotel Summary
+/*-------------------------------------------------------------------------*/
+.details__hotel-summary {
+  padding: 20px 0 20px 0;
+  background: #fff;
+  overflow: hidden; }
+  .details__hotel-summary figure {
+    float: left;
+    margin-right: 15px; }
+    .details__hotel-summary figure img {
+      max-width: 210px; }
+  .details__hotel-summary h3 {
+    margin-bottom: 5px;
+    font-size: 1.3em; }
+  .details__hotel-summary h4 {
+    font-weight: 300;
+    font-size: 1em; }
+  .details__hotel-summary .checkout__buttons {
+    float: right; }
+    .details__hotel-summary .checkout__buttons button {
+      margin-bottom: 5px; }
+    .details__hotel-summary .checkout__buttons small {
+      text-align: right; }
+
+.details__rooms-table {
+  margin-bottom: 0; }
+  .details__rooms-table td {
+    padding-top: 25px;
+    padding-bottom: 15px; }
+  .details__rooms-table tr:nth-child(even) {
+    background: rgba(236, 239, 241, 0.44); }
+  .details__rooms-table .table-block__room-checkout {
+    margin-bottom: 15px; }
+
+.details__hotel-rooms hgroup h2 {
+  margin-bottom: 0 !important; }
+
+/*-------------------------------------------------------------------------*/
+/*  Rooms Table
+/*-------------------------------------------------------------------------*/
+.table-block__room-details {
+  width: 33%;
+  padding: 0; }
+  .table-block__room-details h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em; }
+  .table-block__room-details img {
+    float: left;
+    margin-right: 15px; }
+
+.table-block__room-pricing .savings-breakdown {
+  margin-left: 0; }
+
+.table-block__room-checkout {
+  vertical-align: top;
+  text-align: center; }
+  .table-block__room-checkout .btn-checkout--red {
+    margin: 0 auto;
+    margin-bottom: 15px; }
+
+.details__reviews .overall-rating {
+  padding: 15px 0;
+  border-bottom: 1px solid #D8D8D8;
+  margin-bottom: 25px; }
+
+.details__reviews .review {
+  margin-bottom: 25px;
+  overflow: hidden; }
+  .details__reviews .review h3 {
+    margin-bottom: 5px; }
+  .details__reviews .review .posted-date {
+    margin-bottom: 15px; }
+  .details__reviews .review small {
+    font-size: .9em;
+    display: block; }
+
+.details__amenities ul {
+  overflow: hidden; }
+  .details__amenities ul li {
+    line-height: 22px;
+    width: 30%;
+    float: left; }
+
+/*-------------------------------------------------------------------------*/
+/*  Media Queries
+/*-------------------------------------------------------------------------*/
+@media (max-width: 435px) {
+  .table-block__room p {
+    font-size: .8em !important; }
+  .table-block__room-pricing {
+    float: left;
+    width: 100%; }
+    .table-block__room-pricing .savings-breakdown {
+      display: block; }
+  .table-block__room-checkout {
+    float: left;
+    width: 100%; }
+  .btn-checkout, .btn-checkout--red {
+    display: block;
+    width: 100%; } }
+
+/* Mobile devices (phones, 768px and below) */
+@media (max-width: 768px) {
+  .table-block__room {
+    display: block; }
+  .table-block__room-pricing {
+    display: block;
+    float: left;
+    border-top: none !important; }
+  .table-block__room-checkout {
+    float: right;
+    border-top: none !important; }
+  .savings-breakdown {
+    margin-left: 0px !important; }
+  .details__hotel-summary figure {
+    margin: 0;
+    width: 100%; }
+    .details__hotel-summary figure img {
+      width: 100% !important;
+      margin-bottom: 15px; }
+  .details__hotel-summary .checkout__buttons {
+    float: none; }
+  .details-rooms-table td {
+    padding-top: 15px; } }
+
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+.checkout-content h2 {
+  margin-bottom: 15px; }
+
+.form-checkout small {
+  margin-top: 5px;
+  display: block;
+  margin-bottom: 5px;
+  line-height: 18px; }
+
+.form-checkout .form-group {
+  width: 46%;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  vertical-align: top; }
+  .form-checkout .form-group input, .form-checkout .form-group select {
+    width: 100%; }
+  .form-checkout .form-group input.half-size, .form-checkout .form-group select.half-size {
+    width: 49%; }
+
+.form-checkout .terms-conditions {
+  height: 200px;
+  padding: 15px;
+  overflow-y: scroll;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+  font-size: .9em;
+  line-height: 20px; }
+
+.form-checkout .terms-agree {
+  position: relative;
+  padding-left: 25px;
+  font-size: .9em;
+  line-height: 1.2em;
+  padding: 8px;
+  border: 1px solid #DADADA;
+  background: #F7F7F7; }
+  .form-checkout .terms-agree input {
+    margin-right: 10px;
+    margin-top: -2px; }
+  .form-checkout .terms-agree label:hover {
+    cursor: pointer; }
+
+.form-checkout .checkout__hotel-details {
+  margin-bottom: 15px; }
+  .form-checkout .checkout__hotel-details p {
+    line-height: 22px; }
+
+.form-checkout .checkout__booking-summary strong {
+  font-weight: 500; }
+
+.form-checkout .checkout__booking-summary ul li {
+  line-height: 22px; }
+
+.form-checkout .checkout__booking-summary ul li {
+  line-height: 20px; }
+
+.form-checkout .checkout__nightly-price {
+  margin-bottom: 0 !important; }
+  .form-checkout .checkout__nightly-price u {
+    text-decoration: none; }
+
+.form-checkout .checkout__discounts {
+  background: #E4FFE5;
+  border-top: 1px dotted #96E699;
+  border-bottom: 1px dotted #96E699; }
+
+.form-checkout .checkout__total-price {
+  background: #F9F9F9;
+  border-top: 1px dotted #E0E0E0; }
+  .form-checkout .checkout__total-price .container-spacer {
+    padding-bottom: 15px;
+    margin-bottom: 0; }
+
+.form-checkout .checkout__your-price {
+  margin-bottom: 0; }
+
+.mod__ul-span-cols.checkout__booking-summary ul {
+  overflow: hidden; }
+  .mod__ul-span-cols.checkout__booking-summary ul li {
+    text-align: right; }
+    .mod__ul-span-cols.checkout__booking-summary ul li span {
+      float: left;
+      display: inline-block; }
+
+.mod__ul-span-cols.checkout__booking-summary p {
+  margin-bottom: 0; }
+
+/*-------------------------------------------------------------------------*/
+/*  Checkout Steps
+/*-------------------------------------------------------------------------*/
+.checkout__steps-container {
+  background: #fff;
+  border-bottom: 1px solid #d0d0d0; }
+  .checkout__steps-container .checkout__steps {
+    margin-left: 10px; }
+    .checkout__steps-container .checkout__steps li {
+      display: inline-block;
+      text-align: -webkit-match-parent;
+      margin: 10px 0; }
+      .checkout__steps-container .checkout__steps li a {
+        padding: 10px 10px;
+        display: block;
+        height: 57px; }
+    .checkout__steps-container .checkout__steps li:first-child {
+      border-right: 1px solid #d0d0d0; }
+  .checkout__steps-container i {
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 27px;
+    height: 21px;
+    background: transparent url("../img/checkout-steps.gif") 0px -1000px no-repeat; }
+  .checkout__steps-container .icon-bell {
+    background-position: 0 0 !important; }
+  .checkout__steps-container .icon-bell:before {
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    content: '';
+    width: 27px;
+    height: 21px;
+    background: transparent url("../img/checkout-steps.gif") 0px -85px no-repeat; }
+  .checkout__steps-container .icon-completed {
+    background-position: 0 -21px !important; }
+  .checkout__steps-container .icon-current {
+    background-position: 0 -42px !important; }
+  .checkout__steps-container .icon-pending {
+    background-position: 0 -63px !important; }
+
+.payment-option__payment-slider rzslider {
+  width: 46%; }
+  .payment-option__payment-slider rzslider span.rz-bar, .payment-option__payment-slider rzslider span.rz-bar.rz-selection {
+    background: #D2D2D2; }
+
+.payment-option__payment-slider rzslider span.rz-pointer.rz-active:after {
+  background-color: #fff; }
+
+.payment-option__payment-slider rzslider span.rz-pointer {
+  background-color: #64D868 !important; }
+
+/* Mobile devices (phones, 768px and below) */
+@media (max-width: 768px) {
+  .form-checkout .form-group {
+    width: 100%; } }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .checkout__nightly-price u {
+    display: none; } }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .checkout__nightly-price u {
+    display: inline-block; } }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 775px) {
+  .payment-option__payment-slider rzslider {
+    width: 100%; } }
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 33px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+
+footer {
+  margin-top: 35px;
+  background-color: #196B8E;
+  font-size: 10px;
+  text-align: center;
+  padding: 30px; }
+  footer .copyright {
+    display: block;
+    margin-bottom: 8px; }
+  footer .footer-links ul {
+    text-align: -webkit-match-parent;
+    display: inline-block; }
+    footer .footer-links ul li {
+      padding: 0 5px;
+      display: inline-block;
+      text-align: -webkit-match-parent; }
+    footer .footer-links ul li, footer .footer-links ul a {
+      color: #fff; }
+    footer .footer-links ul li:hover, footer .footer-links ul a:hover {
+      text-decoration: underline;
+      cursor: pointer; }
+  footer .footer-border {
+    padding: 0px;
+    border-top: 0px; }
+

@@ -1,0 +1,223 @@
+﻿
+<div ng-controller="HotelsConfirmationController as confirm">
+    <section class="top-25px">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-heading">
+                        <h1>Reservation Confirmation</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <form class="form-inline form-checkout">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-content">
+                        <div class="content-format btm-25px">
+
+                            <hgroup>
+                                <h3>Guest Information</h3>
+                            </hgroup>
+                            <div class="container-box">
+                                <div class="container-spacer">
+
+                                    <div class="details__hotel-summary clearfix">
+                                        <figure>
+                                            <a href="#"><img ng-src="{{confirm.details.HotelContent.available_room_type_image}}" alt="" class="img-responsive"></a>
+                                        </figure>
+                                        <hgroup>
+                                            <h3>
+                                                {{confirm.details.HotelContent.name}}
+                                                <ul class="review-stars">
+                                                    <li ng-repeat="star in confirm.stars | limitTo : confirm.details.HotelContent.star_rating" class="fa fa-star stars-5"></li>
+                                                    <li hotel-stars stars="confirm.details.HotelContent.star_rating" class="fa fa-star-half stars-5"></li>
+                                                </ul>
+                                            </h3>
+                                            <h4>
+                                                {{confirm.details.HotelContent.address1}}, <br />
+                                                {{confirm.details.HotelContent.city}}, {{confirm.details.HotelContent.state_province}}, {{confirm.details.HotelContent.postal_code}}<br>
+                                                {{confirm.details.HotelContent.phone}}
+                                            </h4>
+                                        </hgroup>
+                                    </div>
+                                    <div class="mod__ul-span-cols">
+                                        <ul>
+                                            <li><span>Booking #</span><strong>{{confirm.confirmationDetails.BookingId}}</strong></li>
+                                            <li><span>Reference # </span><strong>{{confirm.confirmationDetails.ItineraryId}}</strong></li>
+                                            <li><span>Confirmation #</span><strong>{{confirm.confirmationDetails.ConfirmationId}}</strong></li>
+                                            <!--<li><span>Confirmation ID</span><strong>{{confirm.confirmationDetails.ConfirmationId}}</strong></li>-->
+                                            <li><span>Room(s)</span> <strong>{{confirm.originalSearch.numRooms}}</strong></li>
+
+                                            <li>
+                                                <span>{{confirm.confirmationDetails.ReservationInfo.CheckIn | date : 'EEEE'}}, {{confirm.confirmationDetails.ReservationInfo.CheckIn | date :  longDate}} - {{confirm.confirmationDetails.ReservationInfo.CheckOut | date : 'EEEE'}}, {{confirm.confirmationDetails.ReservationInfo.CheckOut | date :  longDate}} </span> <strong>{{confirm.cancelPolicy.MarketPriceBreakdown.NightlyRates.length}} Night(s)</strong>
+                                            </li>
+
+                                        </ul>
+                                        <hr>
+                                        <ul>
+
+                                            <li>
+                                                <span>Reservation Name</span> <strong>{{confirm.purchase.ContactFirstName}} {{confirm.purchase.ContactLastName}}</strong>
+                                            </li>
+                                            <li ng-if="confirm.purchase.ContactEmails > 0" ng-repeat="email in confirm.purchase.ContactEmails">
+                                                <span>Confirmation E-mail</span> <strong>{{email}}</strong>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <ul ng-if="confirm.purchase.ConfirmEmails.length > 0">
+                                            <li >
+                                                <span><small>Additional Recipients to Receive the Confirmation<br></small></span>
+                                            </li>
+                                            <li ng-repeat="email in confirm.purchase.ConfirmEmails">
+                                                <span>E-mail Address</span> <strong>{{email}}</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Check-in Policies Start  -->
+                            <div class="content-format btm-25px">
+                                <hgroup>
+                                    <h3>Check-in Policies</h3>
+                                </hgroup>
+                                <div class="container-box">
+                                    <div class="container-spacer">
+
+                                        <div class="mod__ul-span-cols">
+                                            <p ng-bind-html="confirm.details.HotelContent.policy_description | html"></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Check-in Policies End  -->
+                            <!-- Room Start  -->
+                            <div class="content-format btm-25px">
+                                <hgroup>
+                                    <h3>Room</h3>
+                                </hgroup>
+                                <div class="container-box">
+                                    <div class="container-spacer">
+
+                                        <div class="mod__ul-two-cols">
+                                            <ul>
+                                                <li>
+                                                    <strong>Guests</strong><br>
+                                                    Reserved for {{confirm.purchase.ContactFirstName}} {{confirm.purchase.ContactLastName}}<br>
+                                                    Adults {{confirm.originalSearch.numAdults}}
+                                                    <br>
+                                                    Children {{confirm.originalSearch.numChildren}}
+                                                    <br>
+                                                    <br>
+                                                </li>
+
+                                                <li>
+                                                    <strong>Room</strong><br>
+                                                    {{confirm.room.available_room_type_name}} <br>
+                                                    <small ng-if="confirm.room.available_is_non_refundable">(Room is not refundable)</small>
+                                                    <br>
+                                                </li>
+                                            </ul>
+                                            <hr>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Room End  -->
+                            <!-- Check-in Policies Start  -->
+                            <div class="content-format btm-25px">
+                                <hgroup>
+                                    <h3>Additional hotel fees</h3>
+                                </hgroup>
+                                <div class="container-box">
+                                    <div class="container-spacer">
+
+                                        <p ng-bind-html="confirm.details.HotelContent.property_fees_description | html"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Check-in Policies End  -->
+     
+                        </div><!-- end checkout__personal-info -->
+
+                    </div><!-- end col-content -->
+
+                    <div class="col-sidebar">
+                        <!-- booking summary -->
+                        <div class="mod__ul-span-cols checkout__booking-summary">
+                            <hgroup>
+                                <h3>Total Summary</h3>
+                            </hgroup>
+                            <div class="container-box">
+                                <div class="container-spacer">
+
+                                    <ul class="checkout__hotel-summary">
+
+                                        <li ng-if="confirm.orginalValues.bundled">
+                                            <span>Total</span>
+                                            <label ng-bind-html="confirm.orginalValues.bundledRate | customCurrency : confirm.currencyFormat"></label>
+                                        </li>
+
+                                        <li ng-if="!confirm.orginalValues.bundled">
+                                            <span>Market Rate</span>
+                                            <label ng-bind-html="confirm.orginalValues.marketRate | customCurrency : confirm.currencyFormat"></label>
+                                        </li>
+
+                                        <li ng-if="confirm.orginalValues.bundled">
+                                            <span>Taxes and Fees</span>
+                                            <label>Included</label>
+                                        </li>
+
+                                        <li ng-if="!confirm.orginalValues.bundled">
+                                            <span>Taxes and Fees</span>
+                                            <label ng-bind-html="confirm.orginalValues.marketTaxes | customCurrency : confirm.currencyFormat"></label>
+                                        </li>
+
+                                        <li ng-if="confirm.orginalValues.dbcApplied > 0">
+                                            <span>{{confirm.orginalValues.dbcLabel}}</span>
+                                            -<label ng-bind-html="confirm.orginalValues.dbcApplied | customCurrency : confirm.currencyFormat : 0"></label>
+                                        </li>
+
+                                        <li ng-if="confirm.orginalValues.vcApplied > 0">
+                                            <span>{{confirm.orginalValues.vcLabel}}</span>
+                                            -<label ng-bind-html="confirm.orginalValues.vcApplied | customCurrency : confirm.currencyFormat : 0"></label>
+                                        </li>
+
+                                        <li>
+                                            <span>Balance Paid</span>
+                                            <label ng-bind-html="confirm.orginalValues.customerPaid | customCurrency : confirm.currencyFormat"></label>
+                                        </li>
+
+                                        <li ng-if="confirm.orginalValues.cashBackEarned > 0">
+                                            <span>{{confirm.orginalValues.cashBackLabel}}</span>
+                                            <label ng-bind-html="confirm.orginalValues.cashBackEarned | customCurrency : confirm.currencyFormat : 0"></label>
+                                        </li>
+
+                                    </ul>
+
+                                </div><!-- end container-spacer -->
+                                <div class="container-spacer">
+                                    <p ng-bind-html="confirm.cancelPolicy.CancelPolicyText | html"></p><br>
+                                    <!--<div ng-controller="HotelsCancelController as cancel">
+                                        <a href="javascript: void(0)" ng-click="cancel.cancel();">Cancel this Room</a>
+                                    </div>-->
+                                </div><!-- end container-spacer -->
+                            </div><!-- end container-box -->
+                            <!-- <button class="btn btn-primary" ng-click="cancel.cancel();">Cancel this Room</button> -->
+                            <!--  <button class="btn btn-light">Back to My Account</button> -->
+                        </div><!-- end checkout__booking-summary -->
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </section>
+</div>

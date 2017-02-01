@@ -1,0 +1,60 @@
+﻿{
+    "ClassId": "184",
+    "MemberId": "abc123",
+    "NameId": "981273",
+    "PartnerId": "127",
+
+    "BookingRequest": {
+        "MktCarrierCode": "DL",
+        "CreditCardInfo": {
+            "CardExpMonth": 5,
+            "CardExpYear": 2018,
+            "CardNumber": "1111222233334444",
+            "CardSecurityCode": "345",
+            "CardVendor": "VI",
+            "NameOnCard": "Paul Vanukoff"
+        },
+        "ExpectedFareAmount": 444.44,
+        "Itineraries": [
+            {
+                "Segments": [
+                    {
+                        "MktCarrierCode": "DL",
+                        "DepartureAirport": "PHX",
+                        "DepartureDateTime": "2017-03-03",
+                        "ArrivalAirport": "ORD"
+                    },
+                    {
+                        "MktCarrierCode": "DL",
+                        "DepartureAirport": "ORD",
+                        "DepartureDateTime": "2017-03-03",
+                        "ArrivalAirport": "MCO"
+                    }
+                ]
+            },
+            {
+                "Segments": [
+                    {
+                        "MktCarrierCode": "DL",
+                        "DepartureAirport": "MCO",
+                        "DepartureDateTime": "2017-03-09",
+                        "ArrivalAirport": "PHX"
+                    }
+                ]
+            }
+        ],
+        "Passengers": [
+            {
+                "DOB": "1976-09-06",
+                "FirstName": "Paul",
+                "LastName": "Vanukoff",
+                "Gender": "M",
+                "Kind": "Adult"
+            }
+        ]
+    },
+
+    "InvoiceEmail": "paul.vanukoff@iceenterprise.com",
+
+    "ConfirmEmail": "paul.vanukoff@iceenterprise.com"
+}

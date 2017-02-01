@@ -1,0 +1,305 @@
+﻿<div ng-controller="HotelsDetailController as details">
+<section class="details__hotel-summary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <figure>
+                    <a href="#">
+                        <img ng-src="{{details.detailsReturned.hotelPhoto}}" alt="" class="img-responsive" />
+                    </a>
+                </figure>
+                <hgroup>
+                    <h3>
+                        <a href="#">{{details.detailsReturned.HotelContent.name}}</a>
+                    </h3>
+                    <h4>{{details.detailsReturned.HotelContent.address1}} {{details.detailsReturned.HotelContent.city}} {{details.detailsReturned.HotelContent.state_province}} </h4>
+                </hgroup>
+            </div>
+            <div class="col-md-4">
+                <div class="checkout__buttons top-15px">
+                    <!--<button class="btn btn-checkout">Checkout <span>{{details.detailsReturned.headerTotal | currency}}</span></button>
+                    <small>{{details.detailsReturned.headerPrice | currency}} / night includes taxes</small>
+                    <div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="anchor-nav">
+                    <li class="selected" ng-click="details.anchorScroll('rooms')">
+                        <a href="">Rooms</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="details.anchorScroll('details')">Details</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="details.anchorScroll('amenities')">Amenities</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="details.anchorScroll('reviews')">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="details.anchorScroll('photos')">Photos</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="details.anchorScroll('map')">Map</a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- end row -->
+    </div><!-- end container-fluid -->
+</section>
+<section class="details__hotel-rooms">
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer" id="rooms">
+                <hgroup>
+                    <h2>Choose Your Room</h2>
+                </hgroup>
+            </div><!-- end container spacer -->
+            <!--
+            <div class="form-hotel-search">
+            <div class="container-fluid">
+            <div class="row">
+            <div class="col-sm-12">
+            <form class="form-hotel-search__form-tag">
+                <fieldset class="form-group checkin">
+                    <label for="inputCheckIn" translate>Check-In</label>
+                    <input type="email" class="form-control" id="detailCheckin" data-min-date="{{main.today}}"data-max-date="{{main.setMaxDate}}" ng-model="main.searchData.checkin" placeholder="Check In" bs-datepicker required>
+
+                </fieldset>
+                <fieldset class="form-group checkout">
+                    <label for="inputCheckOut" translate>Check-Out</label>
+                    <input type="email" class="form-control" data-max-date="{{main.setMaxDate}}"ng-model="main.searchData.checkout" id="detailCheckout" placeholder="Check Out" data-min-date="main.tomorrow" bs-datepicker required>
+                </fieldset>
+                <fieldset class="form-group rooms">
+                    <label for="selectRooms">Rooms</label>
+                    <select class="form-control" id="selectRooms">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group rooms">
+                    <label for="selectRooms" translate>Guests</label>
+                    <select class="form-control" ng-options="default.label for default in main.occupancyDefaults track by default.id" ng-model="main.defaultSelected" ng-change="main.setOccupancy(main.defaultSelected)" ng-init="main.setOccupancy(main.defaultSelected)"></select>
+                </fieldset>
+                <div ng-if="main.show.additionalGuests" class="children-enabled">
+                    <fieldset class="form-group rooms">
+                        <label for="selectRooms">Adults</label>
+                        <select class="form-control" ng-model="main.searchData.numAdults" id="numAdults" ng-options="room for room in main.rooms | limitTo : 6"></select>
+                    </fieldset>
+                    <fieldset class="form-group rooms">
+                        <label for="numChildren">Children</label>
+                        <select class="form-control" ng-model="main.searchData.numChildren" id="numChildren" ng-options="option for option in main.options | limitTo : 7" ng-change="main.checkChildren();"></select>
+                    </fieldset>
+                    <div class="children-container">
+                        <fieldset class="form-group children">
+                            <div ng-repeat="child in main.options | limitTo : main.searchData.numChildren" class="form-group children-clone" ng-init="main.childAge(child, $index)">
+                                <label>Age for Child {{$index + 1}}</label>
+                                <select ng-model="child" id="child{{+ $index}}" class="form-control child" ng-options="option for option in main.options | limitTo : 18" ng-change="main.childAge(child, $index)"></select>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default btn-search">Search</button>
+            </form>--><!-- end search form -->
+            <!--</div>--><!-- end col-sm-12 -->
+            <!--</div>--><!-- end row -->
+            <!--</div>--><!-- end container-fluid -->
+            <!--</div>--><!-- end form-hotel-search -->
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div ng-animate="'view'" ui-view="hotelRoomDetail"></div>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container-box -->
+    </div><!-- end container-fluid -->
+</section><!-- end details hotel rooms -->
+
+<div ng-if="details.show.error.detailSearch">{{details.show.error.message}}</div>
+
+<section class="details-hotel-details content-format" id="details">
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <hgroup class="border-dotted">
+                            <h2>Details </h2>
+                        </hgroup>
+                    </div>
+                    <div class="col-sm-6" style="text-align: right">
+                        <a href="" ng-click="details.anchorScroll()">Back to Top</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p ng-bind-html="details.detailsReturned.HotelContent.property_description | html">
+                        </p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>Dining</h4>
+                        <p>
+                            {{details.detailsReturned.HotelContent.dining_description}}
+                        </p>
+                    </div>
+                </div>
+            </div><!-- end container spacer -->
+        </div>
+    </div>
+</section>
+<section class="details__amenities content-format" id="amenities">
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer">
+                                <div class="row">
+                    <div class="col-sm-6">
+                        <hgroup class="border-dotted">
+                            <h2>Amenities </h2>
+                        </hgroup>
+                    </div>
+                    <div class="col-sm-6" style="text-align: right">
+                        <a href="" ng-click="details.anchorScroll()">Back to Top</a>
+                    </div>
+                </div>
+
+                <div class="row btm-20px">
+                    <div class="col-sm-12">
+                        <h4>Hotel Amenities</h4>
+                        <ul class="mod_bullet-list">
+                            <li ng-repeat="attribute in details.detailsReturned.HotelContent.property_attributes">
+                                {{attribute.attribut_desc}}
+                            </li>
+                        </ul>
+
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container spacer -->
+        </div>
+    </div>
+</section>
+<!--trip reviews-->
+<section class="details__reviews" id="reviews">
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <hgroup class="border-dotted">
+                            <h2>Reviews </h2>
+                        </hgroup>
+                    </div>
+                    <div class="col-sm-6" style="text-align: right">
+                        <a href="" ng-click="details.anchorScroll()">Back to Top</a>
+                    </div>
+                </div>
+                <div class="overall-rating">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2><img ng-src="{{details.detailsReturned.TripAdvisorReviews.MainRatingUrl}}" alt="" /> {{details.detailsReturned.TripAdvisorReviews.MainRatingText}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="review" ng-repeat="review in details.detailsReturned.TripAdvisorReviews.Reviews | limitTo : 3">
+                        <div class="col-sm-3">
+                            <p><img ng-src="{{review.RatingUrl}}" alt="" /> {{review.RatingText}}
+                            </p>
+                            <small>by {{review.Reviewer}}, {{review.ReviewerFrom}}</small>
+                        </div>
+                        <div class="col-sm-9">
+                            <h3>{{review.Slug}}</h3>
+                            <small class="posted-date">Posted {{review.ReviewDate}}</small>
+                            <p>{{review.Review}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- end container spacer -->
+        </div>
+    </div>
+</section>
+<section class="details-hotel-photos" id="photos">
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <hgroup class="border-dotted">
+                            <h2>Photos </h2>
+                        </hgroup>
+                    </div>
+                    <div class="col-sm-6" style="text-align: right">
+                        <a href="" ng-click="details.anchorScroll()">Back to Top</a>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-4" ng-repeat="image in details.detailsReturned.HotelContent.images">
+                        <img ng-src="{{image.url}}" width="345" height="233" alt="" />
+                    </div>
+
+                </div>
+            </div><!-- end container spacer -->
+        </div>
+    </div>
+</section>
+
+<section class="details__map">
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer">
+                <div class="row">
+                    <div class="col-sm-12" width="100%">
+                        <div id="map" class="map-container" ng-init="details.mapInit();"></div>
+
+                        <div id="class" ng-repeat="marker in details.markers | orderBy : 'title'">
+                            <a href="#" ng-click="details.openInfoWindow($event, marker)">{{marker.title}}</a>
+                        </div> -->
+                    </div>
+                </div><!-- end row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                    <div class="col-sm-6">
+                        <hgroup class="border-dotted">
+                            <h2>Map </h2>
+                        </hgroup>
+                    </div>
+                    <div class="col-sm-6" style="text-align: right">
+                        <a href="" ng-click="details.anchorScroll()">Back to Top</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6" style="text-align: center">
+
+                        <h4>Location</h4><br/>
+                        <ul>
+                            <li></li>
+                            <li>{{details.detailsReturned.HotelContent.address1}}</li>
+                            <li>{{details.detailsReturned.HotelContent.city}}, {{details.detailsReturned.HotelContent.state_province}} {{details.detailsReturned.HotelContent.postal_code}}</li>
+                            <li>{{details.detailsReturned.HotelContent.country}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end container spacer -->
+    </div>
+</div>
+</section>
+
+
+</div>
+                            

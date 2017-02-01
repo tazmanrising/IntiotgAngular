@@ -1,0 +1,15 @@
+﻿<div id="agentpane">
+    <div class="paneheader" style="width:100%">Agent</div>
+    <span class="infoline">{{agent.currentSession.identity.ice_agent_name}}</span><br/>
+    <span class="systemline">Call Time: <timer interval="1000">{{minutes}}:{{seconds}}</timer></span>
+    <br/>
+    <kendo-button class="k-help" style="width: 180px" ng-click="agent.showGuide('product')">Product Guide</kendo-button><br/>
+    <kendo-button class="k-help" style="width: 180px" ng-click="agent.showGuide('brand')">Brand Guide</kendo-button><br/>
+    <kendo-button class="k-help" style="width: 180px" ng-click="agent.showGuide('memberclass')">Member Class Guide</kendo-button><br/>
+
+    <hr/>
+    <kendo-button class="k-help" enable="false" style="width: 180px" ng-click="agent.showGuide('brand')">My Notes</kendo-button><br/>
+    <kendo-button class="k-help" enable="false" style="width: 180px" ng-click="agent.showGuide('brand')">Search Knowledge Base</kendo-button><br/>
+    <hr/>
+        <kendo-button class="k-help" enable="false" style="width: 180px" ng-click="agent.showGuide('brand')">Chat W/Product Specialist</kendo-button><br/>
+</div>

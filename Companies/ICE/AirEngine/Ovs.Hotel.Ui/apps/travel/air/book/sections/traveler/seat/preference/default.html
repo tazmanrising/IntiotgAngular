@@ -1,0 +1,9 @@
+﻿<!--Passport Information-->
+<h3>Seat Preference</h3>
+
+<label class="form-control-label radio-inline" ng-repeat="preference in book.seatPreferenceList">
+    <input type="radio" value="{{preference}}" ng-model="traveler.seatPreference" required /> {{preference}}
+</label>
+
+<p><span ng-bind-html="book.seatPreferenceMessage"></span></p>
+<!--End Passport Information-->

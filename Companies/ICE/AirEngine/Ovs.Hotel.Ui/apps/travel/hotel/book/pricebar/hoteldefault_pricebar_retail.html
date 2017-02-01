@@ -1,0 +1,42 @@
+﻿<!-- booking summary -->
+<div class="mod__ul-span-cols checkout__booking-summary">
+    <hgroup>
+        <h2>Accommodation Information</h2>
+    </hgroup>
+    <div class="container-box">
+        <div class="container-spacer">
+            <div class="checkout__hotel-details">
+                <h4>{{book.details.HotelContent.name}}</h4>
+                <p>
+                    {{book.details.HotelContent.address1}}, <br />
+                    {{book.details.HotelContent.city}}, {{book.details.HotelContent.state_province}}, {{book.details.HotelContent.postal_code}}<br />
+                    {{book.details.HotelContent.phone}}
+                </p>
+            </div>
+
+            <span><strong>Hotel Summary</strong></span><br />
+            <ul class="checkout__hotel-summary">
+
+                <li id="room"><span>Room</span>{{book.purchase.confirmRoomNum}}</li>
+                <li id="numAdults"><span>Adults</span>{{book.purchase.confirmAdults}}</li>
+                <li id="numChild"><span>Children</span>{{book.purchase.confirmChildren.length}}</li>
+                <li id="childAges"><span ng-if="book.purchase.confirmChildren.length > 0">Children's ages</span>{{book.purchase.confirmChildren}}</li>
+                <li id="numNights"><span><strong>{{book.cancelPolicy.RoomDetailResults.NightlyRates.length}} Night(s)</strong></span></li>
+                <li id="confirmCheckin"><span>From</span>{{book.purchase.confirmCheckin | date : longDate}}</li>
+                <li id="confirmCheckout"><span>To</span>{{book.purchase.confirmCheckout | date : longDate}}</li>
+            </ul>
+        </div><!-- end container-spacer -->
+
+        <div ng-animate="'view'" ui-view="hotelPriceSummary"></div>
+
+        <div class="container-spacer">
+            <ul class="checkout__your-price">
+                <li ng-if="book.showVC">
+                    <span>{{book.finalVcLabel}}</span>-<label id="finalVc" ng-bind-html="book.finalVC | customCurrency : book.currencyFormat : 0"></label>
+                </li>
+                <li><span>Your Price</span><label id="yourPrice" ng-bind-html="book.purchase.yourPrice | customCurrency : book.currencyFormat"></label></li>
+            </ul>
+        </div><!-- end container-spacer -->
+    </div><!-- end container-box -->
+    <!-- <button class="btn btn-default">Review Order</button> <button class="btn btn-primary">Place Order Now</button> -->
+</div><!-- end checkout__booking-summary -->

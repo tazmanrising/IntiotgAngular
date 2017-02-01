@@ -1,0 +1,508 @@
+/*
+    Template: Details Page
+
+-------------------------------------------------------------------------
+
+    1. Top Hotel Summary (.details__hotel-summary) - Thumbnail, hotel name and address
+    2. Room Table
+    	- Photo
+    	- Details
+    	- Pricing (.table-block__room-pricing)
+    3. Reviews
+    4. Page Sections
+
+
+-------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------*/
+/*  1. Top Hotel Summary
+/*-------------------------------------------------------------------------*/
+.details__hotel-summary {
+	padding: 20px 0 20px 0;
+	overflow: hidden;
+	background: #F3F3F3;
+    border-bottom: 1px solid #dbe0e7;
+	figure {
+		float:  left;
+		margin-right: 15px;
+		img {
+			max-width: 210px;
+		}
+	}
+	h4 {
+		line-height: 20px;
+	}
+	.checkout__buttons {
+		float: right;
+		button {
+			margin-bottom: 5px;
+		}
+		small {
+			text-align: right;
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  2. Hotel Rooms Table
+/*-------------------------------------------------------------------------*/
+.details__rooms-table {
+	tr {
+		border-top: 1px solid #eceeef;
+	}
+	td {
+		border: none !important;
+		box-sizing: border-box;
+	}
+	margin-bottom: 0;
+ 	&>td {
+ 		padding-top: 25px;
+		padding-bottom: 15px;
+ 	}
+	tr:nth-child(even) {
+		background: rgba(236, 239, 241, 0.44);
+	}
+	.table-block__room-checkout {
+		margin-bottom: 15px;
+		.nightly-price {
+
+		}
+	}
+	// .table th, .table td {
+	// 	padding: 0 !important;
+	// }
+}
+.details__cash-back {
+	.table-block__room-details {
+		width: 33% !important;
+	}
+}  
+/*-------------------------------------------------------------------------*/
+/*  Hotel Rooms Table - Photo
+/*-------------------------------------------------------------------------*/
+.table-block__room-photo {
+	width: 20%;
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Hotel Rooms Table - Details
+/*-------------------------------------------------------------------------*/
+.table-block__room-details {
+	width: 33%;
+ 	padding: 0;
+	h3 {
+		margin-bottom: 10px;
+		font-size: 1.2em;
+	}
+}
+.table-block__room-pricing {
+	// .savings-breakdown {
+	// 	margin-left: 0;
+	// 	width: 100%;
+	// }
+	// .cash-back	{
+	// 	&__container {
+	// 		width: 100%;
+	//
+	// 	}
+	// 	&__btn-container {
+	// 		float: left;
+	// 		overflow: hidden;
+	// 		li:first-child {
+	// 			line-height: 22px;
+	// 			height: auto;
+	// 		}
+	// 		li {
+	// 			float: left;
+	// 			height: 47px;
+	// 			vertical-align: top;
+	// 			display: block;
+	// 			box-sizing: border-box;
+	// 		}
+	// 		&:hover {
+	// 			cursor: pointer;
+	// 		}
+	// 	}
+	// 	&__nightly-price {
+	// 		float: none !important;
+	// 		font-size: 24px;
+	// 		margin-bottom: 12px;
+	// 		font-weight: 400;
+	// 		small {
+	// 			font-size: 16px;
+	// 		}
+	// 	}
+	// 	// EARN
+	// 	&__label {
+	// 		line-height: 47px;
+	// 		background: #909090;
+	// 		padding: 0 15px;
+	// 		color:#fff;
+	// 		font-weight: 400;
+	// 		font-size: 1.1em;
+	// 	}
+	// 	&__arrow {
+	// 		position: relative;
+	// 		width: 22px;
+	// 		background: #c4c4c4;
+	// 		overflow: hidden;
+	// 		i:first-child {
+	// 			position: absolute;
+	// 			left: 0px;
+	// 			top: 0px;
+	// 			z-index: 1;
+	// 			width: 0;
+	// 			height: 0;
+	// 			border-top: 23px solid transparent;
+	// 			border-bottom: 23px solid transparent;
+	// 			border-left: 15px solid #909090;
+	// 		}
+	// 		i:last-child {
+	// 			// z-index: 5;
+	// 			position: absolute;
+	// 			left: 0px;
+	// 			top: -8px;
+	// 			width: 0;
+	// 			height: 0;
+	// 			border-top: 31px solid transparent;
+	// 			border-bottom: 30px solid transparent;
+	// 			border-left: 20px solid #dadada; //
+	// 			background: #c4c4c4;
+	// 		}
+	// 	}
+	// 	&__amount {
+	// 		background: #c4c4c4;
+	// 		font-size: 20px;
+	// 		height: 47px;
+	// 		padding: 5px 15px 0 10px;
+	// 		font-weight: 400;
+	// 		line-height: 20px;
+	// 		small {
+	// 			display: block;
+	// 			font-size: 13px;
+	// 		}
+	// 	}
+	// }
+}
+.table-block__room-checkout {
+	vertical-align: top;
+	text-align: center;
+	.btn-checkout--red {
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*  Hotel Amenities
+/*-------------------------------------------------------------------------*/
+.details__amenities {
+	ul {
+		overflow: hidden;
+		li {
+			line-height: 22px;
+			width: 30%;
+			float: left;
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Hotel Reviews
+/*-------------------------------------------------------------------------*/
+.details__reviews {
+	.overall-rating {
+		padding: 15px 0;
+		border-bottom: 1px solid #D8D8D8;
+		margin-bottom: 25px;
+	}
+	.review {
+		margin-bottom: 25px;
+	  	overflow: hidden;
+	  	h3 {
+	  		margin-bottom: 5px;
+	  	}
+	  	.posted-date {
+	  		margin-bottom: 15px;
+	  	}
+	  	small {
+	  		font-size: .9em;
+	  		display: block;
+	  	}
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Hotel Photos
+/*-------------------------------------------------------------------------*/
+.details__photos {
+
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Hotel Map
+/*-------------------------------------------------------------------------*/
+.details__map {
+	.map-container {
+		height: 420px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Media Queries
+/*-------------------------------------------------------------------------*/
+
+@media (max-width: 1024px) {
+	.table-block__room-details {
+		// width: 45%;
+	}
+}
+@media (max-width: 930px) {
+	.details__rooms-table {
+		td {
+			display: block;
+			float: left;
+			padding-bottom: 0;
+		}
+	}
+	.table-block__room-photo {
+		width: 55%;
+		float: left;
+	}
+	.table-block__room-details {
+		width: 45%;
+		display: block;
+		padding-left: 15px;
+		// min-height: 204px;
+	}
+	.table-block__room-pricing {
+		background: #F3F3F3;
+		display: block;
+		padding-top: 15px;
+		width: 55%;
+		margin-top: 15px;
+		min-height: auto !important;
+	}
+	.table-block__room-checkout {
+		min-height: auto !important;
+		background: #F3F3F3;
+		padding-top: 15px;
+		padding-left: 15px;
+		display: block;
+		width: 45%;
+		text-align: left;
+		margin-bottom: 0 !important;
+		margin-top: 0px !important;
+		.btn-checkout--red {
+			margin: 0 0 15px 0;
+		}
+		.nightly-price {
+			text-align: left;
+		}
+	}
+	.details__cash-back {
+		.table-block {
+			&__room-details {
+				width: 90% !important;
+			}
+			&__room-pricing {
+				width: 100% !important;
+				display: block;
+			}
+			&__room-checkout {
+				width: 100% !important;
+			}
+		}
+	}
+}
+// @media (max-width: 740px) {
+// 	.table-block__room-photo {
+// 		display: block;
+// 		width: 100%;
+// 	}
+// 	.table-block__room-details {
+// 		display: block;
+// 		width: 100%;
+// 	}
+// 	.table-block__room-pricing {
+// 		width: 45%;
+// 	}
+// }
+
+@media (max-width: 500px) {
+	.table-block__room-photo {
+		float: none !important;
+		display: block;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	.table-block__room-details {
+		width: 100%;
+	}
+	.table-block__room-pricing {
+		display: block;
+		width: 100%;
+		.btn-checkout--red {
+			width: 100%;
+		}
+	}
+	.details__hotel-summary {
+		figure {
+			width: 100%;
+			margin-right: 0;
+    		margin-bottom: 15px;
+
+    		img {
+    			width: 100%;
+    			max-width: 100%;
+    		}
+		}
+	}
+	.table-block__room-checkout {
+		width: 100%;
+		margin-top: 0px !important;
+		min-height: auto !important;
+		padding-bottom: 15px;
+		.btn-checkout--red {
+			text-align: right;
+			display: inline-block;
+		}
+		.nightly-price {
+			text-align: right;
+		}
+	}
+	.details__cash-back {
+		.table-block__room-checkout {
+			.nightly-price {
+				text-align: left;
+			}
+		}
+	}
+	.table-block__room-pricing {
+		min-height: auto;
+		.savings-breakdown {
+			margin-bottom: 0;
+		}
+		.savings-breakdown--retail {
+			width: 100% !important;
+		}
+	}
+
+	.anchor-nav {
+		li {
+			display: block;
+			border-bottom: 1px solid #D0D0D0;
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 435px) {
+	.table-block__room-checkout {
+		.btn-checkout--red {
+			width: 100%;
+			text-align: center;
+		}
+		.nightly-price {
+			text-align: center;
+		}
+	}
+	.details__amenities {
+		ul {
+			li {
+			    line-height: 22px;
+			    width: 100%;
+			    float: left;
+			}
+		}
+	}
+	// .table-block__room-details {
+	// 	p {
+	// 		font-size: .8em !important;
+	// 	}
+	// }
+	// .table-block__room-pricing {
+	// 	float: left;
+	// 	width: 100% !important;
+
+	// 	.savings-breakdown {
+	// 		display: block;
+	// 	}
+
+	// }
+	// .table-block__room-checkout {
+	// 	float:  left;
+	// 	width: 100%;
+	// }
+
+	// .btn-checkout, .btn-checkout--red {
+	// 	display: block;
+	// 	width: 100%;
+	// }
+}
+
+
+
+/* Mobile devices (phones, 768px and below) */
+@media (max-width: $screen-sm-min) {
+	// .table-block__room-details {
+	// 	display: block;
+	// }
+	// .table-block__room-pricing {
+	// 	display: block;
+	// 	float: left;
+	// 	border-top: none !important;
+	// }
+	// .table-block__room-checkout {
+	// 	float: right;
+	// 	border-top: none !important;
+	// }
+	// .savings-breakdown {
+	// 	margin-left: 0px !important;
+	// }
+
+	// .details__hotel-summary {
+	// 	figure {
+	// 		margin: 0;
+	// 		width: 100%;
+	// 		img {
+	// 			width: 100% !important;
+	// 			margin-bottom: 15px;
+	// 		}
+	// 	}
+	// 	.checkout__buttons {
+	// 		float: none;
+	// 	}
+	// }
+	// .details-rooms-table {
+	// 	td {
+	// 		padding-top: 15px;
+	// 	}
+	// }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}

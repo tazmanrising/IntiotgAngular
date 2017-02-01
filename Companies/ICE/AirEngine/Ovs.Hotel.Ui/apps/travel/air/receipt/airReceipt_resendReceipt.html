@@ -1,0 +1,260 @@
+﻿<div ng-controller="airReceiptController as receipt" class="booking-receipt">
+    <section class="top-25px">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-heading">
+                        <h1>Resend Receipt - {{receipt.airportCode}}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section ng-if="!receipt.bookingData">
+        <div ng-init="receipt.getBookingData()"></div>
+    </section>
+    <section ng-if="receipt.bookingData">
+        <form class="form-inline form-checkout" id="receiptData">
+            <div class="container-fluid">
+                <div class="col-content">
+                    <div class="content-format btm-25px">
+                        <hgroup>
+                            <h2 ng-if="receipt.showInitialInfo">Flight Information</h2>
+                            <h2 id="receiptSuccess" ng-if="receipt.success">The Receipt For Booking # {{receipt.userData.bookingId}} Has Been Resent.</h2>
+                            <h2 id="receiptError" ng-if="receipt.errorMessage">{{receipt.errorMessage}}</h2>
+                        </hgroup>
+                        <div class="container-box">
+                            <div class="container-spacer">
+                                <!--<div class="details__hotel-summary clearfix">
+                                    <figure>
+                                        <a href="#"><img id="hotelImage" ng-src="{{receipt.receiptData.hotel_image_url}}" alt="" class="img-responsive"></a>
+                                    </figure>
+                                    <hgroup id="hotelData">
+                                        <h3>
+                                            {{receipt.receiptData.Supplier}}
+                                            <ul class="review-stars">
+                                                <li id="starRating" ng-repeat="star in receipt.stars | limitTo : receipt.receiptData.star_rating" class="fa fa-star stars-5"></li>
+                                                <li hotel-stars stars="receipt.receiptData.star_rating" class="fa fa-star-half stars-5"></li>
+                                            </ul>
+                                        </h3>
+                                        <h4 id="hotelAddress">
+                                            {{receipt.receiptData.address1}}, {{receipt.receiptData.address2}}<br />
+                                            {{receipt.receiptData.city}} {{receipt.receiptData.state_province}}, {{receipt.receiptData.country}} {{receipt.receiptData.postal_code}}<br />
+                                            {{receipt.receiptData.hotel_phone}}
+
+                                        </h4>
+                                    </hgroup>
+                                </div>-->
+                              
+                                    <div class="row" style="line-height:1.5;" ng-repeat="passengers in receipt.receiptData.BookingRecord.Passengers">
+                                        <div class="col-md-7">
+                                            Passenger {{$index + 1}}
+                                        </div>
+                                        <div class="col-md-2">
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span style="font-weight: bold;float:right;">{{passengers.FirstName}} {{passengers.LastName}}</span>
+                                        </div>
+                                    </div>
+                                <!--flight data-->
+                                <hr />
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <span style="font-weight: bold;text-decoration: underline;">Airline</span>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <span style="font-weight: bold;text-decoration: underline;">Departing</span>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <span style="font-weight: bold;text-decoration: underline;">Arriving</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid" ng-repeat="x in receipt.receiptData.BookingRecord.Itineraries">
+                                    <div ng-repeat="y in x.Segments">
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!--<span style="font-weight: bold;">{{y.MktCarrier | airlineCodeFilter}}</span>-->
+                                                <airline-code carrier="{{ y.MktCarrier }}"></airline-code>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span style="font-weight: bold;">{{y.Origin.City}}, {{y.Origin.Region}} ({{y.Origin.Airport}})</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span style="font-weight: bold;">{{y.Destination.City}}, {{y.Destination.Region}} ({{y.Destination.Airport}})</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span style="font-weight: bold;">{{y.Origin.DateTimeHere | getDateFormattedSingle }}</span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span style="font-weight: bold;">{{y.Destination.DateTimeHere | getDateFormattedSingle }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                 <p></p>
+                                            </div>
+                                        </div>
+                                 
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <div ng-show="collapsed">
+                                            to be continued
+                                        </div>
+                                        <hr />
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <display-disclaimer></display-disclaimer>
+                                </div>
+                                <!--end flight data-->
+                                <!--<div class="mod__ul-span-cols">
+                                    <ul>
+                                        <li id="numRooms"><span>Room</span> <strong>{{receipt.receiptData.BookingRecord.Supplier}}</strong></li>
+                                        <li id="roomType"><span>Room Name</span> <strong>{{receipt.receiptData.room_type}}</strong></li>
+                                        <li id="guestName">
+                                            <span>Reservation Name</span> <strong>{{receipt.receiptData.guest_name}}</strong>
+                                        </li>
+                                        <li>
+                                            <span id="dates">{{receipt.receiptData.checkin | date : 'EEEE'}}, {{receipt.receiptData.checkin | date :  fullDate}} - {{receipt.receiptData.checkout | date : 'EEEE'}}, {{receipt.receiptData.checkout | date :  fullDate}}</span> <strong>{{receipt.receiptData.num_nights}} Nights</strong>
+                                        </li>
+                                        <li id="numAdults">
+                                            <span>Number of Adults</span> <strong>{{receipt.receiptData.num_adults}}</strong>
+                                        </li>
+                                        <li id="numChildren">
+                                            <span>Number of Children</span> <strong>{{receipt.receiptData.num_children}}</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p id="cancelPolicy" ng-bind-html="receipt.receiptData.cancel_policy"></p>-->
+                            </div>
+                        </div>
+                    </div><!-- end checkout__personal-info -->
+                    <!-- end terms and conditions -->
+                    <!-- will show only on desktop view -->
+                    <div class="container-box">
+                        <div class="container-spacer">
+                            <label class="required"><strong>Send to a different email address than what's on file.</strong></label> <br />
+                            <div class="extra-emails">
+                                <span class="email-add" ng-click="receipt.addEmail()"><img ng-src="{{receipt.addEmailImage}}" class="icon-add" />add email address</span>
+                                <span class="email-remove" ng-click="receipt.subtrackEmail()"><img ng-src="{{receipt.subtractEmailImage}}" class="icon-remove" />remove email address</span>
+
+                            </div>
+
+                            <div class="form-group email" ng-repeat="email in receipt.emails track by $index">
+                                <label for="email" class="required"><strong>Email</strong></label>
+                                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ng-model="email.address" name="E-mail" class="k-textbox" placeholder="E-mail" validationMessage="There appears to be an issue with the email address entered." value="{{email.address}}" style="width: 100%" ng-blur="receipt.emailChange(email.address)" />
+                                <span class="k-invalid-msg" data-for="email"></span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="btn-container lowercase-buttons">
+                        <ul ng-if="receipt.showInitialInfo">
+                            <li><button id="resendReceipt" class="btn btn-primary" ng-click="receipt.resend()">Resend Receipt</button></li>
+                            <li id="cancel"><button class="btn btn-default" ui-sref="index">Cancel</button></li>
+                        </ul>
+                        <ul ng-if="!receipt.showInitialInfo">
+                            <li><button id="homeButton" class="btn btn-primary" ui-sref="index">Home</button> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end col-sm-8 -->
+                <div class="col-sidebar">
+                    <!-- booking summary -->
+                    <div class="mod__ul-span-cols checkout__booking-summary">
+                        <hgroup>
+                            <h2>Payment Information</h2>
+                        </hgroup>
+                        <div class="container-box">
+                            <div class="container-spacer">
+                                <ul class="checkout__hotel-summary">
+                                    <li>
+                                        <span>
+                                            Flight Price Paid <br>
+                                        </span>
+                                        <label id="totalPaid" ng-bind-html="receipt.receiptData.BookingRecord.Base | customCurrency : receipt.currencyFormat"></label>
+                                    </li>
+                                    <li id="paidDBC" ng-if="receipt.receiptData.paid.dbc_amount > 0">
+                                        <span ng-bind-html="receipt.currentSession.display_options.labels.dbc">
+                                            <br>
+                                        </span>
+                                        <label ng-bind-html="receipt.receiptData.paid.dbc_amount | customCurrency : receipt.currencyFormat : 0"></label>
+                                    </li>
+                                    <li id="paidVC" ng-if="receipt.receiptData.paid.vc_amount > 0">
+                                        <span ng-bind-html="receipt.currentSession.display_options.labels.vacation_cash">
+                                            <br>
+                                        </span>
+                                        <label ng-bind-html="receipt.receiptData.paid.vc_amount | customCurrency : receipt.currencyFormat : 0"></label>
+                                    </li>
+                                    <li id="paidCashback" ng-if="receipt.receiptData.paid.cb_amount > 0">
+                                        <span ng-bind-html="receipt.currentSession.display_options.labels.earned">
+                                            <br>
+                                        </span>
+                                        <label ng-bind-html="receipt.receiptData.paid.cb_amount | customCurrency : receipt.currencyFormat : 0"></label>
+                                    </li>
+                                    <li id="paidPoints" ng-if="receipt.receiptData.paid.points_amount > 0">
+                                        <span ng-bind-html="receipt.currentSession.display_options.labels.points">
+                                            <br>
+                                        </span>
+                                        <label ng-bind-html="receipt.receiptData.paid.points_amount | customCurrency : receipt.currencyFormat : 0"></label>
+                                    </li>
+                                    <li id="paidFees" ng-repeat="fee in receipt.receiptData.fees">
+                                        <span ng-if="fee.fee > 0" ng-bind-html="fee.label | html"></span>
+                                        <label ng-if="fee.fee > 0" ng-bind-html="fee.fee | customCurrency : receipt.currencyFormat"></label>
+                                    </li>
+                                    <li id="paidTotal">
+                                        <span>Tax Paid:</span>
+                                        <label ng-bind-html="receipt.receiptData.BookingRecord.Tax | customCurrency : receipt.currencyFormat"></label>
+                                    </li>
+                                    <li id="paidTotal">
+                                        <span>Total Paid:</span>
+                                        <label ng-bind-html="receipt.receiptData.BookingRecord.Total | customCurrency : receipt.currencyFormat"></label>
+                                    </li>
+                                </ul>
+                            </div><!-- end container-spacer -->
+
+                        </div><!-- end container-box -->
+                    </div><!-- end checkout__booking-summary -->
+                    <!-- will show only on mobile view -->
+                    <div class="btn-container lowercase-buttons">
+                        <ul ng-if="receipt.showInitialInfo">
+                            <li id="secondResendReceiptButton"><button class="btn btn-primary" ng-click="receipt.resend()">Resend Receipt</button></li>
+                            <li id="secondCancelButton"><button class="btn btn-default" ui-sref="index">Cancel</button></li>
+                        </ul>
+                        <ul ng-if="!receipt.showInitialInfo">
+                            <li><button id="secondHomeButton" class="btn btn-primary" ui-sref="index">Home</button> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+</div>
+
+    

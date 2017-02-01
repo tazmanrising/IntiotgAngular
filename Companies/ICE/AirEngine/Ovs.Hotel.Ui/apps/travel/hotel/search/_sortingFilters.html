@@ -1,0 +1,54 @@
+﻿ <!----------------------------------- Begin Filter area ---------------------------------------->
+<div ng-show="show.resultsReturned" class="ng-hide" ng-controller="hotelController">
+    <div class="col-xs-12">
+        <h4>{{hotelsShown}} Hotels near {{searchData.destination}}</h4>
+        <hr>
+    </div>
+
+    <div class="col-md-3">
+        <!--Hotel Search-->
+        <div class="filters">
+            <label for="searchAllHotels">Search by Hotel or Brand</label><br />
+            <input type="text" id="searchAllHotels" class="form-control" ng-model="selctedSearch" placeholder="Search..." bs-options="hotel for hotel in currentHotels" ng-change="recount()" bs-typeahead />
+            <hr>
+        </div>
+        <!--Star rating-->
+        <div class="filters">
+            <h4>Rating</h4>
+            <div ng-repeat="rating in ratings">
+                <div ng-click="setStarRatingFilter(rating)" value="{{rating.value}}" ng-model="rating.selected" class="starrating" ng-class="{activeStarrating : isActive(rating)}">
+                    <span>At Least</span>
+                    <span ng-repeat="star in stars | limitTo : rating.value" class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty alignStars" ng-repeat="star in stars | limitTo : 5 - rating.value"></span>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!--Slider-->
+        <div class=" filters">
+            <div class="container filterPadding">
+                <h4>Price Range</h4>
+                <rzslider rz-slider-floor="min"
+                          rz-slider-ceil="max"
+                          rz-slider-model="bottom"
+                          rz-slider-high="top"
+                          rz-slider-draggable-range="true"
+                          rz-slider-translate="translate"
+                          rz-slider-hide-limit-labels="true"></rzslider>
+            </div>
+            <hr>
+        </div>
+
+        <!--GeoBoundary-->
+        <div class="filters">
+            <h4>Locations</h4>
+            <div ng-repeat="boundary in geoboundaryList" v>
+                <input type="checkbox" id="boundary.id" ng-model="boundary.isChecked" ng-change="main.recount()" />{{boundary.name}}<br />
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<!----------------------------------- End Filter area ---------------------------------------->

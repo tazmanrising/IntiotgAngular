@@ -1,0 +1,19 @@
+﻿<!--Show bundled pricing-->
+<div class="checkout__nightly-price" ng-if="book.currentSession.display_options.options.show_bundled_price == 'true'">
+    <ul class="container-spacer">
+        <li><label id="totalAll" ng-bind-html="book.marketTotal | customCurrency : book.currencyFormat"></label><span>Total</span></li>
+        <li><span>Taxes and Fees</span>Included</li>
+    </ul>
+</div>
+
+<!--Show non-bundled pricing-->
+<div class="checkout__total-price" ng-if="book.currentSession.display_options.options.show_bundled_price == 'false'">
+    <ul class="container-spacer">
+        <li id="roomRate"><label ng-bind-html="book.room.available_total_market_rate  | customCurrency : book.currencyFormat"></label><span>Market Rate</span></li>
+        <li id="roomTax"><label ng-bind-html="book.marketTaxDisplay | customCurrency : book.currencyFormat"></label><span>Taxes and Fees</span></li>
+        <!-- 
+        <li id="roomFees" ng-repeat="fees in book.marketRatesupplimentalFees"><label ng-bind-html="fees.Amount  | customCurrency : book.currencyFormat"></label><span>Supplemental Charges</span></li>
+        -->
+        <li id="marketTotal"><label ng-bind-html="book.marketTotal | customCurrency : book.currencyFormat"></label><span>Total</span></li>
+    </ul>
+</div>

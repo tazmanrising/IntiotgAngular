@@ -1,0 +1,26 @@
+<div class="search-results-listings__hotel-details">
+    <div class="heading">
+        <h3 ng-bind-html="hotel.hotel_snapshot.name | html"></h3>
+        <ul class="review-stars">
+            <li ng-repeat="star in main.stars | limitTo : hotel.hotel_snapshot.star_rating" class="fa fa-star stars-5"></li>
+            <li hotel-stars stars="hotel.hotel_snapshot.star_rating" class="fa fa-star-half stars-5"></li>
+        </ul>
+        <h4><small ng-bind-html="hotel.hotel_snapshot.location | html"></small></h4>
+    </div>
+</div><!-- end hotel details -->
+
+<div class="search-results-listings__hotel-image">
+    <img alt="" src="{{ hotel.hotel_snapshot.img_URL }}" class="img-responsive" />
+</div>
+
+<div class="search-results-listings__hotel-pricing">
+    <div class="cash-back__container">
+        <ul class="cash-back__btn-container" ng-click="details.callDetails(hotel.hotel_snapshot, top)">
+            <li class="cash-back__nightly-price">{{hotel.daily_market_rate | currency}} <small>Best Nightly Rate</small></li>
+            <li class="cash-back__label">EARN</li>
+            <li class="cash-back__arrow"><i></i><i></i></li>
+            <li class="cash-back__amount">{{hotel.total_savings | currency}} <small>Total Cruise Credits</small></li>
+        </ul>
+        <p class="search-results-listings__description" sw-angular-popover="{{hotel.hotel_snapshot.desc}}" sw-options="main.popoverOptions"><span ng-bind-html="hotel.hotel_snapshot.short_desc | characters : 100"> </span></p>
+    </div>
+</div><!-- end hotel pricing -->

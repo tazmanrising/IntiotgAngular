@@ -1,0 +1,32 @@
+﻿.k-popup .k-group-header {
+    padding: 5px;
+}
+
+.k-popup .k-list .k-item:first-child {
+    height: 30px;
+}
+
+/* First element in list */
+.k-popup ul.k-list .k-item {
+    height: 35px;
+    position: relative;
+}
+
+.k-popup .k-list .k-item:hover {
+    cursor: pointer;
+}
+
+/* First item inside <li>'s */
+.k-popup .k-list .k-item.k-first {
+    height: 55px;
+}
+
+.k-popup .k-list .k-item > .k-group {
+    width: 95%;
+    text-align: right;
+}
+
+.k-item-name {
+    position: absolute;
+    bottom: 0;
+}

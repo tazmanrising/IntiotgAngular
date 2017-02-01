@@ -1,0 +1,257 @@
+{
+	"display_options": {
+		"Locale": "en_US",
+		"currency_code": "USD",
+		"program_long_name": "Sears Vacations",
+		"program_short_name": "Sears Vacations",
+		"program_email": "help@searsvacations.com",
+		"program_phone_number": "1-800-GET-SEARS",
+		"stylesheet1": "~/apps/assets/brands/sears/css/style.css",
+		"options": {
+			"show_bundled_price": "false",
+			"show_daily_price": "true",
+			"email_optin_text": "email optin text",
+			"tcpa_optin_text": "Yes, Please Contact me at this cell number",
+			"has_points_add": "false",
+			"has_user_add": "false",
+			"has_resort_exchange": "false",
+			"login_required": "true",
+			"send_activation_email": "false",
+			"send_antispam_email": "false",
+			"has_country_driven_member_class": "false",
+			"has_vip_users": "false",
+			"has_partner_level_lead_source": "false",
+			"hide_vacation_vouchers_column": "false",
+			"hide_vacation_vouchers_balance": "false",
+			"hide_user_access_list": "true",
+			"hide_membership_dates": "true",
+			"has_account_info_in_name_bar": "true",
+			"show_third_party_id_as_member_id": "false",
+			"has_sears_gift_card": "false",
+			"general_phone_number": "1-800-222-3333",
+			"travel_phone_number": "1-800-555-6666",
+			"google_analytics_domain_name": "www.searsvacations.com",
+			"google_analytics_ignored_organic": "www.searsvacations.com",
+			"offer_email_optin": "true",
+			"offer_tcpa_optin": "true",
+			"show_third_party_home": "false",
+			"include_points": "false",
+			"show_phone_contact": "true",
+			"show_hours": "false",
+			"hours": "open 9 to 5",
+			"show_email_contact": "false",
+			"email_contact": "support@searsvacations.com"
+
+		},
+		"labels": {
+			"points": "Points",
+			"vacation_cash": "Vacation Cash",
+			"phone_number": "Phone Number",
+			"agent_id": "Sales Associate Id",
+			"agent": "Sales Associate",
+			"dbc": "Travel Credits",
+			"account_settings_label": "My Account",
+			"login": "Login",
+			"sign_out": "Sign Out",
+			"third_party_home_label": "Home",
+			"header_badge_label": "Travel Credits",
+			"header_badge_button_text": "current Balance",
+			"first_name": "First Name",
+			"last_name": "Address",
+			"address1": "Address Line 1",
+			"address2": "Address Line 2",
+			"city": "City",
+			"state_province": "State/Province",
+			"country": "Country",
+			"postal_code": "Postal Code",
+			"submit_button_label": "Submit",
+			"submit_button_process_text": "Processing",
+			"book_button_label": "book",
+			"book_button_processing_text": "Processing"
+		},
+		"templates": {
+			"travel_body": "/apps/travel/default_travel_body.html",
+			"travel_nav": "/apps/travel/default_travel_nav.html",
+			"travel_footer": "/apps/travel/default_travel_footer.html",
+
+			"club_search": "/apps/travel/hotel/search/clubdefault_search.html",
+			"hotel_header": "/apps/common/headers/default_header_dbc.html",
+			"hotel_footer": "/apps/common/footers/default_footer.html",
+			"hotel_footer_page": "/apps/common/footers/default_footer_page.html",
+			"hotel_menu": "/apps/common/menus/default_menu.html",
+			"hotel_body": "/apps/travel/hotel/search/merchandising/hoteldefault_merchandising_dbc.html",
+
+			"hotel_search": "/apps/travel/hotel/search/hoteldefault_search.html",
+
+			"hotel_searchresultslist": "/apps/travel/hotel/search/listviewdisplay/hoteldefault_listview.html",
+			"hotel_searchresults_listdetail": "/apps/travel/hotel/search/listviewdisplay/hoteldefault_listdetail_dbc.html",
+
+			"hotel_searchresults_map": "/apps/travel/hotel/search/mapviewdisplay/hoteldefault_mapview.html",
+			"hotel_searchresults_mapdetail": "/apps/travel/hotel/search/mapviewdisplay/hoteldefault_mapdetail_dbc.html",
+
+			"hotel_searchresultsgrid": "/apps/travel/hotel/search/gridviewdisplay/hoteldefault_gridview.html",
+			"hotel_searchresults_griddetail": "/apps/travel/hotel/search/gridviewdisplay/hoteldefault_griddetail_dbc.html",
+
+			"hotel_roomdetail": "/apps/travel/hotel/hoteldetail/roomdisplay/hoteldefault_roomdetail_dbc.html",
+			"hotel_detailview": "/apps/travel/hotel/hoteldetail/hoteldefault_detailview.html",
+
+			"hotel_book_header": "/apps/travel/hotel/book/book_header.html",
+			"hotel_book": "/apps/travel/hotel/book/hoteldefault_bookview.html",
+			"hotel_price_summary": "/apps/travel/hotel/book/price_summary/hoteldefault_pricesummary_dbc.html",
+			"hotel_book_cc": "/apps/travel/hotel/book/payment_collection/hoteldefault_ccinput.html",
+			"hotel_book_dbc": "/apps/travel/hotel/book/payment_collection/hoteldefault_dbcinput.html",
+			"hotel_book_vc": "/apps/travel/hotel/book/payment_collection/hoteldefault_vcinput.html",
+			"hotel_book_points": "/apps/travel/hotel/book/payment_collection/hoteldefault_pointsinput.html",
+			"hotel_book_pricebar": "/apps/travel/hotel/book/pricebar/hoteldefault_pricebar_dbc.html",
+
+			"hotel_confirmation": "/apps/travel/hotel/confirmation/hoteldefault_confirmationview.html",
+			"hotel_review": "/apps/travel/hotel/review/hoteldefault_reviewview.html",
+			"hotel_cancel": "/apps/travel/hotel/cancel/hoteldefault_cancelview.html"
+
+		},
+		"logos": [{
+			"link_href": "",
+			"logo_image_alt": "",
+			"logo_image_url": "~/apps/assets/brands/sears/img/sears_logo.png",
+			"logo_number": 1,
+			"logo_text": "",
+			"text_link": ""
+		}],
+		"menus": [{
+			"link_href": "link1href",
+			"text_link": "text link",
+			"track_clicks": true,
+			"display_link_in_popup": false,
+			"partner_id": 101,
+			"popup_height": 0,
+			"popup_width": 0,
+			"menu_link_subgroup_id": 0,
+			"sub_menus": []
+		}, {
+			"link_href": "link1href",
+			"text_link": "text link",
+			"track_clicks": true,
+			"display_link_in_popup": false,
+			"partner_id": 101,
+			"popup_height": 0,
+			"popup_width": 0,
+			"menu_link_subgroup_id": 1,
+			"sub_menus": []
+		}],
+		"footers": [{
+			"link_href": "linkhref",
+			"text_link": "text link",
+			"footer_group_number": 0,
+			"sort_order": 1,
+			"track_clicks": true,
+			"laberl_with_substitution": "label",
+			"display_link_in_popup": false,
+			"partner_id": 101,
+			"popup_height": 0,
+			"popup_width": 0
+		}, {
+			"link_href": "linkhref",
+			"text_link": "text link",
+			"footer_group_number": 0,
+			"sort_order": 1,
+			"track_clicks": true,
+			"laberl_with_substitution": "label",
+			"display_link_in_popup": false,
+			"partner_id": 101,
+			"popup_height": 0,
+			"popup_width": 0
+		}]
+	},
+	"credit_cards_accepted": [{
+			"credit_card_id": "c1:e1:cc1",
+			"credit_card_name": "Visa",
+			"card_type": "visa",
+			"bin_number": "",
+			"default_currency_code": "USD",
+			"promo_message": "",
+			"sort_order": 0
+		}, {
+			"credit_card_id": "c1:e1:cc2",
+			"credit_card_name": "Mastercard",
+			"card_type": "mastercard",
+			"bin_number": "",
+			"default_currency_code": "USD",
+			"promo_message": "",
+			"sort_order": 1
+		},
+
+		{
+			"credit_card_id": "c1:e1:cc3",
+			"credit_card_name": "American Express",
+			"card_type": "amex",
+			"bin_number": "",
+			"default_currency_code": "USD",
+			"promo_message": "",
+			"sort_order": 2
+		},
+
+		{
+			"credit_card_id": "c1:e1:cc4",
+			"credit_card_name": "Discover",
+			"card_type": "discover",
+			"bin_number": "",
+			"default_currency_code": "USD",
+			"promo_message": "",
+			"sort_order": 3
+		},
+
+
+		{
+			"credit_card_id": "c1:e1:cc4",
+			"credit_card_name": "Sears Card",
+			"card_type": "sears",
+			"bin_number": "",
+			"default_currency_code": "USD",
+			"promo_message": "",
+			"sort_order": 4
+		}
+
+	],
+	"alternative_hard_currencies": [{
+		"id": "c1:e1:cur1",
+		"type": "VC",
+		"label": "Vacation Cash",
+		"conversion_rate": 1.00,
+		"must_use_max_on_each_transaction": false,
+		"terms_and_conditions": "Vacation Cash Terms and Conditions",
+		"balance": 0.00,
+		"redeem_for_air": true,
+		"redeem_for_car": false,
+		"redeeem_for_hotel": true,
+		"redeem_for_cruise": true,
+		"redeem_for_resort": true,
+		"redeem_for_packages": true,
+		"redeem_for_tour": true,
+		"redeem_for_merchandise": true,
+		"redeem_for_wine": true
+	}],
+
+	"alternative_margin_currencies": [{
+		"id": "cu:e1:cur2",
+		"type": "DB",
+		"label": "Travel Credits",
+		"must_use_max_on_each_transaction": false,
+		"conversion_rate": 1.00,
+		"terms_and_conditions": "Travel Credits Terms and Conditions",
+		"balance": 0.00
+	}],
+
+	"alternative_points_currencies": [{}],
+
+	"can_spend_vacation_cash": true,
+	"can_spend_dbc_credits": true,
+	"can_spend_hard_points": false,
+	"created_by_id": "c1:e1:u1",
+	"created_timestamp": "2015-12-11T18:46:32.6251803Z",
+	"id": "c1:e1:domc:699",
+	"is_active": true,
+	"name": "Member Class Display Options for MC 699",
+	"type": "member_class_display_options",
+	"updated_by_id": "c1:e1:u1",
+	"updated_timestamp": "2015-12-11T18:46:32.6256806Z"
+}

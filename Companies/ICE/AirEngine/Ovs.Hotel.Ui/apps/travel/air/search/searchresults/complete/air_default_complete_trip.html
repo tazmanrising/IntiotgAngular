@@ -1,0 +1,47 @@
+﻿<div ng-show="main.displayCompleteFlight">
+
+    <!--
+        Right now this view will not function properly bc the depart and return flight data objects are structured differently.
+        So we can NOT simply push to main.completeFlights[] array and expect to loop then display property values.
+    -->
+
+
+    <div ng-repeat="flight in main.searchSelections.selectedFlights | limitTo : main.numShown">
+        <table style="width: 95%; margin-top: 8px; margin-bottom: 8px">
+            <tr style="margin-bottom:15px">
+                <td style="width: 15%; text-align: center">
+                    <span style="font-size: 1.0em; font-weight: bold; color: black">
+                        Total Price: <!--{{ flight.TotalFareAmount }}-->
+                    </span>
+                    <br />
+                    <a style="font-size: 0.8em">Show Detail</a>
+                </td>
+                <td style="width: 75%">
+                    <p>Eventually will display depart and return flight details... </p>
+                </td>
+                <td style="width: 20%; text-align: center"><!--{{ flight.TicketsRemaining }}--> Tickets Left</td>
+            </tr>
+            <!--<table>
+                <tr style="width: 100%" ng-repeat="flight in flights.FlightOptions">
+                    <td style="width: 70%">
+                        <span><strong>{{flight.OriginAirport}}</strong> ({{flight.Legs[0].Details.DepartureDate}} {{flight.Legs[0].Details.DepartureTime}}) -> <strong>{{flight.DestinationAirport}}</strong> ({{flight.Legs[(flight.Legs.length - 1)].Details.ArrivalDate}} {{flight.Legs[(flight.Legs.length - 1)].Details.ArrivalTime}})({{main.formatDuration(flight.FlightElapseTime)}}) - {{flight.Legs.length -1}}-stop</span>
+                        <div data-ng-repeat="leg in flight.Legs"><small>{{leg.Carrier}} / {{leg.OpCarrier}} {{leg.Details.FlightNumber}} - <strong>{{leg.Details.DepartureAirport}}</strong> ({{leg.Details.DepartureDate}} {{leg.Details.DepartureTime}}) -> <strong>{{leg.Details.ArrivalAirport}}</strong> ({{leg.Details.ArrivalDate}} {{leg.Details.ArrivalTime}})</small></div>
+                    </td>
+                </tr>
+            </table>-->
+
+        </table>
+        <hr />
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <!-- #TODO: replace ng-click with angular directive click-and-disable="main.bookFlight()" -->
+            <button type="button" class="btn btn-lg btn-danger" id="bookFlight" ng-click="main.bookFlight()">
+                <i class="fa fa-plane" aria-hidden="true"></i> Book Flight
+            </button>
+        </div>
+    </div>
+</div>
+
+

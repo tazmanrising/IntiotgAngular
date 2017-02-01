@@ -1,0 +1,34 @@
+﻿<!-- dbc header start -->
+<header class="header-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 brand-conainer">
+                <h1>
+                    <a href="/" translate title="{{main.currentSession.display_options.program_long_name}} - home">
+                        <img ng-src="https://iceassets.blob.core.windows.net/ng-img/blank.png" alt="{{main.currentSession.display_options.program_long_name}}" class="header-main__logo" />
+                    </a>
+                </h1>
+                <!-- <i class="fa fa-times nav-close"></i> -->
+            </div>
+            <div class="col-sm-6">
+                <div class="member-type-container">
+
+                    <ul class="nav-top">
+                        <li><display-options text="main.currentSession.display_options.program_phone_number" show="main.currentSession.display_options.general_phone_number"></display-options></li>
+
+                        <li><display-options text="main.currentSession.display_options.labels.account_settings_label" show="main.currentSession.display_options.labels.account_settings_label"></display-options></li>
+                    </ul>
+
+                    <div class="credits-balance">
+                        <div ng-repeat="currency in main.currentSession.member_info.alternative_margin_currencies">
+                            <small><display-options text="currency.label"></display-options></small>
+                            <display-options text="currency.balance | currency : undefined : 0"></display-options>
+                        </div>
+                    </div>
+
+                </div><!-- end member-type-container -->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- dbc header end -->

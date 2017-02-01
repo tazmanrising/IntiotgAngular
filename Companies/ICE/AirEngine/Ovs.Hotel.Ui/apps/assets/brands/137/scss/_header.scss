@@ -1,0 +1,114 @@
+/*-------------------------------------------------------------------------*/
+/*  Brand Header
+/*-------------------------------------------------------------------------*/
+
+hgroup {
+	h2 {
+		margin-bottom: 15px;
+	}
+}
+
+.header-main {
+	background: $header-background-color;
+	min-height: 82px;
+
+	h1 { 
+		margin: 0;
+		padding: 0;
+	}
+
+	.member-type-container {
+		margin-top: 14px;
+		float: right; 
+		// background: url("../img/sears-shop-your-way-partner.png") top right no-repeat; 
+		margin-left: 15px;
+		padding-top: 5px;
+		min-width: 180px;
+
+		.header-links {
+			float: right;
+			margin-top: 12px; 
+			li {
+				display: inline-block;
+				margin-left: 15px; 
+			} 
+			li:first-child {
+				margin-left: 0; 
+			}
+			li, a {
+				color: #fff;  
+			}
+		}
+
+		.credits-balance {
+			float: right; 
+			background: #002859; 
+			margin-left: 15px;
+			color: #fff; 
+			font-weight: 400;
+			padding: 7px;
+			border-bottom: 2px solid #001733; 
+			font-size: .9em; 
+
+			small {
+				width: 83px;
+				display: inline-block;
+				font-size: 0.8em !important;
+				font-weight: 300; 
+			}
+		}		
+	}
+
+}
+ 
+
+/*-------------------------------------------------------------------------*/
+/*  Custom Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+@media (max-width: 520px) {
+	.header-main {
+		.member-type-container {
+			float: none; 
+			padding-left: 0;
+			margin-left: 0; 
+			margin-top: 0; 
+			margin-bottom: 15px;
+		}
+	} 
+}
+
+/* Extra Small devices (phones, 768px and below) */
+@media (min-width: 800px) {
+ 
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: $screen-sm-min) {
+	 
+}
+
+/*-------------------------------------------------------------------------*/
+/*  General Media Queries
+/*-------------------------------------------------------------------------*/
+/* Extra Small devices (phones, 768px and below) */
+@media (min-width: $screen-xs-min) {
+ 
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+ 
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}
+
+

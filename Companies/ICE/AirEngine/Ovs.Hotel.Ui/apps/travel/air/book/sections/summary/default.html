@@ -1,0 +1,24 @@
+﻿<section class="air-flight-summary">
+    <br />
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer">
+                <h2>Flight Summary</h2>
+                <table class="table">
+                    <tr ng-repeat="selection in book.bookingInfoObject.selectedFlights">
+                        <td ng-repeat="flight in selection.FlightOptions">
+                            <div ng-repeat="leg in flight.Legs">
+                                <h2><img src="{{leg.CarrierSmallLogo}}" style="height: 25px; width: 25px; padding: 0px 5px 0px 5px;" />{{leg.Carrier}} {{leg.Details.FlightNumber}}</h2>
+                                <ul>
+                                    <li>{{leg.Details.Cabin}} (x {{book.travelers.length}})</li>
+                                    <li>Departing <i>{{book.getAirportDetails(leg.Details.DepartureAirport).city}}, {{book.getAirportDetails(leg.Details.DepartureAirport).state}}, {{book.getAirportDetails(leg.Details.DepartureAirport).country}}</i> from <i>{{book.getAirportDetails(leg.Details.DepartureAirport).airportName}} ({{leg.Details.DepartureAirport}})</i> -- {{book.formatFlightSummaryDate(leg.Details.DepartureDate, leg.Details.DepartureTime, book.getAirportDetails(leg.Details.DepartureAirport).timeZone)}}</li>
+                                    <li>Arriving <i>{{book.getAirportDetails(leg.Details.ArrivalAirport).city}}, {{book.getAirportDetails(leg.Details.ArrivalAirport).state}}, {{book.getAirportDetails(leg.Details.ArrivalAirport).country}}</i> at <i>{{book.getAirportDetails(leg.Details.ArrivalAirport).airportName}} ({{leg.Details.ArrivalAirport}})</i> -- {{book.formatFlightSummaryDate(leg.Details.ArrivalDate, leg.Details.ArrivalTime, book.getAirportDetails(leg.Details.ArrivalAirport).timeZone)}}</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section> 

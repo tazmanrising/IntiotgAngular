@@ -1,0 +1,206 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = null;
+    object currentSession = ViewData["currentSession"];
+    object styleSheet1 = ViewData["styleSheet1"];
+    object logo1 = ViewData["logo1"];
+    bool agentMode = (bool)ViewData["agentMode"];
+    object appSettings = ViewData["appSettings"];
+    object title = ViewData["title"];
+    var versionNum = "1.0";
+}
+
+<!DOCTYPE html>
+<html ng-app="airApp">
+<head>
+    <title>@title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <link rel="stylesheet" href="~/apps/assets/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="~/apps/assets/css/bootstrap.custom.css" />
+    <link rel="stylesheet" href="~/apps/assets/css/font-awesome.min.css" />
+        
+    <link rel="stylesheet" href="~/apps/assets/css/rzslider.css" />    
+    <link rel="stylesheet" href="~/apps/assets/css/kendo/current/kendo.common.min.css" />
+    <link rel="stylesheet" href="~/apps/assets/css/kendo/current/kendo.common-bootstrap.min.css" />
+    <link rel="stylesheet" href="~/apps/assets/css/kendo/current/kendo.bootstrap.min.css" />
+    <link rel="stylesheet" href="~/apps/assets/css/kendo/current/kendo.bootstrap.custom.css" />
+    
+    <!-- Default Style -->
+    <link id="main-style" rel="stylesheet" href="~/apps/assets/css/default.css" />
+    <link id="main-custom-style" rel="stylesheet" href="~/apps/assets/css/custom.css" />
+
+    <!-- Theme Style -->
+    <link id="brand-style" rel="stylesheet" href="@styleSheet1" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
+</head>
+
+<body ng-controller="airController as main">
+    <!-- class="mobile-menu__open" to open mobile menu on body tag -->
+
+    <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="spinner-1"></span>
+
+    @if (agentMode)
+    {
+        <link rel="stylesheet" href="/apps/assets/css/agent.css" />
+        <div kendo-splitter="main.agentView" orientation="'vertical'" k-scope-field="main.agentView" panes="[{ resizable: true, collapsible: true, collapsed: false, collapsedSize: '100px', size:'600px', min: '100px', max: '600px', scrollable: false}, { collapsible: false, size: '100%' }]" resize="onResize" style="height: 2000px; width: 100%;">
+            <div kendo-splitter="agent.agentTaskBar" orientation="'horizontal'" id="agenttaskbar" ng-controller="agentController as agent" k-scope-field="agent.agentTaskBar" panes="[{resizable: false, collapsible: false, collapsedSize: '10%', min: '10%', size:'10%', scrollable: false},{resizable: true, size:'80%', scrollable: false},{resizeable: true, collapsible: false, collapsedSize: '10%', min: '10%', size:'10%', scrollable: false}]">
+                <div>
+                    <div ng-include src="'/apps/common/atb/agentpane.html'"></div>
+                </div>
+                <div>
+                    <div ng-include src="'/apps/common/atb/memberpane.html'"></div>
+                </div>
+                <div>
+                    <div ng-include src="'/apps/common/atb/currencypane.html'"></div>
+                </div>
+            </div>
+            <div id="page-wrapper" class="ui-view-container">
+                <div>
+                    @* air search *@
+                    <div ui-view="airMenu"></div>
+                    <div ui-view="airSearch"></div>
+                    <div ng-animate="'view'" ui-view="airBody"></div>
+                    <div ng-animate="'view'" ui-view="airBookView"></div>
+                    <div ui-view="airSearchResults"></div>
+                    <div ui-view="airFooter"></div>
+                    <div ng-animate="'view'" ui-view="airReceipt"></div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div ui-view="airHeader"></div>
+        <div id="page-wrapper" class="ui-view-container">
+            <div>
+                <div ng-animate="'view'" ui-view="airMenu"></div>
+                <div ng-animate="'view'" ui-view="airBody"></div>
+                <div ng-animate="'view'" ui-view="airSearch"></div>
+                <div ng-animate="'view'" ui-view="airSearchResults"></div>
+                <div ng-animate="'view'" ui-view="airBookView"></div>
+                <div ng-animate="'view'" ui-view="airConfirmation"></div>
+                <div ng-animate="'view'" ui-view="airReceipt"></div>
+            </div>
+        </div>
+    }
+
+    <script type="text/javascript" src="~/apps/assets/js/jquery-1.11.1/jquery.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/jquery.noconflict.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/modernizr.2.7.1.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/jquery-migrate.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/jquery.placeholder.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/jquery-ui.min.js?v=@versionNum"></script>
+    <script src="~/apps/assets/js/momentjs-2.14.1/moment-with-locales.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/momentjs-tz-0.5.5-2016f/moment-timezone-with-data-2010-2020.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/humanizeduration.js?v=@versionNum"></script>
+    
+    @* Angular CDN Libraries *@
+    <script src="~/apps/assets/js/angular.min.js?v=@versionNum"></script>
+    <script src="~/apps/assets/js/angular-animate.min.js?v=@versionNum"></script>
+    <script src="~/apps/assets/js/angular-sanitize.min.js?v=@versionNum"></script>
+
+    <!-- Angular Libraries (other) -->
+    <script src="/apps/assets/js/angular-ui-router.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/angular-gettext.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/translations.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/spin.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/angular-spinner.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/angular-strap-2.3.6/angular-strap.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/angular-strap-2.3.6/angular-strap.tpl.min.js?v=@versionNum"></script>
+    <script src="~/apps/assets/js/kendo/current/kendo.all.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/angularjs-slider-master/dist/rzslider.min.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/ng-backstretch.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/tmhDynamicLocale.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/truncate.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/angular-loggly-logger.js?v=@versionNum"></script>
+    <script src="/apps/assets/js/angular-timer.min.js?v=@versionNum"></script>
+    
+    @*our app controller*@
+    <script src="/apps/travel/air/airApp.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/air-controller.js?v=@versionNum"></script>
+
+    @*services*@
+    <script src="/apps/travel/air/common/airSessionService.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/common/dialogService.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/book/airBook-service.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/search/airSearch-service.js?v=@versionNum"></script>
+    <script src="~/apps/travel/air/confirmation/airConfirmation-service.js?v=@versionNum"></script>
+    <script src="~/apps/common/services/StringService.js?v=@versionNum"></script>
+    <script src="~/apps/travel/air/receipt/airReceipt-service.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/common/services/lookupBookingService.js?v=@versionNum"></script>
+    <script src="~/apps/travel/air/common/services/airportService.js?v=@versionNum"></script>
+    
+
+    @*factories*@
+    <script src="/apps/travel/air/confirmation/confirmation-factory.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/search/searchState-factory.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/book/bookCountriesAndStates-factory.js"></script>
+    <script src="/apps/travel/air/book/airBookState-factory.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/airports/airAirports-factory.js?v=@versionNum"></script>
+
+    @*directives and filters  *@
+    <script src="/apps/common/directives/displayOptions-directives.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/passengers/airPassenger-factory.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/book/airBook-freqFlyer-factory.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/airports/airAirports-factory.js?v=@versionNum"></script>
+    <script src="~/apps/common/directives/button-directives.js?v=@versionNum"></script>
+    <script src="/apps/common/commonFilters.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/common/filters/getTravelDateFormatted.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/common/directives/airDisclaimerDirective.js?v=@versionNum"></script>
+    <script src="~/apps/travel/air/common/filters/airlineFilter.js?v=@versionNum"></script>
+    <script src="~/apps/travel/air/common/directives/airlineDirective.js?v=@versionNum"></script>
+    
+
+    @*controllers*@
+    <script src="/apps/travel/air/book/airBook-controller.js?v=@versionNum"></script>
+    <script src="/apps/travel/air/confirmation/airConfirmation-controller.js?v=@versionNum"></script>
+    <script src="~/apps/travel/air/receipt/airReceipt-controller.js?v=@versionNum"></script>
+
+    @*agent mode*@
+    @if (agentMode)
+    {
+        <script src="/apps/common/atb/atb-controller.js?v=@versionNum"></script>
+        <script src="/apps/common/atb/tabs/shoppinghistory/shoppinghistory-controller.js?v=@versionNum"></script>
+        <script src="/apps/common/atb/tabs/transactionhistory/transactionhistory-controller.js?v=@versionNum"></script>
+    }
+
+    <script>
+        AirApp.constant("appSettings", @Html.Raw(appSettings));
+        AirApp.constant("currentSession", @Html.Raw(currentSession));
+    </script>
+    
+    <script type="text/javascript" src="http://cloudfront.loggly.com/js/loggly.tracker-2.1.min.js" async></script>
+    <script>
+        var _LTracker = _LTracker || [];
+        _LTracker.push({
+            'logglyKey': 'ad551207-9dcf-4501-960a-a7a9f1dc8ed9',
+            'sendConsoleErrors' : true,
+            'tag' : 'ovs-air-client-qa'
+        });
+    </script>
+
+    <div kendo-window="main.messageDialog" modal="true" k-modal="true" ng-cloak k-scope-field="main.messageDialog"
+         k-width="350" k-visible="false">
+        {{main.setDialog()}}
+    </div>
+
+    <div kendo-window="main.contentDialog" modal="true" k-modal="true" ng-cloak k-scope-field="main.contentDialog"
+         k-visible="false">
+        {{main.setContent()}}
+    </div>
+
+    <div kendo-window="main.contentIframe" modal="true" iframe="true" k-ifram="true" k-modal="true" ng-cloak k-scope-field="main.contentIframe"
+         k-visible="false">
+        {{main.setIframe()}}
+    </div>
+
+</body>
+</html>

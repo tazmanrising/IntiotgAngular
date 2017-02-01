@@ -1,0 +1,213 @@
+/*-------------------------------------------------------------------------*/
+/*  Top Hotel Summary
+/*-------------------------------------------------------------------------*/
+.details__hotel-summary {
+	padding: 20px 0 20px 0;
+	background: #fff;
+	overflow: hidden;
+	figure {
+		float:  left;
+		margin-right: 15px;
+		img {
+			max-width: 210px;
+		}
+	}
+	h3 {
+		margin-bottom: 5px;
+		font-size: 1.3em;
+	}
+	h4 {
+		font-weight: 300;
+		font-size: 1em;
+	}
+	.checkout__buttons {
+		float: right;
+		button {
+			margin-bottom: 5px;
+		}
+		small {
+			text-align: right;
+		}
+	}
+}
+.details__rooms-table {
+	margin-bottom: 0; 
+	td {
+ 		padding-top: 25px;
+		padding-bottom: 15px;	
+ 	}
+	tr:nth-child(even) {
+		background: rgba(236, 239, 241, 0.44);
+	}
+	.table-block__room-checkout {
+		margin-bottom: 15px;
+		.nightly-price {
+
+	}
+	}
+	// .table th, .table td {
+	// 	padding: 0 !important; 
+	// }
+}
+
+.details__hotel-rooms {
+	hgroup {
+		h2 {
+			margin-bottom: 0 !important;
+	}
+}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Rooms Table
+/*-------------------------------------------------------------------------*/
+.table-block__room-details {
+	width: 33%;
+ 	padding: 0; 
+	h3 {
+		margin-bottom: 10px;
+		font-size: 1.2em;
+	}
+	img {
+		float: left;
+		margin-right: 15px;
+}
+}
+.table-block__room-pricing {
+	.savings-breakdown {
+		margin-left: 0;
+	}
+}
+.table-block__room-checkout {
+	vertical-align: top; 
+	text-align: center; 
+	.btn-checkout--red { 
+		margin: 0 auto;
+		margin-bottom: 15px;  
+	}
+}
+
+
+.details__reviews {
+	.overall-rating {
+		padding: 15px 0;
+		border-bottom: 1px solid #D8D8D8;
+		margin-bottom: 25px;
+	}
+	.review {
+		margin-bottom: 25px;
+	  	overflow: hidden;
+	  	h3 {
+	  		margin-bottom: 5px;
+	  	}
+	  	.posted-date {
+	  		margin-bottom: 15px;
+	  	}
+	  	small {
+	  		font-size: .9em;
+	  		display: block;
+	  	}
+	}
+}
+
+.details__amenities {
+	ul {
+		overflow: hidden;
+		li {
+			line-height: 22px;
+			width: 30%;
+			float: left;
+		}
+	}
+}
+.details__photos {
+
+}
+.details__map {
+
+	}
+
+/*-------------------------------------------------------------------------*/
+/*  Media Queries
+/*-------------------------------------------------------------------------*/
+
+@media (max-width: 435px) {
+	.table-block__room {
+		p {
+			font-size: .8em !important;
+		}
+	}
+	.table-block__room-pricing {
+		float: left;
+		width: 100%;
+
+		.savings-breakdown {
+			display: block;
+	}
+
+}
+	.table-block__room-checkout {
+		float:  left;
+		width: 100%; 
+	}
+
+	.btn-checkout, .btn-checkout--red {
+		display: block; 
+		width: 100%; 
+	}
+	}
+
+
+
+/* Mobile devices (phones, 768px and below) */
+@media (max-width: $screen-sm-min) {
+	.table-block__room {
+		display: block;
+}
+	.table-block__room-pricing {
+		display: block; 
+		float: left;
+		border-top: none !important;
+	}
+	.table-block__room-checkout {
+		float: right;
+		border-top: none !important;
+		}
+	.savings-breakdown {
+		margin-left: 0px !important;
+	}
+
+	.details__hotel-summary {
+		figure {
+			margin: 0;
+			width: 100%; 
+			img {
+				width: 100% !important;
+    		margin-bottom: 15px;
+	}
+			}
+		.checkout__buttons {
+			float: none;
+		}
+	}
+	.details-rooms-table {
+		td {
+			padding-top: 15px;
+}
+}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}

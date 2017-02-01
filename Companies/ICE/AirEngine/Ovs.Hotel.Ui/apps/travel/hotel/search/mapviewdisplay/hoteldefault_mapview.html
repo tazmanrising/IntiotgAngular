@@ -1,0 +1,95 @@
+﻿<section id="content" class="search-results-listings top-25px">
+    <div class="container-fluid">
+        <div id="main" style="padding-top: 0px">
+            <div class="row">
+                <span ng-if="main.show.error">{{main.show.error.message}}</span>
+            </div>
+            <div class="row">
+                
+                <div class="col-content">
+                    <div class="sort-by-section clearfix">
+                        <ul class="swap-tiles clearfix">
+                            <li class="swap-list active">
+                                <a ng-click="main.displayListResults();"><i class="fa fa-th-list"></i>List</a>
+                            </li>
+                            <li class="swap-grid">
+                                <a ng-click="main.displayGridResults();"><i class="fa fa-th-large"></i>Grid</a>
+                            </li>
+                            <li class="swap-block">
+                                <a ng-click="main.displayMapResults();"><i class="fa fa-map fa-1"></i> Map</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="search-results-map">
+                        <div>
+                            <div kendo-map="main.map" k-scope-field="main.map"
+                                 k-center="main.mapCenter"
+                                 k-zoom="main.zoomLevel"
+                                 k-layers="[{type: 'bing', imagrySet: 'arialWithLabels',
+                                key: 'AqaPuZWytKRUA8Nm5nqvXHWGL8BDCXvK8onCl2PkC581Zp3T_fYAQBiwIphJbRAK'}]" k-markers ="main.mapSearchResults">
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- end col-content -->
+                <div class="col-sidebar">
+
+                    <!--Begin filters-->
+                    <div ng-if="!main.hotelsReturned.hotels"><b>0</b> results found. Please search again.</div><br />
+                    <div ng-if="main.hotelsReturned.hotels">
+                        <h4 class="search-results-title"><i class="soap-icon-search"></i><b>{{(main.hotelsReturned.hotels | rangeFilter : 'hotel_snapshot.star_rating' : main.starRating : 5 | textSearch : main.selectedSearch | rangeFilter : 'daily_member_rate' : main.bottom : main.top | geoboundaries : main.geoboundaryList | amenities : main.amenitiesList : main.filterAmenities).length}}</b> results found.</h4>
+                    </div>
+                    <div class="toggle-container filters-container">
+                        <aside class="sidebar-filters">
+                            <div class="filter filter__hotel-brand">
+                                <h4>Search by Hotel</h4>
+
+                                <input type="text" id="searchAllHotels" class="form-control" ng-model="main.selectedSearch" placeholder="Search..." bs-options="hotel for hotel in main.currentHotels" ng-change="main.recount()" bs-typeahead />
+                            </div>
+                            <!--Star rating-->
+                            <div class="filter filter__rating">
+                                <h4>Rating</h4>
+                                <div ng-repeat="rating in main.ratings">
+                                    <div ng-click="main.setStarRatingFilter(rating)" value="{{rating.value}}" ng-model="rating.selected" class="starrating" ng-class="{activeStarrating : main.isActive(rating)}">
+                                        <span>At Least</span>
+                                        <span ng-repeat="star in main.stars | limitTo : rating.value" class="fa fa-star stars-4"></span>
+                                        <span class="" ng-repeat="star in main.stars | limitTo : 5 - rating.value"></span>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <!--Slider-->
+                            <div>
+                                <div class="">
+                                    <h4>Price Range</h4>
+                                    <rzslider rz-slider-model="main.bottom" rz-slider-high="main.top" rz-slider-options="main.slider.options"></rzslider>
+                                </div>
+                                <hr>
+                            </div>
+                            <!--Amenities-->
+                            <div class="filter filter-amenities">
+                                <h4>Amenities</h4>
+                                <ul ng-repeat="amenity in main.amenitiesList">
+                                    <li class="amenity"><input type="checkbox" id="amenity.amenity_id" ng-model="amenity.isChecked" ng-change="main.startFiltering()">{{amenity.name}}</li>
+                                </ul>
+                            </div>
+                            <!--Locations-->
+                            <div class="filter filter-amenities">
+                                <h4>Locations</h4>
+                                <ul ng-repeat="boundary in main.geoboundaryList">
+                                    <li><input class="location" type="checkbox" id="boundary.id" ng-model="boundary.isChecked" ng-change="main.recount()">{{boundary.name}}</li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                    <!--End filters-->
+
+                </div><!-- end sidebar -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Google Map Api -->
+

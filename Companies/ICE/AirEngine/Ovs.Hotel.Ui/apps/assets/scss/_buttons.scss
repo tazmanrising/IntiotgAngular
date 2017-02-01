@@ -1,0 +1,49 @@
+.btn {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: .375rem 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.3;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	user-select: none;
+	border: .0625rem solid transparent;
+	@include border-radius(0.2rem);
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Default Button
+/*-------------------------------------------------------------------------*/
+.btn-checkout, .btn-checkout--red  {
+	font-weight: 300;
+	text-transform: uppercase;
+	padding-top: 9px !important;
+	display: block;
+}
+.btn-checkout span, .btn-checkout--red span {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+// a:link - a normal, unvisited link
+// a:visited - a link the user has visited
+// a:hover - a link when the user mouses over it
+// a:active - a link the moment it is clicked
+
+.btn-container {
+	ul {
+		li {
+			display: inline-block;
+		}
+	}
+	&.lowercase-buttons {
+		.btn {
+			text-transform: initial;
+		}
+	}
+}

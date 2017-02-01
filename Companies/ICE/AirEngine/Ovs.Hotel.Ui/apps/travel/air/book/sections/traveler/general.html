@@ -1,0 +1,124 @@
+﻿<!-- #TODO: Restrict this control to only the types, # of allotments per traveler type, and assigned, as originally searched -->
+<!-- #TODO: Add clickable font-awesome tooltips for fields like name to help users who are having troubles -->
+
+<!-- ROW 1 -->
+<div class="row">
+    <div class="form-group col-md-3 required">
+        <label class="control-label" for="travelerType" translate="yes">Traveler Type</label>
+        <input class="form-control"
+               translate="yes"
+               id="travelerType"
+               type="text"
+               name="travelerType"
+               placeholder="Traveler Type"
+               kendo-drop-down-list
+               k-highlightFirst="'true'"
+               k-suggest="'true'"
+               k-data-source="book.travelerTypes"
+               k-data-text-field="'code'"
+               k-data-value-field="'id'"
+               ng-model="traveler.travelerTypeId" />
+    </div>
+    <div class="form-group col-md-3 required">
+        <label class="control-label" for="firstName" translate="yes">First Name</label>
+        <input class="form-control"
+               translate="yes"
+               id="firstName"
+               type="text"
+               name="firstName"
+               required
+               maxlength="26"
+               ng-model="traveler.firstName"
+               ng-maxlength="26"
+               ng-minlength="2"
+               pattern="^[a-zA-Z\s]+$" />
+    </div>
+    <div class="form-group col-md-3">
+        <label class="control-label" for="mName" translate="yes">Middle Name</label>
+        <input class="form-control"
+               translate="yes"
+               id="mName"
+               type="text"
+               ng-model="traveler.middleName"
+               name="mName"
+               ng-maxlength="26"
+               maxlength="26"
+               pattern="^[a-zA-Z\s]+$" />
+    </div>
+    <div class="form-group col-md-3 required">
+        <label class="control-label" for="lastName" translate="yes">Last Name</label>
+        <input class="form-control"
+               translate="yes"
+               id="lastName"
+               type="text"
+               ng-model="traveler.lastName"
+               name="lastName"
+               ng-maxlength="26"
+               ng-minlength="2"
+               maxlength="26"
+               required
+               pattern="^[a-zA-Z\s]+$" />
+    </div>
+</div>
+
+<!-- ROW 2 -->
+<div class="row">
+    <div class="form-group col-md-6 required">
+        <label class="control-label" translate="yes">Birth Date</label>
+        <div class="form-inline">
+            <label for="birthMonth" class="sr-only">Birth Month</label>
+            <input kendo-drop-down-list
+                   class="form-control"
+                   translate="yes"
+                   id="birthMonth"
+                   k-option-label="'Month'"
+                   k-data-source="book.birthMonthsDataSource"
+                   ng-model="traveler.birthDate.month"
+                   ng-change="book.updateBirthDaysDataSource(traveler.birthDate.month)"
+                   name="birthMonth"
+                   validationMessage="Required"
+                   required />
+            <label for="birthDay" class="sr-only">Birth Day</label>
+            <input kendo-drop-down-list
+                   class="form-control"
+                   translate="yes"
+                   id="birthDay"
+                   k-option-label="'Day'"
+                   k-data-source="book.birthDaysDataSource"
+                   ng-model="traveler.birthDate.day"
+                   ng-init="book.updateBirthDaysDataSource()"
+                   name="birthDay"
+                   validationMessage="Required"
+                   required />
+            <label for="birthYear" class="sr-only">Birth Year</label>
+            <select class="form-control"
+                    kendo-drop-down-list
+                    translate="yes"
+                    id="birthYear"
+                    k-option-label="'Year'"
+                    k-data-source="book.birthYearDataSource"
+                    ng-model="traveler.birthDate.year"
+                    ng-init="book.populateBirthyearDropdown()"
+                    name="birthYear"
+                    validationMessage="Required"
+                    required></select>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6 required">
+        <label for="gender" class="control-label" translate="yes">Gender</label><br />
+        <label class="form-control-label radio-inline" ng-repeat="gender in book.genders">
+            <input type="radio" value="{{ gender.id }}" ng-model="traveler.gender" required /> {{ gender.name }}
+        </label>
+</div>
+</div>
+
+<!-- ROW 3 -->
+<div class="row">
+    <!-- #TODO: Should ONLY show for international flights -->
+    <!-- sync "book.isInternationalFlight" with controller logic -->
+    <div class="form-group col-md-6 required" ng-show="book.isInternationalFlight">
+        <label class="control-label" for="passportIssuingCountry" translate="yes">Passport Issuing Country</label>
+        <input type="text" class="form-control" id="passportIssuingCountry" ng-model="traveler.passportIssuingCountry" translate="yes" />
+    </div>
+</div>

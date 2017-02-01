@@ -1,0 +1,24 @@
+﻿<!-- Known Traveler Program Information -->
+<h4>Known Traveler Program</h4>
+
+<input class="form-control" translate="yes" id="knownTravelerProgram"
+       kendo-drop-down-list type="text"
+       k-highlightFirst="'true'"
+       k-suggest="'true'"
+       k-option-label="'Select a Program'"
+       k-data-source="book.knownTravelerProgramsDataSource"
+       ng-model="traveler.knownTravelerProgram"
+       name="knownTravelerProgram" />
+
+<br />
+<div class="input-group">
+    <span class="input-group-addon" id="knownTravelerNumAddon">#</span>
+    <input type="text"
+           class="form-control"
+           id="knownTravelerNumber"
+           ng-model="traveler.knownTravelerNumber"
+           ng-maxlength="25"
+           maxlength="25"
+           placeholder="Known Traveler Number" />
+</div>
+<!-- End Known Traveler Program Information -->

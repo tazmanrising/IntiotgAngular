@@ -1,0 +1,21 @@
+﻿<footer ng-controller="FooterController as footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer-border">
+                    <div class="footer-links">
+                        <ul ng-repeat="footerItem in main.currentSession.display_options.footers">
+                            <li><a href="{{footerItem.link_href}}">{{footerItem.text_link}}</a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">{{main.currentSession.display_options.labels.copyright}}</div><br />
+
+                    <div class="disclaimer">{{main.currentSession.display_options.labels.disclaimer}}</div><br /><br />
+
+                    <div class="legal">{{main.currentSession.display_options.labels.sot}}</div><br />
+
+                </div><!-- end footer border -->
+            </div><!-- end col-sm-12 -->
+        </div><!-- end row -->
+    </div><!-- end container fluid -->
+</footer><!-- end footer -->

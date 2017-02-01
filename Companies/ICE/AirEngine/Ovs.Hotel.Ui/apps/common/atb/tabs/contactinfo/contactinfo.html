@@ -1,0 +1,36 @@
+﻿        
+<div id="contactinfo" style="width:80%; margin: 0 auto;">
+
+    <ul kendo-panel-bar id="contact-panelbar">
+        <li class="k-state-active">
+            <span class="k-link k-state-selected">Contact Info<kendo-button class="k-command" enable="false" style="width: 60px; margin-left: 20px" ng-click="agent.showGuide('product')">Edit</kendo-button></span>
+            <div style="padding: 10px; text-align: center">
+                <strong>{{agent.currentSession.member_info.first_name}} {{agent.currentSession.member_info.last_name}}</strong><br/>
+                {{agent.member.street1}}<br/>
+                {{agent.member.street2}}<br/>
+                {{agent.member.line3}}
+                <hr/>
+                {{agent.member.phones[0]}}
+                <div ng-repeat="phone in agent.member.phones">
+                    
+                    {{phone.phonenumber}}
+                </div>
+                Primary Phone: 602-454-5445 (Mobile - Have TCPA) <br/>
+                Secondary Phone: 602-444-5555 (Home) <br/>
+                <hr/>
+
+                Primary E-Mail: test@testme.com (Have Optin)<br/>
+
+            </div>
+        </li>
+        <li>
+            <span class="k-link">Call History</span>
+            <div>Coming Soon</div>
+        </li>
+        <li>
+            <span class="k-link">E-Mail History</span>
+            <div>Coming Soon</div>
+        </li>
+    </ul>
+</div>
+

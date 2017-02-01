@@ -1,0 +1,9 @@
+﻿<div ng-controller="shoppingHistoryController as shoppingHistory">
+    <div style="text-align:right">
+            <kendo-button class='k-command' ng-click="shoppingHistory.refreshHistory();" style='width: 70px;'>Refresh</kendo-button>
+</div>
+    <div kendo-grid="shoppingHistory.shoppingHistoryGrid"
+         style="height: 425px"
+         k-options="shoppingHistory.gridOptions"></div>
+
+</div>

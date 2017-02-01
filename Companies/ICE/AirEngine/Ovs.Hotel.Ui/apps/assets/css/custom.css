@@ -1,0 +1,479 @@
+.ui-view-container {
+  position: relative;
+  height: 65px;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+  opacity: 1; 
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translate3d(100px, 0, 0);
+  -moz-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0);
+}
+
+
+section#content {
+    min-height: 1000px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+#main { padding-top: 200px; }
+
+.page-title, .page-description, .home-backstretch-form .form-air-search label { color: #fff; }
+
+.page-title {
+    font-size: 4.1667em;
+    font-weight: bold;
+}
+
+.page-description {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.k-marker { background: none !important; }
+
+.k-marker-70 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-70.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-69 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-69.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-68 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-68.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-67 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-67.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-66 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-66.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-65 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-65.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-64 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-64.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-63 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-63.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-62 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-62.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-61 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-61.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-60 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-60.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-59 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-59.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-58 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-58.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-57 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-57.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-56 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-56.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-55 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-55.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-54 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-54.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-53 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-53.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-52 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-52.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-51 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-51.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-50 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-50.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-49 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-49.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-48 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-48.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-47 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-47.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 38px !important;
+}
+
+.k-marker-46 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-46.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-45 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-45.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-44 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-44.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-43 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-43.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-42 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-42.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-41 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-41.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-40 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-40.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 28px !important;
+}
+
+.k-marker-39 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-39.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-38 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-38.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-38 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-38.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-37 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-37.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-36 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-36.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-35 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-35.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-34 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-34.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-33 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-33.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+    
+.k-marker-32 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-32.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-31 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-31.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-30 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-30.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-29 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-29.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+
+.k-marker-28 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-28.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-27 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-27.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-26 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-26.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-25 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-25.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+}
+
+.k-marker-24 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-24.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px !important;
+}
+
+.k-marker-23 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-23.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px !important;
+}
+
+.k-marker-22 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-22.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px !important;
+}
+
+
+.k-marker-21 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-21.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px !important;
+}
+
+
+.k-marker-20 {
+    background-image: url('/apps/assets/imgs/maps/markers/hotelpin-20.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 15px !important;
+}
+
+.featured {
+    bottom: 50px;
+    margin-bottom: 0;
+    position: absolute;
+    right: 50px;
+    text-align: right;
+    z-index: 9;
+}
+
+.featured figure a { border: 2px solid #fff; }
+
+.featured .details { margin-right: 10px; }
+
+.featured .details > * {
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.25em;
+    margin: 0;
+    text-shadow: 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.hide { visibility: hidden; }
+
+.errors { background-color: indianred; }
+
+/*used form the google map on the hotel detail page*/
+
+#map {
+    height: 420px;
+    width: 70%;
+}
+
+.infoWindowContent {
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    height: 70px;
+    padding-top: 10px;
+    width: 250px;
+}
+
+.popover {
+    max-width: 300px !important;
+    width: 300px !important;
+}

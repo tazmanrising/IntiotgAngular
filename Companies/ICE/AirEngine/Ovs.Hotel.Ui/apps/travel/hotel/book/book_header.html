@@ -1,0 +1,42 @@
+﻿<!-- dbc header start -->
+<header class="header-club">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 brand-conainer">
+                <h1 class="header-main__logo logo">
+                    <a href="/" translate title="{{main.currentSession.display_options.program_long_name}} - home">
+                        <!--<img src="/apps/themes/default/img/trans.png" alt="{{main.currentSession.display_options.program_long_name}} Home" class="header-main__logo" />-->
+                    </a>
+                </h1>
+                <i class="fa fa-times nav-close"></i>
+            </div>
+            <div class="col-sm-6">
+                <div class="member-type-container">
+                 
+                    <ul class="nav-top">
+                        <li><display-options text="main.currentSession.display_options.program_phone_number" show="main.currentSession.display_options.general_phone_number"></display-options></li>
+
+                        <li><a href="{{main.currentSession.display_options.labels.my_account_href}}"><display-options text="main.currentSession.display_options.labels.account_settings_label" show="main.currentSession.display_options.labels.account_settings_label"></display-options></a></li>
+                    </ul>
+ 
+                </div><!-- end member-type-container -->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- dbc header end -->
+
+<section class="checkout__steps-container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="checkout__steps">
+                    <li><a href="#"><i class="icon-bell"></i>Hotel</a></li>
+                    <li><a href="#"><i class="icon-completed"></i>Pick a Room</a></li>
+                    <li><a href="#"><i class="icon-current"></i>Payment & Billing</a></li>
+                    <li><a href="#"><i class="icon-pending"></i>Review</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

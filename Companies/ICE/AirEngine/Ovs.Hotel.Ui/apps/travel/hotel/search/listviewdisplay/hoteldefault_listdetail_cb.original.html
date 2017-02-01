@@ -1,0 +1,45 @@
+
+<div class="search-results-listings__hotel-details">
+
+    <div class="heading">
+        <h3 ng-bind-html="hotel.hotel_snapshot.name | html"></h3>
+        <ul class="review-stars">
+            <li ng-repeat="star in main.stars | limitTo : hotel.hotel_snapshot.star_rating" class="fa fa-star stars-5"></li>
+            <li hotel-stars stars="hotel.hotel_snapshot.star_rating" class="fa fa-star-half stars-5"></li>
+        </ul>
+        <h4><br /><small ng-bind-html="hotel.hotel_snapshot.location | html"></small></h4>
+    </div>
+
+</div><!-- end hotel details -->
+
+<div class="search-results-listings__hotel-image">
+    <img alt="" src="{{ hotel.hotel_snapshot.img_URL }}" class="img-responsive" />
+</div>
+
+<div class="search-results-listings__hotel-pricing">
+
+    <p sw-angular-popover="{{hotel.hotel_snapshot.desc}}" sw-options="main.popoverOptions"><span ng-bind-html="hotel.hotel_snapshot.short_desc | characters : 100"> </span></p>
+
+    <div class="group-container">
+        <div>
+            <small></small> 
+        </div>
+
+        <ul class="savings-breakdown">
+            <li ng-if="main.demoMode == false">Your Price: <span>{{hotel.Total_market_price | currency}}</span></li>
+            <li ng-if="main.demoMode == true">Market Rate: <span> <a href="{{hotel.expedia_link}}" target="_blank">{{hotel.Total_market_price | currency}}</a></span></li>
+
+            <li><b>You Earn</b>: <span style="color: green"><b>{{hotel.total_savings | currency}}</b></span></li>
+
+        </ul>
+        <div class="btn-container">
+            <a class="btn btn-primary" ng-click="details.callDetails(hotel.hotel_snapshot, top)">Select</a>
+            <div class="nightly-price">
+                {{hotel.daily_market_rate | currency}} <small>avg/night</small>
+            </div>
+            <span style="color: white; text-align: center;">SC: {{hotel.supplier_code}}</span>
+        </div>
+    </div>
+
+
+</div><!-- end hotel pricing -->

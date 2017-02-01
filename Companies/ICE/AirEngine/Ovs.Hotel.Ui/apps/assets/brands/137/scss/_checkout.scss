@@ -1,0 +1,247 @@
+.checkout-content h2 {
+	margin-bottom:15px;
+}
+.form-checkout {
+	small {
+		margin-top: 5px;
+		display: block;
+		margin-bottom: 5px;
+		line-height: 18px;
+	}
+	.form-group {
+		width: 46%;
+		margin-right: 15px;
+		margin-bottom: 15px;
+		vertical-align: top;
+		input, select {
+			width: 100%;
+		}
+		input.half-size, select.half-size {
+			width: 49%;
+		}
+	}
+
+	.terms-conditions {
+		height: 200px;
+		padding: 15px;
+		overflow-y: scroll;
+		border: 1px solid #e5e5e5;
+		margin-bottom: 20px;
+		font-size: .9em;
+		line-height: 20px;
+	}
+	.terms-agree {
+		position: relative;
+		padding-left: 25px;
+		font-size: .9em;
+		line-height: 1.2em;
+		padding: 8px;
+		border: 1px solid #DADADA;
+    	background: #F7F7F7;
+		input {
+			margin-right: 10px;
+			margin-top: -2px; 
+		}
+		label:hover {
+			cursor: pointer;
+		}
+	}
+
+	.checkout__hotel-details {
+		margin-bottom: 15px; 
+		h4 {
+
+		}
+		p {
+			line-height: 22px; 
+		}
+	}
+
+	.checkout__booking-summary {
+		strong {
+			font-weight: 500;
+		}
+		ul {
+			li {
+				line-height: 22px; 
+				span {
+					// float: right;
+				}
+			}
+		}
+	}
+
+	.checkout__booking-summary {
+		ul {
+			li {
+				line-height: 20px;
+			}
+		}
+
+	}
+
+	.checkout__nightly-price {
+		margin-bottom: 0 !important;
+		u {
+			text-decoration: none;
+		}
+	}
+	.checkout__discounts {
+		background: #E4FFE5;
+		border-top: 1px dotted #96E699;
+		border-bottom: 1px dotted #96E699;
+	}
+	.checkout__total-price {
+		background: #F9F9F9;
+		border-top: 1px dotted #E0E0E0;
+		.container-spacer {
+			padding-bottom: 15px; 
+			margin-bottom: 0; 
+		}
+	}
+	.checkout__your-price {
+		margin-bottom: 0; 
+	}
+}
+
+
+.mod__ul-span-cols.checkout__booking-summary {
+	ul {
+		overflow: hidden; 
+		li { 
+			text-align: right;
+			span {
+				float: left;
+				display: inline-block;
+			}
+		}
+	}
+	p {
+		margin-bottom: 0; 
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*  Checkout Steps
+/*-------------------------------------------------------------------------*/
+
+.checkout__steps-container {
+	background: #fff;
+	border-bottom: 1px solid #d0d0d0;
+	.checkout__steps {
+		margin-left:10px;
+		li {
+			display: inline-block;
+			text-align: -webkit-match-parent;
+			// margin-right: 15px;
+			// margin-left: 15px;
+			margin: 10px 0;
+			a {
+				padding: 10px 10px;
+				display: block;
+				height: 57px;
+			}
+		}
+		li:first-child {
+			border-right: 1px solid #d0d0d0;
+		}
+	}
+	i {
+		position: relative;
+		margin-top: 10px;
+		text-align:center;
+		display: block;
+    	margin: 0 auto;
+    	margin-bottom: 10px;
+		width: 27px;
+		height: 21px;
+		background: transparent url("../img/checkout-steps.gif") 0px -1000px no-repeat;
+	}
+	.icon-bell {
+		background-position: 0 0 !important;
+	}
+	.icon-bell:before {
+		position: absolute;
+		left:-30px;
+		top: 10px;
+		content:'';
+		width:27px;
+		height: 21px;
+		background: transparent url("../img/checkout-steps.gif") 0px -85px no-repeat;
+	}
+	.icon-completed {
+		background-position: 0 -21px !important;
+	}
+	.icon-current {
+		background-position: 0 -42px !important;
+	}
+	.icon-pending {
+		//background-position: 0 -84px !important;
+		background-position: 0 -63px !important;
+	}
+}
+
+.payment-option {
+	&__payment-slider {
+		rzslider {
+			width: 46%;
+			span.rz-bar,span.rz-bar.rz-selection {
+			    background: #D2D2D2;
+			}
+		}
+		rzslider span.rz-pointer.rz-active:after {
+    		background-color: #fff;
+		}
+		rzslider span.rz-pointer {
+    		background-color: #64D868!important;
+		}
+
+	}
+	&__credit-card {
+
+	}
+}
+
+
+/* Mobile devices (phones, 768px and below) */
+@media (max-width: $screen-sm-min) {
+	.form-checkout {
+		.form-group {
+			width: 100%;
+		}
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+	.checkout__nightly-price {
+		u {
+			display: none;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+	.checkout__nightly-price {
+		u {
+			display: inline-block;
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}
+
+
+@media (max-width: 775px) {
+	.payment-option {
+		&__payment-slider {
+			rzslider {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+﻿
+
+<footer ng-controller="FooterController as footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer-border">
+					<div class="footer-links">
+						<ul ng-repeat="item in footer.displayOptions">
+							<li display-options text="item.link_href" ng-click="footer.showText(item);"></li>
+						</ul>
+						<!--<ul>
+							<li><a href="https://www.explorecruisetravel.com/ms_landing_page?v2_landing_page_type_id=1 ">About Us</a></li>
+							<li><a href="https://www.explorecruisetravel.com/ms_landing_page?v2_landing_page_type_id=12 ">Benefits</a></li>
+							<li><a href=" https://www.explorecruisetravel.com/ms_account_settings_points">My Account</a></li>
+							<li><a href="https://www.explorecruisetravel.com/terms?v2_term_type_id=3 ">Terms of Use</a></li>
+							<li><a href="https://www.explorecruisetravel.com/terms?v2_term_type_id=1 ">Privacy</a></li>
+							<li><a href="https://www.explorecruisetravel.com/terms?v2_term_type_id=2 ">Terms & Conditions</a></li>
+						</ul>-->
+					</div>
+                    <div class="copyright" ng-bind-html="main.currentSession.display_options.labels.copyright"></div>
+					<div class="disclaimer" ng-bind-html="main.currentSession.display_options.labels.disclaimer"></div>
+					<div class="legal" ng-bind-html="main.currentSession.display_options.labels.sot"></div>
+
+                </div><!-- end footer border -->
+            </div><!-- end col-sm-12 -->
+        </div><!-- end row -->
+    </div><!-- end container fluid -->
+</footer><!-- end footer -->

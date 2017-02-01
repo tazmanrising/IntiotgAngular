@@ -1,0 +1,118 @@
+﻿<!-- for testing data-bs-show="true" -->
+<section class="form-air-search">
+    <div class="container-fluid">
+        <div class="error-ttext"></div>
+
+        <br />
+        <br />
+        <!-- ng-submit="validateSearchForm($event)" -->
+        <!-- kendo validator fires onblur() events; hence it can handle custom validation rules -->
+        <form name="main.search" id="search" class="form-air-search__form" ng-model="main.search" kendo-validator="main.validator" k-options="main.searchFormValidationOptions" ng-submit="main.validate($event)" novalidate>
+            <label class="form-control-label radio-inline">
+                <input type="radio" name="searchTypeRoundTrip" id="searchTypeRoundTrip" ng-model="main.searchType" value="RoundTrip" />Round Trip
+            </label>
+            <label class="form-control-label radio-inline">
+                <input type="radio" name="searchTypeOneWay" id="searchTypeOneWay" ng-model="main.searchType" value="OneWay" />One Way
+            </label>
+
+            <div class="row">
+                <div class="col-md-3 form-group departure">
+                    <input kendo-auto-complete
+                           k-data-text-field="'name'"
+                           k-data-value-field="'name'"
+                           k-min-length="3"
+                           k-enforce-min-length="true"
+                           k-placeholder="'From (type departure airport)'"
+                           k-template="main.ffpItemTemplate"
+                           k-group-template="main.ffpGroupTemplate"
+                           k-data-source="main.ffpFromDataSource"
+                           ng-model="main.autoFromValue"
+                           ng-required="true"
+                           id="flyingFrom"
+                           name="flyingFrom"
+                           style="width:100%" />
+                    <span class="k-invalid-msg" data-for="flyingFrom"></span>
+                </div>
+                <div class="col-md-3 form-group destination">
+                    <input kendo-auto-complete
+                           k-data-text-field="'name'"
+                           k-data-value-field="'name'"
+                           k-min-length="3"
+                           id="flyingTo"
+                           name="flyingTo"
+                           ng-model="main.autoToValue"
+                           k-placeholder="'To (type destination airport)'"
+                           k-template="main.ffpItemTemplate"
+                           k-group-template="main.ffpGroupTemplate"
+                           k-data-source="main.ffpToDataSource"
+                           style="width:100%"
+                           required />
+                    <span class="k-invalid-msg" data-for="flyingTo"></span>
+                </div>
+                <div class="col-md-2 form-group checkin">
+                    <input kendo-date-picker
+                           k-ng-model="main.departureDate"
+                           k-min="main._dtpMin"
+                           k-max="main._dtpMax"
+                           k-format="main.searchFormValidation.kendoDateFormat"
+                           k-on-change="main.validateFlightDates()"
+                           ng-required="true"
+                           type="text"
+                           id="departureDate"
+                           name="departureDate"
+                           class="form-control"
+                           style="width:100%" />
+                    <span class="k-invalid-msg" data-for="departureDate"></span>
+                </div>
+                <div class="col-md-2 form-group checkout" ng-if="main.searchType === 'RoundTrip'">
+                    <input type="text"
+                           id="returnDate"
+                           class="form-control"
+                           kendo-date-picker
+                           k-ng-model="main.returnDate"
+                           name="returnDate"
+                           k-min="main._dtpMin"
+                           k-max="main._dtpMax"
+                           k-format="'MM/dd/yyyy'"
+                           k-on-change="main.validateFlightDates()"
+                           required
+                           style="width:100%" />
+                    <span class="k-invalid-msg" data-for="returnDate"></span>
+                </div>
+                <div class="col-md-2 form-group">
+                    <!--ng-options='num as (num + " Adult") for num in main.passengerDataSource.Adults'-->
+                    <select class="form-control"
+                            translate="yes"
+                            name="paxAdults"
+                            id="paxAdults"
+                            ng-model="main.paxTypes.Adult"
+                            ng-change="main.validatePaxRules()"
+                            ng-required="true"
+                            style="width:100%">
+                        <option ng-repeat="num in main.paxAdultDataSource" value="{{num}}">{{num}} {{ num > 1 ? " Adults" : " Adult" }}</option>
+                    </select>
+                    <span class="k-invalid-msg" data-for="paxAdults"></span>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button translate="yes" class="btn btn-primary btn-search pull-right" ng-disabled="main.searchFormValidation.disableSearchButton">
+                        Search <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row" ng-if="main.show.error.checkout">
+                <div class="col-md-12">
+                    <div style="color:#fff;">{{main.show.error.message}}</div>
+                </div>
+            </div>
+
+        </form><!-- end search form -->
+    </div>
+
+    <!--used to perform search if state parameters are present. -->
+    <div ng-init="main.clubSearch()"></div>
+</section>

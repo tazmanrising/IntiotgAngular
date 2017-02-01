@@ -1,0 +1,14 @@
+{
+  "id": "c1:e1:tmpltmc:699",
+  "type": "member_class_display_Templates",
+  "ice_partner_id": "101",
+  "ice_member_class_id": "699",
+  "templates" [
+      ]
+  "name": "Display Templates for Partner/Member Class 101/699",
+  "is_active": true,
+  "created_timestamp": "2015-11-18T20:15:12.6321435Z",
+  "updated_timestamp": "2015-11-18T20:15:12.6321435Z",
+  "created_by_id": "c1:e1:u1",
+  "updated_by_id": "c1:e1:u1"
+}

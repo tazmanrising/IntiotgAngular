@@ -1,0 +1,117 @@
+﻿<div class="container-fluid">
+    <div id="main" style="padding-top: 0px">
+        <div class="row">
+            <span ng-if="main.show.error">{{main.show.error.message}}</span>
+        </div>
+        <div class="row">
+        </div>
+        <div class="row" id="top">
+            <div class="col-sidebar">
+                <!--Begin filters-->
+                <div class="toggle-container filters-container">
+                    <aside class="sidebar-filters">
+                        <div id="left-pane">
+                            <div class="pane-content">
+                                <div id="filterBarContent"></div>
+                                <h4>Total Flights {{main.completeFlightCount}}</h4>
+                                <h4>Outbound Flights {{main.singleFlightCount}}</h4>
+                                <h4>Correlation Id</h4>
+                                <p>{{main.correlationId}}</p><br />
+                                <h4>Sort By</h4>
+                                <select id="sortBy" style="width: 100%">
+                                    <option>Price</option>
+                                    <!--<option>Duration</option>-->
+                                    <option>Outbound Depature (Earliest)</option>
+                                    <!--<option>Outbound Depature (Latest)</option>
+                                    <option>Outbound Arrival Time (Earliest)</option>
+                                    <option>Outbound Arrival Latest (Latest)</option>
+                                    <option>Return Depature (Earliest)</option>
+                                    <option>Return Depature (Latest)</option>
+                                    <option>Return Arrival Time (Earliest)</option>
+                                    <option>Return Arrival Latest (Latest)</option>-->
+                                </select>
+                                <br />
+                                <h4 style="padding-top: 20px">Filters</h4>
+                                <ul id="panelbar" kendo-panel-bar style="width: 100%">
+                                    <!--<li>
+                                        <span class="k-link k-state-selected">Price Range</span>
+                                        <div style="width: 100%; background-color: white">
+                                            <input id="priceSlider" kendo-slider k-min="0" k-max="1000" k-smallStep="50" k-largeStep="100" k-showButtons="false" k-tickPlacement="'none'" style="width: 100%;" value="650"/>
+                                            <div style="text-align: right; font-weight: bold; margin-top: 0; color: black; width: 100%">
+                                                <label id="maxPrice">1000</label>&nbsp;&nbsp;&nbsp
+                                            </div>
+                                        </div>
+                                    </li>-->
+                                    <li>
+                                        Airlines
+                                        <div id="filterAirlineContent"></div>
+
+                                    </li>
+                                    <li>
+                                        Depature Time
+                                        <div style="width: 100%; height: 20px; text-align: left; vertical-align: middle; background-color: white; color: black; font-size: 0.8em;">
+                                            <input style="margin-left: 10px; margin-right: 0; font-size: 1.0em; color: black" type="checkbox" onchange="filterDepartTime(this)" id="departEarlyMorning" /> Early Morning (12:00a - 4:59a)
+                                        </div>
+                                        <div style="width: 100%; height: 20px; text-align: left; vertical-align: middle; background-color: white; color: black; font-size: 0.8em;">
+                                            <input style="margin-left: 10px; margin-right: 0; font-size: 1.0em; color: black" type="checkbox" onchange="filterDepartTime(this)" id="departMorning" /> Morning (5:00a - 11:59a)
+                                        </div>
+                                        <div style="width: 100%; height: 20px; text-align: left; vertical-align: middle; background-color: white; color: black; font-size: 0.8em;">
+                                            <input style="margin-left: 10px; margin-right: 0; font-size: 1.0em; color: black" type="checkbox" onchange="filterDepartTime(this)" id="departAfternoon" /> Afternoon (12:00p - 5:59p)
+                                        </div>
+                                        <div style="width: 100%; height: 20px; text-align: left; vertical-align: text-top; background-color: white; color: black; font-size: 0.8em;">
+                                            <input style="margin-left: 10px; margin-right: 0; font-size: 1.0em; color: black" type="checkbox" onchange="filterDepartTime(this)" id="departEvening" /> Evening (6:00p - 11:59p)
+                                        </div>
+                                    </li>
+                                    <!--<li>
+                                        Return Time
+                                        <div style="width: 100%; height: 20px; text-align: left; vertical-align: text-top; background-color: white; color: black; font-size: 0.8em;">
+                                            <input style="margin-left: 10px; margin-right: 0; font-size: 1.0em; color: black" type="checkbox" onchange="filterReturnTime(this)" id="returnEarlyMorning"/> Early Morning (12:00a - 4:59a)
+                                        </div>
+                                        <div style="width: 100%; height: 20px; text-align: left; vertical-align: text-top; background-color: white; color: black; font-size: 0.8em;">
+                                            <input style="margin-left: 10px; margin-right: 0; font-size: 1.0em; color: black" type="checkbox" onchange="filterReturnTime(this)" id="returnMorning"/> Morning (5:00a - 11:59a)
+                                        </div>
+                                        <div style="width: 100%; height: 20px; text-align: left; vertical-align: text-top; background-color: white; color: black; font-size: 0.8em;">
+                                            <input style="margin-left: 10px; margin-right: 0; font-size: 1.0em; color: black" type="checkbox" onchange="filterReturnTime(this)" id="returnAfternoon"/> Afternoon (12:00p - 5:59p)
+                                        </div>
+                                        <div style="width: 100%; height: 20px; text-align: left; vertical-align: text-top; background-color: white; color: black; font-size: 0.8em;">
+                                            <input style="margin-left: 10px; margin-right: 0; font-size: 1.0em; color: black" type="checkbox" onchange="filterReturnTime(this)" id="returnEvening"/> Evening (6:00p - 11:59p)
+                                        </div>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </div>
+
+                    </aside>
+                </div>
+
+                <!--End filters-->
+            </div>
+            <!--Begin flight results-->
+            <div class="col-content">
+                <div class="sort-by-section clearfix">
+                </div>
+
+                <div class="hotel-list listing-style3 hotel">
+                    <div id="tabstrip" kendo-tab-strip style="margin-top: 5px;">
+                        <ul>
+                            <li class="k-state-active">Flights</li>
+
+                            <!--<li>Fare Calendar</li>-->
+                        </ul>
+                        <!--first tab div-->
+                        <div>
+                            <div ng-animate="'view'" ui-view="airSearchResultsDepart"></div>
+                            <div ng-animate="'view'" ui-view="airSearchResultsReturn"></div>
+                            <div ng-animate="'view'" ui-view="airSearchResultsComplete"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="resultRowTemplate" name="main.resultRowTemplate" type="text/x-kendo-template">
+    <div class="resultRow">Hello</div>
+</script>
+<!-- Google Map Api -->

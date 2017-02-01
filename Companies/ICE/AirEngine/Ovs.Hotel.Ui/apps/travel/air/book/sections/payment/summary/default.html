@@ -1,0 +1,81 @@
+﻿<section class="form-air-payment-summary-info">
+    <h2>Payment Summary</h2>
+
+    <div class="container-box">
+        <div class="container-spacer">
+
+            <!-- We'll likely need to setup an angular watch (or similar);
+            proly need to update pricing display on-the-fly depending on flight preference selections -->
+            
+            <!-- Loop through each passanger -->
+            <div class="row">
+                <div class="col-md-12 traveler-item" ng-repeat="traveler in book.travelers track by $index" id="traveler-{{ $index }}">
+                    <a href="" ng-model="payment.traveler.collapsed" ng-click="payment.traveler.collapsed=!payment.traveler.collapsed">
+                        Traveler #{{$index + 1}}: {{ traveler.travelerType }}
+                        <span class="pull-right">{{ book.payment.totalPerPassenger | customCurrency : traveler.payment.currencySymbol }}</span> <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                    </a>
+
+                    <div ng-show="payment.traveler.collapsed">
+                        <!-- Flight Total Price -->
+                        <div class="row">
+                            <div class="col-md-6" translate="yes">
+                                Flight
+                            </div>
+
+                            <div class="col-md-6 pull-right">
+                                <span class="pull-right">{{ book.payment.totalFare | currency : traveler.payment.currencySymbol }}</span>
+                            </div>
+                        </div>
+
+                        <!-- Taxes & Fees -->
+                        <div class="row" ng-if="book.payment.totalTax > 0">
+                            <div class="col-md-6">
+                                Taxes &amp; Fees
+                            </div>
+                            <div class="col-md-6 pull-right">
+                                <span class="pull-right">{{ book.payment.totalTax | currency : traveler.payment.currencySymbol }}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="clearfix">
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Expedia Book Fee (pulled in dynamically) -->
+            <div class="row" ng-hide="true">
+                <div class="col-md-6">
+                    Booking Fee
+                </div>
+
+                <div class="col-md-6">
+                    <span class="pull-right">{{ book.payment.bookingFee | currency : traveler.payment.currencySymbol }}</span>
+                </div>
+            </div>
+
+            <br /><hr /><br />
+
+            <!-- Expedia Book Fee (pulled in dynamically) -->
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="pull-right" style="font-weight:bold; text-transform:uppercase;">TOTAL : {{ book.payment.total | currency : traveler.payment.currencySymbol }}</span>
+                </div>
+            </div>
+
+            <br /><br />
+
+            <!-- disclaimer -->
+            <div class="row">
+                <div class="col-md-12">
+                    <span ng-bind-html="book.payment.disclaimer"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

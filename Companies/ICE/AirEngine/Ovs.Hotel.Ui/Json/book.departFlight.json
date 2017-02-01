@@ -1,0 +1,259 @@
+﻿[
+    {
+        "MultiCarrier": false,
+        "Id": "O4",
+        "IsRefundable": false,
+        "PaxFareDetails": null,
+        "TotalFareAmount": 310.2,
+        "TotalTaxAmount": 63.69,
+        "TotalMaxFareAmount": 0,
+        "FlightType": 0,
+        "OriginFilter": true,
+        "ReturnFilter": false,
+        "Show": true,
+        "MarketingCarriers": [ "American Airlines", "American Airlines" ],
+        "MarkeOperatingCarriers": [ null, "American Airlines" ],
+        "Class": null,
+        "OriginAirport": "ATL",
+        "DestinationAirport": "BOS",
+        "Segments": [
+            {
+                "OriginFilter": true,
+                "ReturnFilter": false,
+                "Show": true,
+                "SegmentType": null,
+                "CarrierCode": "AA",
+                "OpCarrierCode": null,
+                "FlightNumber": "4713",
+                "Equipment": "E75",
+                "Class": null,
+                "ArrivalDate": "02/07/2017",
+                "DepartureDate": "02/07/2017",
+                "DepartureAirport": "ATL",
+                "DepartureTime": "08:50",
+                "ArrivalAirport": "DCA",
+                "ArrivalTime": "10:43",
+                "TravelTime": "0153",
+                "NumberOfStops": null,
+                "StopsLabel": null,
+                "Cabin": null,
+                "AvailabilityContext": null,
+                "$$hashKey": "object:324"
+            },
+            {
+                "OriginFilter": true,
+                "ReturnFilter": false,
+                "Show": true,
+                "SegmentType": null,
+                "CarrierCode": "AA",
+                "OpCarrierCode": "AA",
+                "FlightNumber": "2170",
+                "Equipment": "319",
+                "Class": null,
+                "ArrivalDate": "02/07/2017",
+                "DepartureDate": "02/07/2017",
+                "DepartureAirport": "DCA",
+                "DepartureTime": "11:30",
+                "ArrivalAirport": "BOS",
+                "ArrivalTime": "12:59",
+                "TravelTime": "0129",
+                "NumberOfStops": null,
+                "StopsLabel": null,
+                "Cabin": null,
+                "AvailabilityContext": null,
+                "$$hashKey": "object:325"
+            }
+        ],
+        "FlightElapseTime": "0409",
+        "OutboundElapseTime": null,
+        "InboundElapseTime": null,
+        "ReturnOptionCount": 23,
+        "ReturnOptions": [
+            {
+                "Id": "R2",
+                "SortOrder": 0,
+                "Description": "Flt# 891(AA) BOS->CLT Flt# 572(AA) CLT->ATL  $323.7 Fare Codes XAUSJ0BA VAVNJ0MB XAUSJ0MA UAVQA0MA XEVVA0MA ",
+                "PlusPrice": 0,
+                "TotalPrice": 323.7,
+                "$$hashKey": "object:328"
+            },
+            {
+                "Id": "R3",
+                "SortOrder": 0,
+                "Description": "Flt# 1808(AA) BOS->CLT Flt# 843(AA) CLT->ATL  $323.7 Fare Codes XAUSJ0BA GAA2AKEN VAVNJ0MB UAVQA0MA ",
+                "PlusPrice": 0,
+                "TotalPrice": 323.7,
+                "$$hashKey": "object:329"
+            },
+            {
+                "Id": "R7",
+                "SortOrder": 0,
+                "Description": "Flt# 1729(AA) BOS->CLT Flt# 1814(AA) CLT->ATL  $314.7 Fare Codes QVAHZNN5 VAVSL5MB UAVQA0MA XEVVA0MA ",
+                "PlusPrice": 0,
+                "TotalPrice": 314.7,
+                "$$hashKey": "object:330"
+            },
+            {
+                "Id": "R10",
+                "SortOrder": 0,
+                "Description": "Flt# 2130(AA) BOS->DCA Flt# 4623(AA) DCA->ATL  $314.7 Fare Codes NVAIXSN5 XEVVA0MA UAVQA0MA ",
+                "PlusPrice": 0,
+                "TotalPrice": 314.7,
+                "$$hashKey": "object:331"
+            },
+            {
+                "Id": "R17",
+                "SortOrder": 0,
+                "Description": "Flt# 2159(AA) BOS->DCA Flt# 4476(AA) DCA->ATL  $314.7 Fare Codes G7AHZNN5 LAA2AKEN ",
+                "PlusPrice": 0,
+                "TotalPrice": 314.7,
+                "$$hashKey": "object:332"
+            },
+            {
+                "Id": "R15",
+                "SortOrder": 0,
+                "Description": "Flt# 1708(AA) BOS->CLT Flt# 450(AA) CLT->ATL  $307.2 Fare Codes SUAIZNN5 ",
+                "PlusPrice": 0,
+                "TotalPrice": 307.2,
+                "$$hashKey": "object:333"
+            },
+            {
+                "Id": "R16",
+                "SortOrder": 0,
+                "Description": "Flt# 1491(AA) BOS->PHL Flt# 1846(AA) PHL->ATL  $307.2 Fare Codes SUAIZNN5 ",
+                "PlusPrice": 0,
+                "TotalPrice": 307.2,
+                "$$hashKey": "object:334"
+            },
+            {
+                "Id": "R8",
+                "SortOrder": 0,
+                "Description": "Flt# 1682(AA) BOS->CLT Flt# 450(AA) CLT->ATL  $297.2 Fare Codes QVAHZNN5 NVAIXSN5 ",
+                "PlusPrice": 0,
+                "TotalPrice": 297.2,
+                "$$hashKey": "object:335"
+            },
+            {
+                "Id": "R9",
+                "SortOrder": 0,
+                "Description": "Flt# 2169(AA) BOS->DCA Flt# 4623(AA) DCA->ATL  $297.2 Fare Codes QVAHZNN5 NVAIXSN5 ",
+                "PlusPrice": 0,
+                "TotalPrice": 297.2,
+                "$$hashKey": "object:336"
+            },
+            {
+                "Id": "R20",
+                "SortOrder": 0,
+                "Description": "Flt# 2152(AA) BOS->LGA Flt# 4682(AA) LGA->ATL  $295.7 Fare Codes VAUNA0MP XEUNA0MA XETNA0MA XAUNA0MJ ",
+                "PlusPrice": 0,
+                "TotalPrice": 295.7,
+                "$$hashKey": "object:337"
+            },
+            {
+                "Id": "R21",
+                "SortOrder": 0,
+                "Description": "Flt# 2165(AA) BOS->LGA Flt# 4591(AA) LGA->ATL  $295.7 Fare Codes XAUNA0MJ XETNA0MA ",
+                "PlusPrice": 0,
+                "TotalPrice": 295.7,
+                "$$hashKey": "object:338"
+            },
+            {
+                "Id": "R19",
+                "SortOrder": 0,
+                "Description": "Flt# 1991(AA) BOS->PHL Flt# 2016(AA) PHL->ATL  $283.7 Fare Codes VAUNA0MP XEUNA0MA VAUQX0MB XAUNA0MJ ",
+                "PlusPrice": 0,
+                "TotalPrice": 283.7,
+                "$$hashKey": "object:339"
+            },
+            {
+                "Id": "R18",
+                "SortOrder": 0,
+                "Description": "Flt# 2121(AA) BOS->LGA Flt# 1678(AA) LGA->ATL  $253.7 Fare Codes VAUNA0MP XEUNA0MA ",
+                "PlusPrice": 0,
+                "TotalPrice": 253.7,
+                "$$hashKey": "object:340"
+            },
+            {
+                "Id": "R4",
+                "SortOrder": 0,
+                "Description": "Flt# 1240(AA) BOS->ORD Flt# 2247(AA) ORD->ATL  $230.7 Fare Codes GAA2AKEN QVAHZNN5 ",
+                "PlusPrice": 0,
+                "TotalPrice": 230.7,
+                "$$hashKey": "object:341"
+            },
+            {
+                "Id": "R32",
+                "SortOrder": 0,
+                "Description": "Flt# 4761(AA) BOS->LGA Flt# 4591(AA) LGA->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:342"
+            },
+            {
+                "Id": "R4",
+                "SortOrder": 0,
+                "Description": "Flt# 2224(AA) BOS->CLT Flt# 760(AA) CLT->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:343"
+            },
+            {
+                "Id": "R8",
+                "SortOrder": 0,
+                "Description": "Flt# 1773(AA) BOS->PHL Flt# 1833(AA) PHL->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:344"
+            },
+            {
+                "Id": "R9",
+                "SortOrder": 0,
+                "Description": "Flt# 2170(AA) BOS->DCA Flt# 4624(AA) DCA->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:345"
+            },
+            {
+                "Id": "R13",
+                "SortOrder": 0,
+                "Description": "Flt# 2056(AA) BOS->CLT Flt# 787(AA) CLT->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:346"
+            },
+            {
+                "Id": "R14",
+                "SortOrder": 0,
+                "Description": "Flt# 1655(AA) BOS->CLT Flt# 589(AA) CLT->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:347"
+            },
+            {
+                "Id": "R15",
+                "SortOrder": 0,
+                "Description": "Flt# 2149(AA) BOS->DCA Flt# 4535(AA) DCA->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:348"
+            },
+            {
+                "Id": "R16",
+                "SortOrder": 0,
+                "Description": "Flt# 2131(AA) BOS->LGA Flt# 1819(AA) LGA->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:349"
+            },
+            {
+                "Id": "R17",
+                "SortOrder": 0,
+                "Description": "Flt# 1883(AA) BOS->PHL Flt# 719(AA) PHL->ATL  $0 Fare Codes ",
+                "PlusPrice": 0,
+                "TotalPrice": 0,
+                "$$hashKey": "object:350"
+            }
+        ],
+        "$$hashKey": "object:79"
+    }
+]

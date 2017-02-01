@@ -1,0 +1,17 @@
+﻿[
+    {
+        "code": "Adult",
+        "id": 0,
+        "label": "Adult #1"
+    },
+    {
+        "code": "Child",
+        "id": 1,
+        "label": "Child #1"
+    },
+    {
+        "code": "Infant",
+        "id": 2,
+        "label": "Infant #1"
+    }
+]

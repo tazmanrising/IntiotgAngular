@@ -1,0 +1,139 @@
+﻿<div ng-controller="hotelController as main">
+    <h4 class="search-results-title"><i class="soap-icon-search"></i><b>{{main.hotelsShown}}</b> results found.</h4>
+    <div class="toggle-container filters-container">
+        <aside>
+            <div class="filter filter__hotel-brand">
+                <h4>Search by Hotel or Brand</h4>
+                
+                <!--<input type="text" id="searchAllHotels" class="form-control" ng-model="selctedSearch" placeholder="Search..." bs-options="hotel for hotel in currentHotels" ng-change="recount()" bs-typeahead />-->
+            </div>
+            <!--Star rating-->
+            <div class="filter filter__rating">
+                <h4>Rating</h4>
+
+
+                <div ng-repeat="rating in main.ratings">
+                    <div ng-click="main.setStarRatingFilter(rating)" value="{{rating.value}}" ng-model="rating.selected">
+                        <span>At Least</span>
+                        <span ng-repeat="star in main.stars | limitTo : rating.value" class="fa fa-star stars-4"></span>
+                        <!--<span class="fa fa-star stars-4" ng-repeat="star in stars | limitTo : 5 - rating.value"></span>-->
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+            <div class="filter filter__price-range">
+                <h4>Price Range</h4>
+                <!--Slider-->
+                <div class=" filters">
+                    <!--<div class="container filterPadding">
+                        <h4>Price Range</h4>
+                        <rzslider rz-slider-floor="min"
+                                  rz-slider-ceil="max"
+                                  rz-slider-model="bottom"
+                                  rz-slider-high="top"
+                                  rz-slider-draggable-range="true"
+                                  rz-slider-translate="translate"
+                                  rz-slider-hide-limit-labels="true"></rzslider>
+                    </div>-->
+                    <hr>
+                </div>
+            </div>
+            <div class="filter filter-amenities">
+                <h4>Amenities</h4>
+                <ul>
+                    <li><label><input type="checkbox"> Wifi</label></li>
+                    <li><label><input type="checkbox"> Pet Friendly</label></li>
+                    <li><label><input type="checkbox"> Outdoor Pool</label></li>
+                    <li><label><input type="checkbox"> Airport Shuttle</label></li>
+                    <li><label><input type="checkbox"> Complimentary Breakfast</label></li>
+                </ul>
+            </div>
+            <div class="filter filter-amenities">
+                <h4>Locations</h4>
+                <ul> <!--ng-repeat="boundary in geoboundaryList"-->>
+                    <li><label><input type="checkbox" /> <!--id="boundary.id" ng-model="boundary.isChecked" ng-change="recount()">--><!--{{boundary.name}}--></label></li>
+                    <li><label><input type="checkbox"> Down Town</label></li>
+                    <li><label><input type="checkbox"> Outdoor Pool</label></li>
+                    <li><label><input type="checkbox"> Airport Shuttle</label></li>
+                    <li><label><input type="checkbox"> Complimentary Breakfast</label></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <!----------------------------------- Begin Filter area ---------------------------------------->
+    <!-- <div class="panel style1 arrow-right">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#price-filter" target="_self" class="collapsed">Price</a>
+        </h4>
+        <ng-include src="_sortingFilters.html"></ng-include>
+        <div id="price-filter" class="panel-collapse collapse">
+            <div class="panel-content">
+                <div id="price-range"></div>
+                <br />
+                <span class="min-price-label pull-left"></span>
+                <span class="max-price-label pull-right"></span>
+                <div class="clearer"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="panel style1 arrow-right">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#rating-filter" target="_self" class="collapsed">User Rating</a>
+        </h4>
+        <div id="rating-filter" class="panel-collapse collapse filters-container">
+            <div class="panel-content">
+                <div id="rating" class="five-stars-container editable-rating"></div>
+                <br />
+                <small>2458 REVIEWS</small>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="panel style1 arrow-right">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#neighborhood-type-filter" target="_self" class="collapsed">Neighborhood</a>
+        </h4>
+        <div id="neighborhood-type-filter" class="panel-collapse collapse">
+            <div class="panel-content">
+                <ul class="check-square filters-option">
+
+                    <li ng-repeat="neighborhood in main.hotelsReturned.areas"><a target="_self" href="#">{{neighborhood}}<small>{{neighborhood.count}}</small></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="panel style1 arrow-right">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" target="_self" href="#amenities-filter" class="collapsed">Amenities</a>
+        </h4>
+        <div id="amenities-filter" class="panel-collapse collapse">
+            <div class="panel-content">
+                <ul class="check-square filters-option">
+                    <li><a target="_self" href="#">Bathroom<small>(722)</small></a></li>
+                    <li><a target="_self" href="#">Cable tv<small>(982)</small></a></li>
+                    <li class="active"><a target="_self" href="#">air conditioning<small>(127)</small></a></li>
+                    <li class="active"><a target="_self" href="#">mini bar<small>(222)</small></a></li>
+                    <li><a target="_self" href="#">wi - fi<small>(158)</small></a></li>
+                    <li><a target="_self" href="#">pets allowed<small>(439)</small></a></li>
+                    <li><a target="_self" href="#">room service<small>(52)</small></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="panel style1 arrow-right">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#chain-filter" target="_self" class="collapsed">Hotel Chain</a>
+        </h4>
+        <div id="chain-filter" class="panel-collapse collapse">
+            <div class="panel-content">
+                <ul class="check-square filters-option">
+
+                    <li ng-repeat="chain in main.hotelsReturned.chains"><a target="_self" href="#">"{{chain[1]}}"<small>{{chain[2]}}</small></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div> -->
+</div>

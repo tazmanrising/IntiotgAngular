@@ -1,0 +1,34 @@
+﻿<div class="additional-info traveler-info--additional-info-{{$index}}">
+    <a href="" ng-model="traveler.collapsed" ng-click="traveler.collapsed=!traveler.collapsed">
+        Seat requests, frequent flyer, known traveler, redress and more <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+    </a>
+    
+    <div ng-show="traveler.collapsed">
+        <div class="row">
+            <div class="col-md-12"><br /><br /></div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <div ng-include="'/apps/travel/air/book/sections/traveler/knownTraveler/default.html'"></div>
+            </div>
+            <div class="form-group col-md-6">
+                <div ng-include="'/apps/travel/air/book/sections/traveler/frequentFlyer/default.html'"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <div ng-include="'/apps/travel/air/book/sections/traveler/redress/default.html'"></div>
+            </div>
+            <div class="form-group col-md-6">
+                <div ng-include="'/apps/travel/air/book/sections/traveler/assistance/default.html'"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <div ng-include="'/apps/travel/air/book/sections/traveler/seat/preference/default.html'"></div>
+            </div>
+        </div>
+    </div>
+</div>

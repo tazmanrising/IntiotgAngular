@@ -1,0 +1,53 @@
+﻿<section class="air-book-terms">
+    <div class="container-fluid">
+        <div class="container-box">
+            <div class="container-spacer">
+                <h2>Terms and Conditions</h2>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol>
+                            <li>
+                                Review your trip details to make sure the dates and times are correct
+                            </li>
+                            <li>
+                                Ensure your flight passenger names match governement-issued ID exactly
+                            </li>
+                            <li ng-if="book.nonrefundableFees">
+                                IF NON REFUNDABLE BOOKINGS FEES APPLY (As noted from display options) we need to state that fee is non refundable
+                                </li>
+                            <li>
+                                Please confirm your flights details directly with your airline 24 hours prior to departure to ensure the most accurate information is available to you
+                            </li>
+                            <li>
+                                Prices may not include baggage fees or other fees charged directly by the airline
+                            </li>
+                            <li>
+                                Fares are not guaranteed until ticketed
+                            </li>
+                            <li>
+                                Federal Law forbids the carriage of hazardous materials aboard aircraft in your luggage or on your person.
+                            </li>
+                            <li>{{ book.cancellationPolicy }}</li>
+                            <li ng-if="book.fareRules.length">
+                                <ul>
+                                    <li ng-repeat="rule in book.fareRules">{{ rule }}</li>
+                                </ul>
+                            </li>
+                            <li>{{ book.baggageCharge }}</li>
+                            <li>We will make every effort to communicate any special requests to the airline(s) made during your booking process.  These requests cannot be guaranteed and no compensation will be payable if special requests/requirements cannot be met</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="terms-agree">
+                            <label for="inputAgree" class="required">
+                                <input id="inputAgree" type="checkbox" required ng-model="book.termsAgree" validationMessage="Agreement is required" name="termsAgree">
+                                Please check this box to confirm you have read and agreed to the terms and condiitions above.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,31 @@
+footer {
+	margin-top: 35px;
+
+	text-align: center;
+	.copyright {
+		display: block;
+		margin-bottom:8px;
+	}
+	.footer-links {
+		ul {
+			text-align: -webkit-match-parent;
+			display: inline-block;
+			li {
+				padding: 0 5px;
+				display: inline-block;
+				text-align: -webkit-match-parent;
+			}
+			li, a {
+				color: #373a3c;
+			}
+			li:hover, a:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+	}
+	.footer-border {
+		padding-top: 20px;
+		border-top: 1px solid #dadada;
+	}
+}

@@ -1,0 +1,61 @@
+﻿<div id="memberpane">
+    <div class="paneheader">
+        <div class="paneheader" style="float: left; width: 95%; text-align: center">
+            <span class="paneheader">Member</span></div>
+        <div class="paneheader" style="float: right; width: 5%; text-align: right">
+            <kendo-button sprite-css-class="'k-icon k-i-arrow-n'" ng-click="main.viewMinimize();" ng-show="!main.viewCollapsed" class="btn-tool">
+                <span class="k-sprite"></span></kendo-button><kendo-button ng-show="main.viewCollapsed" ng-click="main.viewMaximize();" sprite-css-class="'k-icon k-i-arrow-s'" class="btn-tool">
+                <span class="k-sprite"></span></kendo-button>
+        </div>
+    </div>
+    <div>
+
+        <div style="float: left; width: 60%; text-align: left">
+            <span class="infoline">  ({{agent.currentSession.member_info.member_id}}) {{agent.currentSession.member_info.first_name}} {{agent.currentSession.member_info.last_name}} - {{agent.currentSession.identity.ice_member_class_name}}</span>
+        </div>
+
+        <div style="float: right; width: 40%; text-align: right">
+            <!--<kendo-button ng-disabled="agent.disableRenewButton" class="k-warning" ng-click="onClick1()">Expired-Renew</kendo-button>
+            <kendo-button class="k-alert" ng-disabled="agent.disableUpgradeableButton" ng-click="onClick1()">Upgradeable</kendo-button>
+            <kendo-button class="k-good" ng-disabled="agent.disableRecissionButton" ng-click="">In-Recission (Info)</kendo-button><br/>-->
+        </div>
+    </div>
+    <br/>
+    <div kendo-tab-strip="agent.tabstrip" k-content-urls="[ null, null, null, null, null, null, null]" k-options="agent.tabOptions" style="margin-top: 1em">
+        <!-- tab list -->
+        <ul>
+            <li>Contact Info</li>
+            <li>Membership Info</li>
+            <li class="k-state-active">Shopping History</li>
+            <li>Transactions</li>
+            <li class="k-state-disabled" enabled="false" >Agent Notes</li>
+        </ul>
+
+
+        <div style="padding: 1em; height:450px">
+            <div ng-include src="'/apps/common/atb/tabs/contactinfo/contactinfo.html'"></div>
+        </div>
+
+        <div style="padding: 1em; height:450px">
+            <div ng-include src="'/apps/common/atb/tabs/memberinfo/memberinfo.html'"></div>
+
+        </div>
+
+        <div style="padding: 1em; height:450px">
+            <div ng-include src="'/apps/common/atb/tabs/shoppinghistory/shoppinghistory.html'"></div>
+        </div>
+        <div style="padding: 1em; height:450px">
+            <div ng-include src="'/apps/common/atb/tabs/transactionhistory/transactionhistory.html'"></div>
+        </div>
+        <div style="padding: 1em; height:450px">
+            <div ng-include src="'/apps/common/atb/tabs/allhistory/allhistory.html'"></div>
+        </div>
+        <div style="padding: 1em; height:450px">
+            <div ng-include src="'/apps/common/atb/tabs/brandrules/brandrules.html'"></div>
+        </div>
+
+        <div style="padding: 1em; height:450px">
+            <div ng-include src="'/apps/common/atb/tabs/agentnotes/agentnotes.html'"></div>
+        </div>
+    </div>
+</div>

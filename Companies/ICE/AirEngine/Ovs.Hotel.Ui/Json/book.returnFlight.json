@@ -1,0 +1,226 @@
+﻿[
+    {
+        "Id": "R10",
+        "SortOrder": 0,
+        "Description": "Flt# 1209(DL) BOS->ATL  $366.2 Fare Codes NVAIXSN5 XEVVA0MA UAVQA0MA ",
+        "PlusPrice": 0,
+        "TotalPrice": 366.2,
+        "$$hashKey": "object:154"
+    },
+    {
+        "Id": "R1",
+        "SortOrder": 0,
+        "Description": "Flt# 981(DL) BOS->ATL  $360.2 Fare Codes XAUSJ0BA XAUSJ0MA VAVSL5MB UAVQA0MA VAVNJ0MB XEVVA0MA ",
+        "PlusPrice": 0,
+        "TotalPrice": 360.2,
+        "$$hashKey": "object:155"
+    },
+    {
+        "Id": "R2",
+        "SortOrder": 0,
+        "Description": "Flt# 105(DL) BOS->ATL  $360.2 Fare Codes XAUSJ0BA QVAHZNN5 VAVNJ0MB UAVQA0MA ",
+        "PlusPrice": 0,
+        "TotalPrice": 360.2,
+        "$$hashKey": "object:156"
+    },
+    {
+        "Id": "R7",
+        "SortOrder": 0,
+        "Description": "Flt# 1213(DL) BOS->ATL  $325.2 Fare Codes NVAIXSN5 ",
+        "PlusPrice": 0,
+        "TotalPrice": 325.2,
+        "$$hashKey": "object:157"
+    },
+    {
+        "Id": "R11",
+        "SortOrder": 0,
+        "Description": "Flt# 708(DL) BOS->ATL  $318.7 Fare Codes XEVVA0MA KAA4AKEN UAVQA0MA ",
+        "PlusPrice": 0,
+        "TotalPrice": 318.7,
+        "$$hashKey": "object:158"
+    },
+    {
+        "Id": "R18",
+        "SortOrder": 0,
+        "Description": "Flt# 476(DL) BOS->JFK Flt# 433(DL) JFK->ATL  $318.7 Fare Codes SUAIZNN5 XEVOA0MB VEVNA0MJ ",
+        "PlusPrice": 0,
+        "TotalPrice": 318.7,
+        "$$hashKey": "object:159"
+    },
+    {
+        "Id": "R19",
+        "SortOrder": 0,
+        "Description": "Flt# 3477(DL) BOS->JFK Flt# 43(DL) JFK->ATL  $318.7 Fare Codes SUAIZNN5 XEVOA0MB VEVNA0MJ ",
+        "PlusPrice": 0,
+        "TotalPrice": 318.7,
+        "$$hashKey": "object:160"
+    },
+    {
+        "Id": "R22",
+        "SortOrder": 0,
+        "Description": "Flt# 4081(DL) BOS->RDU Flt# 832(DL) RDU->ATL  $285.2 Fare Codes GAA4AHEN SVAIZNN3 ",
+        "PlusPrice": 0,
+        "TotalPrice": 285.2,
+        "$$hashKey": "object:161"
+    },
+    {
+        "Id": "R20",
+        "SortOrder": 0,
+        "Description": "Flt# 3962(DL) BOS->JFK Flt# 477(DL) JFK->ATL  $263.2 Fare Codes SUAIZNN5 ",
+        "PlusPrice": 0,
+        "TotalPrice": 263.2,
+        "$$hashKey": "object:162"
+    },
+    {
+        "Id": "R21",
+        "SortOrder": 0,
+        "Description": "Flt# 6266(DL) BOS->RDU Flt# 834(DL) RDU->ATL  $263.2 Fare Codes SUAIZNN5 ",
+        "PlusPrice": 0,
+        "TotalPrice": 263.2,
+        "$$hashKey": "object:163"
+    },
+    {
+        "Id": "R23",
+        "SortOrder": 0,
+        "Description": "Flt# 1218(DL) BOS->DTW Flt# 1764(DL) DTW->ATL  $253.7 Fare Codes VAUNA0MP XEUNA0MA ",
+        "PlusPrice": 0,
+        "TotalPrice": 253.7,
+        "$$hashKey": "object:164"
+    },
+    {
+        "Id": "R24",
+        "SortOrder": 0,
+        "Description": "Flt# 1723(DL) BOS->DTW Flt# 2174(DL) DTW->ATL  $253.7 Fare Codes VAUNA0MP XEUNA0MA ",
+        "PlusPrice": 0,
+        "TotalPrice": 253.7,
+        "$$hashKey": "object:165"
+    },
+    {
+        "Id": "R1",
+        "SortOrder": 0,
+        "Description": "Flt# 1203(DL) BOS->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:166"
+    },
+    {
+        "Id": "R11",
+        "SortOrder": 0,
+        "Description": "Flt# 1201(DL) BOS->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:167"
+    },
+    {
+        "Id": "R12",
+        "SortOrder": 0,
+        "Description": "Flt# 1205(DL) BOS->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:168"
+    },
+    {
+        "Id": "R13",
+        "SortOrder": 0,
+        "Description": "Flt# 1207(DL) BOS->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:169"
+    },
+    {
+        "Id": "R23",
+        "SortOrder": 0,
+        "Description": "Flt# 2673(DL) BOS->LGA Flt# 1941(DL) LGA->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:170"
+    },
+    {
+        "Id": "R24",
+        "SortOrder": 0,
+        "Description": "Flt# 2673(DL) BOS->LGA Flt# 1943(DL) LGA->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:171"
+    },
+    {
+        "Id": "R25",
+        "SortOrder": 0,
+        "Description": "Flt# 6063(DL) BOS->LGA Flt# 1945(DL) LGA->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:172"
+    },
+    {
+        "Id": "R26",
+        "SortOrder": 0,
+        "Description": "Flt# 2022(DL) BOS->JFK Flt# 469(DL) JFK->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:173"
+    },
+    {
+        "Id": "R27",
+        "SortOrder": 0,
+        "Description": "Flt# 6059(DL) BOS->LGA Flt# 1941(DL) LGA->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:174"
+    },
+    {
+        "Id": "R28",
+        "SortOrder": 0,
+        "Description": "Flt# 6299(DL) BOS->RDU Flt# 824(DL) RDU->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:175"
+    },
+    {
+        "Id": "R29",
+        "SortOrder": 0,
+        "Description": "Flt# 6299(DL) BOS->RDU Flt# 822(DL) RDU->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:176"
+    },
+    {
+        "Id": "R30",
+        "SortOrder": 0,
+        "Description": "Flt# 6273(DL) BOS->RDU Flt# 826(DL) RDU->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:177"
+    },
+    {
+        "Id": "R31",
+        "SortOrder": 0,
+        "Description": "Flt# 6256(DL) BOS->RDU Flt# 818(DL) RDU->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:178"
+    },
+    {
+        "Id": "R33",
+        "SortOrder": 0,
+        "Description": "Flt# 2002(DL) BOS->DTW Flt# 325(DL) DTW->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:179"
+    },
+    {
+        "Id": "R34",
+        "SortOrder": 0,
+        "Description": "Flt# 3808(DL) BOS->IND Flt# 1154(DL) IND->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:180"
+    },
+    {
+        "Id": "R35",
+        "SortOrder": 0,
+        "Description": "Flt# 900(DL) BOS->ATL  $0 Fare Codes ",
+        "PlusPrice": 0,
+        "TotalPrice": 0,
+        "$$hashKey": "object:181"
+    }
+]

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.3.4</title>
+
+    <link rel="shortcut icon" type="image/png" href="jasmine_favicon.png">
+    <link rel="stylesheet" href="jasmine.css">
+
+    <!--  Jasmine Library  -->
+    <script src="jasmine.js"></script>
+    <script src="jasmine-html.js"></script>
+    <script src="boot.js"></script>
+
+    <script src="../../../../../assets/js/jquery-1.11.1/jquery.min.js"></script>
+    <script src="../../../../../assets/js/jquery.noconflict.js"></script>
+    <script src="../../../../../assets/js/modernizr.2.7.1.min.js"></script>
+    <script src="../../../../../assets/js/jquery-migrate.min.js"></script>
+    <script src="../../../../../assets/js/jquery.placeholder.min.js"></script>
+    <script src="../../../../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../../../../assets/js/moment.min.js"></script>
+    <script src="../../../../../assets/js/humanizeduration.js"></script>
+    <script src="../../../../../assets/js/momentjs-tz-0.5.5-2016f/moment-timezone-with-data-2010-2020.js"></script>
+    <!-- Angular Libraries -->
+    <script src="../../../../../assets/js/angular.min.js"></script>
+    <script src="../../../../../assets/js/angular-ui-router.min.js"></script>
+    <script src="../../../../../assets/js/angular-animate.min.js"></script>
+    <script src="../../../../../assets/js/angular-mocks.js"></script>
+    <script src="../../../../../assets/js/angular-gettext.min.js"></script>
+    <script src="../../../../../assets/js/translations.js"></script>
+    <script src="../../../../../assets/js/spin.js"></script>
+    <script src="../../../../../assets/js/angular-spinner.min.js"></script>
+    <script src="../../../../../assets/js/angular-strap-2.3.6/angular-strap.min.js"></script>
+    <script src="../../../../../assets/js/angular-strap-2.3.6/angular-strap.tpl.min.js"></script>
+    <script src="../../../../../assets/js/kendo/kendo.all.min.js"></script>
+    <script src="../../../../../assets/js/angularjs-slider-master/dist/rzslider.min.js"></script>
+    <script src="../../../../../assets/js/ng-backstretch.js"></script>
+    <script src="../../../../../assets/js/tmhDynamicLocale.js"></script>
+    <script src="../../../../../assets/js/angular-sanitize.min.js"></script>
+    <script src="../../../../../assets/js/swAngular-Popover.js"></script>
+    <script src="../../../../../assets/js/truncate.js"></script>
+    <script src="../../../../../assets/js/angular-loggly-logger.js"></script>
+    <script src="../../../../../assets/js/angular-timer.min.js"></script>
+
+    <script src="../../../airApp.js"></script>
+    <script src="../../../air-controller.js"></script>
+
+    <script src="../../airSessionService.js"></script>
+    <script src="../../dialogService.js"></script>
+
+    <script src="../../../confirmation/airConfirmation-controller.js"></script>
+    <script src="../../../confirmation/confirmation-factory.js"></script>
+    <script src="../../../book/airBook-service.js"></script>
+    <script src="../../../passengers/airPassenger-factory.js"></script>
+    <script src="../../../book/airBook-freqFlyer-factory.js"></script>
+    <script src="../../../search/searchState-factory.js"></script>
+    <script src="../../../book/airBookState-factory.js"></script>
+    <script src="../../../airports/airAirports-factory.js"></script>
+    <script src="../../../book/airBook-controller.js"></script>
+    <script src="../../../../../common/directives/displayOptions-directives.js"></script>
+
+    <!--Specs-->
+    <script src="../specs/airSearch-controller.spec.js"></script>
+    <script src="../specs/airBook-controller.spec.js"></script>
+    <script src="../specs/airPassenger-factory.spec.js"></script>
+    <script src="../specs/airAirports-factory.spec.js"></script>
+</head>
+
+<body>
+    <script>
+        var _currentSession = { "identity": { "user_name": "nexgensv", "ng_name_id": null, "ice_name_id": "17841734", "ng_partner_id": null, "ice_partner_id": "101", "ng_member_id": null, "ice_member_id": "SVS90886QFI", "ng_member_class_id": null, "ice_member_class_id": "699", "ice_member_class_name": "Sears Vacations - Savings Credits Test (dbc)", "ng_member_class_name": null, "ng_hashed_password": null, "ice_hashed_password": null, "agent_mode": false, "ng_agent_id": null, "ng_agent_name": null, "ice_agent_id": null, "ice_agent_name": null, "web_status": "active" }, "current_api_key": "/ssEQt/kJbJyOzlrLN/v6Pr5gV6geeHNG5K1aSHsNx/mZ2HtUn6nHfjw5diwWVVtP6kbAW9lTiofIbprlYQgKg==", "search_endpoint": null, "transaction_endpoint": null, "member_info": { "member_id": "SVS90886QFI", "status": null, "enrollment_date": "0001-01-01T00:00:00", "expiration_date": "2016-11-19T00:00:00", "in_recession": false, "upgraded_membership": false, "upgradeable_membership": false, "renewable": false, "renewable_online": false, "renewable_as_part_of_purchase": false, "user_id": null, "third_party_id": null, "primary_owner": false, "can_book": true, "dbcBalance": 0.0, "vcBalance": 15.0, "pointsBalance": 0.0, "can_change_password": false, "can_change_contact_info_for_their_id": false, "can_delete_their_user_id": false, "can_spend_vacation_cash": true, "max_vacation_cash_spend_allowed": 0.0, "can_spend_dbc_credits": true, "max_dbc_spend_allowed": 0.0, "can_spend_hard_points": false, "max_hard_points_spend_allowed": 0, "prefix": null, "first_name": "Nexgen", "last_name": "Test", "addresses": [{ "Label": "membermaint", "is_primary": true, "suffix": null, "street1": "travelnow", "street2": "", "street3": "", "city": "Phoenix", "state_province": "AZ", "postal_code": "85260", "country": "US", "state_code": null, "country_code": null }], "phone_numbers": [{ "IsPrimary": true, "Label": "membermaint", "CountryCode": null, "ExchangePrefix": null, "Number": "(555) 555-5555", "IsMobile": false, "HasTcpaOptIn": false, "TcpaOptinDateTime": "0001-01-01T00:00:00" }], "email_addresses": [{ "is_primary": true, "label": "membermaint", "address": "nexgen@noemail.com", "opted_in": true, "opted_in_date_time": "0001-01-01T00:00:00" }], "credit_cards_accepted": [{ "credit_card_id": "c1:e1:cc1", "credit_card_name": "Visa", "card_type": "visa", "bin_number": "", "default_currency_code": "USD", "promo_message": "", "sort_order": 0 }, { "credit_card_id": "c1:e1:cc2", "credit_card_name": "MasterCard", "card_type": "mastercard", "bin_number": "", "default_currency_code": "USD", "promo_message": "", "sort_order": 1 }, { "credit_card_id": "c1:e1:cc3", "credit_card_name": "American Express", "card_type": "amex", "bin_number": "", "default_currency_code": "USD", "promo_message": "", "sort_order": 2 }, { "credit_card_id": "c1:e1:cc4", "credit_card_name": "Discover", "card_type": "discover", "bin_number": "", "default_currency_code": "USD", "promo_message": "", "sort_order": 3 }, { "credit_card_id": "c1:e1:cc4", "credit_card_name": "Sears Card", "card_type": "sears", "bin_number": "", "default_currency_code": "USD", "promo_message": "", "sort_order": 4 }], "alternative_hard_currencies": [{ "id": "c1:e1:cur1", "type": "VC", "label": "Vacation Cash", "conversion_rate": 1.0, "must_use_min_on_each_transaction": false, "must_use_max_on_each_transaction": false, "terms_and_conditions": "Vacation Cash Terms and Conditions", "balance": 15.0, "redeem_for_air": true, "redeem_for_car": false, "redeem_for_hotel": true, "redeem_for_cruise": true, "redeem_for_resort": true, "redeem_for_packages": true, "redeem_for_tour": true, "redeem_for_merchandise": true, "redeem_for_wine": true, "points_bank_online": false, "variable_based_margin": false, "can_cancel": false, "can_refund": false, "reimbursement_conversion_rate": 0.0, "redemption_conversion_rate": 0.0, "usage_balance": 0.0, "hotel_redemption_options": null }], "alternative_margin_currencies": [{ "id": "cu:e1:cur2", "type": "DB", "label": "Travel Credits", "must_use_max_on_each_transaction": false, "conversion_rate": 1.0, "terms_and_conditions": "Travel Credits Terms and Conditions", "balance": 0 }] }, "display_options": { "Locale": "en_US", "currency_code": "USD", "country_code": null, "program_long_name": "Sears Vacations", "program_short_name": "Sears Vacations", "program_email": "help@searsvacations.com", "demo_mode": false, "program_phone_number": "1-800-GET-SEARS", "display_type": "dbc", "stylesheet1": "/apps/assets/brands/sears/css/style.css", "stylesheet2": null, "options": { "show_bundled_price": "false", "show_daily_price": "false", "email_optin_text": "email optin text", "tcpa_optin_text": "Yes, Please Contact me at this cell number", "has_points_add": "false", "has_user_add": "false", "has_resort_exchange": "false", "login_required": "true", "send_activation_email": "false", "send_antispam_email": "false", "has_country_driven_member_class": "false", "has_vip_users": "false", "has_partner_level_lead_source": "false", "hide_vacation_vouchers_column": "false", "hide_vacation_vouchers_balance": "false", "hide_user_access_list": "true", "hide_membership_dates": "true", "has_account_info_in_name_bar": "true", "show_third_party_id_as_member_id": "false", "has_sears_gift_card": "false", "general_phone_number": "1-800-222-3333", "travel_phone_number": "1-800-555-6666", "google_analytics_domain_name": "www.searsvacations.com", "google_analytics_ignored_organic": "www.searsvacations.com", "offer_email_optin": "true", "offer_tcpa_optin": "true", "show_third_party_home": "false", "include_points": "false", "show_phone_contact": "true", "show_hours": "false", "hours": "open 9 to 5", "show_email_contact": "false", "email_contact": "support@searsvacations.com" }, "labels": { "points": "Points", "vacation_cash": "Vacation Cash", "phone_number": "Phone Number", "agent_id": "Sales Associate Id", "agent": "Sales Associate", "dbc": "Travel Credits", "account_settings_label": "My Account", "login": "Login", "sign_out": "Sign Out", "third_party_home_label": "Home", "header_badge_label": "Travel Credits", "header_badge_button_text": "current Balance", "first_name": "First Name", "last_name": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "city": "City", "state_province": "State/Province", "country": "Country", "postal_code": "Postal Code", "submit_button_label": "Submit", "submit_button_process_text": "Processing", "book_button_label": "book", "book_button_processing_text": "Processing", "copyright": "Copyright 2016 Sears Vacations", "my_account_href": "http://www.searsvacations.com/en/user-account-page/" }, "templates": { "resort_header": "/apps/common/headers/default_header_dbc.html", "resort_footer": "/apps/common/footers/default_footer.html", "resort_menu": "/apps/common/menus/default_menu.html", "resort_search": "/apps/travel/resort/search/resortdefault_search.html", "resort_body": "/apps/travel/resort/body/resortdefault_body_dbc.html", "travel_body": "/apps/travel/default_travel_body.html", "travel_nav": "/apps/travel/default_travel_nav.html", "travel_footer": "/apps/travel/default_travel_footer.html", "air_header": "/apps/common/headers/default_header_dbc.html", "air_footer": "/apps/common/footers/default_footer.html", "air_footer_page": "/apps/common/footers/default_footer_page.html", "air_menu": "/apps/common/menus/default_menu.html", "air_body": "/apps/travel/air/home/airdefault_merchandising_dbc.html", "air_search": "/apps/travel/air/search/air_default_search.html", "air_search_results": "/apps/travel/air/search/air_default_searchresults.html", "club_search": "/apps/travel/hotel/search/clubdefault_search.html", "hotel_header": "/apps/common/headers/default_header_dbc.html", "hotel_footer": "/apps/common/footers/default_footer.html", "hotel_footer_page": "/apps/common/footers/default_footer_page.html", "hotel_menu": "/apps/common/menus/default_menu.html", "hotel_body": "/apps/travel/hotel/search/merchandising/hoteldefault_merchandising_dbc.html", "hotel_search": "/apps/travel/hotel/search/hoteldefault_search.html", "hotel_searchresultslist": "/apps/travel/hotel/search/listviewdisplay/hoteldefault_listview.html", "hotel_searchresults_listdetail": "/apps/travel/hotel/search/listviewdisplay/hoteldefault_listdetail_dbc.html", "hotel_searchresults_map": "/apps/travel/hotel/search/mapviewdisplay/hoteldefault_mapview.html", "hotel_searchresults_mapdetail": "/apps/travel/hotel/search/mapviewdisplay/hoteldefault_mapdetail_dbc.html", "hotel_searchresultsgrid": "/apps/travel/hotel/search/gridviewdisplay/hoteldefault_gridview.html", "hotel_searchresults_griddetail": "/apps/travel/hotel/search/gridviewdisplay/hoteldefault_griddetail_dbc.html", "hotel_roomdetail": "/apps/travel/hotel/hoteldetail/roomdisplay/hoteldefault_roomdetail_dbc.html", "hotel_detailview": "/apps/travel/hotel/hoteldetail/hoteldefault_detailview.html", "hotel_book_header": "/apps/travel/hotel/book/book_header.html", "hotel_book": "/apps/travel/hotel/book/hoteldefault_bookview.html", "hotel_price_summary": "/apps/travel/hotel/book/price_summary/hoteldefault_pricesummary_dbc.html", "hotel_book_cc": "/apps/travel/hotel/book/payment_collection/hoteldefault_ccinput.html", "hotel_book_dbc": "/apps/travel/hotel/book/payment_collection/hoteldefault_dbcinput.html", "hotel_book_vc": "/apps/travel/hotel/book/payment_collection/hoteldefault_vcinput.html", "hotel_book_points": "/apps/travel/hotel/book/payment_collection/hoteldefault_pointsinput.html", "hotel_book_pricebar": "/apps/travel/hotel/book/pricebar/hoteldefault_pricebar_dbc.html", "hotel_confirmation": "/apps/travel/hotel/confirmation/hoteldefault_confirmationview.html", "hotel_confirmation_pricing": "/apps/travel/hotel/confirmation/hoteldefault_confirmation_pricing_dbc.html", "hotel_review": "/apps/travel/hotel/review/hoteldefault_reviewview.html", "hotel_cancel": "/apps/travel/hotel/cancel/hoteldefault_cancelview.html", "hotel_receipt": "/apps/travel/hotel/receipt/hotelReceipt_resendReceipt.html" }, "email_templates": { "hotel_invoice_template_id": "25149017", "hotel_confirmation_template_id": "25149026", "hotel_cancel_template_id": "25149032" }, "logos": [{ "link_href": "", "logo_image_alt": "", "logo_image_url": "/apps/assets/brands/sears/img/sears-vacations-logo.png", "logo_number": 1, "logo_text": "", "text_link": "" }], "menus": [{ "link_href": "http://www.searsvacations.com/en/benefits", "text_link": "My Benefits", "track_clicks": true, "display_link_in_popup": false, "partner_id": 101, "popup_height": 0, "popup_width": 0, "menu_link_subgroup_id": 0, "sub_menus": [] }, { "link_href": "http://www.searsvacations.com/en/shop-travel/", "text_link": "Shop Travel", "track_clicks": true, "display_link_in_popup": false, "partner_id": 101, "popup_height": 0, "popup_width": 0, "menu_link_subgroup_id": 1, "sub_menus": [] }], "footers": [{ "link_href": "/apps/assets/brands/sears/content/searsprivacypolicy.html", "text_link": "Privacy Policy", "footer_group_number": 0, "sort_order": 1, "track_clicks": true, "laberl_with_substitution": "label", "display_link_in_popup": false, "partner_id": 101, "popup_height": 0, "popup_width": 0 }, { "link_href": "/apps/assets/brands/sears/content/searstermsandconditions.html", "text_link": "Terms and Conditions", "footer_group_number": 0, "sort_order": 1, "track_clicks": true, "laberl_with_substitution": "label", "display_link_in_popup": false, "partner_id": 101, "popup_height": 0, "popup_width": 0 }] }, "agent_info": null }
+        AirApp.constant("appSettings", {});
+        AirApp.constant("currentSession", _currentSession);
+    </script>
+
+</body>
+</html>

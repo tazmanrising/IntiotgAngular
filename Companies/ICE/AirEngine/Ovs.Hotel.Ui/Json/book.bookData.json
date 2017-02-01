@@ -1,0 +1,302 @@
+﻿{
+    "flights": [
+        {
+            "MultiCarrier": false,
+            "Id": "O1",
+            "IsRefundable": false,
+            "PaxFareDetails": null,
+            "TotalFareAmount": 401.2,
+            "TotalTaxAmount": 70.04,
+            "TotalMaxFareAmount": 0,
+            "FlightType": 0,
+            "OriginFilter": true,
+            "ReturnFilter": false,
+            "Show": true,
+            "MarketingCarriers": [ "American Airlines", "American Airlines" ],
+            "MarkeOperatingCarriers": [ "American Airlines", "American Airlines" ],
+            "Class": null,
+            "OriginAirport": "PHX",
+            "DestinationAirport": "MCO",
+            "Segments": [
+                {
+                    "OriginFilter": true,
+                    "ReturnFilter": false,
+                    "Show": true,
+                    "SegmentType": null,
+                    "CarrierCode": "AA",
+                    "OpCarrierCode": "AA",
+                    "FlightNumber": "885",
+                    "Equipment": "321",
+                    "Class": null,
+                    "ArrivalDate": "01/23/2017",
+                    "DepartureDate": "01/23/2017",
+                    "DepartureAirport": "PHX",
+                    "DepartureTime": "01:45",
+                    "ArrivalAirport": "ORD",
+                    "ArrivalTime": "06:02",
+                    "TravelTime": "0317",
+                    "NumberOfStops": null,
+                    "StopsLabel": null,
+                    "Cabin": null,
+                    "AvailabilityContext": null,
+                    "$$hashKey": "object:488"
+                },
+                {
+                    "OriginFilter": true,
+                    "ReturnFilter": false,
+                    "Show": true,
+                    "SegmentType": null,
+                    "CarrierCode": "AA",
+                    "OpCarrierCode": "AA",
+                    "FlightNumber": "2351",
+                    "Equipment": "738",
+                    "Class": null,
+                    "ArrivalDate": "01/23/2017",
+                    "DepartureDate": "01/23/2017",
+                    "DepartureAirport": "ORD",
+                    "DepartureTime": "15:00",
+                    "ArrivalAirport": "MCO",
+                    "ArrivalTime": "18:38",
+                    "TravelTime": "0238",
+                    "NumberOfStops": null,
+                    "StopsLabel": null,
+                    "Cabin": null,
+                    "AvailabilityContext": null,
+                    "$$hashKey": "object:489"
+                }
+            ],
+            "FlightElapseTime": "1453",
+            "OutboundElapseTime": null,
+            "InboundElapseTime": null,
+            "ReturnOptionCount": 11,
+            "ReturnOptions": [
+                {
+                    "Id": "1",
+                    "SortOrder": 0,
+                    "Description": "Flt# 2388(AA) MCO->ORD Flt# 1908(AA) ORD->PHX ",
+                    "PlusPrice": 0,
+                    "TotalPrice": 401.2,
+                    "$$hashKey": "object:492"
+                },
+                {
+                    "Id": "16",
+                    "SortOrder": 0,
+                    "Description": "Flt# 998(AA) MCO->LAX Flt# 491(AA) LAX->PHX ",
+                    "PlusPrice": 21,
+                    "TotalPrice": 422.2,
+                    "$$hashKey": "object:493"
+                },
+                {
+                    "Id": "11",
+                    "SortOrder": 0,
+                    "Description": "Flt# 2505(AA) MCO->DFW Flt# 513(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:494"
+                },
+                {
+                    "Id": "23",
+                    "SortOrder": 0,
+                    "Description": "Flt# 425(AA) MCO->DFW Flt# 542(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:495"
+                },
+                {
+                    "Id": "14",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1289(AA) MCO->DFW Flt# 542(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:496"
+                },
+                {
+                    "Id": "32",
+                    "SortOrder": 0,
+                    "Description": "Flt# 127(AA) MCO->DFW Flt# 542(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:497"
+                },
+                {
+                    "Id": "17",
+                    "SortOrder": 0,
+                    "Description": "Flt# 2505(AA) MCO->DFW Flt# 889(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:498"
+                },
+                {
+                    "Id": "19",
+                    "SortOrder": 0,
+                    "Description": "Flt# 425(AA) MCO->DFW Flt# 575(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:499"
+                },
+                {
+                    "Id": "12",
+                    "SortOrder": 0,
+                    "Description": "Flt# 2351(AA) MCO->DFW Flt# 889(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:500"
+                },
+                {
+                    "Id": "33",
+                    "SortOrder": 0,
+                    "Description": "Flt# 425(AA) MCO->DFW Flt# 549(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:501"
+                },
+                {
+                    "Id": "34",
+                    "SortOrder": 0,
+                    "Description": "Flt# 1289(AA) MCO->DFW Flt# 549(AA) DFW->PHX ",
+                    "PlusPrice": 59,
+                    "TotalPrice": 460.2,
+                    "$$hashKey": "object:502"
+                }
+            ],
+            "$$hashKey": "object:47"
+        },
+        {
+            "Id": "1",
+            "SortOrder": 0,
+            "Description": "Flt# 2388(AA) MCO->ORD Flt# 1908(AA) ORD->PHX ",
+            "PlusPrice": 0,
+            "TotalPrice": 801.2,
+            "$$hashKey": "object:492"
+        }
+    ],
+    "contact": {
+        "options": {
+            "data": null,
+            "schema": {},
+            "offlineStorage": null,
+            "serverSorting": false,
+            "serverPaging": false,
+            "serverFiltering": false,
+            "serverGrouping": false,
+            "serverAggregates": false,
+            "batch": false,
+            "country": {},
+            "phoneNumber": "",
+            "emailPrimary": "",
+            "emailItinerary": "",
+            "tcpaOptIn": false
+        },
+        "_map": {},
+        "_prefetch": {},
+        "_data": [],
+        "_pristineData": [],
+        "_ranges": [],
+        "_view": [],
+        "_pristineTotal": 0,
+        "_destroyed": [],
+        "_group": [],
+        "_shouldDetachObservableParents": true,
+        "_events": {},
+        "transport": { "data": [] },
+        "reader": {},
+        "_online": true,
+        "country": {
+            "Name": "USA",
+            "Id": "US"
+        },
+        "phoneNumber": "1 262 626 2626",
+        "emailPrimary": "a@mail.com",
+        "emailItinerary": "a@mail.com"
+    },
+    "travelers": [
+        {
+            "travelerType": "Adult",
+            "travelerTypeId": 0,
+            "firstName": "Tom",
+            "middleName": "",
+            "lastName": "Smith",
+            "gender": "M",
+            "birthDate": {
+                "month": "May",
+                "day": "6",
+                "year": "2011"
+            },
+            "freqFlyerProgram": "",
+            "freqFlyerNumber": "",
+            "knownTravelerNumber": "",
+            "knownTravelerProgram": "",
+            "tsaRedressNumber": "",
+            "seatPreference": "Window",
+            "specialAssistance": ""
+        },
+        {
+            "travelerType": "Adult",
+            "travelerTypeId": 0,
+            "firstName": "Teresa",
+            "middleName": "",
+            "lastName": "Smith",
+            "gender": "M",
+            "birthDate": {
+                "month": "Jun",
+                "day": "5",
+                "year": "2012"
+            },
+            "freqFlyerProgram": "",
+            "freqFlyerNumber": "",
+            "knownTravelerNumber": "",
+            "knownTravelerProgram": "",
+            "tsaRedressNumber": "",
+            "seatPreference": "Aisle",
+            "specialAssistance": ""
+        },
+        {
+            "travelerType": "Child",
+            "travelerTypeId": 1,
+            "firstName": "Child",
+            "middleName": "",
+            "lastName": "Smith",
+            "gender": "M",
+            "birthDate": {
+                "month": "Jun",
+                "day": "7",
+                "year": "2012"
+            },
+            "freqFlyerProgram": "",
+            "freqFlyerNumber": "",
+            "knownTravelerNumber": "",
+            "knownTravelerProgram": "",
+            "tsaRedressNumber": "",
+            "seatPreference": "Window",
+            "specialAssistance": ""
+        },
+        {
+            "travelerType": "Infant",
+            "travelerTypeId": 2,
+            "firstName": "Toddler",
+            "middleName": "",
+            "lastName": "Smith",
+            "gender": "M",
+            "birthDate": {
+                "month": "May",
+                "day": "5",
+                "year": "2012"
+            },
+            "freqFlyerProgram": "",
+            "freqFlyerNumber": "",
+            "knownTravelerNumber": "",
+            "knownTravelerProgram": "",
+            "tsaRedressNumber": "",
+            "seatPreference": "Aisle"
+        }
+    ],
+    "payment": {
+        "disclaimer": "All prices quoted in <strong>US Dollars</strong>.",
+        "bookingFee": 100,
+        "totalFare": 401.2,
+        "totalTax": 70.04,
+        "totalPerPassenger": 471.24,
+        "total": 1984.96
+    },
+    "searchType": "RoundTrip"
+}

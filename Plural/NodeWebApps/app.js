@@ -6,12 +6,13 @@ var express = require('express');
 // create an instance of express
 var app = express();
 
-var port = 5000;
+//process.env.PORT  
+var port = process.env.PORT || 5000;
 
 //Setup app.use   middleware  used by express first
 
 // setup the public static directory
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 //serve html back up
 
@@ -37,6 +38,8 @@ app.listen(port, function(err){
 
 // node app.js  
 
+//npm install --save-dev jshint gulp-jshint
+
 
 // BOWER
 // npm install bower -g 
@@ -45,6 +48,9 @@ app.listen(port, function(err){
 
 // create file   .bowerrc  
 
+// npm install -g gulp 
+// HAVE to ALSO do a LOCAL INSTALL of gulp TOO
+// npm install gulp --save-dev    ,  this is for devdependency , no need for prod
 
 
 
@@ -54,6 +60,8 @@ app.listen(port, function(err){
 
 
 
+//npm install --save-dev gulp-jshint  
+// npm install --save-dev gulp-jscs jshint-stylish
 
 
 // npm init     this creates the package.json  asking questions  etc..  

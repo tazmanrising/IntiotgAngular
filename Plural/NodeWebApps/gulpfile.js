@@ -5,11 +5,11 @@ var nodemon = require('gulp-nodemon');
 
 var jsFiles = ['*.js', 'src/**/*.js'];
 
-// create a task
+//create a task.
 
 
 gulp.task('style', function(){
-   return gulp.src(jsFiles)  // return the string for a subtask
+   return gulp.src(jsFiles)  //return the string for a subtask
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish',{
             verbose: true
@@ -50,14 +50,14 @@ gulp.task('inject', function(){
 
 // run this
 
-// gulp inject 
+// gulp inject
 
 
-// npm install gulp-inject --save-dev 
+// npm install gulp-inject --save-dev
 
 // npm install --save-dev gulp-nodemon
 
-//   lets run  gulp serve   and it runs style and inject 
+//   lets run  gulp serve   and it runs style and inject
 gulp.task('serve', ['style', 'inject'], function() {
     var options = {
         script: 'app.js',

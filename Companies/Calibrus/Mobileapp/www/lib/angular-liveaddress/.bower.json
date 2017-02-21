@@ -1,0 +1,28 @@
+{
+  "name": "angular-liveaddress",
+  "version": "0.2.0",
+  "homepage": "https://github.com/faradayio/angular-liveaddress",
+  "authors": [
+    "Tristan Davies <github@tristan.io>"
+  ],
+  "description": "Use SmartyStreets to autocomplete address fields",
+  "main": "liveaddress.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "d3ca6396287596b45d4475d430a163271c28a45c"
+  },
+  "_source": "https://github.com/faradayio/angular-liveaddress.git",
+  "_target": "^0.2.0",
+  "_originalSource": "angular-liveaddress",
+  "_direct": true
+}

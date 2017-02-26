@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drag &amp; Drop Lists for angular.js</title>
+
+    <!-- jQuery is not required -->
+    <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    
+
+    <link rel="stylesheet" href="//marceljuenemann.github.io/angular-drag-and-drop-lists/demo/framework/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//marceljuenemann.github.io/angular-drag-and-drop-lists/demo/framework/vendor/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="//marceljuenemann.github.io/angular-drag-and-drop-lists/demo/framework/vendor/prism.css"/>
+    <link rel="stylesheet" href="//marceljuenemann.github.io/angular-drag-and-drop-lists/demo/framework/demo-framework.css"/>
+    <link rel="stylesheet" href="multi.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="angular-drag-and-drop-lists.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+ 
+   <script src="http://marceljuenemann.github.io/angular-drag-and-drop-lists/demo/framework/vendor/prism.js"></script>
+
+
+
+
+
+    <!-- angular is the only dependency! -->
+
+    <script src="app.js"></script>
+    <script src="multi.js"></script>
+
+    <body ng-app="demo">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" navigation></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+
+            <div ng-view></div>
+
+        </div>
+
+    </body>

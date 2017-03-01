@@ -1,1 +1,0 @@
-{"version":3,"file":"device.routes.js","sourceRoot":"","sources":["device.routes.ts"],"names":[],"mappings":";AAEA,sCAAoC,yBAAyB,CAAC,CAAA;AAC9D,wCAAsC,2BAA2B,CAAC,CAAA;AAErD,oBAAY,GAAiB;IACxC,EAAE,IAAI,EAAE,SAAS,EAAE,SAAS,EAAE,2CAAmB,EAAE;IACnD,EAAE,IAAI,EAAE,YAAY,EAAE,SAAS,EAAE,+CAAqB,EAAE;CACzD,CAAC"}

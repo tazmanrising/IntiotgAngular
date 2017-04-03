@@ -8,4 +8,6 @@
         "**/Ang2Fund/app/**/*.js": true,
         "**/Ang2Fund/app/**/*.js.map": true
     }
+,
+"files.autoSave": "afterDelay"
 }

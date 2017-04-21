@@ -26,7 +26,39 @@ app.set('views', './src/views');
 // view engine ejs
 app.set('view engine', 'ejs');
 
-// app.get('/', function (req, res) {
+var books = [
+    {
+        title: 'War',
+        genre: 'historical',
+        author: 'Tolstoy',
+        read: false
+    }
+];
+
+bookRouter.route('/')
+    .get(function (req, res) {
+       res.render('books', {
+        title: 'Books',
+        nav: [{
+            Link: '/Books',
+            Text: 'Books'
+        }, {
+            Link: '/Authors',
+            Text: 'Authors'
+        }],
+        books: books
+       });
+    });
+
+bookRouter.route('/single')
+    .get(function(req, res){
+       res.send('Hello Single Book') 
+    });
+
+app.use('/Books', bookRouter);
+
+
+//  app.get('/', function (req, res) {
 //     //res.render('index', {title: 'Hello from render',list: ['a','b']});
 //     res.render('index', {
 //         title: 'Hello from render',
@@ -45,9 +77,9 @@ app.set('view engine', 'ejs');
 //    res.send('hello world');
 //});
 
-app.get('/books', function (req, res) {
-    res.send('hello books');
-});
+// app.get('/books', function (req, res) {
+//     res.send('hello books');
+// });
 
 // listen with a callback
 app.listen(port, function (err) {

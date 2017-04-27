@@ -6,13 +6,38 @@ var express = require('express');
 // create an instance of express
 var app = express();
 
+// add mssql 
+var sql = require('mssql');
+var config = {
+    user: 'sa',
+    password: 'Gigi$1862',
+    server: 'DESKTOP-RSKHI4E', // you can use  'localhost\\instance for connecting to a named instance
+    database: 'Books',
+    options: {
+        port: 1433,
+        encrypt: false // use true if on windows azure 
+    }
+};
+
+// OPEN connection
+sql.connect(config, function(err){
+    console.log(err);
+})
+
 //process.env.PORT
 var port = process.env.PORT || 5000;
+var nav = [{
+    Link: '/Books',
+    Text: 'Book'
+},{
+    Link: '/Authors',
+    Text: 'Author'
+}];
 
-var bookRouter = express.Router(); 
+//var bookRouter = express.Router();
+var bookRouter = require('./src/routes/bookRoutes')(nav);
 
 //Setup app.use   middleware  used by express first
-
 // setup the public static directory
 app.use(express.static('public'));
 
@@ -21,55 +46,27 @@ app.use(express.static('public'));
 //app.use(express.static('src/views'));
 // commenting out above for below
 app.set('views', './src/views');
-
-
 // view engine ejs
 app.set('view engine', 'ejs');
 
-var books = [
-    {
-        title: 'War',
-        genre: 'historical',
-        author: 'Tolstoy',
-        read: false
-    }
-];
+app.use('/Books', bookRouter);
 
-bookRouter.route('/')
-    .get(function (req, res) {
-       res.render('books', {
-        title: 'Books',
+// npmjs.com     mssql
+//  npm install --save mssql
+
+app.get('/', function (req, res) {
+    //res.render('index', {title: 'Hello from render',list: ['a','b']});
+    res.render('index', {
+        title: 'Hello from render',
         nav: [{
             Link: '/Books',
             Text: 'Books'
         }, {
             Link: '/Authors',
             Text: 'Authors'
-        }],
-        books: books
-       });
+        }]
     });
-
-bookRouter.route('/single')
-    .get(function(req, res){
-       res.send('Hello Single Book') 
-    });
-
-app.use('/Books', bookRouter);
-
-
-//  app.get('/', function (req, res) {
-//     //res.render('index', {title: 'Hello from render',list: ['a','b']});
-//     res.render('index', {
-//         title: 'Hello from render',
-//         nav: [{
-//             Link: '/Books',
-//             Text: 'Books'
-//         }, {
-//             Link: '/Authors',
-//             Text: 'Authors'}]
-//         });
-// });
+});
 
 // pass express 2 things    request from router
 // header/body etc     response will be sent back
@@ -77,9 +74,9 @@ app.use('/Books', bookRouter);
 //    res.send('hello world');
 //});
 
-// app.get('/books', function (req, res) {
-//     res.send('hello books');
-// });
+app.get('/books', function (req, res) {
+    res.send('hello books');
+});
 
 // listen with a callback
 app.listen(port, function (err) {

@@ -73,15 +73,35 @@ var router = function(nav){
     });
 
     bookRouter.route('/:id')
-    .get(function (req, res) {
+    .all(function(req, res, next){
         var id = req.params.id;
+        var resultSingle = '';
+        var ps = new sql.PreparedStatement();
+        ps.input('id', sql.Int);
+        ps.prepare('select * from books where id = @id',
+            function(err){
+                ps.execute({
+                        id:req.params.id
+                    },
+                    function(err, recordset){
+                        resultSingle = recordset['recordset'];
+                        if (resultSingle.length === 0){
+                            res.status(404).send('Not Found');
+                        } else {
+                            req.book = resultSingle[0];
+                            next();
+                        } 
+                    });
+                });
+    })
+    .get(function (req, res) {
         res.render('bookView', {
             title: 'Books',
             nav: nav,
-            book: books[id]
+            book: req.book  //resultSingle[0] // books[id]
         });
-    });
-    
+     });
+
     return bookRouter;
 }
 module.exports = router;
